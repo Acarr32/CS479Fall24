@@ -5,7 +5,7 @@ Serial myPort;
 
 
 void setup() {
-  size(400, 400);
+  size(1024, 900);
   
   // Initialize serial communication
   String portName = Serial.list()[1]; // Select the correct port (change index if needed)
