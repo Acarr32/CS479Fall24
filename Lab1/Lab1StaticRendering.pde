@@ -45,7 +45,7 @@ void drawStaticMetrics(){
   text("Heart Rate* : ", width * 2/3 + 20, height/4 + metricSpace - metricsPadding);
   text("Confidence* : ", width * 2/3 + 20, height/4 + 2*metricSpace - metricsPadding);
   text("Oxygen* : ", width * 2/3 + 20, height/4 + 3*metricSpace - metricsPadding);
-  text("Current Status : ", width * 2/3 + 20, height/4  + 4*metricSpace - metricsPadding);
+  text("Status : ", width * 2/3 + 20, height/4  + 4*metricSpace - metricsPadding);
   
   textSize(15);
   //Add disclaimer text

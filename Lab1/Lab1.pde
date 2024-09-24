@@ -1,9 +1,10 @@
 import processing.serial.*;
 import javax.swing.JOptionPane;
+import java.text.DecimalFormat;
 
 // Serial communication object
 Serial myPort;
-
+DataStorage data = new DataStorage();
 
 void setup() {
   size(1024, 900);
@@ -19,7 +20,7 @@ void setup() {
   
   renderLoadingWindow();
   
-  drawStaticUI();
+  
 }
 
 void draw() {
@@ -27,6 +28,9 @@ void draw() {
   
   bioData parsedData = ParseInput(sensorData);
   
+  clear();
+  
+  drawStaticUI();
   updateMetrics();
   
 }
