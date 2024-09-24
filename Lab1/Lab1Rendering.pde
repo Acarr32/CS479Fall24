@@ -8,6 +8,8 @@ void drawUI() {
   renderHeader();
   
   renderMetrics();
+  
+  renderKey();
 }
 
 void renderHeader(){
@@ -26,7 +28,7 @@ void renderHeader(){
 void renderMetrics(){
   //Render section background
   fill(51);
-  rect(width * 2/3, height/8, width/3, height * 7/8);
+  rect(width * 2/3, height/8, width/3, height * 4/8);
   
   //Add section header
   fill(255,255,255);
@@ -35,8 +37,29 @@ void renderMetrics(){
   
   //Add metric titles
   
+  int metricSpace = 70;
+  int metricsPadding = 50;
+  
+  text("Thing 1 : ", width * 2/3 + 20, height/4 + metricSpace - metricsPadding);
+  text("Thing 2 : ", width * 2/3 + 20, height/4 + 2*metricSpace - metricsPadding);
+  text("Thing 3 : ", width * 2/3 + 20, height/4 + 3*metricSpace - metricsPadding);
+  text("Thing 4 : ", width * 2/3 + 20, height/4  + 4*metricSpace - metricsPadding);
+  
+  
   //Render and populate metrics
   
-  //Summary option?
+}
+
+void renderKey(){
+  //Render section background
+  int bgColor = 51;
+  
+  fill(bgColor);
+  rect(width * 2/3, height* 5/8, width/3, height * 3/8);
+  
+  //Add section header
+  fill(255,255,255);
+  textSize(50);
+  text("Key", width * 2/3 + 100, height* 5/8 + 60);
   
 }
