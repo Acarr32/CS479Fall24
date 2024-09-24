@@ -1,4 +1,5 @@
 import processing.serial.*;
+import javax.swing.JOptionPane;
 
 // Serial communication object
 Serial myPort;
@@ -16,7 +17,9 @@ void setup() {
   println("Port loaded: " + portName);
   myPort = new Serial(this, portName, 115200);
   
-  delay(4000); // Give time for sensor to configure
+  renderLoadingWindow();
+  
+  drawStaticUI();
 }
 
 void draw() {
@@ -24,11 +27,7 @@ void draw() {
   
   bioData parsedData = ParseInput(sensorData);
   
-  // Draw the UI elements
-  drawUI();
-  
-  //Draw the Graph elements
-  drawGraph();
+  updateMetrics();
   
 }
 
