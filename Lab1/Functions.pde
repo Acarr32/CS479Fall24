@@ -40,6 +40,7 @@ bioData ParseData(String input){
 boolean isGoodData(bioData bD){
   return (bD.status == 3) && (bD.heartRate >= 30); 
 }
+
 class bioData {
   public float heartRate;
   public float confidence;
@@ -111,7 +112,7 @@ void CalmingMode(String musicFileName){
   }
   
   
-  drawUI("Calming Mode", data);
+  //drawUI("Calming Mode", data);
   
   JOptionPane.showMessageDialog(null, decisionText, "Process Complete", JOptionPane.PLAIN_MESSAGE);
   
@@ -138,7 +139,7 @@ void StressMode(){
     delay(readBuffer);
   }
   
-  drawUI("Stressed Mode", data);
+  //drawUI("Stressed Mode", data);
   
   JOptionPane.showMessageDialog(null, "Testing complete. You will now enter a passive stress analysis mode.");
 }
