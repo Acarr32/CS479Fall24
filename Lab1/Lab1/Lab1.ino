@@ -13,6 +13,8 @@ int confidence = 0;
 int oxygen = 0;
 int status = 0;
 
+int buzzer_pin = 12;
+
 
 // Takes address, reset pin, and MFIO pin.
 SparkFun_Bio_Sensor_Hub bioHub(resPin, mfioPin); 
@@ -58,7 +60,19 @@ void loop(){
       Serial.print(", ");
       Serial.println(body.status);
     }
-
+    if (Serial.available() > 0) {
+      char incomingData = Serial.read();
+      
+      if (incomingData == 'B') { // 'B' stands for Buzz
+        buzz();
+      }
+    }
     delay(1000); // Slowing it down, we don't need to break our necks here.
+}
+
+void buzz(){
+  tone(buzzer_pin, 100); // Turn on the buzzer
+  delay(5000);                   // Keep it on for 1 second (adjust as needed)
+  noTone(buzzer_pin);  // Turn off the buzzer
 }
 

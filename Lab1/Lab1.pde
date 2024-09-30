@@ -74,9 +74,9 @@ void draw() {
   if(currPage.equals("home")){
     openingScreen();
   } else if(currPage.equals("calmed")){
-    drawUI("Calmed Mode");
+    CalmingMode("freudian.mp3");
   } else if(currPage.equals("stressed")){
-    drawUI("Stressed Mode");
+    StressMode();
   } else if(currPage.equals("normal")){
     drawUI("Normal");
   }

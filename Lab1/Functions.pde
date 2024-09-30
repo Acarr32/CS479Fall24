@@ -142,21 +142,22 @@ void StressMode(){
   ArrayList<bioData> data = new ArrayList<>();
   
   long startTime = millis();
-  
+  int highestHR = 0;
   //Reads in for 60 secs of good input
   while(millis() - startTime <= 60000){
-    String sensorData = myPort.readString();
-    bioData parsedData = ParseData(sensorData);
-    
-    if(parsedData.status != 3){
-      startTime += readBuffer;
+    if(heartrate > highestHR){
+      highestHR = heartrate;
     }
-    
-    data.add(parsedData);
-    delay(readBuffer);
   }
+  String decisionText;
   
-  //drawUI("Stressed Mode", data);
+  if(highestHR >= avgHR){
+    decisionText = "Heart rate increased";
+    myPort.write('B');
+  }
+  else{
+    decisionText = "No increase in heart rate";
+  }
+  JOptionPane.showMessageDialog(null, decisionText, "Process Complete", JOptionPane.PLAIN_MESSAGE);
   
-  JOptionPane.showMessageDialog(null, "Testing complete. You will now enter a passive stress analysis mode.");
 }
