@@ -1,4 +1,4 @@
-
+boolean calmingDone = false;
 void drawUI(String title) {
   
   //Set black background
@@ -54,98 +54,17 @@ void drawMetrics(){
   
   text("* = Indicates average of the last 10 read values"+activity_level, width * 3/4 + 80, height/10 + 4.5*metricSpace - metricsPadding);
   
-  
-  //Render and populate metrics
-  //bioData metrics = getMetrics(data); 
-  
-  //bioData test = new bioData(0.0, 0.0, 0.0, 0);
-  
-  //fill(255,255,255);
-  //text(df.format(test.confidence), width * 2/3 + 260, height/4 + 2*metricSpace - metricsPadding);
-  //text(df.format(test.oxygen), width * 2/3 + 260, height/4 + 3*metricSpace - metricsPadding);
-  //text(test.status, width * 2/3 + 140, height/4  + 4*metricSpace - metricsPadding);
-  
-  
-  ////fill(getZone(metrics.heartRate));
-  //text(df.format(test.heartRate), width * 2/3 + 260, height/4 + metricSpace - metricsPadding);
 }
 
-//void drawGraph(){
-//  background(255); // White background
-
-//  // Set up graph dimensions
-//  int graphWidth = width - 500;  // Leave some space for margins
-//  int graphHeight = height - 100;
-//  int xOffset = 50;  // Left margin
-//  int yOffset = 50;  // Top margin
-
-//  // Draw the axis
-//  stroke(0);  // Set stroke color to black
-//  line(xOffset, yOffset, xOffset, graphHeight + yOffset);  // Y-axis
-//  line(xOffset, graphHeight + yOffset, graphWidth + xOffset, graphHeight + yOffset);  // X-axis
-  
-//  // Label the Y-axis with heart rate values
-//  fill(0);  // Set text color to black
-//  textSize(12);  // Set text size
-//  int maxHeartRate = 200;  // You can adjust this depending on the expected range of heart rate values
-//  int minHeartRate = 50;   // Minimum expected heart rate
-  
-//  // Number of Y-axis labels you want
-//  int numLabels = 10;
-//  for (int i = 0; i <= numLabels; i++) {
-//    // Calculate the value to label
-//    int heartRateLabel = int(map(i, 0, numLabels, minHeartRate, maxHeartRate));
-    
-//    // Map the position of the label to the Y-axis
-//    float y = map(heartRateLabel, minHeartRate, maxHeartRate, graphHeight + yOffset, yOffset);
-    
-//    // Draw the label
-//    text(heartRateLabel, xOffset - 30, y + 5);  // Offset to the left of the Y-axis for visibility
-//    line(xOffset - 5, y, xOffset, y);  // Draw tick marks on the Y-axis
-//  }
-
-//  if(activity_level.equals("MAXIMUM")){
-//      stroke(255, 0, 0);
-//  } else if(activity_level.equals("HARD")){
-//      stroke(186, 142, 35);
-//  } else if(activity_level.equals("MODERATE")){
-//      stroke(0, 255, 0);
-//  } else if(activity_level.equals("LIGHT")){
-//      stroke(0, 0, 255);
-//  } else{
-//      stroke(60, 60, 60);
-//  } // Set stroke color according to the activity level
-
-//  noFill();
-//  //stroke(0);
-//  // Loop through the data and plot the heart rate values
-//  if (data.size() > 1) {
-//    for (int i = 0; i < data.size() - 1; i++) {
-//      ArrayList<Integer> currentPoint = data.get(i);
-//      ArrayList<Integer> nextPoint = data.get(i + 1);
-
-//      // Extract heart rate values (assumed to be the first element in each sublist)
-//      int currentHeartRate = currentPoint.get(0);
-//      int nextHeartRate = nextPoint.get(0);
-
-//      // Map the data to the graph dimensions
-//      float x1 = map(i, 0, data.size() - 1, xOffset, graphWidth + xOffset);
-//      float x2 = map(i + 1, 0, data.size() - 1, xOffset, graphWidth + xOffset);
-//      float y1 = map(currentHeartRate, minHeartRate, maxHeartRate, graphHeight + yOffset, yOffset);
-//      float y2 = map(nextHeartRate, minHeartRate, maxHeartRate, graphHeight + yOffset, yOffset);
-
-
-//      // Draw the line between two points
-//      line(x1, y1, x2, y2);
-//    }
-//  } else {
-//    println("Not enough data to plot");
-//  }
-//}
 
 void drawGraph() {
   background(255); // White background
-
+  
+  fill(200,230,200);
+  rect(width / 2 - 150, 20, 300, 100);
+  fill(0);
+  text("Home", width / 2 - 150, 20, 300, 100);
+  
   // Set up graph dimensions
   int graphWidth = width - 500;  // Leave some space for margins
   int graphHeight = height - 100;

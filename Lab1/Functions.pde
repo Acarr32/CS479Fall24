@@ -76,9 +76,27 @@ void showPortData(boolean show){
   printArray(Serial.list());
 }
 
+void openingScreen(){
+  background(100,100, 180);
+  fill(220,230, 220);
+  rect(width/3-320, height/2 -75, 300, 150);
+  fill(0);
+  textAlign(CENTER, CENTER);
+  text("Calming Mode", width/3-320, height/2 -75, 300, 150);
+  fill(220,230, 220);
+  rect(2*width/3-320, height/2 -75, 300, 150);
+  fill(0);
+  textAlign(CENTER, CENTER);
+  text("Normal Mode", 2*width/3-320, height/2 -75, 300, 150);
+  fill(220,230, 220);
+  rect(3*width/3-320, height/2 -75, 300, 150);
+  fill(0);
+  textAlign(CENTER, CENTER);
+  text("Stress Mode", 3*width/3-320, height/2 -75, 300, 150);
+}
+
 void CalmingMode(String musicFileName){
   JOptionPane.showMessageDialog(null, "We will now play calming music for the next minute. Please close your eyes and listen.");
-  
   ArrayList<bioData> data = new ArrayList<>();
   
   //Load and play music
@@ -88,7 +106,9 @@ void CalmingMode(String musicFileName){
   long startTime = millis();
   
   //Reads in for 60 secs
-  while(millis() - startTime <= 60000){
+  while(millis() - startTime <= 700){ //ORIGINALLY: 60000
+    
+    println(millis()-startTime);
     String sensorData = myPort.readString();
     bioData parsedData = ParseData(sensorData);
     
@@ -98,22 +118,19 @@ void CalmingMode(String musicFileName){
     
     data.add(parsedData);
     delay(readBuffer);
+    //serialEvent(myPort);
   }
   
   file.pause();
   
   String decisionText;
   
-  if(getMetrics(data).heartRate >= resting){
+  if(heartrate >= avgHR){
     decisionText = "Not Calmed. :c";
   }
   else{
     decisionText = "Calmed :)";
   }
-  
-  
-  //drawUI("Calming Mode", data);
-  
   JOptionPane.showMessageDialog(null, decisionText, "Process Complete", JOptionPane.PLAIN_MESSAGE);
   
 }
