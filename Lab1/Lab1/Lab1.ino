@@ -71,8 +71,8 @@ void loop(){
 }
 
 void buzz(){
-  tone(buzzer_pin, 100); // Turn on the buzzer
-  delay(5000);                   // Keep it on for 1 second (adjust as needed)
+  tone(buzzer_pin, 41); // Turn on the buzzer
+  delay(5000);
   noTone(buzzer_pin);  // Turn off the buzzer
 }
 

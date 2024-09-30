@@ -93,7 +93,7 @@ void serialEvent(Serial myPort){
     oxygen = int(values[2]);
     status = int(values[3]);
     activity_perc = heartrate / float(220-USER_AGE);
-    System.out.println(activity_perc);
+    //System.out.println(activity_perc);
     if (activity_perc >= 0.6) {
         activity_level = "MAXIMUM";
     } else if (activity_perc >= 0.5) {
@@ -121,7 +121,7 @@ void serialEvent(Serial myPort){
     }
     data.add(currData);
     
-    System.out.println(data);
+    //System.out.println(data);
     //System.out.print(heartrate);
     //System.out.print(", ");
     //System.out.print(confidence);

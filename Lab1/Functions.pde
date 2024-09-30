@@ -145,12 +145,13 @@ void StressMode(){
   int highestHR = 0;
   //Reads in for 60 secs of good input
   while(millis() - startTime <= 60000){
+   //System.out.println(millis()- startTime);
     if(heartrate > highestHR){
       highestHR = heartrate;
     }
   }
   String decisionText;
-  
+  System.out.println(avgHR);
   if(highestHR >= avgHR){
     decisionText = "Heart rate increased";
     myPort.write('B');
