@@ -96,6 +96,29 @@ void drawGraph() {
     line(xOffset - 5, y, xOffset, y);  // Draw tick marks on the Y-axis
   }
 
+  // Draw X-axis labels (e.g., time or sample index)
+  textSize(12);  // Set text size for X-axis labels
+  int xLabelCount = 5; // Number of labels
+  for (int i = 0; i <= xLabelCount; i++) {
+    float x = map(i, 0, xLabelCount, xOffset, graphWidth + xOffset);
+  }
+
+  // Label for Y-axis
+  fill(0);
+  textSize(16);
+  textAlign(CENTER, CENTER);
+  pushMatrix(); // Save the current transformation matrix
+  translate(xOffset - 40, graphHeight / 2 + yOffset); // Position the Y-axis label
+  rotate(-HALF_PI); // Rotate for vertical label
+  text("Heart Rate (bpm)", 0, 0);
+  popMatrix(); // Restore the previous transformation matrix
+
+  // Label for X-axis
+  fill(0);
+  textSize(16);
+  textAlign(CENTER, CENTER);
+  text("Time", width / 2, graphHeight + yOffset + 35); // Position the X-axis label
+
   // Set the fill color based on activity_level
   if(activity_level.equals("MAXIMUM")){
       fill(230, 30, 30, 100);  // Red with some transparency
@@ -160,6 +183,7 @@ void drawGraph() {
     }
   }
 }
+
 
 void drawStaticKey(){
   //Render section background
