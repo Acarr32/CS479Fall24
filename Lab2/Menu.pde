@@ -27,21 +27,26 @@ void DrawMenu() {
 }
 
 void mousePressed() {
-  if (mouseX >= (width - buttonWidth) / 2 && mouseX <= (width + buttonWidth) / 2 && 
-      mouseY >= buttonYStart && mouseY <= buttonYStart + buttonHeight) {
-    fitnessMode();
-  } else if (mouseX >= (width - buttonWidth) / 2 && mouseX <= (width + buttonWidth) / 2 && 
-             mouseY >= buttonYStart + buttonHeight + buttonSpacing && 
-             mouseY <= buttonYStart + 2 * (buttonHeight + buttonSpacing)) {
-    stressMonitoringMode();
-  } else if (mouseX >= (width - buttonWidth) / 2 && mouseX <= (width + buttonWidth) / 2 && 
-             mouseY >= buttonYStart + 2 * (buttonHeight + buttonSpacing) && 
-             mouseY <= buttonYStart + 3 * (buttonHeight + buttonSpacing)) {
-    meditationMonitoringMode();
-  } else if (mouseX >= (width - buttonWidth) / 2 && mouseX <= (width + buttonWidth) / 2 && 
-             mouseY >= buttonYStart + 3 * (buttonHeight + buttonSpacing) && 
-             mouseY <= buttonYStart + 4 * (buttonHeight + buttonSpacing)) {
-    generalMonitoringMode();
+  if(inMenu){
+    if (mouseX >= (width - buttonWidth) / 2 && mouseX <= (width + buttonWidth) / 2 && 
+        mouseY >= buttonYStart && mouseY <= buttonYStart + buttonHeight) {
+      fitnessMode();
+    } else if (mouseX >= (width - buttonWidth) / 2 && mouseX <= (width + buttonWidth) / 2 && 
+               mouseY >= buttonYStart + buttonHeight + buttonSpacing && 
+               mouseY <= buttonYStart + 2 * (buttonHeight + buttonSpacing)) {
+      stressMonitoringMode();
+    } else if (mouseX >= (width - buttonWidth) / 2 && mouseX <= (width + buttonWidth) / 2 && 
+               mouseY >= buttonYStart + 2 * (buttonHeight + buttonSpacing) && 
+               mouseY <= buttonYStart + 3 * (buttonHeight + buttonSpacing)) {
+      meditationMonitoringMode();
+    } else if (mouseX >= (width - buttonWidth) / 2 && mouseX <= (width + buttonWidth) / 2 && 
+               mouseY >= buttonYStart + 3 * (buttonHeight + buttonSpacing) && 
+               mouseY <= buttonYStart + 4 * (buttonHeight + buttonSpacing)) {
+      generalMonitoringMode();
+    }
+  }
+  else{
+    return;
   }
 }
 
@@ -56,6 +61,8 @@ void fitnessMode() {
   
   // After collecting baseline data, display cardio zone
   displayCardioZone();
+  
+  drawGraph(data);
 }
 
 void stressMonitoringMode() {
