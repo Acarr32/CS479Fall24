@@ -1,4 +1,6 @@
 public void InitializePlots(){
+  background(255);
+  inMenu = false;
   respirationPlot = new GPlot(this);
   heartRatePlot = new GPlot(this);
   
@@ -17,6 +19,8 @@ void drawGraph(ArrayList<ArrayList<Integer>> data) {
 
   ArrayList<Integer> respirationRates = data.get(0);
   ArrayList<Integer> heartRates = data.get(1);
+  
+  InitializePlots();
   
   respirationPlot.setPos(50, 40);
   heartRatePlot.setPos(50, 300);
