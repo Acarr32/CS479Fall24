@@ -18,6 +18,7 @@ float restingHeartRate = 0;
 float restingRespiratoryRate = 0;
 int startTime;
 int cardioZone = 0;
+boolean inMenu = true;
 
 void setup() {
   size(800, 600);
@@ -28,7 +29,7 @@ void setup() {
   buttonSpacing = height * 0.05;
   
   InitializeData();
-  //InitializePlots();
+  
   DrawMenu();
   
   frameRate(4); // Set frame rate to 4 FPS for 1/4 second sampling
