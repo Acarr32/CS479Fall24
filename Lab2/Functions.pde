@@ -17,7 +17,7 @@ void collectBaseline() {
     TotalReads++;
     delay(250);
   }
-   //<>//
+  
   if(HRSum == 0 || RespSum == 0 || TotalReads == 0 ){
     baselineHeartRate = 0;
     baselineCollected = false;

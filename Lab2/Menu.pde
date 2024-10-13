@@ -27,7 +27,7 @@ void DrawMenu() {
 }
 
 void mousePressed() {
-  if(inMenu){
+  if (inMenu) {
     if (mouseX >= (width - buttonWidth) / 2 && mouseX <= (width + buttonWidth) / 2 && 
         mouseY >= buttonYStart && mouseY <= buttonYStart + buttonHeight) {
       fitnessMode();
@@ -44,8 +44,7 @@ void mousePressed() {
                mouseY <= buttonYStart + 4 * (buttonHeight + buttonSpacing)) {
       generalMonitoringMode();
     }
-  }
-  else{
+  } else {
     return;
   }
 }
@@ -59,17 +58,20 @@ void fitnessMode() {
   
   System.out.println("Done");
   
-  Graphing = true; //<>//
+  Graphing = true;
 }
 
 void stressMonitoringMode() {
-  System.out.println("Test");
+  System.out.println("Stress Monitoring Mode selected");
 }
 
 void meditationMonitoringMode() {
-  System.out.println("Test");
+  System.out.println("Meditation Monitoring Mode selected");
 }
 
 void generalMonitoringMode() {
-  System.out.println("Test");
+  background(255);  // Clear the background
+  inMenu = false;   // Exit menu
+  Graphing = true;  // Start graphing
+  System.out.println("Entering General Monitoring Mode...");
 }
