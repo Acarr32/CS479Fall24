@@ -1,9 +1,10 @@
-public void InitializeData(){
-  data = new ArrayList<ArrayList<Integer>>();
+public void InitializeData() {
+  hrdata = new ArrayList<ArrayList<Integer>>();
+  rrdata = new ArrayList<ArrayList<Integer>>();
   ArrayList<Integer> respirationRates = new ArrayList<Integer>();
   ArrayList<Integer> heartRates = new ArrayList<Integer>();
-  data.add(respirationRates);
-  data.add(heartRates);
+  rrdata.add(respirationRates);
+  hrdata.add(heartRates);
 }
 
 void collectBaseline() {
@@ -11,24 +12,26 @@ void collectBaseline() {
   int RespSum = 0;
   int TotalReads = 0;
   ArrayList<Integer> averages = new ArrayList<Integer>();
-  while(millis() - startTime < 10000) {
-    HRSum += (int)random(60, 100); //TODO: Add data input
-    RespSum += (int)random(200,700); //TODO: Add data input
+
+  while (millis() - startTime < 10000) {
+    HRSum += (int)random(60, 100);  // Simulated heart rate data
+    heartRates.add(HRSum);
+    RespSum += (int)random(200, 700);  // Simulated respiration data
+    respirationRates.add(RespSum);
     TotalReads++;
     delay(250);
   }
-  
-  if(HRSum == 0 || RespSum == 0 || TotalReads == 0 ){
+
+  //rrdata.add(respirationRates);
+  //hrdata.add(heartRates);
+  if (HRSum == 0 || RespSum == 0 || TotalReads == 0) {
     baselineHeartRate = 0;
     baselineCollected = false;
-  }
-  else{
+  } else {
     averages.add(RespSum / TotalReads);
     averages.add(HRSum / TotalReads);
     baselineCollected = true;
   }
-  
-  cardioZone = determineCardioZone(restingHeartRate);
   
   displayCardioZone(averages);
 }
@@ -54,11 +57,6 @@ String getCardioZoneName(int zone) {
     case 4: return "Maximum";
     default: return "Unknown";
   }
-}
-
-void addData(){  
-  data.get(1).add((int)random(60, 100)); //TODO: Add data input
-  data.get(0).add((int)random(200,700)); //TODO: Add data input
 }
 
 void displayCardioZone(ArrayList<Integer> averages) {

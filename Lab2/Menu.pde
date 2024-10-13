@@ -73,5 +73,7 @@ void generalMonitoringMode() {
   background(255);  // Clear the background
   inMenu = false;   // Exit menu
   Graphing = true;  // Start graphing
+  //fill(150);
+  //rect((width - buttonWidth) / 2, buttonYStart + 2 * (buttonHeight + buttonSpacing), buttonWidth, buttonHeight);
   System.out.println("Entering General Monitoring Mode...");
 }

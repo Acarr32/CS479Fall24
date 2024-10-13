@@ -5,6 +5,8 @@ ArrayList<ArrayList<Integer>> hrdata;
 ArrayList<ArrayList<Integer>> rrdata;
 ArrayList<Integer> heartRates = new ArrayList<Integer>();
 ArrayList<Integer> respirationRates = new ArrayList<Integer>();
+Integer heartrate = 0;
+Integer resprate = 0;
 GPlot respirationPlot, heartRatePlot;
 int baselineHeartRate = 0;
 boolean baselineCollected = false;
