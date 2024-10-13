@@ -61,13 +61,6 @@ void fitnessMode() {
   Graphing = true;
 }
 
-void stressMonitoringMode() {
-  System.out.println("Stress Monitoring Mode selected");
-}
-
-void meditationMonitoringMode() {
-  System.out.println("Meditation Monitoring Mode selected");
-}
 
 void generalMonitoringMode() {
   background(255);  // Clear the background
