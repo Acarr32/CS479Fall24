@@ -76,7 +76,6 @@ public void drawGraph() {
     
 }
 
-
 void InputLoop() {
   // Keep only the most recent 25 inputs
   if (heartRates.size() > 25) {
@@ -88,4 +87,5 @@ void InputLoop() {
 
   background(255, 255, 255);  // Clear the background for each frame
   drawGraph();  // Call to render the graph
+  drawSpin();
 }

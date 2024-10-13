@@ -1,5 +1,6 @@
 import grafica.*;
 import javax.swing.*;
+import processing.serial.*;
 
 ArrayList<ArrayList<Integer>> hrdata;
 ArrayList<ArrayList<Integer>> rrdata;
@@ -40,12 +41,60 @@ void setup() {
   frameRate(4); // Set frame rate to 4 FPS for 1/4 second sampling
 }
 
+void serialEvent(Serial myPort) {
+  String value = myPort.readStringUntil('\n');  // Read serial input until newline
+  if (value != null) {
+    value = trim(value);  // Trim whitespace or newline characters
+    //println("Raw input: " + value);  // Print the raw input to verify format
+    
+    String[] values = split(value, ",");  // Split using comma (no space)
+    
+    // Check if the split operation returned exactly 2 values
+    if (values.length == 2) {
+      try {
+        // Parse the first and second values as integers
+        heartrate = int(trim(values[0]));  // Trim and parse the first value (heartrate)
+        resprate = int(trim(values[1]));   // Trim and parse the second value (pressure)
+
+        // Clear and add the new data to currData
+        heartRates.clear();
+        respirationRates.clear();
+        heartRates.add(heartrate);
+        respirationRates.add(resprate);
+        
+        // Limit the data array to store the last 10 readings
+        if (rrdata.size() >= 25) {
+          rrdata.remove(0);
+        }
+        rrdata.add(respirationRates);  // Add current data to the history
+        
+        if (hrdata.size() >= 25) {
+          hrdata.remove(0);
+        }
+        hrdata.add(heartRates);
+        
+        // Print the parsed values
+        System.out.print("Heartrate: " + heartrate + ", ");
+        System.out.println("Pressure: " + resprate);
+        
+      } catch (NumberFormatException e) {
+        // Handle any errors in parsing
+        println("Error parsing the input values: " + value);
+      }
+    } else {
+      // If we don't get exactly 2 values, report the issue
+      println("Error: Unexpected data format. Expected 2 values, but got: " + values.length);
+    }
+  }
+}
+
 void draw() {
   if (Graphing) {
     background(255);  // Clear the background
     addData();        // Collect and add new data points
     InputLoop();      // Manage input loop, remove old data, and render graphs
-    drawGraph();      // Draw the graphs
+    drawGraph();
+    drawSpin();
     delay(250);       // Delay for each graph update
   }
 }
