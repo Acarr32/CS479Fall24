@@ -59,10 +59,7 @@ void fitnessMode() {
   
   System.out.println("Done");
   
-  // After collecting baseline data, display cardio zone
-  displayCardioZone();
-  
-  drawGraph(data);
+  Graphing = true; //<>//
 }
 
 void stressMonitoringMode() {

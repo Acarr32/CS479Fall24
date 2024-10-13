@@ -20,6 +20,8 @@ int startTime;
 int cardioZone = 0;
 boolean inMenu = true;
 
+boolean Graphing = false;
+
 void setup() {
   size(800, 600);
   
@@ -36,5 +38,9 @@ void setup() {
 }
 
 void draw() {
-  //InputLoop();
+  while(Graphing){
+    background(255);
+    InputLoop();
+    delay(250);
+  }
 }

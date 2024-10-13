@@ -7,21 +7,30 @@ public void InitializeData(){
 }
 
 void collectBaseline() {
-  ArrayList<Integer> heartRates = data.get(1);
-  ArrayList<Integer> respirationRates = data.get(0);
-  if (millis() - startTime < 3000) {
-    heartRates.add((int)random(60, 100));
-    respirationRates.add((int)random(200,700));
-  } else {
-    int sum = 0;
-    for (int rate : heartRates) {
-      sum += rate;
-    }
-    baselineHeartRate = sum / heartRates.size();
+  int HRSum = 0;
+  int RespSum = 0;
+  int TotalReads = 0;
+  ArrayList<Integer> averages = new ArrayList<Integer>();
+  while(millis() - startTime < 10000) {
+    HRSum += (int)random(60, 100); //TODO: Add data input
+    RespSum += (int)random(200,700); //TODO: Add data input
+    TotalReads++;
+    delay(250);
+  }
+   //<>//
+  if(HRSum == 0 || RespSum == 0 || TotalReads == 0 ){
+    baselineHeartRate = 0;
+    baselineCollected = false;
+  }
+  else{
+    averages.add(RespSum / TotalReads);
+    averages.add(HRSum / TotalReads);
     baselineCollected = true;
   }
   
   cardioZone = determineCardioZone(restingHeartRate);
+  
+  displayCardioZone(averages);
 }
 
 int determineCardioZone(float heartRate) {
@@ -35,30 +44,6 @@ int determineCardioZone(float heartRate) {
   
 }
 
-ArrayList<Integer> getAverages(ArrayList<ArrayList<Integer>> d){
-  
-  int AvgHeartRate, TotalHeartRate = 0;
-  int AvgResp, TotalResp = 0;
-  
-  ArrayList<Integer> result = new ArrayList<Integer>();
-  
-  for(int rate: d.get(0)){
-    TotalResp += rate;
-  }
-  
-  for(int rate: d.get(1)){
-    TotalHeartRate += rate;
-  }
-  
-  AvgResp = TotalResp / d.get(0).size();
-  AvgHeartRate = TotalHeartRate / d.get(1).size();
-  
-  
-  result.add(AvgResp);
-  result.add(AvgHeartRate);
-  
-  return result; 
-}
 
 String getCardioZoneName(int zone) {
   switch (zone) {
@@ -71,11 +56,14 @@ String getCardioZoneName(int zone) {
   }
 }
 
-void displayCardioZone() {
+void addData(){  
+  data.get(1).add((int)random(60, 100)); //TODO: Add data input
+  data.get(0).add((int)random(200,700)); //TODO: Add data input
+}
+
+void displayCardioZone(ArrayList<Integer> averages) {
   fill(0);
   textSize(20);
-  
-  ArrayList<Integer> averages = getAverages(data);
   
   String line1 = "Current Cardio Zone: " + getCardioZoneName(cardioZone);
   String line2 = "Current Average Heart Rate: " + averages.get(1);
