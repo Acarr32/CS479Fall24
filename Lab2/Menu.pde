@@ -59,6 +59,18 @@ void fitnessMode() {
   Graphing = true;
 }
 
+void stressMonitoringMode() {
+  System.out.println("Enterting Stress Monitoring Mode..");
+  if(!baselineCollected){
+    collectBaseline();
+  }
+  
+  Graphing = true;
+ 
+  CalmProc("freudian.mp3");
+  StressProc();
+}
+
 void meditationMonitoringMode() {
   System.out.println("Collecting Baseline...");
   startTime = millis();
