@@ -2,7 +2,6 @@ import processing.serial.*;  // Import the Serial library
 
 float targetAngle = PI / 2;  // Start pointing vertically upwards (PI/2 radians)
 float easing = 0.05f;
-Serial myPort;  // Declare object for serial port
 PFont f;
 
 void drawSpin() {

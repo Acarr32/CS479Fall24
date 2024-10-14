@@ -26,7 +26,14 @@ int startTime;
 int cardioZone = 0;
 boolean inMenu = true;
 boolean Graphing = false;
+<<<<<<< HEAD
 boolean Stress = false;
+=======
+boolean MeditationMode = false;
+
+int frameTracker = 0;
+int breathCycleSeconds = 2;
+>>>>>>> origin/Eleonora
 
 void setup() {
   size(800, 600);
@@ -98,5 +105,20 @@ void draw() {
     drawGraph();
     drawSpin();
     delay(250);       // Delay for each graph update
+  }
+  
+  else if (MeditationMode) {
+    background(255);  // Clear the background
+    addData();        // Collect and add new data points
+    drawGraph();
+    drawMeditation();
+    delay(250); 
+    
+    // breathCycleSeconds * 12 = 3s (sampling is 4FPS)
+    if (frameTracker >= breathCycleSeconds * 12) {
+      frameTracker = 0;  // Reset after each breath cycle
+    } else {
+      frameTracker++;
+    }
   }
 }

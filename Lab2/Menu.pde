@@ -34,7 +34,7 @@ void mousePressed() {
     } else if (mouseX >= (width - buttonWidth) / 2 && mouseX <= (width + buttonWidth) / 2 && 
                mouseY >= buttonYStart + buttonHeight + buttonSpacing && 
                mouseY <= buttonYStart + 2 * (buttonHeight + buttonSpacing)) {
-      stressMonitoringMode();
+      // stressMonitoringMode();
     } else if (mouseX >= (width - buttonWidth) / 2 && mouseX <= (width + buttonWidth) / 2 && 
                mouseY >= buttonYStart + 2 * (buttonHeight + buttonSpacing) && 
                mouseY <= buttonYStart + 3 * (buttonHeight + buttonSpacing)) {
@@ -57,6 +57,18 @@ void fitnessMode() {
   }
   
   Graphing = true;
+}
+
+void meditationMonitoringMode() {
+  System.out.println("Collecting Baseline...");
+  startTime = millis();
+  
+  // while (!baselineCollected) {
+  //  collectBaseline();
+  //}
+  
+  System.out.println("Done");
+  MeditationMode = true;
 }
 
 
