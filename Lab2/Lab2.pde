@@ -26,14 +26,10 @@ int startTime;
 int cardioZone = 0;
 boolean inMenu = true;
 boolean Graphing = false;
-<<<<<<< HEAD
-boolean Stress = false;
-=======
 boolean MeditationMode = false;
 
 int frameTracker = 0;
 int breathCycleSeconds = 2;
->>>>>>> origin/Eleonora
 
 void setup() {
   size(800, 600);
