@@ -1,6 +1,7 @@
 import grafica.*;
 import javax.swing.*;
 import processing.serial.*;
+import processing.sound.*;
 
 ArrayList<ArrayList<Integer>> hrdata;
 ArrayList<ArrayList<Integer>> rrdata;
@@ -25,6 +26,7 @@ int startTime;
 int cardioZone = 0;
 boolean inMenu = true;
 boolean Graphing = false;
+boolean Stress = false;
 
 void setup() {
   size(800, 600);

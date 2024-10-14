@@ -50,13 +50,11 @@ void mousePressed() {
 }
 
 void fitnessMode() {
-  System.out.println("Collecting Baseline...");
+  System.out.println("Entering Fitness Mode..");
   startTime = millis();
-  while (!baselineCollected) {
+  if(!baselineCollected){
     collectBaseline();
   }
-  
-  System.out.println("Done");
   
   Graphing = true;
 }

@@ -8,6 +8,8 @@ public void InitializeData() {
 }
 
 void collectBaseline() {
+  System.out.println("Collecting Baseline...");
+  
   int HRSum = 0;
   int RespSum = 0;
   int TotalReads = 0;
@@ -34,6 +36,7 @@ void collectBaseline() {
   }
   
   displayCardioZone(averages);
+  System.out.println("Done");
 }
 
 int determineCardioZone(float heartRate) {
