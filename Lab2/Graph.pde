@@ -25,9 +25,10 @@ public void drawGraph() {
     fill(47, 79, 79);
     rect(500, 0 * (buttonHeight + buttonSpacing), buttonWidth, 600);
     fill(255);
-    text("Heart Rate: " + heartrate, 600, 100);
+    textAlign(LEFT);
+    text("Heart Rate: " + heartrate, 525, 100);
     fill(255);
-    text("Respiration Rate: " + resprate, 620, 200);
+    text("Respiration Rate: " + resprate, 525, 150);
     
     // Initialize the plots only once
     if (respirationPlot == null || heartRatePlot == null) {
@@ -73,7 +74,6 @@ public void drawGraph() {
     heartRatePlot.setPoints(heartRatePoints);
     heartRatePlot.setPointColors(pointColors);  // Set colors for the heart rate points
     heartRatePlot.defaultDraw();
-    
 }
 
 void InputLoop() {
