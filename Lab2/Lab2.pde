@@ -7,9 +7,11 @@ ArrayList<ArrayList<Integer>> hrdata;
 ArrayList<ArrayList<Integer>> rrdata;
 ArrayList<Integer> heartRates = new ArrayList<Integer>();
 ArrayList<Integer> respirationRates = new ArrayList<Integer>();
+ArrayList<Integer> ekgs = new ArrayList<Integer>();
 Integer heartrate = 0;
 Integer resprate = 0;
-GPlot respirationPlot, heartRatePlot;
+Integer ekg = 0;
+GPlot respirationPlot, heartRatePlot, ekgPlot;
 int baselineHeartRate = 0;
 boolean baselineCollected = false;
 

@@ -115,7 +115,7 @@ public void StressProc(){
   
   if(highestHR >= baselineHeartRate){
     decisionText = "Heart rate increased";
-    myPort.write('B');
+    //myPort.write('B');
   }
   else{
     decisionText = "No increase in heart rate";
