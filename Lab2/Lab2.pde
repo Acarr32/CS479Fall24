@@ -14,6 +14,8 @@ Integer ekg = 0;
 GPlot respirationPlot, heartRatePlot, ekgPlot;
 int baselineHeartRate = 0;
 boolean baselineCollected = false;
+int timeStep = 0; // To track the time for EKG data
+float frequency = 30.0; // Frequency of the sinusoidal wave for EKG
 
 float buttonWidth;
 float buttonHeight;

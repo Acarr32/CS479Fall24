@@ -3,9 +3,15 @@ void addData() {
   heartRates.add(heartrate);
   resprate = (int)random(200, 700);
   respirationRates.add(resprate);
-  ekg = (int)random(200, 1000);
+  
+  // Simulate a sinusoidal EKG signal
+  ekg = (int)(500 + 400 * Math.round(sin(TWO_PI * frequency * timeStep / 60))); // Sinusoidal wave
   ekgs.add(ekg);
+  
+  // Increment time step
+  timeStep++;
 }
+
 
 public void InitializePlots() {
     respirationPlot = new GPlot(this);
