@@ -15,7 +15,7 @@ public void drawMeditation() {
   stroke(255);
   strokeWeight(4);
     
-  if (frameTracker < (breathCycleSeconds * 12) / 3) {
+  if (frameTracker < breathCycleSeconds * frameRate) {
     text("Inhale", x, y);
     line(x + 30, y + 50, x + 30, y + 150);  // Vertical line
     line(x + 30, y + 50, x + 10, y + 80);  // Left diagonal line (arrow head)

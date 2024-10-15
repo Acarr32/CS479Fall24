@@ -111,7 +111,7 @@ void draw() {
     delay(250); 
     
     // breathCycleSeconds * 12 = 3s (sampling is 4FPS)
-    if (frameTracker >= breathCycleSeconds * 12) {
+    if (frameTracker >= breathCycleSeconds * 3 * frameRate) {
       frameTracker = 0;  // Reset after each breath cycle
     } else {
       frameTracker++;
