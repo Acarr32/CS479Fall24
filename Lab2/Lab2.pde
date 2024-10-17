@@ -31,7 +31,7 @@ int frameTracker = 0;
 int breathCycleSeconds = 2;
 
 void setup() {
-  size(800, 600);
+  size(800, 700);
   
   buttonWidth = width * 0.4;
   buttonHeight = height * 0.1; 
