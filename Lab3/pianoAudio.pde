@@ -1,21 +1,26 @@
 import processing.sound.*;
 
+int numWhite = 10;
+int numBlack = 6;
+
 // Declare arrays for sound files
-SoundFile[] whiteKeyNotes = new SoundFile[7];
-SoundFile[] blackKeyNotes = new SoundFile[5];
+SoundFile[] whiteKeyNotes = new SoundFile[numWhite];
+SoundFile[] blackKeyNotes = new SoundFile[numBlack];
 
 // Octave handling
 int currentOctave = 3; // Start at octave 3 (default)
-String[] octaves = {"C", "D", "E", "F", "G", "A", "B"};
-String[] blackOctaves = {"Db", "Eb", "Gb", "Ab", "Bb"};
+String[] octaves = {"B", "C", "D", "E", "F", "G", "A", "B", "C", "D"};
+String[] blackOctaves = {"Db", "Eb", "Gb", "Ab", "Bb", "Db"};
 
 // Piano Keys declarations
 int whiteKeyWidth, whiteKeyHeight, blackKeyWidth, blackKeyHeight;
 color whiteKeyColor, blackKeyColor, pressedColor;
-int[] whiteKeyX = new int[7]; // Positions for white keys
-int[] blackKeyX = new int[5]; // Positions for black keys
-boolean[] whiteKeyPressed = new boolean[7];
-boolean[] blackKeyPressed = new boolean[5];
+
+int[] whiteKeyX = new int[numWhite]; // Positions for white keys
+int[] blackKeyX = new int[numBlack]; // Positions for black keys
+
+boolean[] whiteKeyPressed = new boolean[numWhite];
+boolean[] blackKeyPressed = new boolean[numBlack];
 
 // Button positions and sizes
 int buttonWidth;
@@ -31,9 +36,9 @@ void setup() {
   loadOctaveNotes(currentOctave);
 
   // Define key dimensions
-  whiteKeyWidth = width / 9;
+  whiteKeyWidth = width / (numWhite + 1);
   whiteKeyHeight = height / 4 * 3;
-  blackKeyWidth = whiteKeyWidth / 2;
+  blackKeyWidth = whiteKeyWidth / 3;
   blackKeyHeight = whiteKeyHeight / 2;
 
   // Set colors
@@ -41,26 +46,27 @@ void setup() {
   blackKeyColor = color(0);
   pressedColor = color(200, 100, 100);
   
-  marginX = (width - whiteKeyWidth * 7) / 2;
+  marginX = (width - whiteKeyWidth * numWhite) / 2;
   marginY = (height - whiteKeyHeight);
 
   // Set x positions for white keys
-  for (int i = 0; i < 7; i++) {
+  for (int i = 0; i < numWhite; i++) {
     whiteKeyX[i] = i * whiteKeyWidth + marginX;
   }
 
   // Set x positions for black keys (skip keys between B and C, E and F)
-  blackKeyX[0] = whiteKeyX[1] - blackKeyWidth / 2;
-  blackKeyX[1] = whiteKeyX[2] - blackKeyWidth / 2;
-  blackKeyX[2] = whiteKeyX[4] - blackKeyWidth / 2;
-  blackKeyX[3] = whiteKeyX[5] - blackKeyWidth / 2;
-  blackKeyX[4] = whiteKeyX[6] - blackKeyWidth / 2;
-
+  blackKeyX[0] = whiteKeyX[2] - blackKeyWidth / 2;
+  blackKeyX[1] = whiteKeyX[3] - blackKeyWidth / 2;
+  blackKeyX[2] = whiteKeyX[5] - blackKeyWidth / 2;
+  blackKeyX[3] = whiteKeyX[6] - blackKeyWidth / 2;
+  blackKeyX[4] = whiteKeyX[7] - blackKeyWidth / 2;
+  blackKeyX[5] = whiteKeyX[9] - blackKeyWidth / 2;
+  
   // Set button positions
   buttonWidth = width / 5;
   buttonHeight = height / 10;
-  octaveUpX = width / 2 - buttonWidth - 10;
-  octaveDownX = width / 2 + 10;
+  octaveDownX = width / 2 - buttonWidth - 10;
+  octaveUpX = width / 2 + 10;
   buttonY = marginY / 3;
 }
 
@@ -69,7 +75,7 @@ void draw() {
   textSize(24);
 
   // Draw white keys
-  for (int i = 0; i < 7; i++) {
+  for (int i = 0; i < numWhite; i++) {
     if (whiteKeyPressed[i]) {
       fill(pressedColor); // Change color when pressed
     } else {
@@ -80,7 +86,7 @@ void draw() {
   }
 
   // Draw black keys
-  for (int i = 0; i < 5; i++) {
+  for (int i = 0; i < numBlack; i++) {
     if (blackKeyPressed[i]) {
       fill(pressedColor); // Change color when pressed
     } else {
@@ -105,7 +111,7 @@ void draw() {
 
 void mousePressed() {
   // Check if white keys are pressed
-  for (int i = 0; i < 7; i++) {
+  for (int i = 0; i < numWhite; i++) {
     if (mouseX > whiteKeyX[i] && mouseX < whiteKeyX[i] + whiteKeyWidth && mouseY < marginY + blackKeyHeight + whiteKeyHeight && mouseY > marginY + blackKeyHeight) {
       whiteKeyPressed[i] = true;
       println("White key " + (i + 1) + " pressed!");
@@ -114,8 +120,8 @@ void mousePressed() {
   }
 
   // Check if black keys are pressed
-  for (int i = 0; i < 5; i++) {
-    if (mouseX > blackKeyX[i] && mouseX < blackKeyX[i] + blackKeyWidth && mouseY < blackKeyHeight && mouseY > marginY) {
+  for (int i = 0; i < numBlack; i++) {
+    if (mouseX > blackKeyX[i] && mouseX < blackKeyX[i] + blackKeyWidth && mouseY < marginY + blackKeyHeight && mouseY > marginY) {
       blackKeyPressed[i] = true;
       println("Black key " + (i + 1) + " pressed!");
       blackKeyNotes[i].play();
@@ -143,22 +149,38 @@ void mousePressed() {
 
 void mouseReleased() {
   // Reset key press states when the mouse is released
-  for (int i = 0; i < 7; i++) {
+  for (int i = 0; i < numWhite; i++) {
     whiteKeyPressed[i] = false;
   }
-  for (int i = 0; i < 5; i++) {
+  
+  for (int i = 0; i < numBlack; i++) {
     blackKeyPressed[i] = false;
   }
 }
 
 // Function to load sound files based on the current octave
 void loadOctaveNotes(int octave) {
-  for (int i = 0; i < 7; i++) {
-    String noteFile = "./piano-mp3/" + octaves[i] + octave + ".mp3";
+  String noteFile;
+  
+  for (int i = 0; i < numWhite; i++) {
+    if ((i == 0) && ((octave - 1) >= 0)) {
+      noteFile = "./piano-mp3/" + octaves[i] + (octave - 1) + ".mp3";
+    } else if ((i > 7) && ((octave + 1) <= 7)) {
+      noteFile = "./piano-mp3/" + octaves[i] + (octave + 1) + ".mp3";
+    } else {
+      noteFile = "./piano-mp3/" + octaves[i] + octave + ".mp3";
+    }
+    
     whiteKeyNotes[i] = new SoundFile(this, noteFile);
   }
-  for (int i = 0; i < 5; i++) {
-    String noteFile = "./piano-mp3/" + blackOctaves[i] + octave + ".mp3";
+  
+  for (int i = 0; i < numBlack; i++) {
+    if ((i == (numBlack - 1)) && ((octave + 1) <= 7)) {
+      noteFile = "./piano-mp3/" + blackOctaves[i] + (octave + 1) + ".mp3";
+    } else {
+      noteFile = "./piano-mp3/" + blackOctaves[i] + octave + ".mp3";
+    }
+    
     blackKeyNotes[i] = new SoundFile(this, noteFile);
   }
 }
