@@ -1,3 +1,4 @@
+import processing.sound.*;
 void setup() {
   fullScreen();
   currentState = State.Menu;
@@ -7,5 +8,15 @@ void setup() {
 
 void draw() {
   background(255);
-  drawMenu();
+  switch (currentState){
+    case Menu:
+      drawMenu();
+      break;
+    case Piano:
+      drawPiano();
+      break;
+    default:
+      background(255);
+  }
+    
 }

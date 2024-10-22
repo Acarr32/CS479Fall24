@@ -21,7 +21,7 @@ void drawMenu() {
   if (mouseX > width * 0.25 - buttonWidth / 2 && mouseX < width * 0.25 + buttonWidth / 2 && 
       mouseY > height * 0.5 - buttonHeight / 2 && mouseY < height * 0.5 + buttonHeight / 2) {
     if (mousePressed) {
-      pianoMode();
+      renderPiano();
     }
   }
   fill(100, 200, 100); // Piano button color
@@ -35,7 +35,7 @@ void drawMenu() {
   if (mouseX > width * 0.75 - buttonWidth / 2 && mouseX < width * 0.75 + buttonWidth / 2 && 
       mouseY > height * 0.5 - buttonHeight / 2 && mouseY < height * 0.5 + buttonHeight / 2) {
     if (mousePressed) {
-      guitarMode();
+      currentState = State.Guitar;
     }
   }
   fill(200, 100, 100); // Guitar button color
