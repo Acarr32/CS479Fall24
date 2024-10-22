@@ -1,5 +1,8 @@
 import processing.sound.*;
 import java.util.*;
+import processing.serial.*;
+
+//void pianoSerial() - pass an array of keys pressed
 void setup() {
   fullScreen();
   currentState = State.Menu;
@@ -20,4 +23,43 @@ void draw() {
       background(255);
   }
     
+}
+
+void serialEvent(Serial myPort){
+  String value = myPort.readStringUntil('\n');  // Read serial input until newline
+  if (value != null) {
+    value = trim(value);
+    
+    String[] values = split(value, ",");
+    switch(currentState){
+      case Piano:
+        Integer[] keysActive = new Integer[12];
+        boolean keyPressed = false;
+        int octave = 0;
+        for(int i = 0; i<values.length; i++){
+          if(values[i] == "1"){
+            if(i == 0){
+              octave = -1;
+            }
+            if(i == 11){
+              octave = 1;
+            }
+            else{
+              octave = 0;
+              keysActive[i] = i;
+              keyPressed = true;
+            }
+          }
+        }
+        if(!keyPressed){
+          keysActive = new Integer[0];
+        }
+        pianoSerial(keysActive, octave);
+        
+        case Guitar:
+           break;
+        default:
+          break;
+    }
+  }
 }
