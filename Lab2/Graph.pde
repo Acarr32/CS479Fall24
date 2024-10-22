@@ -1,7 +1,15 @@
 void addData() {
+<<<<<<< HEAD
   heartrate = (int)random(60, 100);
+=======
+<<<<<<< Updated upstream
+  heartrate = (int)random(60, 100); // Change
+=======
+  //heartrate = (int)random(60, 100);
+>>>>>>> Stashed changes
+>>>>>>> Eleonora
   heartRates.add(heartrate);
-  resprate = (int)random(200, 700);
+  //resprate = (int)random(200, 700);
   respirationRates.add(resprate);
   
   // Simulate a sinusoidal EKG signal
