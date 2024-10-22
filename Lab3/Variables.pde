@@ -12,6 +12,7 @@ float maxTitleSize;
 float minTitleSize;
 float timeState;
 
+Serial myPort;
 
 int numWhite = 10;
 int numBlack = 6;

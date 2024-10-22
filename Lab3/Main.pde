@@ -5,6 +5,7 @@ import processing.serial.*;
 //void pianoSerial() - pass an array of keys pressed
 void setup() {
   fullScreen();
+  myPort = new Serial(this, Serial.list()[0], 9600); 
   currentState = State.Menu;
   maxTitleSize = height * 0.1; // 10% of the height
   minTitleSize = height * 0.03; // 3% of the height
@@ -25,7 +26,7 @@ void draw() {
     
 }
 
-void serialEvent(Serial myPort){
+void serialEvent(){
   String value = myPort.readStringUntil('\n');  // Read serial input until newline
   if (value != null) {
     value = trim(value);
