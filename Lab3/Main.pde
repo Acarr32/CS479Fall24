@@ -28,6 +28,7 @@ void draw() {
 
 void serialEvent(){
   String value = myPort.readStringUntil('\n');  // Read serial input until newline
+  System.out.println(value);
   if (value != null) {
     value = trim(value);
     
