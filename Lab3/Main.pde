@@ -34,16 +34,26 @@ void serialEvent(Serial myPort){
       case Piano:
         int[] keysActive = new int[12];
         boolean keyPressed = false;
+        int octave = 0;
         for(int i = 0; i<values.length; i++){
           if(values[i] == "1"){
-            keysActive[i] = i;
-            keyPressed = true;
-          }          
+            if(i == 0){
+              octave = -1;
+            }
+            if(i == 11){
+              octave = 1;
+            }
+            else{
+              octave = 0;
+              keysActive[i] = i;
+              keyPressed = true;
+            }
+          }
         }
         if(!keyPressed){
           keysActive = new int[0];
         }
-        pianoSerial(keysActive);
+        pianoSerial(keysActive, octave);
     }
   }
 }
