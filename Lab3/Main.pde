@@ -1,11 +1,13 @@
 import processing.sound.*;
 import java.util.*;
 import processing.serial.*;
+Serial myPort;
 
 //void pianoSerial() - pass an array of keys pressed
 void setup() {
   fullScreen();
-  myPort = new Serial(this, Serial.list()[0], 9600); 
+  myPort = new Serial(this, Serial.list()[0], 9600);
+  delay(3000);
   currentState = State.Menu;
   maxTitleSize = height * 0.1; // 10% of the height
   minTitleSize = height * 0.03; // 3% of the height
@@ -28,12 +30,14 @@ void draw() {
 
 void serialEvent(Serial myPort){
   String value = myPort.readStringUntil('\n');  // Read serial input until newline
-  System.out.println(value);
   try{
     if (value != null) {
+      System.out.println(value);
       value = trim(value);
       
-      String[] values = split(value, ",");
+      String[] values = split(value, " ");
+      
+      //System.out.println("Values " + values);
       switch(currentState){
         case Piano:
           Integer[] keysActive = new Integer[12];
@@ -65,8 +69,12 @@ void serialEvent(Serial myPort){
             break;
       }
     }
+    else{
+      return;
+    }
   }
   catch(Exception e){
     System.out.println("Parsing Error");
+    System.out.println(e);
   }
 }
