@@ -106,3 +106,6 @@ void loadOctaveNotes(int octave) {
     blackKeyNotes[i] = new SoundFile(this, noteFile);
   }
 }
+
+//void pianoSerial(int[] keysActive){
+//}
