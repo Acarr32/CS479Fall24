@@ -1,22 +1,15 @@
-public void renderPiano(){
-  background(255);
-  currentState = State.Piano;
+public void renderPiano(float whiteWidth, float whiteHeight, float keysY){  
   // Load sound files for default octave (C3 to B3)
   loadOctaveNotes(currentOctave);
 
   // Define key dimensions
-  whiteKeyWidth = width / (numWhite + 1);
-  whiteKeyHeight = height / 4 * 3;
+  whiteKeyWidth = whiteWidth;
+  whiteKeyHeight = whiteHeight;
   blackKeyWidth = whiteKeyWidth / 3;
   blackKeyHeight = whiteKeyHeight / 2;
-
-  // Set colors
-  whiteKeyColor = color(255);
-  blackKeyColor = color(0);
-  pressedColor = color(200, 100, 100);
   
   marginX = (width - whiteKeyWidth * numWhite) / 2;
-  marginY = (height - whiteKeyHeight);
+  marginY = keysY;
 
   // Set x positions for white keys
   for (int i = 0; i < numWhite; i++) {
@@ -31,19 +24,39 @@ public void renderPiano(){
   blackKeyX[4] = whiteKeyX[7] - blackKeyWidth / 2;
   blackKeyX[5] = whiteKeyX[9] - blackKeyWidth / 2;
   
+  if (currentState == State.Piano) {
+    loadCommands();
+  }
+}
+
+void loadCommands() {
   // Set button positions
   buttonWidth = width / 5;
   buttonHeight = height / 10;
+  
   octaveDownX = width / 2 - buttonWidth - 10;
-  octaveUpX = width / 2 + 10;
+  octaveUpX = width / 2 + buttonWidth + 10;
+  
   buttonY = marginY / 3;
-  
-  
-  
 }
 
+void drawCommands() {
+   // Draw Octave Up button
+  fill(150);
+  rect(octaveUpX, buttonY, buttonWidth, buttonHeight);
+  fill(0);
+  textAlign(CENTER, CENTER);
+  text("Octave Up", octaveUpX + buttonWidth / 2, buttonY + buttonHeight / 2);
+
+  // Draw Octave Down button
+  fill(150);
+  rect(octaveDownX, buttonY, buttonWidth, buttonHeight);
+  fill(0);
+  text("Octave Down", octaveDownX + buttonWidth / 2, buttonY + buttonHeight / 2);
+}
+
+
 public void drawPiano(){
-  background(255);
   textSize(24);
 
   // Draw white keys
@@ -64,21 +77,13 @@ public void drawPiano(){
     } else {
       fill(blackKeyColor);
     }
+    
     rect(blackKeyX[i], marginY, blackKeyWidth, blackKeyHeight);
   }
 
-  // Draw Octave Up button
-  fill(150);
-  rect(octaveUpX, buttonY, buttonWidth, buttonHeight);
-  fill(0);
-  textAlign(CENTER, CENTER);
-  text("Octave Up", octaveUpX + buttonWidth / 2, buttonY + buttonHeight / 2);
-
-  // Draw Octave Down button
-  fill(150);
-  rect(octaveDownX, buttonY, buttonWidth, buttonHeight);
-  fill(0);
-  text("Octave Down", octaveDownX + buttonWidth / 2, buttonY + buttonHeight / 2);
+  if (currentState == State.Piano) {
+    drawCommands();
+  }
 }
 
 void loadOctaveNotes(int octave) {

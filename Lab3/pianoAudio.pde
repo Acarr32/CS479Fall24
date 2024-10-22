@@ -3,8 +3,11 @@ void maousePressed() {
   for (int i = 0; i < numWhite; i++) {
     if (mouseX > whiteKeyX[i] && mouseX < whiteKeyX[i] + whiteKeyWidth && mouseY < marginY + blackKeyHeight + whiteKeyHeight && mouseY > marginY + blackKeyHeight) {
       whiteKeyPressed[i] = true;
-      println("White key " + (i + 1) + " pressed!");
       whiteKeyNotes[i].play();
+      
+      // Record key press
+      println("White key " + (i + 1) + " pressed!");
+      keyPresses.add("Note: " + octaves[i] + currentOctave + " at " + millis() + " ms");
     }
   }
 
@@ -12,8 +15,11 @@ void maousePressed() {
   for (int i = 0; i < numBlack; i++) {
     if (mouseX > blackKeyX[i] && mouseX < blackKeyX[i] + blackKeyWidth && mouseY < marginY + blackKeyHeight && mouseY > marginY) {
       blackKeyPressed[i] = true;
-      println("Black key " + (i + 1) + " pressed!");
       blackKeyNotes[i].play();
+      
+      println("Black key " + (i + 1) + " pressed!");
+      // Record key press
+      keyPresses.add("Note: " + blackOctaves[i] + currentOctave + " at " + millis() + " ms");
     }
   }
 

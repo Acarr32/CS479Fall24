@@ -14,34 +14,32 @@ void drawMenu() {
   text(GetString("subtitle"), width / 2, height * 0.4);
 
   // Buttons
-  float buttonWidth = width * 0.45; // 45% of the width
-  float buttonHeight = 60; // Increased button height
+  float buttonWidth = width * 0.2; // 45% of the width
+  float buttonHeight = height / 10; // Increased button height
   
-  // Piano Mode Button
-  if (mouseX > width * 0.25 - buttonWidth / 2 && mouseX < width * 0.25 + buttonWidth / 2 && 
-      mouseY > height * 0.5 - buttonHeight / 2 && mouseY < height * 0.5 + buttonHeight / 2) {
-    if (mousePressed) {
-      renderPiano();
-    }
-  }
-  fill(100, 200, 100); // Piano button color
-  rect(width * 0.25 - buttonWidth / 2, height * 0.5 - buttonHeight / 2, buttonWidth, buttonHeight);
-  fill(255); // Button text color
-  textSize(20);
-  textAlign(CENTER, CENTER);
-  text(GetString("pianoMode"), width * 0.25, height * 0.5);
+  buttonY = (height - buttonHeight) / 2;
+  pianoX = width / 2 - 2 * buttonWidth;
+  learnX = (width - buttonWidth) / 2 ;
+  guitarX = width / 2 + buttonWidth;
   
-  // Guitar Mode Button
-  if (mouseX > width * 0.75 - buttonWidth / 2 && mouseX < width * 0.75 + buttonWidth / 2 && 
-      mouseY > height * 0.5 - buttonHeight / 2 && mouseY < height * 0.5 + buttonHeight / 2) {
-    if (mousePressed) {
-      currentState = State.Guitar;
-    }
+  pianoModeButton = new Button(pianoX, buttonY, buttonWidth, buttonHeight, "Piano Mode");
+  pianoModeButton.display();
+  if (pianoModeButton.isMouseOver()) {
+    currentState = State.Piano;
+    renderPiano(width / (numWhite + 1), height / 4 * 3, height / 4);
   }
-  fill(200, 100, 100); // Guitar button color
-  rect(width * 0.75 - buttonWidth / 2, height * 0.5 - buttonHeight / 2, buttonWidth, buttonHeight);
-  fill(255); // Button text color
-  textSize(20);
-  textAlign(CENTER, CENTER);
-  text(GetString("guitarMode"), width * 0.75, height * 0.5);
+  
+  learnModeButton = new Button(learnX, buttonY, buttonWidth, buttonHeight, "Learn the Piano");
+  learnModeButton.display();
+  if (learnModeButton.isMouseOver()) {
+    currentState = State.Recording;
+    renderRecording();
+  }
+  
+  guitarModeButton = new Button(guitarX, buttonY, buttonWidth, buttonHeight, "Guitar Mode");
+  guitarModeButton.display();
+  if (guitarModeButton.isMouseOver()) {
+    // renderGuitar();
+    currentState = State.Guitar;
+  }
 }
