@@ -143,7 +143,7 @@ public void pianoSerial(Integer[] keys, int octaveEvent){
   
   
   //White Key Check
-  for(int i = 0; i < numWhite; i++){
+  for(int i = 0; i < keys.length; i++){
     if(kL.contains(keys[i])){
       whiteKeyPressed[keys[i]] = true;
       println("White key " + (i + 1) + " pressed!");
