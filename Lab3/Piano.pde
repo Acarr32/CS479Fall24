@@ -57,7 +57,7 @@ public void pianoSerial(Integer[] keys, int octaveEvent){
     blackKeyNotes[1].play();
   }
   else{
-    blackKeyPressed[1];
+    blackKeyPressed[1] = false;
   }
   
   if(kL.contains(5) && kL.contains(6)){
@@ -65,7 +65,7 @@ public void pianoSerial(Integer[] keys, int octaveEvent){
     blackKeyNotes[2].play();
   }
   else{
-    blackKeyPressed[2];
+    blackKeyPressed[2] = false;
   }
   
   if(kL.contains(6) && kL.contains(6)){
@@ -73,7 +73,7 @@ public void pianoSerial(Integer[] keys, int octaveEvent){
     blackKeyNotes[3].play();
   }
   else{
-    blackKeyPressed[3];
+    blackKeyPressed[3] = false;
   }
     
   if(kL.contains(7) && kL.contains(7)){
@@ -81,7 +81,7 @@ public void pianoSerial(Integer[] keys, int octaveEvent){
     blackKeyNotes[4].play();
   }
   else{
-    blackKeyPressed[4];
+    blackKeyPressed[4] = false;
   }
   
   if(kL.contains(9) && kL.contains(10)){
@@ -89,7 +89,7 @@ public void pianoSerial(Integer[] keys, int octaveEvent){
     blackKeyNotes[5].play();
   }
   else{
-    blackKeyPressed[5];
+    blackKeyPressed[5] = false;
   }
   
   if(blackKeyPressed[0]){
