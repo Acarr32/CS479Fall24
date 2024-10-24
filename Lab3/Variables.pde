@@ -12,19 +12,21 @@ float maxTitleSize;
 float minTitleSize;
 float timeState;
 
+PImage playIcon, playSampleIcon, startIcon, stopIcon;
+
 // Save the pressed keys to record the music
 ArrayList<String> keyPresses = new ArrayList<String>();
 
 // Playback state
 boolean isRecording = false;
-boolean isPaused = false;
 boolean isPlayingBack = false;
 boolean isPlayingSample = false;
 int playbackStartTime = 0;
 int playbackIndex = 0;
+int recordingStartTime = 0;
 
 // Create the buttons for the recording page
-Button recordButton, playRecordingButton, playSampleButton;
+Button startRecordingButton, stopRecordingButton, playRecordingButton, playSampleButton;
 float backButtonX, backButtonY, backButtonWidth, backButtonHeight;
 Button backButton;
 

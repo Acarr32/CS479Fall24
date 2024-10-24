@@ -3,4 +3,7 @@ void guitarMode() {
     println(GetString("testString"));
     currentState = State.Guitar;
   }
+  
+    drawBackButton();
+
 }

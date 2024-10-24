@@ -5,7 +5,7 @@ void drawMenu() {
   // Title
   textSize(titleSize);
   textAlign(CENTER);
-  fill(GetColor()); // Random title color
+  fill(255, 0, 0); // Red Title
   text(GetString("title"), width / 2, height * 0.3);
   
   // Subtitle
@@ -22,21 +22,21 @@ void drawMenu() {
   learnX = (width - buttonWidth) / 2 ;
   guitarX = width / 2 + buttonWidth;
   
-  pianoModeButton = new Button(pianoX, buttonY, buttonWidth, buttonHeight, "Piano Mode");
+  pianoModeButton = new Button(pianoX, buttonY, buttonWidth, buttonHeight, "Piano Mode", null, color(150));
   pianoModeButton.display();
   if (pianoModeButton.isMouseOver()) {
     currentState = State.Piano;
     renderPiano(width / (numWhite + 1), height / 4 * 3, height / 4);
   }
   
-  learnModeButton = new Button(learnX, buttonY, buttonWidth, buttonHeight, "Learn the Piano");
+  learnModeButton = new Button(learnX, buttonY, buttonWidth, buttonHeight, "Learn the Piano", null, color(150));
   learnModeButton.display();
   if (learnModeButton.isMouseOver()) {
     currentState = State.Recording;
     renderRecording();
   }
   
-  guitarModeButton = new Button(guitarX, buttonY, buttonWidth, buttonHeight, "Guitar Mode");
+  guitarModeButton = new Button(guitarX, buttonY, buttonWidth, buttonHeight, "Guitar Mode", null, color(150));
   guitarModeButton.display();
   if (guitarModeButton.isMouseOver()) {
     // renderGuitar();
