@@ -1,13 +1,15 @@
-void maousePressed() {
+void mousePressed() {
   // Check if white keys are pressed
   for (int i = 0; i < numWhite; i++) {
     if (mouseX > whiteKeyX[i] && mouseX < whiteKeyX[i] + whiteKeyWidth && mouseY < marginY + blackKeyHeight + whiteKeyHeight && mouseY > marginY + blackKeyHeight) {
       whiteKeyPressed[i] = true;
       whiteKeyNotes[i].play();
-      
-      // Record key press
-      println("White key " + (i + 1) + " pressed!");
-      keyPresses.add("Note: " + octaves[i] + currentOctave + " at " + millis() + " ms");
+            
+      // Only record the key if we're recording
+      if (isRecording) {
+        int relativeTime = millis() - recordingStartTime;  // Calculate time relative to the start of the recording
+        keyPresses.add(octaves[i] + currentOctave + "," + relativeTime);  // Save note and time in CSV format
+      }
     }
   }
 
@@ -17,9 +19,11 @@ void maousePressed() {
       blackKeyPressed[i] = true;
       blackKeyNotes[i].play();
       
-      println("Black key " + (i + 1) + " pressed!");
-      // Record key press
-      keyPresses.add("Note: " + blackOctaves[i] + currentOctave + " at " + millis() + " ms");
+      // Only record the key if we're recording
+      if (isRecording) {
+        int relativeTime = millis() - recordingStartTime;  // Calculate time relative to the start of the recording
+        keyPresses.add(blackOctaves[i] + currentOctave + "," + relativeTime);  // Save note and time in CSV format
+      }
     }
   }
 
@@ -42,7 +46,7 @@ void maousePressed() {
   }
 }
 
-void maouseReleased() {
+void mouseReleased() {
   // Reset key press states when the mouse is released
   for (int i = 0; i < numWhite; i++) {
     whiteKeyPressed[i] = false;

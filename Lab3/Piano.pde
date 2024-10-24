@@ -35,7 +35,7 @@ void loadCommands() {
   buttonHeight = height / 10;
   
   octaveDownX = width / 2 - buttonWidth - 10;
-  octaveUpX = width / 2 + buttonWidth + 10;
+  octaveUpX = width / 2 + 10;
   
   buttonY = marginY / 3;
 }
@@ -84,6 +84,8 @@ public void drawPiano(){
   if (currentState == State.Piano) {
     drawCommands();
   }
+  
+  drawBackButton();
 }
 
 void loadOctaveNotes(int octave) {
