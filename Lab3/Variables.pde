@@ -12,7 +12,7 @@ float maxTitleSize;
 float minTitleSize;
 float timeState;
 
-PImage playIcon, playSampleIcon, startIcon, stopIcon;
+PImage bassIcon, playIcon, playSampleIcon, startIcon, stopIcon, trebleIcon;
 
 // Save the pressed keys to record the music
 ArrayList<String> keyPresses = new ArrayList<String>();
@@ -63,3 +63,6 @@ float marginX, marginY;
 float pianoX, learnX, guitarX;
 
 Button learnModeButton, pianoModeButton, guitarModeButton;
+
+float extraStaffSpace;
+float barSpacing;

@@ -13,10 +13,12 @@ void setup() {
   backButtonX = width - backButtonWidth - 20;
   backButtonY = 20;
   
+  bassIcon = loadImage("img/bass.png");
   playIcon = loadImage("img/play.png");
   playSampleIcon = loadImage("img/playSample.png");
   startIcon = loadImage("img/start.png");
   stopIcon = loadImage("img/stop.png");
+  trebleIcon = loadImage("img/treble.png");
 }
 
 void draw() {
@@ -37,6 +39,7 @@ void draw() {
       handleRecordingPageButtons();
       drawBackButton();
       drawPiano();
+      drawSheetMusic();
       break;
     default:
       background(255);
