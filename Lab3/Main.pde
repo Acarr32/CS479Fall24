@@ -25,52 +25,59 @@ void setup() {
   trebleIcon = loadImage("img/treble.png");
 }
 //**************************************below
-void serialEvent(Serial myPort){
+void serialEvent(Serial myPort) {
   String value = myPort.readStringUntil('\n');  // Read serial input until newline
-  try{
+  try {
     if (value != null) {
-      System.out.println(value);
+      System.out.println("Serial Input: " + value);  // Debugging: print raw serial input
       value = trim(value);
       
       String[] values = split(value, " ");
+      System.out.println("Parsed Values: " + Arrays.toString(values));  // Debugging: print parsed values
       
-      //System.out.println("Values " + values);
-      switch(currentState){
+      switch(currentState) {
         case Piano:
           Integer[] keysActive = new Integer[12];
           boolean keyPressed = false;
           int octave = 0;
-          for(int i = 0; i<values.length; i++){
-            if(values[i] == "1"){
-              if(i == 0){
-                octave = -1;
+          
+          for (int i = 0; i < values.length; i++) {
+            if (values[i].equals("1")) {  // Fix string comparison (use .equals() for string comparison)
+              System.out.println("Key Pressed at index: " + i);  // Debugging: print which key is pressed
+              
+              if (i == 0) {
+                octave = -1;  // Adjust octave down
               }
-              if(i == 11){
-                octave = 1;
-              }
-              else{
-                octave = 0;
-                keysActive[i] = i;
+              if (i == 11) {
+                octave = 1;   // Adjust octave up
+              } else {
+                octave = 0;   // No octave shift
+                keysActive[i] = i;  // Register active key
                 keyPressed = true;
               }
             }
           }
-          if(!keyPressed){
-            keysActive = new Integer[0];
-          }
-          pianoSerial(keysActive, octave);
           
-          case Guitar:
-             break;
-          default:
-            break;
+          if (!keyPressed) {
+            System.out.println("No keys pressed.");
+            keysActive = new Integer[0];  // No keys pressed, set active keys to empty
+          }
+          
+          System.out.println("Active Keys: " + Arrays.toString(keysActive));  // Debugging: print active keys
+          pianoSerial(keysActive, octave);  // Call pianoSerial function with detected keys and octave shift
+          break;
+          
+        case Guitar:
+          // Logic for Guitar mode if implemented
+          break;
+          
+        default:
+          break;
       }
-    }
-    else{
+    } else {
       return;
     }
-  }
-  catch(Exception e){
+  } catch (Exception e) {
     System.out.println("Parsing Error");
     System.out.println(e);
   }

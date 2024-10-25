@@ -114,8 +114,15 @@ void loadOctaveNotes(int octave) {
   }
 }
 //**************************************Below
-
 public void pianoSerial(Integer[] keys, int octaveEvent){
+  // First, reset all keys to "not pressed"
+  for (int i = 0; i < numWhite; i++) {
+    whiteKeyPressed[i] = false;  // Reset white keys
+  }
+  for (int i = 0; i < numBlack; i++) {
+    blackKeyPressed[i] = false;  // Reset black keys
+  }
+
   List<Integer> kL = Arrays.asList(keys);
   
   //Black Key check
@@ -123,112 +130,56 @@ public void pianoSerial(Integer[] keys, int octaveEvent){
     blackKeyPressed[0] = true;
     blackKeyNotes[0].play();
   }
-  else{
-    blackKeyPressed[0] = false;
-  }
   
   if(kL.contains(3) && kL.contains(4)){
     blackKeyPressed[1] = true;
     blackKeyNotes[1].play();
-  }
-  else{
-    blackKeyPressed[1] = false;
   }
   
   if(kL.contains(5) && kL.contains(6)){
     blackKeyPressed[2] = true;
     blackKeyNotes[2].play();
   }
-  else{
-    blackKeyPressed[2] = false;
-  }
   
-  if(kL.contains(6) && kL.contains(6)){
+  if(kL.contains(6) && kL.contains(7)){
     blackKeyPressed[3] = true;
     blackKeyNotes[3].play();
   }
-  else{
-    blackKeyPressed[3] = false;
-  }
     
-  if(kL.contains(7) && kL.contains(7)){
+  if(kL.contains(7) && kL.contains(8)){
     blackKeyPressed[4] = true;
     blackKeyNotes[4].play();
-  }
-  else{
-    blackKeyPressed[4] = false;
   }
   
   if(kL.contains(9) && kL.contains(10)){
     blackKeyPressed[5] = true;
     blackKeyNotes[5].play();
   }
-  else{
-    blackKeyPressed[5] = false;
-  }
   
-  if(blackKeyPressed[0]){
-    if(kL.contains(2)){
-      kL.remove(2);
-    }
-    if(kL.contains(3)){
-      kL.remove(3);
-    }
-  }
-  if(blackKeyPressed[1]){
-    if(kL.contains(3)){
-      kL.remove(3);
-    }
-    if(kL.contains(4)){
-      kL.remove(4);
+  // Remove corresponding white key if a black key is pressed
+  for (int i = 0; i < blackKeyPressed.length; i++) {
+    if (blackKeyPressed[i]) {
+      // Remove white keys that are tied to black keys
+      if(i == 0){ kL.remove(Integer.valueOf(2)); kL.remove(Integer.valueOf(3)); }
+      if(i == 1){ kL.remove(Integer.valueOf(3)); kL.remove(Integer.valueOf(4)); }
+      if(i == 2){ kL.remove(Integer.valueOf(5)); kL.remove(Integer.valueOf(6)); }
+      if(i == 3){ kL.remove(Integer.valueOf(6)); kL.remove(Integer.valueOf(7)); }
+      if(i == 4){ kL.remove(Integer.valueOf(7)); kL.remove(Integer.valueOf(8)); }
+      if(i == 5){ kL.remove(Integer.valueOf(9)); kL.remove(Integer.valueOf(10)); }
     }
   }
-  if(blackKeyPressed[2]){
-    if(kL.contains(5)){
-      kL.remove(5);
-    }
-    if(kL.contains(6)){
-      kL.remove(6);
-    }
-  }
-  if(blackKeyPressed[3]){
-    if(kL.contains(6)){
-      kL.remove(6);
-    }
-    if(kL.contains(7)){
-      kL.remove(7);
+
+  // White Key Check
+  for (int i = 0; i < numWhite; i++) {
+    if(kL.contains(i)){
+      whiteKeyPressed[i] = true;  // Set the white key as pressed
+      whiteKeyNotes[i].play();    // Play the note for the white key
     }
   }
-  if(blackKeyPressed[4]){
-    if(kL.contains(7)){
-      kL.remove(7);
-    }
-    if(kL.contains(8)){
-      kL.remove(8);
-    }
-  }
-  if(blackKeyPressed[5]){
-    if(kL.contains(9)){
-      kL.remove(9);
-    }
-    if(kL.contains(10)){
-      kL.remove(10);
-    }
-  }
-  
-  
-  //White Key Check
-  for(int i = 0; i < keys.length; i++){
-    if(kL.contains(keys[i])){
-      whiteKeyPressed[keys[i]] = true;
-      println("White key " + (i + 1) + " pressed!");
-      whiteKeyNotes[keys[i]].play();
-    }
-    else{
-      whiteKeyPressed[keys[i]] = false;
-    }
-  }
-  
+
+  // Update the current octave if octave change event
   currentOctave += octaveEvent;
-  
-}//**************************************Above
+}
+
+
+//**************************************Above
