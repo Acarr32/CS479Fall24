@@ -44,6 +44,14 @@ void mousePressed() {
       println("Octave Down: Now at octave " + currentOctave);
     }
   }
+  
+  if(currentState == State.Guitar) {
+    for (int i = 0; i < 6; i++) { // Change loop limit to 6
+      if (abs(mouseY - stringY[i]) < stringSpacing / 2) { // Check if click is near the string
+        
+      }
+    }
+  }
 }
 
 void mouseReleased() {

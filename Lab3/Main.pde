@@ -34,11 +34,11 @@ void serialEvent(Serial myPort) {
       
       String[] values = split(value, " ");
       System.out.println("Parsed Values: " + Arrays.toString(values));  // Debugging: print parsed values
-      
+      Integer[] keysActive = new Integer[12];
+      boolean keyPressed = false;
       switch(currentState) {
         case Piano:
-          Integer[] keysActive = new Integer[12];
-          boolean keyPressed = false;
+          
           int octave = 0;
           
           for (int i = 0; i < values.length; i++) {
@@ -68,9 +68,20 @@ void serialEvent(Serial myPort) {
           break;
           
         case Guitar:
-          // Logic for Guitar mode if implemented
-          break;
-          
+          int count = 0;
+          for (int i = 0; i < values.length; i++) {
+              if(values[i] == "1"){
+                keysActive[count] = i;  // Register active key
+                keyPressed = true;
+                count++;
+              }
+           }
+           sizeOfGuitarString = count;
+          if (!keyPressed) {
+            System.out.println("No keys pressed.");
+            keysActive = new Integer[0];  // No keys pressed, set active keys to empty
+          }
+          guitarSerial(keysActive);
         default:
           break;
       }
@@ -103,6 +114,9 @@ void draw() {
       drawPiano();
       drawSheetMusic();
       break;
+     case Guitar:
+        guitarMode();
+        break;
     default:
       background(255);
       drawBackButton();
