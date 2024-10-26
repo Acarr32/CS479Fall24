@@ -32,9 +32,12 @@ void drawRecording() {
   textAlign(CENTER);
   text("Recording Page", width / 2, 100);
   
-  // Handle playback
-  if (isPlayingBack) {
-    playBack();
+  if (isPlayingBack) {    
+    if (isPlayingSample) {
+      playBack(sampleNotes);
+    } else {
+      playBack(keyPresses);
+    }
   }
 
   // Display the recording buttons
@@ -114,17 +117,37 @@ void playRecording(String type) {
       playRecordingButton.changeColor(color(0, 255, 0));
     }
   }
-}
-
-// Function to handle piano interaction (add your note-playing logic here)
-void handlePianoInteraction() {
-
+  else {
+    if (!sampleNotes.isEmpty()){
+      sampleNotes.clear(); // Clears all elements from sampleNotes
+    }
+    
+    // Add each note with a 5000 ms timestamp
+    int time = 750;
+    
+    for (String note : notes) {
+        sampleNotes.add(note + "," + String.valueOf(time));
+        
+        time += 750;
+    }
+        
+    if (!sampleNotes.isEmpty()) {
+      isPlayingBack = true;
+      isPlayingSample = true;
+      playbackStartTime = millis();
+      playbackIndex = 0;
+      println("Playback started...");
+      
+      playSampleButton.changeColor(color(0, 255, 0));
+      playBack(sampleNotes);
+    }
+  }
 }
 
 // Playback logic (plays the recorded events)
-void playBack() {
-  if (playbackIndex < keyPresses.size()) {
-    String[] data = split(keyPresses.get(playbackIndex), ',');
+void playBack(ArrayList<String> keys) {
+  if (playbackIndex < keys.size()) {
+    String[] data = split(keys.get(playbackIndex), ',');
     String note = data[0];
     int timeStamp = int(data[1]);
 
@@ -137,7 +160,8 @@ void playBack() {
       playbackIndex++;
     }
   } else {
-    isPlayingBack = false;  // Stop playback when all notes have been played
+    isPlayingBack = false;
+    isPlayingSample = false;
     println("Playback finished.");
   }
 }
@@ -159,22 +183,6 @@ void playNoteByName(String note) {
     }
   }
 }
-
-
-
-//-----------------------------------------------------------------------------------------
-
-//String[] notes = {
-//  "G4", "F4", "E4", "D4", "C4", "B4", "A4",
-//  "G3", "F3", "E3", "D3", "C3", "B3", "A3",
-//  "G2", "F2"};
-  
-String[] notes = {
-    "E3", "D3", "C3", "D3",
-    "E3", "E3", "E3", "E3",
-    "D3", "D3", "D3", "D3",
-    "E3", "G3", "G3", "G3" };
-    
 
 public void renderSheetMusic(float barWidth, float barHeight, float staffY) {
   // Define dimensions of the entire section (4 bars)
