@@ -1,10 +1,14 @@
-ups// Function to save key press data to a file
+// Function to save key press data to a file
 void saveKeyPressData() {
   saveStrings("key_presses_log.txt", keyPresses.toArray(new String[0]));
 }
 
 void renderRecording() {
   currentState = State.Recording;
+  
+  isRecording = false;
+  isPlayingBack = false;
+  isPlayingSample = false;
   
   fill(255);
   buttonHeight = height / 15;
@@ -211,7 +215,6 @@ void drawMeasureBar(float x, float y, float barHeight) {
 }
 
 // Function to draw a note in the bar
-// Function to draw a note in the bar
 void drawNotesInBar(float x, float y, float barWidth, float barHeight, String[] notes) {
   // Define the positions within each bar where the notes should be placed
   float[] notePositions = {1.0/8, 3.0/8, 5.0/8, 7.0/8};
@@ -243,12 +246,6 @@ void drawNotesInBar(float x, float y, float barWidth, float barHeight, String[] 
   }
 }
 
-
-
-
-//void drawline
-
-
 // Function to calculate the y position based on note letter and octave
 float calculateNoteYPosition(char noteLetter, int octave, float startY, float barHeight) {
   // Define the step size for each line/space in the staff
@@ -257,147 +254,147 @@ float calculateNoteYPosition(char noteLetter, int octave, float startY, float ba
   // Define the base line for the top of the staff (F5)
   float baseY = startY + (4 * stepSize); // F4 is on the top line
   float noteY = baseY;
-if (octave == 5){
-  switch (noteLetter) {
-    case 'G':
-      noteY -= 8 * stepSize; // G4 on the third line
-      break;
-    case 'F':
-      noteY -= 7.5 * stepSize; // F4 in the fourth space
-      break;
-    case 'E':
-      noteY -= 7 * stepSize; // E4 on the bottom line
-      break;
-    case 'D':
-      noteY -= 6.5 * stepSize; // D5 on the top line
-      break;
-    case 'C':
-      noteY -= 6 * stepSize; // C5 in the first space
-      break;
-    case 'B':
-      noteY -= 5.5 * stepSize; // B5 on the second line
-      break;
-    case 'A':
-      noteY -= 5 * stepSize; // A5 in the second space
-      break;
-    default:
-      // Handle notes outside of the expected octaves as needed
-      return startY + (barHeight / 2); // Default to middle of the staff
-  }
-}
-  if (octave == 4){
-  switch (noteLetter) {
-    case 'G':
-      noteY -= 4.5 * stepSize; // G4 on the third line
-      break;
-    case 'F':
-      noteY -= 4 * stepSize; // F4 in the fourth space
-      break;
-    case 'E':
-      noteY -= 3.5 * stepSize; // E4 on the bottom line
-      break;
-    case 'D':
-      noteY -= 3 * stepSize; // D5 on the top line
-      break;
-    case 'C':
-      noteY -= 2.5 * stepSize; // C5 in the first space
-      break;
-    case 'B':
-      noteY -= 2 * stepSize; // B5 on the second line
-      break;
-    case 'A':
-      noteY -= 1.5 * stepSize; // A5 in the second space
-      break;
-    default:
-      // Handle notes outside of the expected octaves as needed
-      return startY + (barHeight / 2); // Default to middle of the staff
-  }
-}
   
-if (octave == 3){
-  switch (noteLetter) {
-    case 'G':
-      noteY -= 1 * stepSize; // G4 on the third line
-      break;
-    case 'F':
-      noteY -= 0.5 * stepSize; // F4 in the fourth space
-      break;
-    case 'E':
-      noteY -= 0 * stepSize; // E4 on the bottom line
-      break;
-    case 'D':
-      noteY -= -0.5 * stepSize; // D5 on the top line
-      break;
-    case 'C':
-      noteY -= -1 * stepSize; // C5 in the first space
-      break;
-    case 'B':
-      noteY -= -1.5 * stepSize; // B5 on the second line
-      break;
-    case 'A':
-      noteY -= -2 * stepSize; // A5 in the second space
-      break;
-    default:
-      // Handle notes outside of the expected octaves as needed
-      return startY + (barHeight / 2); // Default to middle of the staff
+  if (octave == 5){
+    switch (noteLetter) {
+      case 'G':
+        noteY -= 8 * stepSize; // G4 on the third line
+        break;
+      case 'F':
+        noteY -= 7.5 * stepSize; // F4 in the fourth space
+        break;
+      case 'E':
+        noteY -= 7 * stepSize; // E4 on the bottom line
+        break;
+      case 'D':
+        noteY -= 6.5 * stepSize; // D5 on the top line
+        break;
+      case 'C':
+        noteY -= 6 * stepSize; // C5 in the first space
+        break;
+      case 'B':
+        noteY -= 5.5 * stepSize; // B5 on the second line
+        break;
+      case 'A':
+        noteY -= 5 * stepSize; // A5 in the second space
+        break;
+      default:
+        // Handle notes outside of the expected octaves as needed
+        return startY + (barHeight / 2); // Default to middle of the staff
+    }
   }
-}
-if (octave == 2){
-  switch (noteLetter) {
-    case 'G':
-      noteY -= -2.5 * stepSize; // G4 on the third line
-      break;
-    case 'F':
-      noteY -= -3 * stepSize; // F4 in the fourth space
-      break;
-    case 'E':
-      noteY -= -3.5 * stepSize; // E4 on the bottom line
-      break;
-    case 'D':
-      noteY -= -4 * stepSize; // D5 on the top line
-      break;
-    case 'C':
-      noteY -= -4.5 * stepSize; // C5 in the first space
-      break;
-    case 'B':
-      noteY -= -5 * stepSize; // B5 on the second line
-      break;
-    case 'A':
-      noteY -= -5.5 * stepSize; // A5 in the second space
-      break;
-    default:
-      // Handle notes outside of the expected octaves as needed
-      return startY + (barHeight / 2); // Default to middle of the staff
+  else if (octave == 4){
+    switch (noteLetter) {
+      case 'G':
+        noteY -= 4.5 * stepSize; // G4 on the third line
+        break;
+      case 'F':
+        noteY -= 4 * stepSize; // F4 in the fourth space
+        break;
+      case 'E':
+        noteY -= 3.5 * stepSize; // E4 on the bottom line
+        break;
+      case 'D':
+        noteY -= 3 * stepSize; // D5 on the top line
+        break;
+      case 'C':
+        noteY -= 2.5 * stepSize; // C5 in the first space
+        break;
+      case 'B':
+        noteY -= 2 * stepSize; // B5 on the second line
+        break;
+      case 'A':
+        noteY -= 1.5 * stepSize; // A5 in the second space
+        break;
+      default:
+        // Handle notes outside of the expected octaves as needed
+        return startY + (barHeight / 2); // Default to middle of the staff
+    }
   }
-}
-if (octave == 1){
-  switch (noteLetter) {
-    case 'G':
-      noteY -= -6 * stepSize; // G4 on the third line
-      break;
-    case 'F':
-      noteY -= -6.5 * stepSize; // F4 in the fourth space
-      break;
-    case 'E':
-      noteY -= -7 * stepSize; // E4 on the bottom line
-      break;
-    case 'D':
-      noteY -= -7.5 * stepSize; // D5 on the top line
-      break;
-    case 'C':
-      noteY -= -8 * stepSize; // C5 in the first space
-      break;
-    case 'B':
-      noteY -= -8.5 * stepSize; // B5 on the second line
-      break;
-    case 'A':
-      noteY -= -9 * stepSize; // A5 in the second space
-      break;
-    default:
-      // Handle notes outside of the expected octaves as needed
-      return startY + (barHeight / 2); // Default to middle of the staff
+  else if (octave == 3){
+    switch (noteLetter) {
+      case 'G':
+        noteY -= 1 * stepSize; // G4 on the third line
+        break;
+      case 'F':
+        noteY -= 0.5 * stepSize; // F4 in the fourth space
+        break;
+      case 'E':
+        noteY -= 0 * stepSize; // E4 on the bottom line
+        break;
+      case 'D':
+        noteY -= -0.5 * stepSize; // D5 on the top line
+        break;
+      case 'C':
+        noteY -= -1 * stepSize; // C5 in the first space
+        break;
+      case 'B':
+        noteY -= -1.5 * stepSize; // B5 on the second line
+        break;
+      case 'A':
+        noteY -= -2 * stepSize; // A5 in the second space
+        break;
+      default:
+        // Handle notes outside of the expected octaves as needed
+        return startY + (barHeight / 2); // Default to middle of the staff
+    }
   }
-}
+  else if (octave == 2){
+    switch (noteLetter) {
+      case 'G':
+        noteY -= -2.5 * stepSize; // G4 on the third line
+        break;
+      case 'F':
+        noteY -= -3 * stepSize; // F4 in the fourth space
+        break;
+      case 'E':
+        noteY -= -3.5 * stepSize; // E4 on the bottom line
+        break;
+      case 'D':
+        noteY -= -4 * stepSize; // D5 on the top line
+        break;
+      case 'C':
+        noteY -= -4.5 * stepSize; // C5 in the first space
+        break;
+      case 'B':
+        noteY -= -5 * stepSize; // B5 on the second line
+        break;
+      case 'A':
+        noteY -= -5.5 * stepSize; // A5 in the second space
+        break;
+      default:
+        // Handle notes outside of the expected octaves as needed
+        return startY + (barHeight / 2); // Default to middle of the staff
+    }
+  }
+  else if (octave == 1){
+    switch (noteLetter) {
+      case 'G':
+        noteY -= -6 * stepSize; // G4 on the third line
+        break;
+      case 'F':
+        noteY -= -6.5 * stepSize; // F4 in the fourth space
+        break;
+      case 'E':
+        noteY -= -7 * stepSize; // E4 on the bottom line
+        break;
+      case 'D':
+        noteY -= -7.5 * stepSize; // D5 on the top line
+        break;
+      case 'C':
+        noteY -= -8 * stepSize; // C5 in the first space
+        break;
+      case 'B':
+        noteY -= -8.5 * stepSize; // B5 on the second line
+        break;
+      case 'A':
+        noteY -= -9 * stepSize; // A5 in the second space
+        break;
+      default:
+        // Handle notes outside of the expected octaves as needed
+        return startY + (barHeight / 2); // Default to middle of the staff
+    }
+  }
   // Adjust noteY based on the note letter and octave
   
 
@@ -419,22 +416,4 @@ public void drawSheetMusic() {
   drawNotesInBar(marginX, staffY, barWidth, barHeight, notes);
   image(trebleIcon, marginX-15, staffY + barHeight/2 +10, 150, 150);  // Draw treble clef image
   image(bassIcon, marginX-10, staffY + barHeight + staffSpacing +10 , 100, 100);  // Draw bass clef image
-  
-  if (playbackIndex < keyPresses.size()) {
-    String[] data = split(keyPresses.get(playbackIndex), ',');
-    String note = data[0];
-    int timeStamp = int(data[1]);
-
-    // Check if the current time has reached the timestamp for the next note
-    if (millis() - playbackStartTime >= timeStamp) {
-      // Play the note (you'll need a method to trigger the correct sound file based on the note)
-      playNoteByName(note);
-      println("Replaying note: " + note + " at " + timeStamp + " ms");
-
-      playbackIndex++;
-    }
-  } else {
-    isPlayingBack = false;  // Stop playback when all notes have been played
-    println("Playback finished.");
-  }
 }
