@@ -47,8 +47,14 @@ void mousePressed() {
   
   if(currentState == State.Guitar) {
     for (int i = 0; i < 6; i++) { // Change loop limit to 6
-      if (abs(mouseY - stringY[i]) < stringSpacing / 2) { // Check if click is near the string
-        
+      float yPosition = height / 2 + (i - 2.5) * stringSpacing; // Calculate Y-position for each string
+    
+      // Check if the mouse click is near the string
+      if (abs(mouseY - yPosition) < stringSpacing / 2) { 
+        Integer[] newList = new Integer[1];
+        newList[0] = i + 1; // Store the string number (1-6)
+        System.out.println(newList[0]); // Print the string number
+        guitarSerial(newList); // Call the method to play the corresponding note
       }
     }
   }
