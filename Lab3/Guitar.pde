@@ -1,5 +1,5 @@
 float[] stringY = new float[6]; // Array to store Y-coordinates of each string
-int stringSpacing = 8; // Space between each string
+int stringSpacing = 16; // Space between each string
 int sizeOfGuitarString = 1;
 
 void guitarMode() {
@@ -7,32 +7,56 @@ void guitarMode() {
   drawBackButton();
   renderGuitar();
   drawBackButton();
+  drawTitle();
+}
+
+void drawTitle() {
+  fill(0); // Set text color to black
+  textAlign(CENTER, TOP);
+  textSize(50);
+  text("Virtual Guitar Simulator", width / 2, 100); // Title at the top center
+  textSize(30);
 }
 
 void renderGuitar() {
   background(255); // Set background color
 
-  // Draw guitar body
+  // Draw guitar body (make it larger)
   fill(139, 69, 19); // Brown color for the guitar body
-  ellipse(width / 2 - 250, height / 2, 500, 300); // Main body (horizontal)
+  ellipse(width / 2 + 50, height / 2 + 100, 600, 400); // Main body (enlarged and centered)
 
-  // Draw guitar neck
+  // Draw guitar neck (make it wider and longer)
   fill(160, 82, 45); // Slightly darker color for the neck
-  rect(width / 2 - 600, height / 2 - 25, 400, 50);
+  rect(width / 2 - 550, height / 2 +50, 700, 100); // Extended neck width and height
 
-  // Draw sound hole
+  // Draw sound hole (scaled up for the larger guitar body)
   fill(0); // Black color for sound hole
-  ellipse(width / 2 - 250, height / 2, 80, 80);
+  ellipse(width / 2 + 50, height / 2 + 100, 100, 100); // Centered larger sound hole
 
   // Draw 6 strings and store their positions
   stroke(220);
-  strokeWeight(2);
-  for (int i = 0; i < 6; i++) { // Change loop limit to 6
-    float yPosition = height / 2 + (i - 2.5) * stringSpacing; // Calculate Y-position for each string
+  strokeWeight(3); // Make strings thicker for a larger guitar
+  for (int i = 0; i < 6; i++) {
+    float yPosition = height / 2 + (i - 2.5) * stringSpacing + 100; // Adjust Y-position for larger body
     stringY[i] = yPosition; // Store each string's Y-coordinate in array
-    line(width / 2 - 600, yPosition, width / 2, yPosition);
+    line(width / 2 - 350, yPosition, width / 2 + 150, yPosition); // Extended strings along the neck and body
   }
-  //drawGameInterface();
+  fill(0);
+  rect(width/2 - 350, height/2 + 50, 5, 100);
+  fill(50, 50, 200);
+  rect(width/2 - 530, height / 2 + 65, 30, 70);
+  fill(50, 200, 50);
+  rect(width/2 - 490, height / 2 + 65, 30, 70);
+  fill(200, 50, 50);
+  rect(width/2 - 450, height / 2 + 65, 30, 70);
+  fill(100, 155, 100);
+  rect(width/2 - 410, height / 2 + 65, 30, 70);
+}
+
+void calculateStringPositions() {
+  for (int i = 0; i < 6; i++) {
+    stringY[i] = height / 2 + (i - 2.5) * stringSpacing; // Set Y-coordinates for even spacing
+  }
 }
 
 //void drawGameInterface() {
@@ -52,11 +76,6 @@ void renderGuitar() {
 //  }
 //}
 
-void calculateStringPositions() {
-  for (int i = 0; i < 6; i++) { // Change loop limit to 6
-    stringY[i] = height / 2 + (i - 2.5) * stringSpacing; // Set Y-coordinates for even spacing
-  }
-}
 
 void guitarSerial(Integer[] keysActive){
   SoundFile[] guitarNotes = new SoundFile[sizeOfGuitarString];
