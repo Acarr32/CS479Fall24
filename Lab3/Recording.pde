@@ -26,7 +26,7 @@ void renderRecording() {
 void drawRecording() {
   textSize(24);
   textAlign(CENTER);
-  text("Recording Page", width / 2, 100);
+  text(GetString("recording_title"), width / 2, 100);
   
   // Handle playback
   if (isPlayingBack) {

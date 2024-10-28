@@ -6,6 +6,7 @@ void guitarMode() {
   calculateStringPositions();
   drawBackButton();
   renderGuitar();
+  drawBackButton();
 }
 
 void renderGuitar() {
@@ -60,49 +61,49 @@ void calculateStringPositions() {
 void guitarSerial(Integer[] keysActive){
   SoundFile[] guitarNotes = new SoundFile[sizeOfGuitarString];
   for(int i = 0; i<keysActive.length; i++){
-    String noteFile;
+    String noteFile = "./guitar-mp3/";
     if(keysActive[i] == 0){
       break;
     }
     switch(keysActive[i]){
       case 1:
-        noteFile = "./guitar-mp3/1st_String_E_64kb.mp3";
+        noteFile += "1st_String_E_64kb.mp3";
         guitarNotes[i] = new SoundFile(this, noteFile);
         break;
       case 2:
-        noteFile = "./guitar-mp3/2nd_String_B_64kb.mp3";
+        noteFile += "2nd_String_B_64kb.mp3";
         guitarNotes[i] = new SoundFile(this, noteFile);
         break;
       case 3:
-        noteFile = "./guitar-mp3/3rd_String_G_64kb.mp3";
+        noteFile += "3rd_String_G_64kb.mp3";
         guitarNotes[i] = new SoundFile(this, noteFile);
         break;
       case 4:
-        noteFile = "./guitar-mp3/4th_String_D_64kb.mp3";
+        noteFile += "4th_String_D_64kb.mp3";
         guitarNotes[i] = new SoundFile(this, noteFile);
         break;
       case 5:
-        noteFile = "./guitar-mp3/5th_String_A_64kb.mp3";
+        noteFile += "5th_String_A_64kb.mp3";
         guitarNotes[i] = new SoundFile(this, noteFile);
         break;
       case 6:
-        noteFile = "./guitar-mp3/6th_String_E_64kb.mp3";
+        noteFile += "6th_String_E_64kb.mp3";
         guitarNotes[i] = new SoundFile(this, noteFile);
         break;
       case 7:
-        noteFile = "./guitar-mp3/C_64kb.mp3";
+        noteFile += "C_64kb.mp3";
         guitarNotes[i] = new SoundFile(this, noteFile);
         break;
       case 8:
-        noteFile = "./guitar-mp3/D_64kb.mp3";
+        noteFile += "D_64kb.mp3";
         guitarNotes[i] = new SoundFile(this, noteFile);
         break;
       case 9:
-        noteFile = "./guitar-mp3/Dm_64kb.mp3";
+        noteFile += "Dm_64kb.mp3";
         guitarNotes[i] = new SoundFile(this, noteFile);
         break;
       case 10:
-        noteFile = "./guitar-mp3/E_64kb.mp3";
+        noteFile += "E_64kb.mp3";
         guitarNotes[i] = new SoundFile(this, noteFile);
         break;
     }
