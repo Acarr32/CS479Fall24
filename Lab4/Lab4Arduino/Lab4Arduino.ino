@@ -4,13 +4,21 @@
 */
 #include <Wire.h>
 const int MPU = 0x68; // MPU6050 I2C address
+const int MF_PIN = 1;
+const int LF_PIN = 2;
+const int MM_PIN = 3;
+const int HEEL_PIN = 4;
+
+
 float AccX, AccY, AccZ;
 float GyroX, GyroY, GyroZ;
 float accAngleX, accAngleY, gyroAngleX, gyroAngleY, gyroAngleZ;
 float roll, pitch, yaw;
 float AccErrorX, AccErrorY, GyroErrorX, GyroErrorY, GyroErrorZ;
 float elapsedTime, currentTime, previousTime;
+float MF, LF, MM, HEEL;
 int c = 0;
+
 
 
 void setup() {
@@ -40,8 +48,74 @@ void setup() {
 
 void draw(){
   //Printing output
+  readControllerInput();
+  printInput();
 }
 
+void readControllerInput(){
+  //Reading Force Sensors
+  MM = analogRead(MM_PIN);
+  MF = analogRead(MF_PIN);
+  LF = analogRead(LF_PIN);
+  Heel = analogRead(HEEL_PIN);
+
+  //Reading Accel Sensor
+  Wire.beginTransmission(MPU);
+  Wire.write(0x3B);
+  Wire.endTransmission(false);
+  Wire.requestFrom(MPU, 6, true);
+  AccX = (Wire.read() << 8 | Wire.read()) / 16384.0 ;
+  AccY = (Wire.read() << 8 | Wire.read()) / 16384.0 ;
+  AccZ = (Wire.read() << 8 | Wire.read()) / 16384.0 ;
+
+  //Reading Gyro Sensor
+  Wire.beginTransmission(MPU);
+  Wire.write(0x43);
+  Wire.endTransmission(false);
+  Wire.requestFrom(MPU, 6, true);
+  GyroX = Wire.read() << 8 | Wire.read();
+  GyroY = Wire.read() << 8 | Wire.read();
+  GyroZ = Wire.read() << 8 | Wire.read();
+}
+
+void printInput(){
+  //Printing Acc
+  Serial.print(AccX);
+  pS();
+  Serial.print(AccY);
+  pS();
+  Serial.print(AccZ);
+  pS();
+
+  //Printing Gyro
+  Serial.print(GyroX);
+  pS();
+  Serial.print(GyroY);
+  pS();
+  Serial.print(GyroZ);
+  pS();
+
+  //Printing Sensors
+  Serial.print(MF);
+  pS();
+  Serial.print(LF);
+  pS();
+  Serial.print(MM);
+  pS();
+  Serial.print(Heel);
+  Serial.println("");
+}
+
+
+//Shorthand for printSpace
+void pS(){
+  Serial.print(" ");
+}
+
+
+float readAccX(){
+  return ()
+}
 void calculate_IMU_error() {
   // We can call this funtion in the setup section to calculate the accelerometer and gyro data error. From here we will get the error values used in the above equations printed on the Serial Monitor.
   // Note that we should place the IMU flat in order to get the proper values, so that we then can the correct values
