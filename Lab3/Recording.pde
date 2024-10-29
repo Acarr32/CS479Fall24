@@ -243,12 +243,6 @@ void drawNotesInBar(float x, float y, float barWidth, float barHeight, String[] 
   }
 }
 
-
-
-
-//void drawline
-
-
 // Function to calculate the y position based on note letter and octave
 float calculateNoteYPosition(char noteLetter, int octave, float startY, float barHeight) {
   // Define the step size for each line/space in the staff
@@ -419,22 +413,4 @@ public void drawSheetMusic() {
   drawNotesInBar(marginX, staffY, barWidth, barHeight, notes);
   image(trebleIcon, marginX-15, staffY + barHeight/2 +10, 150, 150);  // Draw treble clef image
   image(bassIcon, marginX-10, staffY + barHeight + staffSpacing +10 , 100, 100);  // Draw bass clef image
-  
-  if (playbackIndex < keyPresses.size()) {
-    String[] data = split(keyPresses.get(playbackIndex), ',');
-    String note = data[0];
-    int timeStamp = int(data[1]);
-
-    // Check if the current time has reached the timestamp for the next note
-    if (millis() - playbackStartTime >= timeStamp) {
-      // Play the note (you'll need a method to trigger the correct sound file based on the note)
-      playNoteByName(note);
-      println("Replaying note: " + note + " at " + timeStamp + " ms");
-
-      playbackIndex++;
-    }
-  } else {
-    isPlayingBack = false;  // Stop playback when all notes have been played
-    println("Playback finished.");
-  }
 }

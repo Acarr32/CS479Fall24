@@ -78,60 +78,36 @@ void calculateStringPositions() {
 
 
 void guitarSerial(Integer[] keysActive){
-  SoundFile[] guitarNotes = new SoundFile[sizeOfGuitarString];
-  for(int i = 0; i<keysActive.length; i++){
-    String noteFile = "./guitar-mp3/";
-    if(keysActive[i] == 0){
-      break;
-    }
-    switch(keysActive[i]){
-      case 1:
-        noteFile += "1st_String_E_64kb.mp3";
-        guitarNotes[i] = new SoundFile(this, noteFile);
-        break;
-      case 2:
-        noteFile += "2nd_String_B_64kb.mp3";
-        guitarNotes[i] = new SoundFile(this, noteFile);
-        break;
-      case 3:
-        noteFile += "3rd_String_G_64kb.mp3";
-        guitarNotes[i] = new SoundFile(this, noteFile);
-        break;
-      case 4:
-        noteFile += "4th_String_D_64kb.mp3";
-        guitarNotes[i] = new SoundFile(this, noteFile);
-        break;
-      case 5:
-        noteFile += "5th_String_A_64kb.mp3";
-        guitarNotes[i] = new SoundFile(this, noteFile);
-        break;
-      case 6:
-        noteFile += "6th_String_E_64kb.mp3";
-        guitarNotes[i] = new SoundFile(this, noteFile);
-        break;
-      case 7:
-        noteFile += "C_64kb.mp3";
-        guitarNotes[i] = new SoundFile(this, noteFile);
-        break;
-      case 8:
-        noteFile += "D_64kb.mp3";
-        guitarNotes[i] = new SoundFile(this, noteFile);
-        break;
-      case 9:
-        noteFile += "Dm_64kb.mp3";
-        guitarNotes[i] = new SoundFile(this, noteFile);
-        break;
-      case 10:
-        noteFile += "E_64kb.mp3";
-        guitarNotes[i] = new SoundFile(this, noteFile);
-        break;
+  SoundFile[] guitarNotes = new SoundFile[10];  // Fixed array size for guitar notes
+  List<Integer> kL = Arrays.asList(keysActive);
+
+  for (int i = 1; i <= 10; i++) {
+    if (kL.contains(i)) {
+      String noteFile = "./guitar-mp3/";
+      
+      switch (i) {
+        case 1: noteFile += "1st_String_E_64kb.mp3"; break;
+        case 2: noteFile += "2nd_String_B_64kb.mp3"; break;
+        case 3: noteFile += "3rd_String_G_64kb.mp3"; break;
+        case 4: noteFile += "4th_String_D_64kb.mp3"; break;
+        case 5: noteFile += "5th_String_A_64kb.mp3"; break;
+        case 6: noteFile += "6th_String_E_64kb.mp3"; break;
+        case 7: noteFile += "C_64kb.mp3"; break;
+        case 8: noteFile += "D_64kb.mp3"; break;
+        case 9: noteFile += "Dm_64kb.mp3"; break;
+        case 10: noteFile += "E_64kb.mp3"; break;
+      }
+      guitarNotes[i - 1] = new SoundFile(this, noteFile);
     }
   }
+
   playString(guitarNotes);
 }
 
 void playString(SoundFile[] guitarNotes) {
-  for(int i = 0; i<guitarNotes.length; i++){
-    guitarNotes[i].play();
+  for (int i = 0; i < guitarNotes.length; i++) {
+    if (guitarNotes[i] != null) {  // Only play non-null sound files
+      guitarNotes[i].play();
+    }
   }
 }
