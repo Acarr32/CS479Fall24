@@ -4,5 +4,8 @@ void setup(){
 }
 
 void draw(){
+  background(255);
+  drawModeButtons();
   drawGraphs();
+  drawFootBase();
 }
