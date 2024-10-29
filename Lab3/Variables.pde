@@ -16,6 +16,7 @@ PImage bassIcon, playIcon, playSampleIcon, startIcon, stopIcon, trebleIcon;
 
 // Save the pressed keys to record the music
 ArrayList<String> keyPresses = new ArrayList<String>();
+ArrayList<String> sampleNotes = new ArrayList<String>();
 
 // Playback state
 boolean isRecording = false;

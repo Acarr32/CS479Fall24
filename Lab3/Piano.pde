@@ -166,14 +166,24 @@ public void pianoSerial(Integer[] keys, int octaveEvent){
       if(i == 3){ kL.remove(Integer.valueOf(6)); kL.remove(Integer.valueOf(7)); }
       if(i == 4){ kL.remove(Integer.valueOf(7)); kL.remove(Integer.valueOf(8)); }
       if(i == 5){ kL.remove(Integer.valueOf(9)); kL.remove(Integer.valueOf(10)); }
+      
+      if (isRecording) {
+        int relativeTime = millis() - recordingStartTime;  // Calculate time relative to the start of the recording
+        keyPresses.add(blackOctaves[i] + currentOctave + "," + relativeTime);  // Save note and time in CSV format
+      }
     }
   }
 
   // White Key Check
   for (int i = 0; i < numWhite; i++) {
-    if(kL.contains(i)){
+    if(kL.contains(i + 1)){
       whiteKeyPressed[i] = true;  // Set the white key as pressed
       whiteKeyNotes[i].play();    // Play the note for the white key
+      
+      if (isRecording) {
+        int relativeTime = millis() - recordingStartTime;  // Calculate time relative to the start of the recording
+        keyPresses.add(octaves[i] + currentOctave + "," + relativeTime);  // Save note and time in CSV format
+      }
     }
   }
 
