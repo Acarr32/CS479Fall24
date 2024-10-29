@@ -1,5 +1,5 @@
 void drawFootBase(){
-  
+  img = loadImage("FootBase.png");
 }
 
 boolean drawBubbles(float MF, float LF, float MM, float Heel){
