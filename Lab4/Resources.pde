@@ -24,16 +24,18 @@ class Button {
   }
 
   void display() {
-    fill(150);
+    fill(buttonColor);
     rect(x, y, w, h);
     fill(0);
 
     if (label != "") {
       textAlign(CENTER, CENTER);
       text(label, x + w / 2, y + h / 2);
-    } else {
+      textAlign(LEFT, BASELINE); // Reset textAlign if needed
+    } else if (iconImage != null) {
       imageMode(CENTER);
       image(iconImage, x + w / 2, y + h / 2, w * 0.8, h * 0.8);
+      imageMode(CORNER); // Reset imageMode if needed
     }
   }
 
