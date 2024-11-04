@@ -3,7 +3,7 @@ float calculateMFP(float MM, float MF, float LF, float Heel){
   float numerator = (MM + MF) * 100;
   float denominator = MM + MF + LF + Heel + .001;
   
-  return numerator/denominator;
+  return (float)(numerator/denominator);
 }
 
 //Button class for easy management of buttons
@@ -50,4 +50,31 @@ class Button {
 
 void serialEvent(){
   //TODO: Read the data and put them into the graphs
+}
+
+Profiles FindGait(float currMM, float currMF, float currLF, float currHeel, float minRead, float maxRead){
+  float MFP = calculateMFP(currMM, currMF, currLF, currHeel);
+  float confidenceWindow = 20;
+  float readRange = maxRead - minRead;
+  float midRead = readRange / 2;
+  float lowConfidenceBound = midRead - confidenceWindow;
+  float highConfidenceBound = midRead + confidenceWindow;
+  
+  if(MFP > 100 - confidenceWindow){
+    if(currMF > currLF + (confidenceWindow / (4 * readRange))){
+      return Profiles.OutToe;
+    }
+    else if(currLF > currMF){
+      return Profiles.InToe;
+    }
+    else return Profiles.TipToeing;
+  }
+  else{
+    return Profiles.Normal;
+  }
+  
+}
+
+Profiles FindGaitAdv(float currMM, float currMF, float currLF, float currHeel){
+  return Profiles.Normal;
 }

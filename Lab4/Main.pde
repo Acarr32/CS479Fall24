@@ -1,6 +1,6 @@
 import processing.sound.*;
 import java.util.*;
-import processing.serial.*; //**************************************
+import processing.serial.*;
 Serial myPort;
 PFont boldFont;
 
