@@ -49,7 +49,6 @@ class Button {
 }
 
 void serialEvent(Serial myPort){
-  //TODO: Read the data and put them into the graphs
   String value = myPort.readStringUntil('\n');  // Read serial input until newline
   try {
     if(value != null){
