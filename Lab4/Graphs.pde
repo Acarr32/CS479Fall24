@@ -1,11 +1,11 @@
 void initializeGraphs(){
   // Graphs dimensions
-  graphWidth = width / 3;
+  graphWidth = width * 2 / 9;
   graphHeight = height / 2;
 }
 
 // use graphWidth and grapHeight for graph size
-void drawGraphs(){  
+void drawGraphs(){   
   fill(255);
   rect(0, 0, graphWidth, graphHeight);
   fill(0);

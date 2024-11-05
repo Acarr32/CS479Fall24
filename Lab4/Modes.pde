@@ -1,8 +1,8 @@
 void initializeMode() {
   // Text Column dimensions
-  columnWidth = width / 3;
-  textWidth = width / 4;
-  distX = columnWidth * 2;
+  columnWidth = width / 4;
+  textWidth = columnWidth * 3 / 4;
+  distX = width - columnWidth;
   marginX = (columnWidth - textWidth) / 2;
   
   // Buttons dimensions
@@ -44,6 +44,7 @@ void drawMode() {
   drawText();
   drawModeButtons();
   drawGraphs();
+  drawFootBase();
 }
 
 void drawText() {
@@ -90,7 +91,7 @@ void drawInputField(float x, float y, String inputText, boolean isActive) {
   fill(255);
   rect(x, y, textWidth / 2, lineHeight / 3);
   fill(0);
-  text(inputText, x + 5, y + 15);
+  text(inputText, x + 5, y + lineHeight / 4);
   noStroke();
 }
 
