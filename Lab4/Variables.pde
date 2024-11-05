@@ -41,7 +41,7 @@ float graphWidth, graphHeight;
 // Text Column dimensions
 float columnWidth, textWidth, marginX, distX;
 
-final float MAX_FORCE_READING = 1;
+final float MAX_FORCE_READING = 1000;
 
 // Buttons to change the view
 Button gameButton, profileButton;
