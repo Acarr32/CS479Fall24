@@ -1,7 +1,7 @@
 //Function defined in the lab manual to calculate our MFP
 float calculateMFP(float MM, float MF, float LF, float Heel){
   float numerator = (MM + MF) * 100;
-  float denominator = MM + MF + LF + Heel + .001;
+  float denominator = MM + MF + LF + Heel + 0.001;
   
   return (float)(numerator/denominator);
 }
@@ -64,8 +64,37 @@ class Button {
   }
 }
 
-void serialEvent(){
-  //TODO: Read the data and put them into the graphs
+void serialEvent(Serial myPort){
+  String value = myPort.readStringUntil('\n');  // Read serial input until newline
+  try {
+    if(value != null){
+      value = trim(value);
+
+      String[] values = split(value, " ");
+      currAcc.setX(float(values[0]));
+      currAcc.setY(float(values[1]));
+      currAcc.setZ(float(values[2]));
+      if(accArr.size() > 20){
+        accArr.remove(0);
+      }
+      accArr.add(currAcc);
+      
+      currGyro.setX(float(values[3]));
+      currGyro.setY(float(values[4]));
+      currGyro.setZ(float(values[5]));
+      if(gyroArr.size() > 20){
+        gyroArr.remove(0);
+      }
+      gyroArr.add(currGyro);
+      
+      currMM = float(values[6]);
+      currMF = float(values[7]);
+      currLF = float(values[8]);
+      currHeel = float(values[9]);
+    }
+  } catch(Exception e){
+    System.out.println(e);
+  }
 }
 
 Profiles FindGait(float currMM, float currMF, float currLF, float currHeel, float minRead, float maxRead){

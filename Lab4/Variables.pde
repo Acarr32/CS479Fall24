@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 // States of the application
 enum State {
   GRAPHS, GAME, PROFILE
@@ -9,6 +10,46 @@ enum Profiles{
   OutToe,
   TipToeing,
   Heeling
+}
+
+class Accelerometer{
+  float x;
+  float y;
+  float z;
+  
+  Accelerometer(float x, float y, float z){
+    this.x = x;
+    this.y = y;
+    this.z = z;
+  }
+  
+  void setX(float x){ this.x = x; }
+  void setY(float y){ this.y = y; }
+  void setZ(float z){ this.z = z; }
+  
+  float getX(){ return this.x; }
+  float getY(){ return this.y; }
+  float getZ(){ return this.z; }
+}
+
+class Gyroscope{
+  float x;
+  float y;
+  float z;
+  
+  Gyroscope(float x, float y, float z){
+    this.x = x;
+    this.y = y;
+    this.z = z;
+  }
+  
+  void setX(float x){ this.x = x; }
+  void setY(float y){ this.y = y; }
+  void setZ(float z){ this.z = z; }
+  
+  float getX(){ return this.x; }
+  float getY(){ return this.y; }
+  float getZ(){ return this.z; }
 }
 
 String GetProfileString(Profiles profile){
@@ -32,6 +73,14 @@ State currentState = State.GRAPHS;
 
 int inputBuffer = 10;
 int sampleTime = 10;
+
+Accelerometer currAcc;
+Gyroscope currGyro;
+
+ArrayList<Accelerometer> accArr = new ArrayList<Accelerometer>();
+ArrayList<Gyroscope> gyroArr = new ArrayList<Gyroscope>();
+
+float currMM; float currMF; float currLF; float currHeel;
 
 PImage img;
 
