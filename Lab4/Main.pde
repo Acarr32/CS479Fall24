@@ -25,10 +25,11 @@ void draw(){
   textSize(24);
   textAlign(CENTER);
   
-  // Check the mode and display accordingly
-  switch (currentState) {
+  // Check the mode and display accordingly //<>//
+  switch (currentState) { //<>//
     case GRAPHS:
       drawMode();
+      drawBubbles();
       break;
     case GAME:
       drawGame();

@@ -93,20 +93,3 @@ Profiles FindGait(float currMM, float currMF, float currLF, float currHeel, floa
   }
   
 }
-
-void drawBubble(float x, float y, float reading){
-  float minSize = 10;
-  float maxSize = 100;
-  
-  float percentMax = reading/MAX_FORCE_READING;
-  
-  float size = (percentMax * (maxSize - minSize)) + minSize;
-  
-  colorMode(HSB, 120);
-  
-  fill(color(map(reading, 0, MAX_FORCE_READING, 0, 120)));
-  
-  circle(x,y, size);
-  
-  colorMode(RGB, 255);
-}
