@@ -57,8 +57,8 @@ Profiles FindGait(float currMM, float currMF, float currLF, float currHeel, floa
   float confidenceWindow = 20;
   float readRange = maxRead - minRead;
   float midRead = readRange / 2;
-  float lowConfidenceBound = midRead - confidenceWindow;
-  float highConfidenceBound = midRead + confidenceWindow;
+  //float lowConfidenceBound = midRead - confidenceWindow;
+  //float highConfidenceBound = midRead + confidenceWindow;
   
   if(MFP > 100 - confidenceWindow){
     if(currMF > currLF + (confidenceWindow / (4 * readRange))){
@@ -69,12 +69,28 @@ Profiles FindGait(float currMM, float currMF, float currLF, float currHeel, floa
     }
     else return Profiles.TipToeing;
   }
+  else if (MFP < confidenceWindow){
+    return Profiles.Heeling;
+  }
   else{
     return Profiles.Normal;
   }
   
 }
 
-Profiles FindGaitAdv(float currMM, float currMF, float currLF, float currHeel){
-  return Profiles.Normal;
+void drawBubble(float x, float y, float reading){
+  float minSize = 10;
+  float maxSize = 100;
+  
+  float percentMax = reading/MAX_FORCE_READING;
+  
+  float size = (percentMax * (maxSize - minSize)) + minSize;
+  
+  colorMode(HSB, 120);
+  
+  fill(color(map(reading, 0, MAX_FORCE_READING, 0, 120)));
+  
+  circle(x,y, size);
+  
+  colorMode(RGB, 255);
 }
