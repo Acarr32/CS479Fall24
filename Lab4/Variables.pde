@@ -80,7 +80,7 @@ Gyroscope currGyro;
 ArrayList<Accelerometer> accArr = new ArrayList<Accelerometer>();
 ArrayList<Gyroscope> gyroArr = new ArrayList<Gyroscope>();
 
-float currMM; float currMF; float currLF; float currHeel;
+float cMM; float cMF; float cLF; float cHeel;
 
 PImage img;
 

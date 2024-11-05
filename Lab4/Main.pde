@@ -7,7 +7,10 @@ PFont boldFont;
 void setup(){
   fullScreen();
   currentState = State.GRAPHS;
-  myPort = new Serial(this, Serial.list()[0], 115200);
+  for(int i = 0; i < Serial.list().length; i++){
+      System.out.println(Serial.list()[i]);
+  }
+  myPort = new Serial(this, Serial.list()[2], 115200);
   boldFont = createFont("SansSerif-Bold", 24);
  
   initializeGraphs();
@@ -22,15 +25,14 @@ void setup(){
 }
 
 void draw(){
-  background(255);
-  textSize(24);
+  background(255); //<>//
+  textSize(24); //<>//
   textAlign(CENTER);
-   //<>//
-  // Check the mode and display accordingly //<>// //<>//
+  
+  // Check the mode and display accordingly //<>//
   switch (currentState) { //<>//
     case GRAPHS:
       drawMode();
-      drawBubbles();
       break;
     case GAME:
       drawGame();

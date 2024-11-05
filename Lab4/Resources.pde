@@ -66,34 +66,39 @@ class Button {
 
 void serialEvent(Serial myPort){
   String value = myPort.readStringUntil('\n');  // Read serial input until newline
-  try {
-    if(value != null){
-      value = trim(value);
-
-      String[] values = split(value, " ");
-      currAcc.setX(float(values[0]));
-      currAcc.setY(float(values[1]));
-      currAcc.setZ(float(values[2]));
-      if(accArr.size() > 20){
-        accArr.remove(0);
-      }
-      accArr.add(currAcc);
+  if(value != null){
+    System.out.println(value);
+    try {
       
-      currGyro.setX(float(values[3]));
-      currGyro.setY(float(values[4]));
-      currGyro.setZ(float(values[5]));
-      if(gyroArr.size() > 20){
-        gyroArr.remove(0);
+        value = trim(value);
+  
+        String[] values = split(value, " ");
+        currAcc.setX(float(values[0]));
+        currAcc.setY(float(values[1]));
+        currAcc.setZ(float(values[2]));
+        if(accArr.size() > 20){
+          accArr.remove(0);
+        accArr.add(currAcc);
+        
+        currGyro.setX(float(values[3]));
+        currGyro.setY(float(values[4]));
+        currGyro.setZ(float(values[5]));
+        if(gyroArr.size() > 20){
+          gyroArr.remove(0);
+        }
+        gyroArr.add(currGyro);
+        
+        cMM = float(values[6]);
+        cMF = float(values[7]);
+        cLF = float(values[8]);
+        cHeel = float(values[9]);
+        
+        drawBubbles(cMM, cMF, cLF, cHeel);
       }
-      gyroArr.add(currGyro);
-      
-      currMM = float(values[6]);
-      currMF = float(values[7]);
-      currLF = float(values[8]);
-      currHeel = float(values[9]);
+    } 
+    catch(Exception e){
+      //System.out.println(e);
     }
-  } catch(Exception e){
-    System.out.println(e);
   }
 }
 
@@ -101,7 +106,6 @@ Profiles FindGait(float currMM, float currMF, float currLF, float currHeel, floa
   float MFP = calculateMFP(currMM, currMF, currLF, currHeel);
   float confidenceWindow = 20;
   float readRange = maxRead - minRead;
-  float midRead = readRange / 2;
   //float lowConfidenceBound = midRead - confidenceWindow;
   //float highConfidenceBound = midRead + confidenceWindow;
   
