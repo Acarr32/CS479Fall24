@@ -6,6 +6,22 @@ float calculateMFP(float MM, float MF, float LF, float Heel){
   return (float)(numerator/denominator);
 }
 
+class Foot {
+  float topLeftX;
+  float topLeftY;
+  PImage image;
+  
+  Foot (PImage image, float topLeftX, float topLeftY) {
+    this.topLeftX = topLeftX;
+    this.topLeftY = topLeftY;
+    this.image = image;
+  }
+  
+  void display() {
+    image(this.image, this.topLeftX, this.topLeftY); 
+  }
+}
+
 //Button class for easy management of buttons
 class Button {
   float x, y, w, h;

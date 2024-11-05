@@ -11,6 +11,7 @@ void setup(){
  
   initializeGraphs();
   initializeMode();
+  initializeFoot();
   
   // Set up the back button dimensions
   backButtonWidth = width / 15;
@@ -34,7 +35,6 @@ void draw(){
       drawBackButton();
       break;
     case PROFILE:
-      drawFootBase();
       drawBackButton();
       break;
     default:

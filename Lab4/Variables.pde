@@ -64,3 +64,8 @@ String userStatus = "Active";
 
 float labelX, labelY, lineHeight;
 boolean isStepLengthActive, isStepWidthActive;
+
+// Variables for foot image
+PImage footImg;
+float footX, footY;
+Foot foot;
