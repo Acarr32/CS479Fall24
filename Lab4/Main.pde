@@ -1,21 +1,22 @@
 import processing.sound.*;
 import java.util.*;
 import processing.serial.*;
-Serial myPort;
+// Serial myPort;
 PFont boldFont;
 
 void setup(){
   fullScreen();
   currentState = State.GRAPHS;
-  for(int i = 0; i < Serial.list().length; i++){
-      System.out.println(Serial.list()[i]);
-  }
-  myPort = new Serial(this, Serial.list()[2], 115200);
+  //for(int i = 0; i < Serial.list().length; i++){
+  //    System.out.println(Serial.list()[i]);
+  //}
+  //myPort = new Serial(this, Serial.list()[2], 115200);
   boldFont = createFont("SansSerif-Bold", 24);
  
   initializeGraphs();
   initializeMode();
   initializeFoot();
+  newTargetColor();
   
   // Set up the back button dimensions
   backButtonWidth = width / 15;
@@ -32,13 +33,12 @@ void draw(){
   // Check the mode and display accordingly //<>//
   switch (currentState) { //<>//
     case GRAPHS:
+      currentState = State.GRAPHS;
       drawMode();
       break;
     case GAME:
+      currentState = State.GAME;  
       drawGame();
-      drawBackButton();
-      break;
-    case PROFILE:
       drawBackButton();
       break;
     default:
@@ -52,7 +52,7 @@ public void drawBackButton() {
   backButton = new Button(backButtonX, backButtonY, backButtonWidth, backButtonHeight, "Back", null, color(150));
   backButton.display();
   
-  if (backButton.isMouseOver()) {
+  if (backButton.isMouseOver() && mousePressed) {
     currentState = State.GRAPHS;
   }
 }

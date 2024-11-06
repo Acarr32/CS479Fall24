@@ -118,3 +118,11 @@ boolean isStepLengthActive, isStepWidthActive;
 PImage footImg;
 float footX, footY;
 Foot foot;
+
+// Game mode
+int score = 0;
+color targetColor;
+boolean showFeedback = false;
+String feedbackText = "";
+int lastColorChange = 0;
+int colorChangeInterval = 1000;

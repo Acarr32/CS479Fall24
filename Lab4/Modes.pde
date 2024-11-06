@@ -10,15 +10,8 @@ void initializeMode() {
   buttonWidth = textWidth * 2 / 5;
   buttonHeight = height / 14;
   
-  profileButton = new Button(distX + marginX, modeButtonsY, buttonWidth, buttonHeight, "Add Profile", null, color(150));
-  if (profileButton.isMouseOver()) {
-    currentState = State.PROFILE;
-  }
-  
+  profileButton = new Button(distX + marginX, modeButtonsY, buttonWidth, buttonHeight, "Add Profile", null, color(150));  
   gameButton = new Button(width - marginX - buttonWidth, modeButtonsY, buttonWidth, buttonHeight, "Game Mode", null, color(150));
-  if (gameButton.isMouseOver()) {
-    currentState = State.GAME;
-  }
   
   // Labels positions
   labelX = distX + marginX;
@@ -37,8 +30,15 @@ void drawModeButtons() {
   
   profileButton.display();
   gameButton.display();
-}
   
+  if (gameButton.isMouseOver() && mousePressed) {
+    currentState = State.GAME;
+  }
+  
+  if (profileButton.isMouseOver() && mousePressed) {
+    currentState = State.PROFILE;
+  }
+}
   
 void drawMode() { 
   drawText();
@@ -124,4 +124,7 @@ void mousePressed() {
     isStepLengthActive = false;
     isStepWidthActive = false;
   }
+  
+
+  
 }
