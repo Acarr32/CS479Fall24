@@ -63,7 +63,7 @@ class Button {
     return mouseX > x && mouseX < x + w && mouseY > y && mouseY < y + h;
   }
 }
-/*
+
 void serialEvent(Serial myPort){
   String value = myPort.readStringUntil('\n');  // Read serial input until newline
   if(value != null){
@@ -102,6 +102,11 @@ void serialEvent(Serial myPort){
         }
         MMarr.add(cMM);
         
+        for (int i = 0; i < MMarr.size(); i++) {
+          System.out.print(MMarr.get(i) + ",");
+        }
+        System.out.println("");
+        
         if(MFarr.size() > 20){
           MFarr.remove(0);
         }
@@ -122,15 +127,16 @@ void serialEvent(Serial myPort){
         System.out.println(cMM);
         System.out.println(cHeel);
         System.out.println("========");
+        drawBubbles(cMM, cMF, cLF, cHeel);
       }
     } 
-    catch(Exception e){
-      //System.out.println(e);
-    }
-    drawBubbles(cMM, cMF, cLF, cHeel);
+    catch(Exception e) {
+    System.out.println("Parsing error: " + e);
   }
 }
-*/
+}
+
+
 Profiles FindGait(float currMM, float currMF, float currLF, float currHeel, float minRead, float maxRead){
   float MFP = calculateMFP(currMM, currMF, currLF, currHeel);
   float confidenceWindow = 20;

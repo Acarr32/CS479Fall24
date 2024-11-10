@@ -1,7 +1,7 @@
 import processing.sound.*;
 import java.util.*;
 import processing.serial.*;
-// Serial myPort;
+ Serial myPort;
 PFont boldFont;
 
 void setup(){
@@ -10,7 +10,11 @@ void setup(){
   //for(int i = 0; i < Serial.list().length; i++){
   //    System.out.println(Serial.list()[i]);
   //}
-  //myPort = new Serial(this, Serial.list()[2], 115200);
+  if (Serial.list().length > 0) {
+    myPort = new Serial(this, Serial.list()[0], 115200);
+} else {
+    System.out.println("No serial ports available.");
+}
   boldFont = createFont("SansSerif-Bold", 24);
  
   initializeGraphs();
