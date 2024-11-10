@@ -64,52 +64,72 @@ class Button {
   }
 }
 
-//void serialEvent(Serial myPort){
-//  String value = myPort.readStringUntil('\n');  // Read serial input until newline
-//  if(value != null){
-//    //System.out.println(value);
-//    try {
-//        value = trim(value);
-//        String[] values = split(value, " ");
+void serialEvent(Serial myPort){
+  String value = myPort.readStringUntil('\n');  // Read serial input until newline
+  if(value != null){
+    //System.out.println(value);
+    try {
+        value = trim(value);
+        String[] values = split(value, " ");
         
-//        for(int i = 6; i < values.length; i++){
-//          System.out.println(values[i]);
-//        }
-//        System.out.println("==============");
+        for(int i = 6; i < values.length; i++){
+          System.out.println(values[i]);
+        }
+        System.out.println("==============");
         
-//        currAcc.setX(Float.parseFloat(values[0]));
-//        currAcc.setY(Float.parseFloat(values[1]));
-//        currAcc.setZ(Float.parseFloat(values[2]));
-//        if(accArr.size() > 20){
-//          accArr.remove(0);
-//        accArr.add(currAcc);
+        currAcc.setX(Float.parseFloat(values[0]));
+        currAcc.setY(Float.parseFloat(values[1]));
+        currAcc.setZ(Float.parseFloat(values[2]));
+        if(accArr.size() > 20){
+          accArr.remove(0);
+        accArr.add(currAcc);
         
-//        currGyro.setX(Float.parseFloat(values[3]));
-//        currGyro.setY(Float.parseFloat(values[4]));
-//        currGyro.setZ(Float.parseFloat(values[5]));
-//        if(gyroArr.size() > 20){
-//          gyroArr.remove(0);
-//        }
-//        gyroArr.add(currGyro);
+        currGyro.setX(Float.parseFloat(values[3]));
+        currGyro.setY(Float.parseFloat(values[4]));
+        currGyro.setZ(Float.parseFloat(values[5]));
+        if(gyroArr.size() > 20){
+          gyroArr.remove(0);
+        }
+        gyroArr.add(currGyro);
         
-//        cMF = Float.parseFloat(values[6]);
-//        cLF = Float.parseFloat(values[7]);
-//        cMM = Float.parseFloat(values[8]);
-//        cHeel = Float.parseFloat(values[9]);
+        cMF = Float.parseFloat(values[6]);
+        cLF = Float.parseFloat(values[7]);
+        cMM = Float.parseFloat(values[8]);
+        cHeel = Float.parseFloat(values[9]);
         
-//        System.out.println(cMF);
-//        System.out.println(cLF);
-//        System.out.println(cMM);
-//        System.out.println(cHeel);
-//        System.out.println("========");
-//      }
-//    } 
-//    catch(Exception e){
-//      //System.out.println(e);
-//    }
-//    drawBubbles(cMM, cMF, cLF, cHeel);
-//  }
-//}
+        if(MMarr.size() > 20){
+          MMarr.remove(0);
+        }
+        MMarr.add(cMM);
+        
+        if(MFarr.size() > 20){
+          MFarr.remove(0);
+        }
+        MFarr.add(cMF);
+        
+        if(LFarr.size() > 20){
+          LFarr.remove(0);
+        }
+        LFarr.add(cLF);
+        
+        if(Heelarr.size() > 20){
+          Heelarr.remove(0);
+        }
+        Heelarr.add(cHeel);
+        
+        System.out.println(cMF);
+        System.out.println(cLF);
+        System.out.println(cMM);
+        System.out.println(cHeel);
+        System.out.println("========");
+      }
+    } 
+    catch(Exception e){
+      //System.out.println(e);
+    }
+    drawBubbles(cMM, cMF, cLF, cHeel);
+  }
+}
 
 Profiles FindGait(float currMM, float currMF, float currLF, float currHeel, float minRead, float maxRead){
   float MFP = calculateMFP(currMM, currMF, currLF, currHeel);

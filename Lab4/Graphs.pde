@@ -6,36 +6,39 @@ void initializeGraphs(){
 
 // use graphWidth and grapHeight for graph size
 void drawGraphs(){  
-  graph1();
-  graph2();
-  graph3();
-  graph4();
+  drawGraph(MMarr, 0, 0, graphWidth, graphHeight, "MM Graph");
+  drawGraph(MFarr, graphWidth, 0, graphWidth, graphHeight, "MF Graph");
+  drawGraph(LFarr, 0, graphHeight, graphWidth, graphHeight, "LF Graph");
+  drawGraph(Heelarr, graphWidth, graphHeight, graphWidth, graphHeight, "Heel Graph");
 }
 
-void graph1(){
-  fill(255);
-  rect(0, 0, graphWidth, graphHeight);
-  fill(0);
-  text("FSR graph 1", graphWidth / 2, graphHeight / 2);  
-}
+void drawGraph(ArrayList<Float> data, float x, float y, float w, float h, String title) {
+    fill(255);
+    rect(x, y, w, h); // Draw background for the graph
+    fill(0);
+    textAlign(CENTER, CENTER);
+    text(title, x + w / 2, y + 20); // Display title at the top
 
-void graph2(){
-  fill(255);
-  rect(graphWidth, 0, graphWidth, graphHeight);
-  fill(0);
-  text("FSR graph 2", graphWidth * 3 / 2, graphHeight / 2);
-}
+    // Draw X and Y axes
+    stroke(0);
+    line(x + 40, y, x + 40, y + h); // Y-axis
+    line(x, y + h - 40, x + w, y + h - 40); // X-axis
 
-void graph3(){
-  fill(255);
-  rect(0, graphHeight, graphWidth, graphHeight);
-  fill(0);
-  text("FSR graph 3", graphWidth / 2, graphHeight * 3 / 2);
-}
+    // Label X and Y axes
+    textAlign(RIGHT, CENTER);
+    text("", x + 30, y + h / 2); // Y-axis label
+    textAlign(CENTER, BOTTOM);
+    text("", x + w / 2, y + h - 20); // X-axis label
 
-void graph4(){
-  fill(255);
-  rect(graphWidth, graphHeight, graphWidth, graphHeight);
-  fill(0);
-  text("FSR graph 4", graphWidth * 3 / 2, graphHeight * 3 / 2);
+    // Plot data points
+    float maxVal = 1000; // Adjust according to expected data range
+    for (int i = 1; i < data.size(); i++) {
+        float x1 = map(i - 1, 0, data.size() - 1, x + 40, x + w); // Start after Y-axis offset
+        float y1 = map(data.get(i - 1), 0, maxVal, y + h - 40, y); // Adjust to fit within axes
+        float x2 = map(i, 0, data.size() - 1, x + 40, x + w);
+        float y2 = map(data.get(i), 0, maxVal, y + h - 40, y);
+        
+        stroke(0);
+        line(x1, y1, x2, y2); // Draw line between data points
+    }
 }

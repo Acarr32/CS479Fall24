@@ -81,7 +81,7 @@ ArrayList<Accelerometer> accArr = new ArrayList<Accelerometer>();
 ArrayList<Gyroscope> gyroArr = new ArrayList<Gyroscope>();
 
 float cMM; float cMF; float cLF; float cHeel;
-
+ArrayList<Float> MMarr = new ArrayList<Float>(); ArrayList<Float> MFarr = new ArrayList<Float>(); ArrayList<Float> LFarr = new ArrayList<Float>(); ArrayList<Float> Heelarr = new ArrayList<Float>();
 PImage img;
 
 // Graphs dimensions
