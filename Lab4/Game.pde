@@ -14,8 +14,8 @@ void drawGame() {
 
   // Display score
   fill(0);
-  textSize(20);
-  text("Score: " + score, 10, 30);
+  textSize(30);
+  text("Score: " + score, width / 4 + 100, height / 3);
 
   // Display feedback
   if (showFeedback) {

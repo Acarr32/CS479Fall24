@@ -63,7 +63,7 @@ class Button {
     return mouseX > x && mouseX < x + w && mouseY > y && mouseY < y + h;
   }
 }
-
+/*
 void serialEvent(Serial myPort){
   String value = myPort.readStringUntil('\n');  // Read serial input until newline
   if(value != null){
@@ -130,7 +130,7 @@ void serialEvent(Serial myPort){
     drawBubbles(cMM, cMF, cLF, cHeel);
   }
 }
-
+*/
 Profiles FindGait(float currMM, float currMF, float currLF, float currHeel, float minRead, float maxRead){
   float MFP = calculateMFP(currMM, currMF, currLF, currHeel);
   float confidenceWindow = 20;
