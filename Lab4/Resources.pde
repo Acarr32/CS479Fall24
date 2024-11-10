@@ -77,25 +77,25 @@ void serialEvent(Serial myPort){
         }
         System.out.println("==============");
         
-        currAcc.setX(Float.parseFloat(values[0]));
-        currAcc.setY(Float.parseFloat(values[1]));
-        currAcc.setZ(Float.parseFloat(values[2]));
+        currAcc.setX(float(values[0]));
+        currAcc.setY(float(values[1]));
+        currAcc.setZ(float(values[2]));
         if(accArr.size() > 20){
           accArr.remove(0);
         accArr.add(currAcc);
         
-        currGyro.setX(Float.parseFloat(values[3]));
-        currGyro.setY(Float.parseFloat(values[4]));
-        currGyro.setZ(Float.parseFloat(values[5]));
+        currGyro.setX(float(values[3]));
+        currGyro.setY(float(values[4]));
+        currGyro.setZ(float(values[5]));
         if(gyroArr.size() > 20){
           gyroArr.remove(0);
         }
         gyroArr.add(currGyro);
         
-        cMF = Float.parseFloat(values[6]);
-        cLF = Float.parseFloat(values[7]);
-        cMM = Float.parseFloat(values[8]);
-        cHeel = Float.parseFloat(values[9]);
+        cMF = float(values[6]);
+        cLF = float(values[7]);
+        cMM = float(values[8]);
+        cHeel = float(values[9]);
         
         if(MMarr.size() > 20){
           MMarr.remove(0);

@@ -21,6 +21,8 @@ void setup(){
   initializeMode();
   initializeFoot();
   newTargetColor();
+  currAcc = new Accelerometer(0.0, 0.0, 0.0);
+  currGyro = new Gyroscope(0.0, 0.0, 0.0);
   
   // Set up the back button dimensions
   backButtonWidth = width / 15;
