@@ -72,9 +72,9 @@ void serialEvent(Serial myPort){
         value = trim(value);
         String[] values = split(value, " ");
         
-        //for(int i = 6; i < values.length; i++){
-        //  System.out.println(values[i]);
-        //}
+        for(int i = 6; i < values.length; i++){
+          System.out.println(values[i]);
+        }
         System.out.println("==============");
         
         currAcc.setX(float(values[0]));
@@ -97,64 +97,39 @@ void serialEvent(Serial myPort){
         cMM = float(values[8]);
         cHeel = float(values[9]);
         
-        if(MMarr.length >=20 ){
-          for (int i = 1; i < MMarr.length; i++) {
-            MMarr[i - 1] = MMarr[i];
-          }
-          MMarr[MMarr.length - 1] = cMM;
-        } else{
-          MMarr[MMcount] = cMM;
-          MMcount++;
+        if(MMarr.size() > 20){
+          MMarr.remove(0);
         }
-        for(int i = 0; i < MMarr.length; i++) {
-            System.out.print(MMarr[i] + " ");
-        }
+        MMarr.add(cMM);
         
-        if(MFarr.length >=20 ){
-          for (int i = 1; i < MFarr.length; i++) {
-            MFarr[i - 1] = MFarr[i];
-          }
-          MFarr[MFarr.length - 1] = cMF;
-        } else{
-          MFarr[MFcount] = cMF;
-          MFcount++;
+        if(MFarr.size() > 20){
+          MFarr.remove(0);
         }
+        MFarr.add(cMF);
         
-        if(LFarr.length >=20 ){
-          for (int i = 1; i < LFarr.length; i++) {
-            LFarr[i - 1] = LFarr[i];
-          }
-          LFarr[LFarr.length - 1] = cLF;
-        } else{
-          LFarr[LFcount] = cLF;
-          LFcount++;
+        if(LFarr.size() > 20){
+          LFarr.remove(0);
         }
+        LFarr.add(cLF);
         
-        if(Heelarr.length >=20 ){
-          for (int i = 1; i < Heelarr.length; i++) {
-            Heelarr[i - 1] = Heelarr[i];
-          }
-          Heelarr[Heelarr.length - 1] = cHeel;
-        } else{
-          Heelarr[Heelcount] = cHeel;
-          Heelcount++;
+        if(Heelarr.size() > 20){
+          Heelarr.remove(0);
         }
-
+        Heelarr.add(cHeel);
         
-        //System.out.println(cMF);
-        //System.out.println(cLF);
-        //System.out.println(cMM);
-        //System.out.println(cHeel);
+        System.out.println(cMF);
+        System.out.println(cLF);
+        System.out.println(cMM);
+        System.out.println(cHeel);
         System.out.println("========");
-        drawBubbles(cMM, cMF, cLF, cHeel);
       }
     } 
-    catch(Exception e) {
-    System.out.println("Parsing error: " + e);
+    catch(Exception e){
+      //System.out.println(e);
+    }
+    drawBubbles(cMM, cMF, cLF, cHeel);
   }
 }
-}
-
 
 Profiles FindGait(float currMM, float currMF, float currLF, float currHeel, float minRead, float maxRead){
   float MFP = calculateMFP(currMM, currMF, currLF, currHeel);

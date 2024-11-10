@@ -17,6 +17,11 @@ class Accelerometer{
   float y;
   float z;
   
+  Accelerometer(){
+    this.x = 0.0;
+    this.y = 0.0;
+    this.z = 0.0;
+  }
   Accelerometer(float x, float y, float z){
     this.x = x;
     this.y = y;
@@ -74,14 +79,16 @@ State currentState = State.GRAPHS;
 int inputBuffer = 10;
 int sampleTime = 10;
 
-Accelerometer currAcc;
+Accelerometer currAcc = new Accelerometer();
 Gyroscope currGyro;
 
 ArrayList<Accelerometer> accArr = new ArrayList<Accelerometer>();
 ArrayList<Gyroscope> gyroArr = new ArrayList<Gyroscope>();
 
 float cMM; float cMF; float cLF; float cHeel;
-ArrayList<Float> MMarr = new ArrayList<Float>(); ArrayList<Float> MFarr = new ArrayList<Float>(); ArrayList<Float> LFarr = new ArrayList<Float>(); ArrayList<Float> Heelarr = new ArrayList<Float>();
+int MMcount = 0; int MFcount = 0; int LFcount = 0; int Heelcount = 0;
+float[] MMarr = new float[20]; float[] MFarr = new float[20]; float[] LFarr = new float[20]; float[] Heelarr = new float[20];
+//ArrayList<Float> MMarr = new ArrayList<Float>(); ArrayList<Float> MFarr = new ArrayList<Float>(); ArrayList<Float> LFarr = new ArrayList<Float>(); ArrayList<Float> Heelarr = new ArrayList<Float>();
 PImage img;
 
 // Graphs dimensions

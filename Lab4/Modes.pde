@@ -124,7 +124,7 @@ void mousePressed() {
     isStepLengthActive = false;
     isStepWidthActive = false;
   }
-  
+  //addDataToMF(random(0, 600));
 
   
 }
