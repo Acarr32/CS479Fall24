@@ -60,15 +60,15 @@ class Gyroscope{
 String GetProfileString(Profiles profile){
   switch(profile){
     case Normal:
-      return "Profile: Walking Normally";
+      return "Walking Normally";
     case InToe:
-      return "Profile: In-Toeing";
+      return "In-Toeing";
     case OutToe:
-      return "Profile: Out-Toeing";
+      return "Out-Toeing";
     case TipToeing:
-      return "Profile: Tip Toeing";
+      return "Tip Toeing";
     case Heeling:
-      return "Profile: Walking on Heels";
+      return "Walking on Heels";
     default:
       return "ERROR 001"; // String not processed
   }
@@ -79,8 +79,8 @@ State currentState = State.GRAPHS;
 int inputBuffer = 10;
 int sampleTime = 10;
 
-Accelerometer currAcc = new Accelerometer();
-Gyroscope currGyro;
+Accelerometer currAcc = new Accelerometer(0.0,0.0,0.0);
+Gyroscope currGyro = new Gyroscope(0.0,0.0,0.0);
 
 ArrayList<Accelerometer> accArr = new ArrayList<Accelerometer>();
 ArrayList<Gyroscope> gyroArr = new ArrayList<Gyroscope>();

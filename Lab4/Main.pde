@@ -26,12 +26,12 @@ void setup(){
   
   // Set up the back button dimensions
   backButtonWidth = width / 15;
-  backButtonHeight = height / 15; //<>//
-  backButtonX = width - backButtonWidth * 3 / 2; //<>//
+  backButtonHeight = height / 15; //<>// //<>//
+  backButtonX = width - backButtonWidth * 3 / 2; //<>// //<>//
   backButtonY = height / 20;
 }
- //<>//
-void draw(){ //<>//
+ //<>// //<>//
+void draw(){ //<>// //<>//
   background(255); //<>//
   textSize(24); //<>//
   textAlign(CENTER);
@@ -42,6 +42,7 @@ void draw(){ //<>//
       currentState = State.GRAPHS;
       drawMode();
       drawBubbles();
+      walkingProfile = GetProfileString(FindGait());
       break;
     case GAME:
       currentState = State.GAME;  
