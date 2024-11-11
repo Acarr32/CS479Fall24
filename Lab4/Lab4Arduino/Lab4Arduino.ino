@@ -43,10 +43,10 @@ void setup() {
   */
   // Call this function if you need to get the IMU error values for your module
   calculate_IMU_error();
-  delay(20);
+  // delay(20);
 }
 
-void draw(){
+void loop(){
   //Printing output
   readControllerInput();
   printInput();
@@ -57,7 +57,7 @@ void readControllerInput(){
   MM = analogRead(MM_PIN);
   MF = analogRead(MF_PIN);
   LF = analogRead(LF_PIN);
-  Heel = analogRead(HEEL_PIN);
+  HEEL = analogRead(HEEL_PIN);
 
   //Reading Accel Sensor
   Wire.beginTransmission(MPU);
@@ -102,7 +102,7 @@ void printInput(){
   pS();
   Serial.print(MM);
   pS();
-  Serial.print(Heel);
+  Serial.print(HEEL);
   Serial.println("");
 }
 
@@ -114,7 +114,7 @@ void pS(){
 
 
 float readAccX(){
-  return ()
+  return 0.0;
 }
 void calculate_IMU_error() {
   // We can call this funtion in the setup section to calculate the accelerometer and gyro data error. From here we will get the error values used in the above equations printed on the Serial Monitor.
