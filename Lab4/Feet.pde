@@ -11,24 +11,24 @@ void initializeFoot() {
 }
 
 
-void drawBubbles(float currMM, float currMF, float currLF, float currHeel){
+void drawBubbles(){
   //System.out.print("function hit: ");
   //System.out.print(currMF);
   //System.out.print(" ");
-  //System.out.print(currLF); //<>//
+  //System.out.print(currLF); //<>// //<>//
   //System.out.print(" ");
   //System.out.print(currMM);
   //System.out.print(" ");
   //System.out.println(currHeel);
-  drawBubble(footX + (0.407103825137 * footImg.width), footY + (0.226218097448 * footImg.height), currMM);
-  drawBubble(footX + (0.781420765027 * footImg.width), footY + (0.330626450116 * footImg.height), currMF);
-  drawBubble(footX + (0.286885245902 * footImg.width), footY + (0.430394431555 * footImg.height), currLF);
-  drawBubble(footX + (0.510928961749 * footImg.width), footY + (0.857308584687 * footImg.height), currHeel); //<>//
+  drawBubble(footX + (0.407103825137 * footImg.width), footY + (0.226218097448 * footImg.height), cMM);
+  drawBubble(footX + (0.781420765027 * footImg.width), footY + (0.330626450116 * footImg.height), cMF);
+  drawBubble(footX + (0.286885245902 * footImg.width), footY + (0.430394431555 * footImg.height), cLF);
+  drawBubble(footX + (0.510928961749 * footImg.width), footY + (0.857308584687 * footImg.height), cHeel); //<>//
 }
-
+ //<>//
 void drawBubble(float x, float y, float reading){
-  float minSize = 80;
-  float maxSize = 300;
+  float minSize = 30;
+  float maxSize = 200;
   
   float percentMax = reading/MAX_FORCE_READING;
   

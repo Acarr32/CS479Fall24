@@ -1,7 +1,7 @@
 //Function defined in the lab manual to calculate our MFP
-float calculateMFP(float MM, float MF, float LF, float Heel){
-  float numerator = (MM + MF) * 100;
-  float denominator = MM + MF + LF + Heel + 0.001;
+float calculateMFP(){
+  float numerator = (cMM + cMF) * 100;
+  float denominator = cMM + cMF + cLF + cHeel + 0.001;
   
   return (float)(numerator/denominator);
 }
@@ -70,7 +70,7 @@ void serialEvent(Serial myPort){
     //System.out.println(value);
     try {
         value = trim(value);
-        String[] values = split(value, " ");
+        String[] values = split(value, " "); //<>//
         
         for(int i = 6; i < values.length; i++){
           System.out.println(values[i]);
@@ -87,11 +87,11 @@ void serialEvent(Serial myPort){
         currGyro.setX(float(values[3]));
         currGyro.setY(float(values[4]));
         currGyro.setZ(float(values[5]));
-        if(gyroArr.size() > 20){
+        if(gyroArr.size() > 20){ //<>//
           gyroArr.remove(0);
-        gyroArr.add(currGyro);
-        }
-        cMF = float(values[6]);
+        gyroArr.add(currGyro); //<>//
+        } //<>//
+        cMF = float(values[6]); //<>//
         cLF = float(values[7]);
         cMM = float(values[8]);
         cHeel = float(values[9]);
@@ -139,12 +139,6 @@ void serialEvent(Serial myPort){
           Heelcount++;
         }
         
-        //System.out.println(cMF);
-        //System.out.println(cLF);
-        //System.out.println(cMM);
-        //System.out.println(cHeel);
-        //System.out.println("========");
-        drawBubbles(cMM, cMF, cLF, cHeel);
       
     } 
     catch(Exception e) {
@@ -154,18 +148,18 @@ void serialEvent(Serial myPort){
 }
 
 
-Profiles FindGait(float currMM, float currMF, float currLF, float currHeel, float minRead, float maxRead){
-  float MFP = calculateMFP(currMM, currMF, currLF, currHeel);
+Profiles FindGait(){
+  float MFP = calculateMFP();
   float confidenceWindow = 20;
-  float readRange = maxRead - minRead;
+  float readRange = 1000;
   //float lowConfidenceBound = midRead - confidenceWindow;
   //float highConfidenceBound = midRead + confidenceWindow;
   
   if(MFP > 100 - confidenceWindow){
-    if(currMF > currLF + (confidenceWindow / (4 * readRange))){
+    if(cMF > cLF + (confidenceWindow / (4 * readRange))){
       return Profiles.OutToe;
     }
-    else if(currLF > currMF){
+    else if(cLF > cMF){
       return Profiles.InToe;
     }
     else return Profiles.TipToeing;
