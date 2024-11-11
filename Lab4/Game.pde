@@ -1,5 +1,5 @@
 void drawGame() {
-  System.out.println("Game Mode entered");
+  //System.out.println("Game Mode entered");
   background(255);
   
   // Check if 3 seconds have passed since last color change

@@ -72,9 +72,9 @@ void serialEvent(Serial myPort){
         value = trim(value);
         String[] values = split(value, " ");
         
-        //for(int i = 6; i < values.length; i++){
-        //  System.out.println(values[i]);
-        //}
+        for(int i = 6; i < values.length; i++){
+          System.out.println(values[i]);
+        }
         System.out.println("==============");
         
         currAcc.setX(float(values[0]));
@@ -83,15 +83,14 @@ void serialEvent(Serial myPort){
         if(accArr.size() > 20){
           accArr.remove(0);
         accArr.add(currAcc);
-        
+        }
         currGyro.setX(float(values[3]));
         currGyro.setY(float(values[4]));
         currGyro.setZ(float(values[5]));
         if(gyroArr.size() > 20){
           gyroArr.remove(0);
-        }
         gyroArr.add(currGyro);
-        
+        }
         cMF = float(values[6]);
         cLF = float(values[7]);
         cMM = float(values[8]);
@@ -106,9 +105,9 @@ void serialEvent(Serial myPort){
           MMarr[MMcount] = cMM;
           MMcount++;
         }
-        for(int i = 0; i < MMarr.length; i++) {
-            System.out.print(MMarr[i] + " ");
-        }
+        //for(int i = 0; i < MMarr.length; i++) {
+        //    System.out.print(MMarr[i] + " ");
+        //}
         
         if(MFarr.length >=20 ){
           for (int i = 1; i < MFarr.length; i++) {
@@ -139,18 +138,17 @@ void serialEvent(Serial myPort){
           Heelarr[Heelcount] = cHeel;
           Heelcount++;
         }
-
         
         //System.out.println(cMF);
         //System.out.println(cLF);
         //System.out.println(cMM);
         //System.out.println(cHeel);
-        System.out.println("========");
+        //System.out.println("========");
         drawBubbles(cMM, cMF, cLF, cHeel);
-      }
+      
     } 
     catch(Exception e) {
-    System.out.println("Parsing error: " + e);
+    System.out.println("Parsing error: " + e.getMessage());
   }
 }
 }
