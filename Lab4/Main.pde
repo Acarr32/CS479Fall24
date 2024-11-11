@@ -43,6 +43,7 @@ void draw(){ //<>// //<>//
       drawMode();
       drawBubbles();
       walkingProfile = GetProfileString(FindGait());
+      StepCheck();
       break;
     case GAME:
       currentState = State.GAME;  

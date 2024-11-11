@@ -42,3 +42,24 @@ void drawBubble(float x, float y, float reading){
   circle(x,y, size);
   
 }
+
+void StepCheck(){
+  float accSum = (float)Math.pow(currAcc.getX(),2) + (float)Math.pow(currAcc.getY(),2) + (float)Math.pow(currAcc.getZ(),2);
+  
+  double totalAcc = Math.sqrt(accSum);
+  
+  if(totalAcc > ACCEL_CONFIDENCE){
+    if(!moving){
+      moving = true;
+      stepCount++;
+      moveStart = millis();
+    }
+    moveDuration = (millis() - moveStart)/1000;
+  }
+  else{
+    if(moving){
+      moving = false;
+      moveDuration = 0;
+    }
+  }
+}

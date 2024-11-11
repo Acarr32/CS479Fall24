@@ -98,6 +98,9 @@ float graphWidth, graphHeight;
 float columnWidth, textWidth, marginX, distX;
 
 final float MAX_FORCE_READING = 1000;
+final float ACCEL_CONFIDENCE = 1.7;
+
+boolean moving = false;
 
 // Buttons to change the view
 Button gameButton, profileButton;
@@ -113,10 +116,12 @@ String stepWidthInput = "";
 
 // Placeholder variables for calculated data
 String strideLength = "0";
-String stepCount = "0";
+int stepCount = 0;
 String cadence = "0";
 String walkingProfile = "Normal";
 String userStatus = "Active";
+int moveDuration = 0;
+int moveStart = 0;
 
 float labelX, labelY, lineHeight;
 boolean isStepLengthActive, isStepWidthActive;
@@ -125,6 +130,7 @@ boolean isStepLengthActive, isStepWidthActive;
 PImage footImg;
 float footX, footY;
 Foot foot;
+
 
 // Game mode
 int score = 0;
