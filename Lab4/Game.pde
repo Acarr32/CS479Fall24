@@ -6,6 +6,20 @@ void drawGame() {
   if (millis() - lastColorChange >= colorChangeInterval) {
     newTargetColor();  // Change color
     lastColorChange = millis();  // Reset timer
+  } else {
+    boolean correct = false;
+    
+    if (cMF > 10 && targetColor == color(255, 0, 0)) {
+      correct = true;
+    } else if (cLF > 10 && targetColor == color(255, 255, 0)) {
+      correct = true;
+    } else if (cMM > 10 && targetColor == color(0, 255, 0)) {
+      correct = true;
+    } else if (cHeel > 10 && targetColor == color(0, 0, 255)) {
+      correct = true;
+    }
+    
+    checkResponse(correct);
   }
   
   // Display the target color as a rectangle or other indicator
@@ -20,13 +34,13 @@ void drawGame() {
   // Display feedback
   if (showFeedback) {
     fill(0);
-    textSize(20);
-    text(feedbackText, width / 4 - 40, height / 2 + 80);
+    textSize(30);
+    text(feedbackText, width / 4 + 100, height * 2 / 3);
   }
 
   // Display foot feedback on the right side
   drawFootBase();
-  // drawBubbles(currMM, currMF, currLF, currHeel);
+  // drawBubbles(cMM, cMF, cF, cHeel);
 }
 
 // Selects a new random target color from red, green, blue, or yellow
@@ -56,5 +70,5 @@ void checkResponse(boolean correct) {
     feedbackText = "Wrong!";
   }
   showFeedback = true;
-  newTargetColor();
+  // newTargetColor();
 }
