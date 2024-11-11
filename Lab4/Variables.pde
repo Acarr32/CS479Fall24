@@ -120,8 +120,8 @@ int stepCount = 0;
 String cadence = "0";
 String walkingProfile = "Normal";
 String userStatus = "Active";
-int moveDuration = 0;
-int moveStart = 0;
+float moveDuration = 0;
+float moveStart = 0;
 
 float labelX, labelY, lineHeight;
 boolean isStepLengthActive, isStepWidthActive;
