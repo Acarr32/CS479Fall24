@@ -4,10 +4,10 @@
 */
 #include <Wire.h>
 const int MPU = 0x68; // MPU6050 I2C address
-const int MF_PIN = 1;
-const int LF_PIN = 2;
-const int MM_PIN = 3;
-const int HEEL_PIN = 4;
+const int MF_PIN = 0;
+const int LF_PIN = 1;
+const int MM_PIN = 2;
+const int HEEL_PIN = 3;
 
 
 float AccX, AccY, AccZ;
