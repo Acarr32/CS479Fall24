@@ -103,7 +103,7 @@ void printInput(){
   pS();
   Serial.print(MM);
   pS();
-  Serial.print(HEEL);
+  Serial.print(0.0);
   Serial.println("");
 }
 

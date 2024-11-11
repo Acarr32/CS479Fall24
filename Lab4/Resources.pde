@@ -91,10 +91,10 @@ void serialEvent(Serial myPort){
           gyroArr.remove(0);
         gyroArr.add(currGyro); //<>// //<>//
         } //<>// //<>//
-        cMF = float(values[6]); //<>// //<>//
-        cLF = float(values[7]);
-        cMM = float(values[8]);
-        cHeel = float(values[9]);
+        cMF = float(values[9]); //<>// //<>//
+        cLF = float(values[6]);
+        cMM = float(values[7]);
+        cHeel = float(values[8]);
         
         if(MMarr.length >=20 ){
           for (int i = 1; i < MMarr.length; i++) {
