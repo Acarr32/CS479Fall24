@@ -91,10 +91,10 @@ void serialEvent(Serial myPort){
           gyroArr.remove(0);
         gyroArr.add(currGyro); //<>// //<>//
         } //<>// //<>//
-        cMF = float(values[6]); //<>// //<>//
-        cLF = float(values[7]);
-        cMM = float(values[8]);
-        cHeel = float(values[9]);
+        cMF = float(values[9]); //<>// //<>//
+        cLF = float(values[6]);
+        cMM = float(values[7]);
+        cHeel = float(values[8]);
         
         if(MMarr.length >=20 ){
           for (int i = 1; i < MMarr.length; i++) {
@@ -150,21 +150,20 @@ void serialEvent(Serial myPort){
 
 Profiles FindGait(){
   float MFP = calculateMFP();
-  float confidenceWindow = 20;
-  float readRange = 1000;
+  float confidenceWindow = 15;
   //float lowConfidenceBound = midRead - confidenceWindow;
   //float highConfidenceBound = midRead + confidenceWindow;
   
   if(MFP > 100 - confidenceWindow){
-    if(cMF > cLF + (confidenceWindow / (4 * readRange))){
-      return Profiles.OutToe;
+    if(cMF > cLF + (confidenceWindow / 4)){
+      return Profiles.InToe;
     }
     else if(cLF > cMF){
-      return Profiles.InToe;
+      return Profiles.OutToe;
     }
     else return Profiles.TipToeing;
   }
-  else if (MFP < confidenceWindow){
+  else if (MFP < confidenceWindow && cHeel > cMF){
     return Profiles.Heeling;
   }
   else{
