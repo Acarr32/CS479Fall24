@@ -1,7 +1,7 @@
 //Function defined in the lab manual to calculate our MFP
-float calculateMFP(){
-  float numerator = (cMM + cMF) * 100;
-  float denominator = cMM + cMF + cLF + cHeel + 0.001;
+float calculateMFP(float MM, float MF, float LF, float Heel){
+  float numerator = (MM + MF) * 100;
+  float denominator = MM + MF + LF + Heel + 0.001;
   
   return (float)(numerator/denominator);
 }
@@ -70,97 +70,117 @@ void serialEvent(Serial myPort){
     //System.out.println(value);
     try {
         value = trim(value);
-        String[] values = value.split(" "); //<>// //<>// //<>// //<>// //<>//
+        String[] values = split(value, " ");
         
-        for(int i = 6; i < values.length; i++){
-          System.out.println(values[i]);
-        }
+        //for(int i = 6; i < values.length; i++){
+        //  System.out.println(values[i]);
+        //}
         System.out.println("==============");
         
-        currAcc.setX(float(values[0]));
-        currAcc.setY(float(values[1]));
-        currAcc.setZ(float(values[2]));
+        currAcc.setX(float(values[0])); currAcc.setY(float(values[1])); currAcc.setZ(float(values[2]));
         if(accArr.size() > 20){
           accArr.remove(0);
         accArr.add(currAcc);
+        
+        currGyro.setX(float(values[3])); currGyro.setY(float(values[4])); currGyro.setZ(float(values[5]));
+        if(gyroArr.size() > 20){
+          gyroArr.remove(0);
         }
-        currGyro.setX(float(values[3]));
-        currGyro.setY(float(values[4]));
-        currGyro.setZ(float(values[5]));
- //<>// //<>//
-        if(gyroArr.size() > 20){ //<>// //<>// //<>//
-          gyroArr.remove(0); //<>// //<>//
-        gyroArr.add(currGyro); //<>// //<>// //<>// //<>// //<>//
-        } //<>// //<>// //<>// //<>// //<>//
-        cMF = float(values[6]); //<>// //<>// //<>//
+        gyroArr.add(currGyro);
+        
+        cMF = float(values[6]);
         cLF = float(values[7]);
         cMM = float(values[8]);
         cHeel = float(values[9]);
         
-        if(MMarr.length >=20 ){
-          for (int i = 1; i < MMarr.length; i++) {
-            MMarr[i - 1] = MMarr[i];
-          }
-          MMarr[MMarr.length - 1] = cMM;
-        } else{
-          MMarr[MMcount] = cMM;
-          MMcount++;
-        }
-        //for(int i = 0; i < MMarr.length; i++) {
-        //    System.out.print(MMarr[i] + " ");
-        //}
-        
-        if(MFarr.length >=20 ){
-          for (int i = 1; i < MFarr.length; i++) {
-            MFarr[i - 1] = MFarr[i];
-          }
-          MFarr[MFarr.length - 1] = cMF;
-        } else{
-          MFarr[MFcount] = cMF;
-          MFcount++;
+        MMcount = addToArr(MMarr, cMM, MMcount);
+        MFcount = addToArr(MFarr, cMF, MFcount);
+        LFcount = addToArr(LFarr, cLF, LFcount);
+        Heelcount = addToArr(Heelarr, cHeel, Heelcount);
+        for(int i = 0; i < MMarr.length; i++) {
+            System.out.print(MMarr[i] + " ");
         }
         
-        if(LFarr.length >=20 ){
-          for (int i = 1; i < LFarr.length; i++) {
-            LFarr[i - 1] = LFarr[i];
-          }
-          LFarr[LFarr.length - 1] = cLF;
-        } else{
-          LFarr[LFcount] = cLF;
-          LFcount++;
-        }
-        
-        if(Heelarr.length >=20 ){
-          for (int i = 1; i < Heelarr.length; i++) {
-            Heelarr[i - 1] = Heelarr[i];
-          }
-          Heelarr[Heelarr.length - 1] = cHeel;
-        } else{
-          Heelarr[Heelcount] = cHeel;
-          Heelcount++;
-        }
-        
-      
+        //System.out.println(cMF);
+        //System.out.println(cLF);
+        //System.out.println(cMM);
+        //System.out.println(cHeel);
+        System.out.println("========");
+        drawBubbles(cMM, cMF, cLF, cHeel);
+      }
     } 
     catch(Exception e) {
-    System.out.println("Parsing error: " + e.getMessage());
+    System.out.println("Parsing error: " + e);
   }
 }
 }
 
+int addToArr(float[] arr, float val, int count){
+  if(val > 10){
+    if(arr.length >=20 ){
+      for (int i = 1; i < arr.length; i++) {
+        arr[i - 1] = arr[i];
+      }
+      arr[arr.length - 1] = val;
+    } else{
+      arr[count] = val;
+      count++;
+    }
+  } else{
+    if(arr.length >=20 ){
+      for (int i = 1; i < arr.length; i++) {
+        arr[i - 1] = arr[i];
+      }
+      arr[arr.length - 1] = 10.0;
+    } else{
+      arr[count] = 10.0;
+      count++;
+    }
+  }
+  return count;
+}
 
-Profiles FindGait(){
-  float MFP = calculateMFP();
+//Profiles FindGait(){
+//  float MFP = calculateMFP();
+//  float confidenceWindow = 20;
+//  float readRange = 1000;
+//  //float lowConfidenceBound = midRead - confidenceWindow;
+//  //float highConfidenceBound = midRead + confidenceWindow;
+  
+//  if(MFP > 100 - confidenceWindow){
+//    if(cMF > cLF + (confidenceWindow / (4 * readRange))){
+//      return Profiles.OutToe;
+//    }
+//    else if(cLF > cMF){
+//      return Profiles.InToe;
+//    }
+//    else return Profiles.TipToeing;
+//  }
+//  else if (MFP < confidenceWindow){
+//    return Profiles.Heeling;
+//  }
+//  if(cMM > cLF + (confidenceWindow * 5) && cMM > cMF && cMM > cHeel){
+//    return Profiles.InToe;
+//  }
+//  else if(cLF > cMM + (confidenceWindow * 5) && cLF > cMF && cLF > cHeel){
+//    return Profiles.OutToe;
+//  }
+//  else return Profiles.Normal;
+//}
+
+
+Profiles FindGait(float currMM, float currMF, float currLF, float currHeel, float minRead, float maxRead){
+  float MFP = calculateMFP(currMM, currMF, currLF, currHeel);
   float confidenceWindow = 20;
-  float readRange = 1000;
+  float readRange = maxRead - minRead;
   //float lowConfidenceBound = midRead - confidenceWindow;
   //float highConfidenceBound = midRead + confidenceWindow;
   
   if(MFP > 100 - confidenceWindow){
-    if(cMF > cLF + (confidenceWindow / (4 * readRange))){
+    if(currMF > currLF + (confidenceWindow / (4 * readRange))){
       return Profiles.OutToe;
     }
-    else if(cLF > cMF){
+    else if(currLF > currMF){
       return Profiles.InToe;
     }
     else return Profiles.TipToeing;
@@ -168,11 +188,7 @@ Profiles FindGait(){
   else if (MFP < confidenceWindow){
     return Profiles.Heeling;
   }
-  if(cMM > cLF + (confidenceWindow * 5) && cMM > cMF && cMM > cHeel){
-    return Profiles.InToe;
+  else{
+    return Profiles.Normal;
   }
-  else if(cLF > cMM + (confidenceWindow * 5) && cLF > cMF && cLF > cHeel){
-    return Profiles.OutToe;
-  }
-  else return Profiles.Normal;
 }
