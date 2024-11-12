@@ -101,6 +101,9 @@ final float MAX_FORCE_READING = 1000;
 final float ACCEL_CONFIDENCE = 1.7;
 
 boolean moving = false;
+boolean firstStep = false;
+
+float firstStepTime = 0.0;
 
 // Buttons to change the view
 Button gameButton, profileButton;
@@ -138,4 +141,4 @@ color targetColor;
 boolean showFeedback = false;
 String feedbackText = "";
 int lastColorChange = 0;
-int colorChangeInterval = 1000;
+int colorChangeInterval = 3000;

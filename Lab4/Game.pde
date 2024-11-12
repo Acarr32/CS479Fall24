@@ -40,7 +40,7 @@ void drawGame() {
 
   // Display foot feedback on the right side
   drawFootBase();
-  // drawBubbles(cMM, cMF, cF, cHeel);
+  drawBubbles();
 }
 
 // Selects a new random target color from red, green, blue, or yellow

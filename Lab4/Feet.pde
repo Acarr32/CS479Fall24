@@ -12,28 +12,36 @@ void initializeFoot() {
 
 
 void drawBubbles(){
-  //System.out.print("function hit: ");
-  //System.out.print(currMF);
-  //System.out.print(" ");
-  //System.out.print(currLF); //<>// //<>// //<>//
-  //System.out.print(" ");
-  //System.out.print(currMM);
-  //System.out.print(" ");
-  //System.out.println(currHeel);
   drawBubble(footX + (0.407103825137 * footImg.width), footY + (0.226218097448 * footImg.height), cMF);
   drawBubble(footX + (0.781420765027 * footImg.width), footY + (0.330626450116 * footImg.height), cLF);
   drawBubble(footX + (0.286885245902 * footImg.width), footY + (0.430394431555 * footImg.height), cMM);
-  drawBubble(footX + (0.510928961749 * footImg.width), footY + (0.857308584687 * footImg.height), cHeel); //<>//
+  drawBubble(footX + (0.510928961749 * footImg.width), footY + (0.857308584687 * footImg.height), cHeel); //<>// //<>//
 }
  //<>// //<>//
 void drawBubble(float x, float y, float reading){
+  // cMF - red
+  fill(color(255, 0, 0));
+  circle(footX + (0.407103825137 * footImg.width), footY + (0.226218097448 * footImg.height), 30);
+  
+  // cLF - yellow
+  fill(color(255, 255, 0));
+  circle(footX + (0.781420765027 * footImg.width), footY + (0.330626450116 * footImg.height), 30);
+  
+  // cMM - green
+  fill(color(0, 255, 0));
+  circle(footX + (0.286885245902 * footImg.width), footY + (0.430394431555 * footImg.height), 30);
+  
+  // cHeel - blue
+  fill(color(0, 0, 255));
+  circle(footX + (0.510928961749 * footImg.width), footY + (0.857308584687 * footImg.height), 30);
+  
   float minSize = 30;
   float maxSize = 200;
   
   float percentMax = reading/MAX_FORCE_READING;
-  
+   //<>//
   float size = (percentMax * (maxSize - minSize)) + minSize;
-  
+   //<>//
   float colorScale = map(reading, 0, MAX_FORCE_READING, 0, 255);
   
   
@@ -51,14 +59,20 @@ void StepCheck(){
   if(totalAcc > ACCEL_CONFIDENCE){
     if(!moving){
       moving = true;
+      userStatus = "Active";
       stepCount++;
       moveStart = millis();
+      if(!firstStep){
+        firstStepTime = millis();
+        firstStep = true;
+      }
     }
     moveDuration = (millis() - moveStart)/1000;
   }
   else{
     if(moving){
       moving = false;
+      userStatus = "Stationary";
       moveDuration = 0;
     }
   }
@@ -66,6 +80,8 @@ void StepCheck(){
   float stepL = float(stepLengthInput);
   
   strideLength = str(2 * stepL * stepCount);
-  cadence = str(stepCount / millis());
+  if(firstStep){
+    cadence = str((stepCount * 1000) / (millis() - firstStepTime)); 
+  }
   
 }
