@@ -70,7 +70,7 @@ void serialEvent(Serial myPort){
     //System.out.println(value);
     try {
         value = trim(value);
-        String[] values = split(value, " "); //<>// //<>//
+        String[] values = split(value, " "); //<>// //<>// //<>//
         
         for(int i = 6; i < values.length; i++){
           System.out.println(values[i]);
@@ -87,11 +87,11 @@ void serialEvent(Serial myPort){
         currGyro.setX(float(values[3]));
         currGyro.setY(float(values[4]));
         currGyro.setZ(float(values[5]));
-        if(gyroArr.size() > 20){ //<>// //<>//
+        if(gyroArr.size() > 20){ //<>// //<>// //<>//
           gyroArr.remove(0);
-        gyroArr.add(currGyro); //<>// //<>//
-        } //<>// //<>//
-        cMF = float(values[6]); //<>// //<>//
+        gyroArr.add(currGyro); //<>// //<>// //<>//
+        } //<>// //<>// //<>//
+        cMF = float(values[6]); //<>// //<>// //<>//
         cLF = float(values[7]);
         cMM = float(values[8]);
         cHeel = float(values[9]);
@@ -150,24 +150,23 @@ void serialEvent(Serial myPort){
 
 Profiles FindGait(){
   float MFP = calculateMFP();
-  float confidenceWindow = 15;
+  float confidenceWindow = 20;
   //float lowConfidenceBound = midRead - confidenceWindow;
   //float highConfidenceBound = midRead + confidenceWindow;
   
   if(MFP > 100 - confidenceWindow){
-    if(cMF > cLF + (confidenceWindow / 4)){
-      return Profiles.InToe;
+    if(cMF > cLF && cMF > cMM && cMF > cHeel){
+      return Profiles.TipToeing;
     }
-    else if(cLF > cMF){
-      return Profiles.OutToe;
-    }
-    else return Profiles.TipToeing;
   }
-  else if (MFP < confidenceWindow && cHeel > cMF){
+  if (MFP < confidenceWindow && cHeel > cMF){
     return Profiles.Heeling;
   }
-  else{
-    return Profiles.Normal;
+  if(cMM > cLF + (confidenceWindow * 5) && cMM > cMF && cMM > cHeel){
+    return Profiles.InToe;
   }
-  
+  else if(cLF > cMM + (confidenceWindow * 5) && cLF > cMF && cLF > cHeel){
+    return Profiles.OutToe;
+  }
+  else return Profiles.Normal;
 }
