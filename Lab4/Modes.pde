@@ -55,23 +55,23 @@ void drawText() {
   textAlign(LEFT);
   
   // Step Length input
-  text("Step Length:", labelX, currentLabelY);
+  text("Step Length (cm):", labelX, currentLabelY);
   drawInputField(labelX + textWidth / 2, currentLabelY - 15, stepLengthInput, isStepLengthActive);
   
   // Step Width input
   currentLabelY += lineHeight;
-  text("Step Width:", labelX, currentLabelY);
+  text("Step Width (cm):", labelX, currentLabelY);
   drawInputField(labelX + textWidth / 2, currentLabelY - 15, stepWidthInput, isStepWidthActive);
 
   // Display calculated data
   currentLabelY += lineHeight * 2;
-  text("Stride Length: " + strideLength, labelX, currentLabelY);
+  text("Stride Length (cm): " + strideLength, labelX, currentLabelY);
   
   currentLabelY += lineHeight;
   text("Step Count: " + stepCount, labelX, currentLabelY);
   
   currentLabelY += lineHeight;
-  text("Cadence: " + cadence, labelX, currentLabelY);
+  text("Cadence (s): " + cadence, labelX, currentLabelY);
   
   currentLabelY += lineHeight;
   text("Walking Profile: " + walkingProfile, labelX, currentLabelY);

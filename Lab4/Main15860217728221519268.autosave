@@ -32,18 +32,17 @@ void setup(){
 }
  //<>// //<>//
 void draw(){ //<>// //<>//
-  background(255); //<>// //<>//
-  textSize(24); //<>// //<>//
+  background(255); //<>//
+  textSize(24); //<>//
   textAlign(CENTER);
   
-  // Check the mode and display accordingly //<>// //<>//
-  switch (currentState) { //<>// //<>//
+  // Check the mode and display accordingly //<>//
+  switch (currentState) { //<>//
     case GRAPHS:
       currentState = State.GRAPHS;
       drawMode();
       drawBubbles();
       walkingProfile = GetProfileString(FindGait());
-      StepCheck();
       break;
     case GAME:
       currentState = State.GAME;  

@@ -9,7 +9,6 @@ const int LF_PIN = 1;
 const int MM_PIN = 2;
 const int HEEL_PIN = 3;
 
-
 float AccX, AccY, AccZ;
 float GyroX, GyroY, GyroZ;
 float accAngleX, accAngleY, gyroAngleX, gyroAngleY, gyroAngleZ;
@@ -18,8 +17,6 @@ float AccErrorX, AccErrorY, GyroErrorX, GyroErrorY, GyroErrorZ;
 float elapsedTime, currentTime, previousTime;
 float MF, LF, MM, HEEL;
 int c = 0;
-
-
 
 void setup() {
   Serial.begin(115200);

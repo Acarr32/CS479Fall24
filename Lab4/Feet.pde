@@ -62,4 +62,10 @@ void StepCheck(){
       moveDuration = 0;
     }
   }
+  
+  float stepL = float(stepLengthInput);
+  
+  strideLength = str(2 * stepL * stepCount);
+  cadence = str(stepCount / millis());
+  
 }
