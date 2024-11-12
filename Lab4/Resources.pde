@@ -150,21 +150,20 @@ void serialEvent(Serial myPort){
 
 Profiles FindGait(){
   float MFP = calculateMFP();
-  float confidenceWindow = 20;
-  float readRange = 1000;
+  float confidenceWindow = 15;
   //float lowConfidenceBound = midRead - confidenceWindow;
   //float highConfidenceBound = midRead + confidenceWindow;
   
   if(MFP > 100 - confidenceWindow){
-    if(cMF > cLF + (confidenceWindow / (4 * readRange))){
-      return Profiles.OutToe;
+    if(cMF > cLF + (confidenceWindow / 4)){
+      return Profiles.InToe;
     }
     else if(cLF > cMF){
-      return Profiles.InToe;
+      return Profiles.OutToe;
     }
     else return Profiles.TipToeing;
   }
-  else if (MFP < confidenceWindow){
+  else if (MFP < confidenceWindow && cHeel > cMF){
     return Profiles.Heeling;
   }
   else{
