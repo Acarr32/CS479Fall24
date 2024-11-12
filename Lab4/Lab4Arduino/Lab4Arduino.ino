@@ -9,6 +9,11 @@ const int LF_PIN = 1;
 const int MM_PIN = 2;
 const int HEEL_PIN = 3;
 
+const int MF_LED_PIN = 3;
+const int LF_LED_PIN = 6;
+const int MM_LED_PIN = 9;
+const int HEEL_LED_PIN = 10;
+
 float AccX, AccY, AccZ;
 float GyroX, GyroY, GyroZ;
 float accAngleX, accAngleY, gyroAngleX, gyroAngleY, gyroAngleZ;
@@ -25,6 +30,12 @@ void setup() {
   Wire.write(0x6B);                  // Talk to the register 6B
   Wire.write(0x00);                  // Make reset - place a 0 into the 6B register
   Wire.endTransmission(true);        //end the transmission
+
+  // Set LED pins as outputs
+  pinMode(MF_LED_PIN, OUTPUT);
+  pinMode(LF_LED_PIN, OUTPUT);
+  pinMode(MM_LED_PIN, OUTPUT);
+  pinMode(HEEL_LED_PIN, OUTPUT);
   /*
   // Configure Accelerometer Sensitivity - Full Scale Range (default +/- 2g)
   Wire.beginTransmission(MPU);
@@ -47,6 +58,7 @@ void loop(){
   //Printing output
   readControllerInput();
   printInput();
+  controlLEDs();
   delay(150);
 }
 
@@ -154,4 +166,19 @@ void calculate_IMU_error() {
   GyroErrorX = GyroErrorX / 200;
   GyroErrorY = GyroErrorY / 200;
   GyroErrorZ = GyroErrorZ / 200;
+}
+
+
+void controlLEDs() {
+  // Map FSR readings (0-1023) to LED intensity (0-255)
+  int MF_LED_intensity = map(MF, 0, 1023, 0, 255);
+  int LF_LED_intensity = map(LF, 0, 1023, 0, 255);
+  int MM_LED_intensity = map(MM, 0, 1023, 0, 255);
+  int HEEL_LED_intensity = map(HEEL, 0, 1023, 0, 255);
+
+  // Set LED brightness
+  analogWrite(MF_LED_PIN, MF_LED_intensity);
+  analogWrite(LF_LED_PIN, LF_LED_intensity);
+  analogWrite(MM_LED_PIN, MM_LED_intensity);
+  analogWrite(HEEL_LED_PIN, HEEL_LED_intensity);
 }
