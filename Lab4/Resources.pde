@@ -70,7 +70,7 @@ void serialEvent(Serial myPort){
     //System.out.println(value);
     try {
         value = trim(value);
-        String[] values = split(value, " "); //<>// //<>// //<>// //<>//
+        String[] values = value.split(" "); //<>// //<>// //<>// //<>//
         
         for(int i = 6; i < values.length; i++){
           System.out.println(values[i]);
@@ -87,14 +87,15 @@ void serialEvent(Serial myPort){
         currGyro.setX(float(values[3]));
         currGyro.setY(float(values[4]));
         currGyro.setZ(float(values[5]));
-        if(gyroArr.size() > 20){ //<>// //<>// //<>// //<>//
-          gyroArr.remove(0);
-          gyroArr.add(currGyro); //<>// //<>// //<>//
-        } //<>// //<>// //<>//
-        cMF = float(values[9]); //<>// //<>// //<>//
-        cLF = float(values[6]);
-        cMM = float(values[7]);
-        cHeel = float(values[8]);
+ //<>//
+        if(gyroArr.size() > 20){ //<>// //<>// //<>//
+          gyroArr.remove(0); //<>//
+        gyroArr.add(currGyro); //<>// //<>// //<>// //<>//
+        } //<>// //<>// //<>// //<>//
+        cMF = float(values[6]); //<>// //<>// //<>//
+        cLF = float(values[7]);
+        cMM = float(values[8]);
+        cHeel = float(values[9]);
         
         if(MMarr.length >=20 ){
           for (int i = 1; i < MMarr.length; i++) {
