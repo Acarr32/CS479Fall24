@@ -11,7 +11,7 @@ void setup(){
   //    System.out.println(Serial.list()[i]);
   //}
   if (Serial.list().length > 0) {
-    myPort = new Serial(this, Serial.list()[2], 115200);
+    myPort = new Serial(this, Serial.list()[0], 115200);
 } else {
     System.out.println("No serial ports available.");
 }
