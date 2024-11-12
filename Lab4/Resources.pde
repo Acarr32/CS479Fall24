@@ -70,7 +70,7 @@ void serialEvent(Serial myPort){
     //System.out.println(value);
     try {
         value = trim(value);
-        String[] values = split(value, " "); //<>// //<>//
+        String[] values = split(value, " "); //<>// //<>// //<>// //<>//
         
         for(int i = 6; i < values.length; i++){
           System.out.println(values[i]);
@@ -87,11 +87,11 @@ void serialEvent(Serial myPort){
         currGyro.setX(float(values[3]));
         currGyro.setY(float(values[4]));
         currGyro.setZ(float(values[5]));
-        if(gyroArr.size() > 20){ //<>// //<>//
+        if(gyroArr.size() > 20){ //<>// //<>// //<>// //<>//
           gyroArr.remove(0);
-        gyroArr.add(currGyro); //<>// //<>//
-        } //<>// //<>//
-        cMF = float(values[9]); //<>// //<>//
+          gyroArr.add(currGyro); //<>// //<>// //<>//
+        } //<>// //<>// //<>//
+        cMF = float(values[9]); //<>// //<>// //<>//
         cLF = float(values[6]);
         cMM = float(values[7]);
         cHeel = float(values[8]);
@@ -167,8 +167,11 @@ Profiles FindGait(){
   else if (MFP < confidenceWindow){
     return Profiles.Heeling;
   }
-  else{
-    return Profiles.Normal;
+  if(cMM > cLF + (confidenceWindow * 5) && cMM > cMF && cMM > cHeel){
+    return Profiles.InToe;
   }
-  
+  else if(cLF > cMM + (confidenceWindow * 5) && cLF > cMF && cLF > cHeel){
+    return Profiles.OutToe;
+  }
+  else return Profiles.Normal;
 }
