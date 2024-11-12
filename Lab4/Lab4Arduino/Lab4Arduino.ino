@@ -36,7 +36,6 @@ void setup() {
   pinMode(LF_LED_PIN, OUTPUT);
   pinMode(MM_LED_PIN, OUTPUT);
   pinMode(HEEL_LED_PIN, OUTPUT);
-
   /*
   // Configure Accelerometer Sensitivity - Full Scale Range (default +/- 2g)
   Wire.beginTransmission(MPU);
