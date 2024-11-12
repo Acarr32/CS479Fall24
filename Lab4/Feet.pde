@@ -19,6 +19,22 @@ void drawBubbles(){
 }
  //<>// //<>//
 void drawBubble(float x, float y, float reading){
+  // cMF - red
+  fill(color(255, 0, 0));
+  circle(footX + (0.407103825137 * footImg.width), footY + (0.226218097448 * footImg.height), 30);
+  
+  // cLF - yellow
+  fill(color(255, 255, 0));
+  circle(footX + (0.781420765027 * footImg.width), footY + (0.330626450116 * footImg.height), 30);
+  
+  // cMM - green
+  fill(color(0, 255, 0));
+  circle(footX + (0.286885245902 * footImg.width), footY + (0.430394431555 * footImg.height), 30);
+  
+  // cHeel - blue
+  fill(color(0, 0, 255));
+  circle(footX + (0.510928961749 * footImg.width), footY + (0.857308584687 * footImg.height), 30);
+  
   float minSize = 30;
   float maxSize = 200;
   
