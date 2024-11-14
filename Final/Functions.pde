@@ -23,6 +23,19 @@ void initializeSerialPort(int port, boolean debug){
   }
 }
 
+
+public static <T> T[] clipArray(ArrayList<T> arr, int start, int end) {
+  int size = end - start;
+  
+  T[] ret = (T[]) new Object[size];
+  
+  for(int i = start; i < end; i++){
+    ret[start-i] = arr.get(i);
+  }
+  
+  return ret;
+}
+
 void printLine(){
   System.out.println("=====================");
 }
