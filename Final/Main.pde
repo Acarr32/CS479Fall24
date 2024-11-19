@@ -1,12 +1,4 @@
 import java.util.*;
-import processing.serial.*;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-
 void setup(){
   fullScreen();
   
@@ -23,4 +15,14 @@ void setup(){
 }
 
 void draw(){
+  background(255);
+  switch(currentState){
+    case Init:
+      performHandReadings();
+      break;
+    case Graph:
+      break;
+    default:
+      break;
+  }
 }
