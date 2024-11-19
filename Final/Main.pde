@@ -15,4 +15,14 @@ void setup(){
 }
 
 void draw(){
+  background(255);
+  switch(currentState){
+    case Init:
+      performHandReadings();
+      break;
+    case Graph:
+      break;
+    default:
+      break;
+  }
 }

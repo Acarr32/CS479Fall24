@@ -16,5 +16,6 @@ class Data{
 }
 
 enum State{
-  Menu
+  Init,
+  Graph
 }

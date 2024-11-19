@@ -1,6 +1,13 @@
 void initializeVariables(){
-   currentState = State.Menu;
-   boldFont = createFont("SansSerif-Bold", 24);
+  currentState = State.Init;
+  boldFont = createFont("SansSerif-Bold", 24);
+  mossGreen = color(62, 86, 65);
+  rustyRed = color(162, 73, 54);
+  coralOrange = color(218, 125, 88);
+  charcoalGray = color(29, 32, 29);
+  seafoamGreen = color(131, 188, 169);
+  
+  currentFlex = 0;
 }
 
 void initializeSerialPort(int port, boolean debug){
@@ -38,4 +45,14 @@ public static <T> T[] clipArray(ArrayList<T> arr, int start, int end) {
 
 void printLine(){
   System.out.println("=====================");
+}
+
+void performHandReadings() {
+  JOptionPane.showMessageDialog(null, "Clench your hand and press spacebar to continue.");
+  clenchedHandFlexReading = currentFlex;
+  
+  JOptionPane.showMessageDialog(null, "Relax your hand and press spacebar to continue.");
+  relaxedHandFlexReading = currentFlex;
+  
+  currentState = State.Graph;
 }

@@ -6,18 +6,28 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import grafica.*;
+import javax.swing.*;
 
 State currentState;
 PFont boldFont;
 Serial myPort;
 
-
 // Graphing Variables
 int leftGraphIndex, rightGraphIndex;
-color PLOT_POINT_COLOR;
-color PLOT_LINE_COLOR;
-color PLOT_POINT_SIZE;
-color PLOT_GRID_LINE_COLOR;
 
+// Color Pallettes
+color mossGreen;
+color rustyRed;
+color coralOrange;
+color charcoalGray;
+color seafoamGreen;
 
-float MAX_FORCE_READING;
+GPlot altitudeGraph;
+
+float minFlexReading, maxFlexReading;
+
+float MAX_FORCE_READING = 1000;
+
+float currentFlex;
+
+float relaxedHandFlexReading, clenchedHandFlexReading;

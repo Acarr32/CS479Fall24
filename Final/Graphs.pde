@@ -1,16 +1,16 @@
 void initializeGraphs(){
-  
+  altitudeGraph = new GPlot(this);
 }
 
 void drawGraphs(){
   
 }
-void drawGraphGPlot(Data[] data, GPlot plot,
+void drawGraphGPlot(ArrayList<Data> data, GPlot plot,
                     float x, float y, float w, float h, 
                     String title, String xAxisTitle, String yAxisTitle) { //<>//
     GPointsArray points = new GPointsArray();
-    for (int i = 0; i < data.length; i++) {
-        points.add(data[i].getTime(), data[i].getReading()); // Add data to GPointsArray
+    for (int i = 0; i < data.size(); i++) {
+        points.add(data.get(i).getTime(), data.get(i).getReading()); // Add data to GPointsArray
     }
 
     plot.setPoints(points);
@@ -23,10 +23,10 @@ void drawGraphGPlot(Data[] data, GPlot plot,
     plot.getXAxis().setAxisLabelText(xAxisTitle);
     plot.getYAxis().setAxisLabelText(yAxisTitle);
     
-    plot.setLineColor(PLOT_LINE_COLOR);
-    plot.setPointColor(PLOT_POINT_COLOR);
-    plot.setPointSize(PLOT_POINT_SIZE);
-    plot.setGridLineColor(PLOT_GRID_LINE_COLOR); 
+    plot.setLineColor(coralOrange);
+    plot.setPointColor(seafoamGreen);
+    plot.setPointSize(20);
+    plot.setGridLineColor(charcoalGray); 
     
     plot.drawBackground();
     plot.drawBox();
