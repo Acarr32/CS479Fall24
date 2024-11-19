@@ -2,27 +2,65 @@ void initializeGraphs(){
   
 }
 
-void drawGraph(float[] data, float x, float y, float w, float h, String title) {
-    fill(255);
-    rect(x, y, w, h); // Draw background for the graph
-    fill(0);
-    textAlign(CENTER, CENTER);
-    text(title, x + w / 2, y + 20); // Display title at the top
-
-    // Draw X and Y axes
-    stroke(0);
-    line(x + 40, y, x + 40, y + h); // Y-axis
-    line(x, y + h - 40, x + w, y + h - 40); // X-axis
-
-    // Plot data points
-    float maxVal = 1500; // Adjust according to expected data range
-    for (int i = 1; i < data.length; i++) {
-        float x1 = map(i - 1, 0, data.length - 1, x + 40, x + w); // Start after Y-axis offset
-        float y1 = map(data[i - 1], 0, maxVal, y + h - 40, y); // Adjust to fit within axes
-        float x2 = map(i, 0, data.length - 1, x + 40, x + w);
-        float y2 = map(data[i], 0, maxVal, y + h - 40, y);
-
-        stroke(0);
-        line(x1, y1, x2, y2); // Draw line between data points
+void drawGraphs(){
+  
+}
+void drawGraphGPlot(Data[] data, GPlot plot,
+                    float x, float y, float w, float h, 
+                    String title, String xAxisTitle, String yAxisTitle) { //<>//
+    GPointsArray points = new GPointsArray();
+    for (int i = 0; i < data.length; i++) {
+        points.add(data[i].getTime(), data[i].getReading()); // Add data to GPointsArray
     }
+
+    plot.setPoints(points);
+    plot.beginDraw();
+    
+    plot.setPos(x, y);
+    plot.setOuterDim(w, h);
+
+    plot.setTitleText(title);
+    plot.getXAxis().setAxisLabelText(xAxisTitle);
+    plot.getYAxis().setAxisLabelText(yAxisTitle);
+    
+    plot.setLineColor(PLOT_LINE_COLOR);
+    plot.setPointColor(PLOT_POINT_COLOR);
+    plot.setPointSize(PLOT_POINT_SIZE);
+    plot.setGridLineColor(PLOT_GRID_LINE_COLOR); 
+    
+    plot.drawBackground();
+    plot.drawBox();
+    plot.drawXAxis();
+    plot.drawYAxis();
+    plot.drawTitle();
+    plot.drawGridLines(GPlot.BOTH);
+    plot.drawLabels();
+    plot.drawPoints();
+    plot.drawLines();
+    
+    plot.endDraw();
+}
+
+
+void drawBubbles(){
+}
+
+void drawBubble(float x, float y, float reading){
+  float minSize = 30;
+  float maxSize = 200;
+  
+  float size = map(reading, 0, MAX_FORCE_READING, minSize, maxSize);
+  
+  // Smooth color gradient
+  float t = map(reading, 0, MAX_FORCE_READING, 0, 1);
+  color startColor = color(0, 0, 255);
+  color endColor = color(255, 0, 0);   
+  color bubbleColor = lerpColor(startColor, endColor, t);
+  
+  // Set the fill color and draw the circle
+  fill(bubbleColor);
+  noStroke();
+  
+  circle(x,y, size);
+  
 }
