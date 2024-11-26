@@ -9,6 +9,9 @@ void drawGraphs(){
     drawGraphGPlot(addShell(heightData), heightPlot, width * .025 , height - height/3 - height *.025 , width * .7, height / 3, "Altitude Plot", "Time", "Altitude Reading");
 }
 
+void collectData(){
+}
+
 void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
                              float x, float y, float w, float h, 
                              String title, String xAxisTitle, String yAxisTitle) {
@@ -60,7 +63,7 @@ void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
     plot.drawPoints();
     plot.drawLines();
     plot.endDraw();
-}
+} //<>//
 
 
  //<>//
@@ -68,14 +71,10 @@ void drawBubbles(){
   currPinkyForce = 0;
   currRingForce = 0;
   currMiddleForce = 0;
-  currPointerForce =0;
-  currThumbForce = 0;
   
   drawBubble(pinkyX, pinkyY, currPinkyForce);
   drawBubble(ringX, ringY, currRingForce);
   drawBubble(middleX, middleY, currMiddleForce);
-  drawBubble(pointerX, pointerY, currPointerForce);
-  drawBubble(thumbX, thumbY, currThumbForce);
 }
 
 void drawBubble(float x, float y, float reading){

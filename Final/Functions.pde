@@ -9,8 +9,6 @@ void initializeVariables(){
   currPinkyForce = 0;
   currRingForce = 0;
   currMiddleForce = 0;
-  currPointerForce = 0;
-  currThumbForce = 0;
   Started = false;
   currentFlex = 0;
 }
@@ -132,21 +130,24 @@ void LoadGraphing(){
   middleX = handAnchorX + (handWidth * .48);
   middleY = handAnchorY + (handHeight * .13);
   
-  pointerX = handAnchorX + (handWidth * .65);
-  pointerY = handAnchorY + (handHeight * .2);
-  
-  thumbX = handAnchorX + (handWidth * .88);
-  thumbY = handAnchorY + (handHeight * .55);
-  
   //Initialize Plots
   initializeGraphs();
-
-  
-  
-  
-  
   //Set Load Flag
   GraphingLoaded = true;
+}
+
+
+void Start(){
+  Started = true;
+  clock = millis();
+  fsrData.clear();
+  flexData.clear();
+  heightData.clear();
+  
+}
+void Stop(){
+  Started = false;
+  writeClimbingData(fsrData, flexData, heightData);
 }
 
 ArrayList<ArrayList<Data>> addShell(ArrayList<Data> data){

@@ -30,3 +30,14 @@ void draw(){
       break;
   }
 }
+
+void mouseClicked(){
+  if(currentState == State.Graph){
+    if(Started && stopButton.isMouseOver()){
+      Stop();
+    }
+    else if(!Started && startButton.isMouseOver()){
+      Start();
+    }
+  }
+}

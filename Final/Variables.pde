@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import grafica.*;
 import javax.swing.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 State currentState;
 PFont boldFont;
@@ -68,14 +71,9 @@ float middleX;
 float middleY;
 float currMiddleForce;
 
-float pointerX;
-float pointerY;
-float currPointerForce;
-
-float thumbX;
-float thumbY;
-float currThumbForce;
 
 ClimbingStatus currentStatus;
 Hold currentHold;
 boolean Started;
+
+float clock;
