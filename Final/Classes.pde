@@ -78,7 +78,7 @@ String ClimbingString(ClimbingStatus status){
    }
 }
 
-String StatusDescription(ClimbingStatus status){
+String AboutStatus(ClimbingStatus status){
   switch (status){
      case Climbing:
        return "Climbing Description";
@@ -107,5 +107,18 @@ String HoldString(Hold hold){
       return "Crimp";
     default:
       return "ERROR";
+  }
+}
+
+String AboutHold(Hold hold){
+  switch(hold){
+    case Sloper:
+      return "Sloper Description";
+    case Jog:
+      return "Jog Description";
+    case Crimp:
+      return "Crimp Description";
+    default:
+      return "ERROR (Again)";
   }
 }
