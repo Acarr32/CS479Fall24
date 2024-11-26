@@ -3,7 +3,7 @@ public void writeClimbingData(ArrayList<ArrayList<Data>> forceData, ArrayList<Da
     String directoryPath = "logs"; // No leading slash for relative paths
     String fileName = "ClimbingData" + currentDateTime + ".txt";
     
-    Path currentDirectory = Paths.get(".").toAbsolutePath(); // Absolute path for clarity
+    Path currentDirectory = Paths.get(dataPath("")); // Absolute path for clarity
     File file;
 
     try {
