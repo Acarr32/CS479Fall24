@@ -15,12 +15,16 @@ void setup(){
 }
 
 void draw(){
-  background(255);
+  background(charcoalGray);
   switch(currentState){
     case Init:
       performHandReadings();
       break;
     case Graph:
+      if(!GraphingLoaded){
+        LoadGraphing();
+      }
+      drawGraphing();
       break;
     default:
       break;
