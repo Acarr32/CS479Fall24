@@ -22,7 +22,7 @@ color coralOrange;
 color charcoalGray;
 color seafoamGreen;
 
-GPlot altitudeGraph;
+GPlot fsrPlot, flexPlot, heightPlot;
 
 float minFlexReading, maxFlexReading;
 
@@ -31,3 +31,9 @@ float MAX_FORCE_READING = 1000;
 float currentFlex;
 
 float relaxedHandFlexReading, clenchedHandFlexReading;
+
+PImage handImg;
+
+Button startButton, stopButton;
+
+boolean GraphingLoaded = false;

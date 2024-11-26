@@ -56,3 +56,33 @@ void performHandReadings() {
   
   currentState = State.Graph;
 }
+
+void drawGraphing(){
+ 
+  startButton.display();
+  stopButton.display();
+  
+  
+}
+
+void LoadGraphing(){
+   //Initialize graphs
+   
+   //Initialize buttons
+   
+   startButton = new Button(width * .81, height * .025, width * .18, height * .1, "Start", color(0,0,255)); 
+   stopButton = new Button(width * .81, (height * .025) + (height * .15), width * .18, height * .1, "Stop", color(255,0,0)); 
+
+   //Initialize images
+   handImg = loadImage("sample.png");
+   
+   GraphingLoaded = true;
+}
+
+ArrayList<Data> generateDummyData(int numPoints) {
+    ArrayList<Data> data = new ArrayList<>();
+    for (int i = 0; i < numPoints; i++) {
+        data.add(new Data(random(0, 100), i * 1000)); // Replace with your real data
+    }
+    return data;
+}

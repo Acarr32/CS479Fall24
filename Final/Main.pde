@@ -21,6 +21,10 @@ void draw(){
       performHandReadings();
       break;
     case Graph:
+      if(!GraphingLoaded){
+        LoadGraphing();
+      }
+      drawGraphing();
       break;
     default:
       break;
