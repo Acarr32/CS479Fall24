@@ -66,7 +66,6 @@ enum ClimbingStatus {
 }
 
 String ClimbingString(ClimbingStatus status){
-  
    switch (status){
      case Climbing:
        return "Climbing";

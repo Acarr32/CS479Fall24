@@ -78,3 +78,4 @@ float currThumbForce;
 
 ClimbingStatus currentStatus;
 Hold currentHold;
+boolean Started;

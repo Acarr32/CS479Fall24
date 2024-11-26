@@ -11,7 +11,7 @@ void initializeVariables(){
   currMiddleForce = 0;
   currPointerForce = 0;
   currThumbForce = 0;
-  
+  Started = false;
   currentFlex = 0;
 }
 
@@ -71,11 +71,18 @@ void performHandReadings() {
 }
 
 void drawGraphing(){
- 
-  
-  //Determine Status
-  determineHold();
-  determineClimbingStatus();
+  if(Started){
+    //Determine Status
+    determineHold();
+    determineClimbingStatus();
+  }
+  else{
+    textSize(50);
+    fill(seafoamGreen);
+    text("Press the 'Start' button to begin tracking data!", width *.1, height *.45);
+    textSize(50);
+    fill(0);
+  }
   
   
   //Draw Buttons
@@ -84,7 +91,6 @@ void drawGraphing(){
   statusButton.display();
   holdButton.display();
   
-  
   //Draw Images
   image(handImg, handAnchorX, handAnchorY, handWidth, handHeight); 
   
@@ -92,8 +98,6 @@ void drawGraphing(){
   drawBubbles();
   
   drawGraphs();
-  
-  
 }
 
 void LoadGraphing(){  
