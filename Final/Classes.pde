@@ -44,6 +44,10 @@ class Button {
   void changeColor(color newColor) {
     this.buttonColor = newColor;
   }
+   
+  void changeLabel(String newText){
+    this.label = newText;
+  }
 
   boolean isMouseOver() {
     return mouseX > x && mouseX < x + w && mouseY > y && mouseY < y + h;
@@ -53,4 +57,44 @@ class Button {
 enum State{
   Init,
   Graph
+}
+
+enum ClimbingStatus {
+  Climbing,
+  Stationary,
+  Falling
+}
+
+String ClimbingString(ClimbingStatus status){
+  
+   switch (status){
+     case Climbing:
+       return "Climbing";
+     case Stationary:
+       return "Stationary";
+     case Falling:
+       return "Falling";
+     default:
+       return "ERROR";
+   }
+}
+
+
+enum Hold{
+  Sloper,
+  Jog,
+  Crimp
+}
+
+String HoldString(Hold hold){
+  switch(hold){
+    case Sloper:
+      return "Sloper";
+    case Jog:
+      return "Jog";
+    case Crimp:
+      return "Crimp";
+    default:
+      return "ERROR";
+  }
 }

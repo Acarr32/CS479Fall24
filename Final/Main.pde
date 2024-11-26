@@ -15,7 +15,7 @@ void setup(){
 }
 
 void draw(){
-  background(255);
+  background(charcoalGray);
   switch(currentState){
     case Init:
       performHandReadings();
