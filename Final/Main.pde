@@ -31,6 +31,7 @@ void draw(){
   }
 }
 
+
 void mouseClicked(){
   if(currentState == State.Graph){
     if(Started && stopButton.isMouseOver()){
@@ -47,5 +48,18 @@ void mouseClicked(){
   if(statusButton.isMouseOver()){
     statusPopup();
   }
+}
   
+
+void serialEvent(Serial myPort){
+   String value = myPort.readStringUntil('\n');
+   if(value != null){
+     try{
+        value = trim(value);
+        String[] values = split(value, " ");
+     }
+     catch(Exception e){
+       System.out.println("Error occurred: "+e);
+     }
+   }
 }
