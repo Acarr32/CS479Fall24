@@ -10,6 +10,15 @@ String GetString(String flag) {
     return "Guitar Mode";
   case "testString":
     return "Test";
+  case "title2":
+    return "What is TactiNotes?";
+  case "description":
+    return "Tactinotes is an interactive 2 part wearable technology. "
+                       + "The tattoo is attached to the skin of the user, from this, "
+                       + "their button input is used to control the respective modes! "
+                       + "The other component is connected to the computer and processes input.";
+  case "recording_title":
+    return "Recording Page";
   default:
     return "";
   }
@@ -72,4 +81,12 @@ class Button {
   boolean isMouseOver() {
     return mouseX > x && mouseX < x + w && mouseY > y && mouseY < y + h;
   }
+}
+
+color getColor(float t){
+  int r = Math.round(lerp(0, 255, (sin(2 * t) + 1) / 2));
+  int g = Math.round(lerp(0, 255, (cos(t - 50) + 1) / 2));
+  int b = Math.round(lerp(0, 255, (sin(t + 50) + 1) / 2));
+  
+  return color(r,g,b);
 }

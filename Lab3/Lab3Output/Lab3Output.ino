@@ -17,7 +17,7 @@ int currentTouch[12] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};  // Array to store 
 bool baselineCollected = false;
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
 
   // Check if the sensor is properly initialized
   if (!cap.begin(0x5A)) {

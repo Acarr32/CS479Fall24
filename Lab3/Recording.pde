@@ -30,8 +30,9 @@ void renderRecording() {
 void drawRecording() {
   textSize(24);
   textAlign(CENTER);
-  text("Recording Page", width / 2, 100);
+  text(GetString("recording_title"), width / 2, 100);
   
+  // Handle playback
   if (isPlayingBack) {    
     if (isPlayingSample) {
       playBack(sampleNotes);
@@ -116,6 +117,31 @@ void playRecording(String type) {
       
       playRecordingButton.changeColor(color(0, 255, 0));
     }
+  } 
+  else {
+    if (!sampleNotes.isEmpty()){
+      sampleNotes.clear(); // Clears all elements from sampleNotes
+    }
+    
+    // Add each note with a 5000 ms timestamp
+    int time = 750;
+    
+    for (String note : notes) {
+        sampleNotes.add(note + "," + String.valueOf(time));
+        
+        time += 750;
+    }
+        
+    if (!sampleNotes.isEmpty()) {
+      isPlayingBack = true;
+      isPlayingSample = true;
+      playbackStartTime = millis();
+      playbackIndex = 0;
+      println("Playback started...");
+      
+      playSampleButton.changeColor(color(0, 255, 0));
+      playBack(sampleNotes);
+    }
   }
   else {
     if (!sampleNotes.isEmpty()){
@@ -160,7 +186,7 @@ void playBack(ArrayList<String> keys) {
       playbackIndex++;
     }
   } else {
-    isPlayingBack = false;
+    isPlayingBack = false;  // Stop playback when all notes have been played
     isPlayingSample = false;
     println("Playback finished.");
   }
@@ -184,6 +210,7 @@ void playNoteByName(String note) {
   }
 }
 
+//-----------------------------------------------------------------------------------------
 public void renderSheetMusic(float barWidth, float barHeight, float staffY) {
   // Define dimensions of the entire section (4 bars)
   float barSpacing = 10;  // Space between bars
