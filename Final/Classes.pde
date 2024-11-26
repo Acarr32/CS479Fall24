@@ -127,6 +127,21 @@ String ClimbingString(ClimbingStatus status){
    }
 }
 
+<<<<<<< HEAD
+=======
+String AboutStatus(ClimbingStatus status){
+  switch (status){
+     case Climbing:
+       return "Climbing Description";
+     case Stationary:
+       return "Stationary Description";
+     case Falling:
+       return "Falling Description";
+     default:
+       return "ERROR (Again)";
+   }
+}
+>>>>>>> AJ
 
 enum Hold{
   Sloper,
@@ -144,5 +159,18 @@ String HoldString(Hold hold){
       return "Crimp";
     default:
       return "ERROR";
+  }
+}
+
+String AboutHold(Hold hold){
+  switch(hold){
+    case Sloper:
+      return "Sloper Description";
+    case Jog:
+      return "Jog Description";
+    case Crimp:
+      return "Crimp Description";
+    default:
+      return "ERROR (Again)";
   }
 }
