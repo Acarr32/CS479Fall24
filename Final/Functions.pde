@@ -106,8 +106,8 @@ void LoadGraphing(){
   determineHold();
   determineClimbingStatus();
 
-  statusButton = new Button(width * .025, height * .5, width / 3, height / 8, ClimbingString(currentStatus), rustyRed);
-  holdButton = new Button((width * .05) + width / 3, height * .5, width / 3, height / 8, HoldString(currentHold), coralOrange);
+  statusButton = new Button(width * .025, height * .5, width / 3, height / 8, "Climber Status: " + ClimbingString(currentStatus), rustyRed);
+  holdButton = new Button((width * .05) + width / 3, height * .5, width / 3, height / 8, "Current Hold: " + HoldString(currentHold), coralOrange);
   
   
   //Initialize images
@@ -150,6 +150,34 @@ void Stop(){
   writeClimbingData(fsrData, flexData, heightData);
 }
 
+void addData(float pinkyReading, float ringReading, float middleReading, float flexReading, float heightReading){
+  currPinkyForce = pinkyReading;
+  currRingForce = ringReading;
+  currMiddleForce = middleReading;
+  
+  if(!Started){
+    return;
+  }
+  
+  Data pinkyData, ringData, middleData, flexD, heightD;
+  
+  int currTime = (int)(millis() - clock);
+  
+  pinkyData = new Data(pinkyReading, currTime);
+  ringData = new Data(ringReading, currTime);
+  middleData = new Data(middleReading, currTime);
+  flexD = new Data(flexReading, currTime);
+  heightD = new Data(heightReading, currTime);
+  
+  ArrayList<Data> tempFlexData = new ArrayList<Data>();
+  tempFlexData.add(pinkyData);
+  tempFlexData.add(ringData);
+  tempFlexData.add(middleData);
+  
+  fsrData.add(tempFlexData);
+  flexData.add(flexD);
+  heightData.add(heightD);
+}
 ArrayList<ArrayList<Data>> addShell(ArrayList<Data> data){
   ArrayList<ArrayList<Data>> d = new ArrayList<ArrayList<Data>>();
   d.add(data);
