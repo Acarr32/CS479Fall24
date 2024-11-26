@@ -78,6 +78,18 @@ String ClimbingString(ClimbingStatus status){
    }
 }
 
+String StatusDescription(ClimbingStatus status){
+  switch (status){
+     case Climbing:
+       return "Climbing Description";
+     case Stationary:
+       return "Stationary Description";
+     case Falling:
+       return "Falling Description";
+     default:
+       return "ERROR (Again)";
+   }
+}
 
 enum Hold{
   Sloper,

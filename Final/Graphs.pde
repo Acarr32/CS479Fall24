@@ -68,12 +68,12 @@ void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
 
  //<>//
 void drawBubbles(){
-  currPinkyForce = 0;
-  currRingForce = 0;
+  currThumbForce = 0;
+  currPointerForce = 0;
   currMiddleForce = 0;
   
-  drawBubble(pinkyX, pinkyY, currPinkyForce);
-  drawBubble(ringX, ringY, currRingForce);
+  drawBubble(thumbX, thumbY, currThumbForce);
+  drawBubble(pointerX, pointerY, currPointerForce);
   drawBubble(middleX, middleY, currMiddleForce);
 }
 

@@ -40,4 +40,12 @@ void mouseClicked(){
       Start();
     }
   }
+  
+  if(holdButton.isMouseOver()){
+    holdPopup();
+  }
+  if(statusButton.isMouseOver()){
+    statusPopup();
+  }
+  
 }

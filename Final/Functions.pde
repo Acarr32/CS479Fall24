@@ -6,8 +6,8 @@ void initializeVariables(){
   coralOrange = color(218, 125, 88);
   charcoalGray = color(29, 32, 29);
   seafoamGreen = color(131, 188, 169);
-  currPinkyForce = 0;
-  currRingForce = 0;
+  currPointerForce = 0;
+  currThumbForce = 0;
   currMiddleForce = 0;
   Started = false;
   currentFlex = 0;
@@ -56,16 +56,6 @@ void determineHold(){
 
 void determineClimbingStatus(){
   currentStatus = ClimbingStatus.Climbing;
-}
-
-void performHandReadings() {
-  JOptionPane.showMessageDialog(null, "Clench your hand and press spacebar to continue.");
-  clenchedHandFlexReading = currentFlex;
-  
-  JOptionPane.showMessageDialog(null, "Relax your hand and press spacebar to continue.");
-  relaxedHandFlexReading = currentFlex;
-  
-  currentState = State.Graph;
 }
 
 void drawGraphing(){
@@ -121,14 +111,14 @@ void LoadGraphing(){
   handHeight = height * .25;
   
   //Initialize Bubble Locations
-  pinkyX = handAnchorX + (handWidth * .14);
-  pinkyY = handAnchorY + (handHeight * .3);
-  
-  ringX = handAnchorX + (handWidth * .31);
-  ringY = handAnchorY + (handHeight * .19);
-  
   middleX = handAnchorX + (handWidth * .48);
   middleY = handAnchorY + (handHeight * .13);
+  
+  pointerX = handAnchorX + (handWidth * .65);
+  pointerY = handAnchorY + (handHeight * .2);
+  
+  thumbX = handAnchorX + (handWidth * .88);
+  thumbY = handAnchorY + (handHeight * .55);
   
   //Initialize Plots
   initializeGraphs();
@@ -150,28 +140,28 @@ void Stop(){
   writeClimbingData(fsrData, flexData, heightData);
 }
 
-void addData(float pinkyReading, float ringReading, float middleReading, float flexReading, float heightReading){
-  currPinkyForce = pinkyReading;
-  currRingForce = ringReading;
+void addData(float thumbReading, float pointerReading, float middleReading, float flexReading, float heightReading){
+  currThumbForce = thumbReading;
+  currPointerForce = pointerReading;
   currMiddleForce = middleReading;
   
   if(!Started){
     return;
   }
   
-  Data pinkyData, ringData, middleData, flexD, heightD;
+  Data thumbData, pointerData, middleData, flexD, heightD;
   
   int currTime = (int)(millis() - clock);
   
-  pinkyData = new Data(pinkyReading, currTime);
-  ringData = new Data(ringReading, currTime);
+  thumbData = new Data(thumbReading, currTime);
+  pointerData = new Data(pointerReading, currTime);
   middleData = new Data(middleReading, currTime);
   flexD = new Data(flexReading, currTime);
   heightD = new Data(heightReading, currTime);
   
   ArrayList<Data> tempFlexData = new ArrayList<Data>();
-  tempFlexData.add(pinkyData);
-  tempFlexData.add(ringData);
+  tempFlexData.add(thumbData);
+  tempFlexData.add(pointerData);
   tempFlexData.add(middleData);
   
   fsrData.add(tempFlexData);

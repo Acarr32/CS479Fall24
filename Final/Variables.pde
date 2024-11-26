@@ -11,6 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+
 State currentState;
 PFont boldFont;
 Serial myPort;
@@ -59,17 +60,17 @@ float handWidth;
 float handHeight;
 
 // Scaled coordinate ratios and adjusted positions
-float pinkyX;
-float pinkyY;
-float currPinkyForce;
-
-float ringX;
-float ringY;
-float currRingForce;
-
 float middleX;
 float middleY;
 float currMiddleForce;
+
+float pointerX;
+float pointerY;
+float currPointerForce;
+
+float thumbX;
+float thumbY;
+float currThumbForce;
 
 
 ClimbingStatus currentStatus;
