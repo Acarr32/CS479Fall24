@@ -30,3 +30,16 @@ void draw(){
       break;
   }
 }
+
+void serialEvent(Serial myPort){
+   String value = myPort.readStringUntil('\n');
+   if(value != null){
+     try{
+        value = trim(value);
+        String[] values = split(value, " ");
+     }
+     catch(Exception e){
+       System.out.println("Error occurred: "+e);
+     }
+   }
+}
