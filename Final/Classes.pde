@@ -1,3 +1,51 @@
+class Values{
+  float thm;
+  float ind;
+  float mid;
+  float flx;
+  float vtg;
+  Accelerometer acc;
+  Gyroscope gyr;
+  
+  Values(float thm, float ind, float mid, float flx, float vtg, Accelerometer acc, Gyroscope gyr){
+    this.thm = thm;
+    this.ind = ind;
+    this.mid = mid;
+    this.flx = flx;
+    this.vtg = vtg;
+    this.acc = acc;
+    this.gyr = gyr;
+  }
+  void printValues(){
+    System.out.println(this.thm);
+    System.out.println(this.ind);
+    System.out.println(this.mid);
+    System.out.println(this.flx);
+    System.out.println(this.flx);
+    System.out.println(this.vtg);
+  }
+}
+
+class Accelerometer{
+  float x, y, z;
+  Accelerometer(){ this.x = 0; this.y = 0; this.z = 0; }
+  Accelerometer(float x, float y, float z){ this.x = x; this.y = y; this.z = z; }
+  void setXYZ(float x, float y, float z){ this.x = x; this.y = y; this.z = z; }
+  float getX(){ return x; }
+  float getY(){ return y; }
+  float getZ(){ return z; }
+}
+
+class Gyroscope{
+  float x, y, z;
+  Gyroscope(){ this.x = 0; this.y = 0; this.z = 0; }
+  Gyroscope(float x, float y, float z){ this.x = x; this.y = y; this.z = z; }
+  void setXYZ(float x, float y, float z){ this.x = x; this.y = y; this.z = z; }
+  float getX(){ return x; }
+  float getY(){ return y; }
+  float getZ(){ return z; }
+}
+
 class Data{
   public float reading;
   public int timeElapsed;
@@ -56,7 +104,8 @@ class Button {
 
 enum State{
   Init,
-  Graph
+  Graph,
+  Menu
 }
 
 enum ClimbingStatus {
@@ -78,18 +127,6 @@ String ClimbingString(ClimbingStatus status){
    }
 }
 
-String StatusDescription(ClimbingStatus status){
-  switch (status){
-     case Climbing:
-       return "Climbing Description";
-     case Stationary:
-       return "Stationary Description";
-     case Falling:
-       return "Falling Description";
-     default:
-       return "ERROR (Again)";
-   }
-}
 
 enum Hold{
   Sloper,
