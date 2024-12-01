@@ -12,6 +12,8 @@ State currentState;
 PFont boldFont;
 Serial myPort;
 
+Values currValues;
+
 // Graphing Variables
 int leftGraphIndex, rightGraphIndex;
 

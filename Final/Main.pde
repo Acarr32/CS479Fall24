@@ -15,22 +15,45 @@ void setup(){
 }
 
 void draw(){
-  background(charcoalGray);
-  switch(currentState){
-    case Init:
-      performHandReadings();
-      break;
-    case Graph:
-      if(!GraphingLoaded){
-        LoadGraphing();
-      }
-      drawGraphing();
-      break;
-    default:
-      break;
-  }
+  //background(charcoalGray);
+  ////switch(currentState){
+  //  case Init:
+  //    //performHandReadings();
+  //    break;
+  //  case Graph:
+  //    if(!GraphingLoaded){
+  //      LoadGraphing();
+  //    }
+  //    drawGraphing();
+  //    break;
+  //  default:
+  //    break;
+  //}
 }
 
+<<<<<<< Updated upstream
+=======
+
+void mouseClicked(){
+  //if(currentState == State.Graph){
+  //  if(Started && stopButton.isMouseOver()){
+  //    Stop();
+  //  }
+  //  else if(!Started && startButton.isMouseOver()){
+  //    Start();
+  //  }
+  //}
+  
+  //if(holdButton.isMouseOver()){
+  //  holdPopup();
+  //}
+  //if(statusButton.isMouseOver()){
+  //  statusPopup();
+  //}
+}
+  
+
+>>>>>>> Stashed changes
 void serialEvent(Serial myPort){
    String value = myPort.readStringUntil('\n');
    if(value != null){
