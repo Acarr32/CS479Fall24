@@ -21,8 +21,6 @@ class Values{
     System.out.println(this.ind);
     System.out.println(this.mid);
     System.out.println(this.flx);
-    System.out.println(this.flx);
-    System.out.println(this.vtg);
   }
 }
 
@@ -105,7 +103,8 @@ class Button {
 enum State{
   Init,
   Graph,
-  Menu
+  Menu,
+  Replay
 }
 
 enum ClimbingStatus {
@@ -127,8 +126,8 @@ String ClimbingString(ClimbingStatus status){
    }
 }
 
-<<<<<<< HEAD
-=======
+//<<<<<<< HEAD
+//=======
 String AboutStatus(ClimbingStatus status){
   switch (status){
      case Climbing:
@@ -141,7 +140,7 @@ String AboutStatus(ClimbingStatus status){
        return "ERROR (Again)";
    }
 }
->>>>>>> AJ
+//>>>>>>> AJ
 
 enum Hold{
   Sloper,

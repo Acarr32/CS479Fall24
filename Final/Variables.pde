@@ -44,7 +44,15 @@ PImage handImg;
 PImage climbing1;
 PImage climbing2;
 
-Button startButton, stopButton, holdButton, statusButton;
+Values currValues;
+ArrayList<ReplayValues> replayValuesList = new ArrayList<ReplayValues>();
+float replayClock = 0;
+Replay replay;
+float prevThm;
+float prevInd;
+float prevMid;
+
+Button startButton, stopButton, holdButton, statusButton, replayButton;
 
 boolean GraphingLoaded = false;
 
@@ -76,5 +84,6 @@ float currThumbForce;
 ClimbingStatus currentStatus;
 Hold currentHold;
 boolean Started;
+boolean hasStartedBefore = false;
 
 float clock;

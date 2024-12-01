@@ -3,10 +3,8 @@ void setup(){
   
   //Environment & Feature Initializations
   initializeVariables();
-  initializeSerialPort(0, false); //port#, debug
+  initializeSerialPort(1, false); //port#, debug
   initializeGraphs();
-  
-  
   //Print 
   background(255);
   textSize(24);
@@ -25,6 +23,11 @@ void draw(){
       }
       drawGraphing();
       break;
+    case Replay:
+      if(!Started){
+        if(replayClock == 0){ replayClock = millis(); }
+        replay.drawReplay();
+      }
     default:
       break;
   }
@@ -35,11 +38,16 @@ void mouseClicked(){
   if(currentState == State.Graph){
     if(Started && stopButton.isMouseOver()){
       Stop();
+      replay = new Replay(replayValuesList);
     }
     else if(!Started && startButton.isMouseOver()){
       Start();
+      hasStartedBefore = true;
     }
   }
+  if(!Started && hasStartedBefore && replayButton.isMouseOver()){
+      currentState = State.Replay;
+   }
   
   if(holdButton.isMouseOver()){
     holdPopup();
@@ -64,7 +72,18 @@ void serialEvent(Serial myPort){
         Accelerometer acc = new Accelerometer(float(values[5]), float(values[6]), float(values[7]));
         Gyroscope gyr = new Gyroscope(float(values[8]), float(values[9]), float(values[10]));
         currValues = new Values(thm, ind, mid, flx, vtg, acc, gyr);
-        currValues.printValues();
+        if(Started){
+          if(prevThm == 0 && prevInd == 0 && prevMid == 0){
+            if(thm > 1 || ind > 1 || mid > 1){
+              ReplayValues temp = new ReplayValues(millis() - clock, thm, ind, mid);
+              temp.print();
+              replayValuesList.add(temp);
+            }
+          }
+        }
+        prevThm = thm;
+        prevInd = ind;
+        prevMid = mid;
      }
      catch(Exception e){
        System.out.println("Error occurred: "+e);

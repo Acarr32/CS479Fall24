@@ -1,4 +1,4 @@
-#include <Wire.h>
+         #include <Wire.h>
 
 // Analog 0: EMG
 const int THM_PIN = 1;    // Analog 1: thumb FSR - THM
@@ -70,23 +70,26 @@ void readInput() {
 
 // Prints the input in the serial monitor
 void printInput() {
-  Serial.print("FSR (Thm, Ind, Mid): ");
+  // Serial.print("FSR (Thm, Ind, Mid): ");
   Serial.print(thm);
   Serial.print(", ");
   Serial.print(ind);
   Serial.print(", ");
   Serial.print(mid);
-  Serial.print(" || Flex (ADC, V): ");
+  Serial.print(", ");
+  // Serial.print(" || Flex (ADC, V): ");
   Serial.print(flx);
   Serial.print(", ");
   Serial.print(vtg);
-  Serial.print(" || Acc (X, Y, Z): ");
+  Serial.print(", ");
+  // Serial.print(" || Acc (X, Y, Z): ");
   Serial.print(AccX);
   Serial.print(", ");
   Serial.print(AccY);
   Serial.print(", ");
   Serial.print(AccZ);
-  Serial.print(" || Gyro (X, Y, Z): ");
+  Serial.print(", ");
+  // Serial.print(" || Gyro (X, Y, Z): ");
   Serial.print(GyroX);
   Serial.print(", ");
   Serial.print(GyroY);

@@ -78,7 +78,9 @@ void drawGraphing(){
   stopButton.display();
   statusButton.display();
   holdButton.display();
-  
+  if(!Started && hasStartedBefore){
+    replayButton.display();
+  }
   //Draw Images
   image(handImg, handAnchorX, handAnchorY, handWidth, handHeight); 
   
@@ -92,6 +94,7 @@ void LoadGraphing(){
   //Initialize buttons
   startButton = new Button(width * .81, height * .025, width * .18, height * .1, "Start", mossGreen); 
   stopButton = new Button(width * .81, (height * .025) + (height * .15), width * .18, height * .1, "Stop", rustyRed);
+  replayButton = new Button(width * 0.81, (height * .025) + (height * 0.8), width * .18, height * .1, "Replay", coralOrange);
   
   determineHold();
   determineClimbingStatus();
