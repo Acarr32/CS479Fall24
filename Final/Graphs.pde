@@ -60,7 +60,7 @@ void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
     plot.drawLines();
     plot.endDraw();
   } //<>//
-}
+
 
 
  //<>//

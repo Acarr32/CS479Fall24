@@ -63,7 +63,7 @@ void holdPopup(){
             JOptionPane.showMessageDialog(
                 null,
                 "All Status Descriptions:\n" +
-                "1. " + HoldString(Hold.Jog) + " : " + AboutHold(Hold.Jog) + "\n" +
+                "1. " + HoldString(Hold.Jug) + " : " + AboutHold(Hold.Jug) + "\n" +
                 "2. " + HoldString(Hold.Sloper) + " : " + AboutHold(Hold.Sloper) + "\n" +
                 "3. " + HoldString(Hold.Crimp) + " : " + AboutHold(Hold.Crimp) + "\n", 
                 "All Statuses Description",
