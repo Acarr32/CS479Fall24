@@ -77,6 +77,7 @@ float thumbY;
 
 //currValues = new Values(thm, ind, mid, flx, vtg, acc, gyr);
 
+int seed;
 
 ClimbingStatus currentStatus;
 Hold currentHold;

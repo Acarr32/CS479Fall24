@@ -150,7 +150,7 @@ String ClimbingString(ClimbingStatus status){
      case Falling:
        return "Falling";
      default:
-       return "ERROR";
+       return throwError(null, 2);
    }
 }
 
@@ -159,13 +159,13 @@ String ClimbingString(ClimbingStatus status){
 String AboutStatus(ClimbingStatus status){
   switch (status){
      case Climbing:
-       return "Climbing Description";
+       return "The user is actively moving upwards towards the top of the wall!";
      case Stationary:
-       return "Stationary Description";
+       return "The user is not moving vertically, or movements are insignificant.";
      case Falling:
-       return "Falling Description";
+       return "The user is actively moving downwards towards the floor.";
      default:
-       return "ERROR (Again)";
+       return throwError(null, 2);
    }
 }
 //>>>>>>> AJ
@@ -185,7 +185,7 @@ String HoldString(Hold hold){
     case Crimp:
       return "Crimp";
     default:
-      return "ERROR";
+      return throwError(null, 3);
   }
 }
 
@@ -198,6 +198,6 @@ String AboutHold(Hold hold){
     case Crimp:
       return "Crimp Description";
     default:
-      return "ERROR (Again)";
+      return throwError(null, 3);
   }
 }

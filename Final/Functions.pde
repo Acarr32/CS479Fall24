@@ -132,6 +132,7 @@ void Start(){
   fsrData.clear();
   flexData.clear();
   heightData.clear();
+  seed = (int)(Math.random() * 4);
   
 }
 void Stop(){
@@ -163,6 +164,7 @@ void addData(float thumbReading, float pointerReading, float middleReading, floa
   flexData.add(flexD);
   heightData.add(heightD);
 }
+
 ArrayList<ArrayList<Data>> addShell(ArrayList<Data> data){
   ArrayList<ArrayList<Data>> d = new ArrayList<ArrayList<Data>>();
   d.add(data);

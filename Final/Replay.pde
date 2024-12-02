@@ -14,14 +14,9 @@ class Replay{
       image(loadImage("./data/rockbackground.png"),0, 0, width, height);
     }
     catch(NullPointerException p) {
-      printLine();
-      System.out.println("ERROR 001: IMAGE FILE NOT LOADED.");
-      System.out.println("PLESE DOWNLOAD THE IMAGE FROM THE FOLLOWING LINK AND ADD TO ./DATA/REPLAYBACKGROUND.JPG");
-      System.out.println("https://github.com/Acarr32/CS479Fall24/tree/main/Final/data");
-      
       background(255);
       fill(0,0,0);
-      text("Error 001: Please consult terminal for more information", height/8, width/2);
+      text(throwError(p, 1), height/8, width/2);
       return;
     }
     //fill(225, 203, 190);

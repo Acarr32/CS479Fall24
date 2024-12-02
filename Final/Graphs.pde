@@ -3,8 +3,8 @@ void initializeGraphs(){
     flexPlot = new GPlot(this);
     heightPlot = new GPlot(this);
 }
+
 void drawGraphs(){
-    
     drawGraphGPlot(fsrData, fsrPlot, width * .025 , height * .025 , width / 3, height / 3, "FSR PLOT" , "Time", "Force Reading");
     drawGraphGPlot(addShell(flexData), flexPlot, (width * .05) + width / 3, height * .025, width / 3, height /3 , "FLEX PLOT" , "Time", "Flex Sensor Read");
     drawGraphGPlot(addShell(heightData), heightPlot, width * .025 , height - height/3 - height *.025 , width * .7, height / 3, "Altitude Plot", "Time", "Altitude Reading");
@@ -15,7 +15,6 @@ GPointsArray arrayToPoints(ArrayList<Data> data){
   for(int i = 0; i < data.size(); i++){
     points.add(data.get(i).getTime(), data.get(i).getReading());
   }
-  
   return points;
 }
 
@@ -31,19 +30,23 @@ void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
     plot.getYAxis().setAxisLabelText(yAxisTitle);
 
     // Define a list of colors for different layers (adjust as needed)
-    color[] lineColors = {mossGreen, rustyRed, coralOrange, charcoalGray, seafoamGreen};
-    color[] pointColors = {mossGreen, rustyRed, coralOrange, charcoalGray, seafoamGreen};
+    color[] colors = {mossGreen, rustyRed, coralOrange, charcoalGray, seafoamGreen};
 
-    int seed = (int)(Math.random() * 4);
     // Add datasets as layers
     for (int i = 0; i < datasets.size(); i++) {
         GPointsArray tempPoints = arrayToPoints(datasets.get(i));
         String layerName = "Layer " + i;
-        color layerColor = lineColors[(i + seed)% lineColors.length()];
+        color layerColor = colors[(i + seed)% colors.length];
         
-        plot.addLayer(layerName, tempPoints);
-        plot.getLayer(layerName).setLineColor(layerColor);
-        plot.getLayer(layerName).setPointColor(layerColor);
+        if(plot.getLayer(layerName) == null){
+          plot.addLayer(layerName, tempPoints);
+          plot.getLayer(layerName).setLineColor(layerColor);
+          plot.getLayer(layerName).setPointColor(layerColor);
+        }
+        else{
+          //Handling same ID layer error
+          plot.getLayer(layerName).setPoints(tempPoints);
+        }
     }
 
     // Draw the plot
@@ -59,11 +62,8 @@ void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
     plot.drawPoints();
     plot.drawLines();
     plot.endDraw();
-  } //<>//
 }
 
-
- //<>//
 void drawBubbles(){ //<>//
   float tempThumb, tempPtr, tempMid;
   
@@ -93,5 +93,4 @@ void drawBubble(float x, float y, float reading){
   noStroke();
   
   circle(x,y, size);
-  
 }

@@ -38,8 +38,8 @@ public void writeClimbingData(ArrayList<ArrayList<Data>> forceData, ArrayList<Da
         }
 
         System.out.println("Log file created at: " + file.getAbsolutePath());
-    } catch (IOException e) {
-        e.printStackTrace();
-        System.out.println("Failed to write to log file.");
+    } 
+    catch (IOException e) {
+        System.out.println(throwError(e,4));
     }
 }
