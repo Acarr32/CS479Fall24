@@ -154,29 +154,18 @@ String ClimbingString(ClimbingStatus status){
    }
 }
 
-//<<<<<<< HEAD
-//=======
 String AboutStatus(ClimbingStatus status){
   switch (status){
      case Climbing:
-<<<<<<< HEAD
-       return "The user is actively moving upwards towards the top of the wall!";
+       return "User is determined to be in motion and climbing currently.";
      case Stationary:
        return "The user is not moving vertically, or movements are insignificant.";
      case Falling:
-       return "The user is actively moving downwards towards the floor.";
-=======
-       return "Climbing Description: User is determined to be in motion and climbing currently.";
-     case Stationary:
-       return "Stationary Description: User is determined to be not in motion and stationary currently.";
-     case Falling:
-       return "Falling Description: TAKE ACTION! User is determined to be falling currently.";
->>>>>>> dca3d5bd6aad57fcc727540b484ff6c30a73e193
+       return "User is determined to be in motion and descending currently.";
      default:
        return throwError(null, 2);
    }
 }
-//>>>>>>> AJ
 
 enum Hold{
   Sloper,
@@ -200,11 +189,11 @@ String HoldString(Hold hold){
 String AboutHold(Hold hold){
   switch(hold){
     case Sloper:
-      return "Sloper Description: Sloped hold detected, determined based on minimum flex of fingers.";
+      return "A big and blobby surface that is typically a very shallow, rounded surface.";
     case Crimp:
-      return "Crimp Description: Crimp hold detected, determined based on moderate flex of fingers.";
+      return "A small edge on a rock or plastic that's only big enough to fit the pads of your fingers.";
     case Jug:
-      return "Jug Description: Jug hold detected, determined based on maximum flex of fingers.";
+      return "A large, ergonomic shape that you can grip with your whole hand.";
     default:
       return throwError(null, 3);
   }

@@ -62,17 +62,12 @@ void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
     plot.drawPoints();
     plot.drawLines();
     plot.endDraw();
-<<<<<<< HEAD
 }
-=======
-  } //<>//
 
->>>>>>> dca3d5bd6aad57fcc727540b484ff6c30a73e193
-
-void drawBubbles(){ //<>//
+void drawBubbles(){ //<>// //<>//
   float tempThumb, tempPtr, tempMid;
   
-  tempThumb = currValues != null ? currValues.GetThm() : 0; //<>//
+  tempThumb = currValues != null ? currValues.GetThm() : 0; //<>// //<>// //<>//
   tempPtr = currValues != null ? currValues.GetPtr() : 0;
   tempMid = currValues != null ? currValues.GetMid() : 0;
   
