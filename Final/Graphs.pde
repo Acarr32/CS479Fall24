@@ -3,10 +3,19 @@ void initializeGraphs(){
     flexPlot = new GPlot(this);
     heightPlot = new GPlot(this);
 }
+
 void drawGraphs(){
     drawGraphGPlot(fsrData, fsrPlot, width * .025 , height * .025 , width / 3, height / 3, "FSR PLOT" , "Time", "Force Reading");
     drawGraphGPlot(addShell(flexData), flexPlot, (width * .05) + width / 3, height * .025, width / 3, height /3 , "FLEX PLOT" , "Time", "Flex Sensor Read");
     drawGraphGPlot(addShell(heightData), heightPlot, width * .025 , height - height/3 - height *.025 , width * .7, height / 3, "Altitude Plot", "Time", "Altitude Reading");
+}
+
+GPointsArray arrayToPoints(ArrayList<Data> data){
+  GPointsArray points = new GPointsArray(data.size());
+  for(int i = 0; i < data.size(); i++){
+    points.add(data.get(i).getTime(), data.get(i).getReading());
+  }
+  return points;
 }
 
 void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
@@ -21,29 +30,22 @@ void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
     plot.getYAxis().setAxisLabelText(yAxisTitle);
 
     // Define a list of colors for different layers (adjust as needed)
-    color[] lineColors = {mossGreen, rustyRed, coralOrange, charcoalGray, seafoamGreen};
-    color[] pointColors = {mossGreen, rustyRed, coralOrange, charcoalGray, seafoamGreen};
+    color[] colors = {mossGreen, rustyRed, coralOrange, charcoalGray, seafoamGreen};
 
     // Add datasets as layers
     for (int i = 0; i < datasets.size(); i++) {
-        GPointsArray points = new GPointsArray();
-        ArrayList<Data> data = datasets.get(i);
-
-        for (int j = 0; j < data.size(); j++) {
-            points.add(data.get(j).getTime(), data.get(j).getReading());
+        GPointsArray tempPoints = arrayToPoints(datasets.get(i));
+        String layerName = "Layer " + i;
+        color layerColor = colors[(i + seed)% colors.length];
+        
+        if(plot.getLayer(layerName) == null){
+          plot.addLayer(layerName, tempPoints);
+          plot.getLayer(layerName).setLineColor(layerColor);
+          plot.getLayer(layerName).setPointColor(layerColor);
         }
-
-        if (i == 0) {
-            // Set the main points for the plot
-            plot.setPoints(points);
-            plot.setLineColor(lineColors[i % lineColors.length]);
-            plot.setPointColor(pointColors[i % pointColors.length]);
-        } else {
-            // Add additional datasets as layers
-            String layerName = "Layer " + i;
-            plot.addLayer(layerName, points);
-            plot.getLayer(layerName).setLineColor(lineColors[i]);
-            plot.getLayer(layerName).setPointColor(pointColors[i]);
+        else{
+          //Handling same ID layer error
+          plot.getLayer(layerName).setPoints(tempPoints);
         }
     }
 
@@ -62,20 +64,16 @@ void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
     plot.endDraw();
 }
 
-
- //<>//
-void drawBubbles(){
-  currPinkyForce = 0;
-  currRingForce = 0;
-  currMiddleForce = 0;
-  currPointerForce =0;
-  currThumbForce = 0;
+void drawBubbles(){ //<>// //<>//
+  float tempThumb, tempPtr, tempMid;
   
-  drawBubble(pinkyX, pinkyY, currPinkyForce);
-  drawBubble(ringX, ringY, currRingForce);
-  drawBubble(middleX, middleY, currMiddleForce);
-  drawBubble(pointerX, pointerY, currPointerForce);
-  drawBubble(thumbX, thumbY, currThumbForce);
+  tempThumb = currValues != null ? currValues.GetThm() : 0; //<>// //<>// //<>//
+  tempPtr = currValues != null ? currValues.GetPtr() : 0;
+  tempMid = currValues != null ? currValues.GetMid() : 0;
+  
+  drawBubble(thumbX, thumbY, tempThumb);
+  drawBubble(pointerX, pointerY, tempPtr);
+  drawBubble(middleX, middleY, tempMid);
 }
 
 void drawBubble(float x, float y, float reading){
@@ -95,5 +93,4 @@ void drawBubble(float x, float y, float reading){
   noStroke();
   
   circle(x,y, size);
-  
 }
