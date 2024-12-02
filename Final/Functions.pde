@@ -6,13 +6,7 @@ void initializeVariables(){
   coralOrange = color(218, 125, 88);
   charcoalGray = color(29, 32, 29);
   seafoamGreen = color(131, 188, 169);
-  currPinkyForce = 0;
-  currRingForce = 0;
-  currMiddleForce = 0;
-  currPointerForce = 0;
-  currThumbForce = 0;
   Started = false;
-  currentFlex = 0;
 }
 
 void initializeSerialPort(int port, boolean debug){
@@ -53,21 +47,11 @@ void printLine(){
 }
 
 void determineHold(){
-  currentHold = Hold.Jog;
+  currentHold = Hold.Jug;
 }
 
 void determineClimbingStatus(){
   currentStatus = ClimbingStatus.Climbing;
-}
-
-void performHandReadings() {
-  JOptionPane.showMessageDialog(null, "Clench your hand and press spacebar to continue.");
-  clenchedHandFlexReading = currentFlex;
-  
-  JOptionPane.showMessageDialog(null, "Relax your hand and press spacebar to continue.");
-  relaxedHandFlexReading = currentFlex;
-  
-  currentState = State.Graph;
 }
 
 void drawGraphing(){
@@ -90,7 +74,9 @@ void drawGraphing(){
   stopButton.display();
   statusButton.display();
   holdButton.display();
-  
+  if(!Started && hasStartedBefore){
+    replayButton.display();
+  }
   //Draw Images
   image(handImg, handAnchorX, handAnchorY, handWidth, handHeight); 
   
@@ -104,12 +90,13 @@ void LoadGraphing(){
   //Initialize buttons
   startButton = new Button(width * .81, height * .025, width * .18, height * .1, "Start", mossGreen); 
   stopButton = new Button(width * .81, (height * .025) + (height * .15), width * .18, height * .1, "Stop", rustyRed);
+  replayButton = new Button(width * 0.81, (height * .025) + (height * 0.8), width * .18, height * .1, "Replay", coralOrange);
   
   determineHold();
   determineClimbingStatus();
 
-  statusButton = new Button(width * .025, height * .5, width / 3, height / 8, ClimbingString(currentStatus), rustyRed);
-  holdButton = new Button((width * .05) + width / 3, height * .5, width / 3, height / 8, HoldString(currentHold), coralOrange);
+  statusButton = new Button(width * .025, height * .5, width / 3, height / 8, "Climber Status: " + ClimbingString(currentStatus), rustyRed);
+  holdButton = new Button((width * .05) + width / 3, height * .5, width / 3, height / 8, "Current Hold: " + HoldString(currentHold), coralOrange);
   
   
   //Initialize images
@@ -123,12 +110,6 @@ void LoadGraphing(){
   handHeight = height * .25;
   
   //Initialize Bubble Locations
-  pinkyX = handAnchorX + (handWidth * .14);
-  pinkyY = handAnchorY + (handHeight * .3);
-  
-  ringX = handAnchorX + (handWidth * .31);
-  ringY = handAnchorY + (handHeight * .19);
-  
   middleX = handAnchorX + (handWidth * .48);
   middleY = handAnchorY + (handHeight * .13);
   
@@ -140,13 +121,48 @@ void LoadGraphing(){
   
   //Initialize Plots
   initializeGraphs();
-
-  
-  
-  
-  
   //Set Load Flag
   GraphingLoaded = true;
+}
+
+
+void Start(){
+  Started = true;
+  clock = millis();
+  fsrData.clear();
+  flexData.clear();
+  heightData.clear();
+  seed = (int)(Math.random() * 4);
+  
+}
+void Stop(){
+  Started = false;
+  writeClimbingData(fsrData, flexData, heightData);
+}
+
+void addData(float thumbReading, float pointerReading, float middleReading, float flexReading, float heightReading){
+  if(!Started){
+    return;
+  }
+  
+  Data thumbData, pointerData, middleData, flexD, heightD;
+  
+  int currTime = (int)(millis() - clock);
+  
+  thumbData = new Data(thumbReading, currTime);
+  pointerData = new Data(pointerReading, currTime);
+  middleData = new Data(middleReading, currTime);
+  flexD = new Data(flexReading, currTime);
+  heightD = new Data(heightReading, currTime);
+  
+  ArrayList<Data> tempForceData = new ArrayList<Data>();
+  tempForceData.add(thumbData);
+  tempForceData.add(pointerData);
+  tempForceData.add(middleData);
+  
+  fsrData.add(tempForceData);
+  flexData.add(flexD);
+  heightData.add(heightD);
 }
 
 ArrayList<ArrayList<Data>> addShell(ArrayList<Data> data){

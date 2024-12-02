@@ -1,0 +1,3 @@
+Data from Accelerometer (Altitude):
+
+Data from Flex Sensors:

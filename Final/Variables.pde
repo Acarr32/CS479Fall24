@@ -7,6 +7,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import grafica.*;
 import javax.swing.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.*;
 
 State currentState;
 PFont boldFont;
@@ -34,15 +38,21 @@ float minFlexReading, maxFlexReading;
 
 float MAX_FORCE_READING = 1000;
 
-float currentFlex;
-
 float relaxedHandFlexReading, clenchedHandFlexReading;
 
 PImage handImg;
 PImage climbing1;
 PImage climbing2;
 
-Button startButton, stopButton, holdButton, statusButton;
+Values currValues;
+ArrayList<ReplayValues> replayValuesList = new ArrayList<ReplayValues>();
+float replayClock = 0;
+Replay replay;
+float prevThm;
+float prevPtr;
+float prevMid;
+
+Button startButton, stopButton, holdButton, statusButton, replayButton;
 
 boolean GraphingLoaded = false;
 
@@ -58,26 +68,22 @@ float handWidth;
 float handHeight;
 
 // Scaled coordinate ratios and adjusted positions
-float pinkyX;
-float pinkyY;
-float currPinkyForce;
-
-float ringX;
-float ringY;
-float currRingForce;
-
 float middleX;
 float middleY;
-float currMiddleForce;
 
 float pointerX;
 float pointerY;
-float currPointerForce;
 
 float thumbX;
 float thumbY;
-float currThumbForce;
+
+//currValues = new Values(thm, ind, mid, flx, vtg, acc, gyr);
+
+int seed;
 
 ClimbingStatus currentStatus;
 Hold currentHold;
 boolean Started;
+boolean hasStartedBefore = false;
+
+float clock;
