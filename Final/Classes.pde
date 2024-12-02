@@ -159,11 +159,19 @@ String ClimbingString(ClimbingStatus status){
 String AboutStatus(ClimbingStatus status){
   switch (status){
      case Climbing:
+<<<<<<< HEAD
        return "The user is actively moving upwards towards the top of the wall!";
      case Stationary:
        return "The user is not moving vertically, or movements are insignificant.";
      case Falling:
        return "The user is actively moving downwards towards the floor.";
+=======
+       return "Climbing Description: User is determined to be in motion and climbing currently.";
+     case Stationary:
+       return "Stationary Description: User is determined to be not in motion and stationary currently.";
+     case Falling:
+       return "Falling Description: TAKE ACTION! User is determined to be falling currently.";
+>>>>>>> dca3d5bd6aad57fcc727540b484ff6c30a73e193
      default:
        return throwError(null, 2);
    }
@@ -172,7 +180,7 @@ String AboutStatus(ClimbingStatus status){
 
 enum Hold{
   Sloper,
-  Jog,
+  Jug,
   Crimp
 }
 
@@ -180,8 +188,8 @@ String HoldString(Hold hold){
   switch(hold){
     case Sloper:
       return "Sloper";
-    case Jog:
-      return "Jog";
+    case Jug:
+      return "Jug";
     case Crimp:
       return "Crimp";
     default:
@@ -192,11 +200,11 @@ String HoldString(Hold hold){
 String AboutHold(Hold hold){
   switch(hold){
     case Sloper:
-      return "Sloper Description";
-    case Jog:
-      return "Jog Description";
+      return "Sloper Description: Sloped hold detected, determined based on minimum flex of fingers.";
     case Crimp:
-      return "Crimp Description";
+      return "Crimp Description: Crimp hold detected, determined based on moderate flex of fingers.";
+    case Jug:
+      return "Jug Description: Jug hold detected, determined based on maximum flex of fingers.";
     default:
       return throwError(null, 3);
   }

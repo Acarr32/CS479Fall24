@@ -62,7 +62,12 @@ void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
     plot.drawPoints();
     plot.drawLines();
     plot.endDraw();
+<<<<<<< HEAD
 }
+=======
+  } //<>//
+
+>>>>>>> dca3d5bd6aad57fcc727540b484ff6c30a73e193
 
 void drawBubbles(){ //<>//
   float tempThumb, tempPtr, tempMid;

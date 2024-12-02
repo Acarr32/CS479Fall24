@@ -47,7 +47,7 @@ void printLine(){
 }
 
 void determineHold(){
-  currentHold = Hold.Jog;
+  currentHold = Hold.Jug;
 }
 
 void determineClimbingStatus(){
