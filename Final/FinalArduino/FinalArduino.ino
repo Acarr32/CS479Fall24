@@ -1,3 +1,132 @@
+Last login: Sun Dec  1 20:39:59 on ttys000
+milkchocolatejr@Alexanders-MacBook-Air-4 ~ % cd Desktop 
+milkchocolatejr@Alexanders-MacBook-Air-4 Desktop % cd CS479Fall24 
+milkchocolatejr@Alexanders-MacBook-Air-4 CS479Fall24 % git pull
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (6/6), 3.35 KiB | 380.00 KiB/s, done.
+From github.com:Acarr32/CS479Fall24
+   dda9ee4..a346618  main       -> origin/main
+Updating dda9ee4..a346618
+Fast-forward
+ README.md | 58 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 58 insertions(+)
+ create mode 100644 README.md
+milkchocolatejr@Alexanders-MacBook-Air-4 CS479Fall24 % git branch
+  AJ
+  lastMain
+* main
+milkchocolatejr@Alexanders-MacBook-Air-4 CS479Fall24 % git branch -a
+  AJ
+  lastMain
+* main
+  remotes/origin/AJ
+  remotes/origin/Anna2
+  remotes/origin/Eleonora
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/lastMain
+  remotes/origin/main
+  remotes/origin/shehriar
+milkchocolatejr@Alexanders-MacBook-Air-4 CS479Fall24 % git branch Anna2
+milkchocolatejr@Alexanders-MacBook-Air-4 CS479Fall24 % git pull
+Already up to date.
+milkchocolatejr@Alexanders-MacBook-Air-4 CS479Fall24 % cd Final 
+milkchocolatejr@Alexanders-MacBook-Air-4 Final % ls  
+Classes.pde		Functions.pde		Replay.pde
+Errors.pde		Graphs.pde		Variables.pde
+FileOutput.pde		Main.pde		data
+FinalArduino		Popups.pde		sketch.properties
+milkchocolatejr@Alexanders-MacBook-Air-4 Final % cd FinalArduino 
+milkchocolatejr@Alexanders-MacBook-Air-4 FinalArduino % ls
+FinalArduino.ino
+milkchocolatejr@Alexanders-MacBook-Air-4 FinalArduino % vim FinalArduino.ino 
+milkchocolatejr@Alexanders-MacBook-Air-4 FinalArduino % cd ..
+milkchocolatejr@Alexanders-MacBook-Air-4 Final % cd ..
+milkchocolatejr@Alexanders-MacBook-Air-4 CS479Fall24 % ls 
+ECGReadingExample.png	Lab1			Lab4
+Final			Lab2			README.md
+Lab0			Lab3			libraries
+milkchocolatejr@Alexanders-MacBook-Air-4 CS479Fall24 % git branch main
+fatal: a branch named 'main' already exists
+milkchocolatejr@Alexanders-MacBook-Air-4 CS479Fall24 % git checkout Anna2
+Switched to branch 'Anna2'
+milkchocolatejr@Alexanders-MacBook-Air-4 CS479Fall24 % ls
+ECGReadingExample.png	Lab1			Lab4
+Final			Lab2			README.md
+Lab0			Lab3			libraries
+milkchocolatejr@Alexanders-MacBook-Air-4 CS479Fall24 % git branch -d
+fatal: branch name required
+milkchocolatejr@Alexanders-MacBook-Air-4 CS479Fall24 % git branch -a
+  AJ
+* Anna2
+  lastMain
+  main
+  remotes/origin/AJ
+  remotes/origin/Anna2
+  remotes/origin/Eleonora
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/lastMain
+  remotes/origin/main
+  remotes/origin/shehriar
+milkchocolatejr@Alexanders-MacBook-Air-4 CS479Fall24 % git branch -d Anna2
+error: Cannot delete branch 'Anna2' checked out at '/Users/milkchocolatejr/Desktop/CS479Fall24'
+milkchocolatejr@Alexanders-MacBook-Air-4 CS479Fall24 % git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+milkchocolatejr@Alexanders-MacBook-Air-4 CS479Fall24 % git branch -d Anna2
+Deleted branch Anna2 (was a346618).
+milkchocolatejr@Alexanders-MacBook-Air-4 CS479Fall24 % git checkout Anna2
+branch 'Anna2' set up to track 'origin/Anna2'.
+Switched to a new branch 'Anna2'
+milkchocolatejr@Alexanders-MacBook-Air-4 CS479Fall24 % git checkout main  
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+milkchocolatejr@Alexanders-MacBook-Air-4 CS479Fall24 % git branch -d Anna2
+warning: deleting branch 'Anna2' that has been merged to
+         'refs/remotes/origin/Anna2', but not yet merged to HEAD.
+Deleted branch Anna2 (was 8edbd6b).
+milkchocolatejr@Alexanders-MacBook-Air-4 CS479Fall24 % git checkout AAnna2     
+error: pathspec 'AAnna2' did not match any file(s) known to git
+milkchocolatejr@Alexanders-MacBook-Air-4 CS479Fall24 % git checkout Anna2 
+branch 'Anna2' set up to track 'origin/Anna2'.
+Switched to a new branch 'Anna2'
+milkchocolatejr@Alexanders-MacBook-Air-4 CS479Fall24 % cd Final 
+milkchocolatejr@Alexanders-MacBook-Air-4 Final % ls
+Classes.pde		Graphs.pde		data
+FileOutput.pde		Main.pde		sketch.properties
+FinalArduino		Replay.pde
+Functions.pde		Variables.pde
+milkchocolatejr@Alexanders-MacBook-Air-4 Final % cd FinalArduino 
+milkchocolatejr@Alexanders-MacBook-Air-4 FinalArduino % ls
+FinalArduino.ino
+milkchocolatejr@Alexanders-MacBook-Air-4 FinalArduino % vim FinalArduino.ino 
+
+#include <Wire.h>
+#include <SPI.h>
+#include <Adafruit_Sensor.h>
+#include "Adafruit_BMP3XX.h"
+
+// Pin definitions
+const int EMG_PIN = A0;
+const int THM_PIN = A1;    // Analog 1: thumb FSR - THM
+const int IND_PIN = A2;    // Analog 2: index FSR - IND
+const int MID_PIN = A3;    // Analog 3: middle FSR - MID
+const int FLX_PIN = A4;    // Analog 4: flex sensor - FXS
+const int MPU = 0x68;      // MPU6050 I2C address
+
+// BMP3XX Pin definitions
+#define BMP_SCK 13
+#define BMP_MISO 12
+#define BMP_MOSI 11
+#define BMP_CS 10
+
+#define SEALEVELPRESSURE_HPA (1013.25)
+Adafruit_BMP3XX bmp;
+
+// Variables
+"FinalArduino.ino" 257L, 6729B
 #include <Wire.h>
 #include <SPI.h>
 #include <Adafruit_Sensor.h>
