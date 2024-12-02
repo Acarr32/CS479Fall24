@@ -11,24 +11,23 @@ This project involves the design and development of a wearable glove system spec
 - **User Interface**: Features dynamic graphs, real-time status updates, and a replay functionality to review performance.
 
 ## Authors
-This project is developed by a team from the University of Illinois at Chicago:
-
-1. **Shehrirar Burney**  
+This project is developed by a student team from the University of Illinois at Chicago, and submitted as a final project for CS/BME 479 Wearable and Nearable Technologies:
+   **Shehrirar Burney**  
    Department of Computer Science  
    Chicago, Illinois, USA  
    [sburne4@uic.edu](mailto:sburne4@uic.edu)
 
-2. **Eleonora Cabai**  
+   **Eleonora Cabai**  
    Department of Computer Science  
    Chicago, Illinois, USA  
    [ecaba5@uic.edu](mailto:ecaba5@uic.edu)
 
-3. **Anna Carroll**  
+   **Anna Carroll**  
    Department of Biomedical Engineering  
    Chicago, Illinois, USA  
    [acarr32@uic.edu](mailto:acarr32@uic.edu)
 
-4. **AJ Williams**  
+   **AJ Williams**  
    Department of Computer Science  
    Chicago, Illinois, USA  
    [awill276@uic.edu](mailto:awill276@uic.edu)
