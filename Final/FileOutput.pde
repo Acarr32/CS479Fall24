@@ -13,10 +13,10 @@ public void writeClimbingData(ArrayList<ArrayList<Data>> forceData, ArrayList<Da
 
         // Create the file inside the directory
         file = new File(newDirectory.toFile(), fileName);
-    } catch (IOException e) {
-        e.printStackTrace();
-        System.out.println("Failed to create directory.");
-        return;
+    }
+    catch (IOException e) {
+      throwError(e, 6);
+      return;
     }
 
     try (FileWriter writer = new FileWriter(file)) {

@@ -3,7 +3,7 @@ void setup(){
   
   //Environment & Feature Initializations
   initializeVariables();
-  initializeSerialPort(1, false); //port#, debug
+  initializeSerialPort(2, true); //port#, debug
   initializeGraphs();
   //Print 
   background(255);

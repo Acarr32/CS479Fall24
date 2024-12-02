@@ -36,7 +36,7 @@ void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
     for (int i = 0; i < datasets.size(); i++) {
         GPointsArray tempPoints = arrayToPoints(datasets.get(i));
         String layerName = "Layer " + i;
-        color layerColor = colors[(i + seed)% colors.length];
+        color layerColor = colors[i % colors.length];
         
         if(plot.getLayer(layerName) == null){
           plot.addLayer(layerName, tempPoints);
@@ -64,10 +64,10 @@ void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
     plot.endDraw();
 }
 
-void drawBubbles(){ //<>// //<>//
+void drawBubbles(){ //<>// //<>// //<>//
   float tempThumb, tempPtr, tempMid;
   
-  tempThumb = currValues != null ? currValues.GetThm() : 0; //<>// //<>// //<>//
+  tempThumb = currValues != null ? currValues.GetThm() : 0; //<>// //<>// //<>// //<>//
   tempPtr = currValues != null ? currValues.GetPtr() : 0;
   tempMid = currValues != null ? currValues.GetMid() : 0;
   
