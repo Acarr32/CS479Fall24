@@ -1,4 +1,4 @@
-# Project Name: tRocker - Smart Rock-Climbing Glove
+# tRocker - Smart Rock-Climbing Glove
 
 [![Link to LaTeX report](https://img.shields.io/badge/Research_Paper-Link-green)](https://drive.google.com/drive/folders/1l-PDidxaaZN4nYoOUncHmqJZ8NY1nHeO?usp=sharing)
 
