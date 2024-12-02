@@ -10,7 +10,13 @@ void drawGraphs(){
     drawGraphGPlot(addShell(heightData), heightPlot, width * .025 , height - height/3 - height *.025 , width * .7, height / 3, "Altitude Plot", "Time", "Altitude Reading");
 }
 
-void collectData(){
+GPointsArray arrayToPoints(ArrayList<Data> data){
+  GPointsArray points = new GPointsArray(data.size());
+  for(int i = 0; i < data.size(); i++){
+    points.add(data.get(i).getTime(), data.get(i).getReading());
+  }
+  
+  return points;
 }
 
 void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
@@ -28,27 +34,16 @@ void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
     color[] lineColors = {mossGreen, rustyRed, coralOrange, charcoalGray, seafoamGreen};
     color[] pointColors = {mossGreen, rustyRed, coralOrange, charcoalGray, seafoamGreen};
 
+    int seed = (int)(Math.random() * 4);
     // Add datasets as layers
     for (int i = 0; i < datasets.size(); i++) {
-        GPointsArray points = new GPointsArray();
-        ArrayList<Data> data = datasets.get(i);
-
-        for (int j = 0; j < data.size(); j++) {
-            points.add(data.get(j).getTime(), data.get(j).getReading());
-             
-
-        if (i == 0) {
-            // Set the main points for the plot
-            plot.setPoints(points);
-            plot.setLineColor(lineColors[i % lineColors.length]);
-            plot.setPointColor(pointColors[i % pointColors.length]);
-        } else {
-            // Add additional datasets as layers
-            String layerName = "Layer " + i;
-            plot.addLayer(layerName, points);
-            //plot.getLayer(layerName).setLineColor(lineColors[i]);
-            //plot.getLayer(layerName).setPointColor(pointColors[i]);
-        }
+        GPointsArray tempPoints = arrayToPoints(datasets.get(i));
+        String layerName = "Layer " + i;
+        color layerColor = lineColors[(i + seed)% lineColors.length()];
+        
+        plot.addLayer(layerName, tempPoints);
+        plot.getLayer(layerName).setLineColor(layerColor);
+        plot.getLayer(layerName).setPointColor(layerColor);
     }
 
     // Draw the plot
@@ -69,10 +64,10 @@ void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
 
 
  //<>//
-void drawBubbles(){
+void drawBubbles(){ //<>//
   float tempThumb, tempPtr, tempMid;
   
-  tempThumb = currValues != null ? currValues.GetThm() : 0;
+  tempThumb = currValues != null ? currValues.GetThm() : 0; //<>//
   tempPtr = currValues != null ? currValues.GetPtr() : 0;
   tempMid = currValues != null ? currValues.GetMid() : 0;
   

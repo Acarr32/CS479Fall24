@@ -154,12 +154,12 @@ void addData(float thumbReading, float pointerReading, float middleReading, floa
   flexD = new Data(flexReading, currTime);
   heightD = new Data(heightReading, currTime);
   
-  ArrayList<Data> tempFlexData = new ArrayList<Data>();
-  tempFlexData.add(thumbData);
-  tempFlexData.add(pointerData);
-  tempFlexData.add(middleData);
+  ArrayList<Data> tempForceData = new ArrayList<Data>();
+  tempForceData.add(thumbData);
+  tempForceData.add(pointerData);
+  tempForceData.add(middleData);
   
-  fsrData.add(tempFlexData);
+  fsrData.add(tempForceData);
   flexData.add(flexD);
   heightData.add(heightD);
 }
