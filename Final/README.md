@@ -36,23 +36,30 @@ This project is developed by a student team from the University of Illinois at C
 
 ### Error 001: Image File Not Loaded
 - **Cause**: Missing image file `replaybackground.jpg`.
-- **Solution**: Download the image from the [GitHub repository](https://github.com/Acarr32/CS479Fall24/tree/main/Final/data) and add it to the `./data/` directory.
+- **Solution**: Download the image `replaybackground.jpg` from the [GitHub repository](https://github.com/Acarr32/CS479Fall24/tree/main/Final/data) and add it to the `./data/` directory.
 
 ### Error 002: Altitude Sensor Not Properly Connected
 - **Cause**: The altitude sensor connection is not secure.
-- **Solution**: Refer to the [GitHub repository](https://github.com/Acarr32/CS479Fall24/tree/main/Final) for detailed setup instructions.
+- **Solution**: Refer to the wiring diagram in the [Report](https://drive.google.com/drive/folders/1l-PDidxaaZN4nYoOUncHmqJZ8NY1nHeO?usp=sharing) to in the ensure that the wires are where they should be (see: `Figure 1: Circuit Diagram`). If this is the case, your sensor could be shorted, which you can check with a multimeter. Refer to the `Additional Resources` to find more information about the sensors.
 
 ### Error 003: Force Sensor(s) Not Properly Connected
 - **Cause**: Force sensors may not be connected correctly.
-- **Solution**: Check the wiring and ensure each sensor is securely attached as detailed in the [GitHub repository](https://github.com/Acarr32/CS479Fall24/tree/main/Final).
+- **Solution**: Refer to the wiring diagram in the [Report](https://drive.google.com/drive/folders/1l-PDidxaaZN4nYoOUncHmqJZ8NY1nHeO?usp=sharing) to in the ensure that the wires are where they should be (see: `Figure 1: Circuit Diagram`). If this is the case, your sensor could be shorted, which you can check with a multimeter. Refer to the `Additional Resources` to find more information about the sensors.
 
 ### Error 004: Failed to Write to Output Log File
 - **Cause**: Issues with file permissions or incorrect file paths.
-- **Solution**: Verify that the output directory is writable and that the paths are correct. For additional troubleshooting, refer to the [GitHub repository](https://github.com/Acarr32/CS479Fall24/tree/main/Final).
+- **Solution**: Verify that the output directory is writable and that the paths are correct. You may need to add permission to processing in order to allow this feature to work.
+ 
+### Error 005: Serial Event Read Failure
+- **Cause**: The connection between the 328P board and the program itself is poor.
+- **Solution**: Reload the [Arduino File](https://github.com/Acarr32/CS479Fall24/blob/main/Final/FinalArduino/FinalArduino.ino) to the central board and try again. If the problem persists, email one of the developers, as there is no other non-code related fix.
 
 ## Additional Resources
-- [Overleaf Paper](https://drive.google.com/drive/folders/1l-PDidxaaZN4nYoOUncHmqJZ8NY1nHeO?usp=sharing)
+- [Report](https://drive.google.com/drive/folders/1l-PDidxaaZN4nYoOUncHmqJZ8NY1nHeO?usp=sharing)
 - [GitHub Repository](https://github.com/Acarr32/CS479Fall24/tree/main/Final)
+- [BMP390 Barometer](https://www.bosch-sensortec.com/products/environmental-sensors/pressure-sensors/bmp390/)
+- [FireBeetle 328P Boards](https://www.dfrobot.com/product-1646.html)
+- [MPU 6050 Accelerometer](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/)
 
 ## Acknowledgments
-We would like to thank our academic peers and mentors who provided valuable feedback and guidance throughout the development of this project. Special thanks to the University of Illinois at Chicago for its resources and support.
+We would like to thank our academic peers and mentors who provided valuable feedback and guidance throughout the development of this project. Special thanks to the University of Illinois at Chicago Biomedical Engineering deparement and professor Esmailbeigi for their resources and support.
