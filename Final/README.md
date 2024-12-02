@@ -1,6 +1,6 @@
-# Project Name: Rock Climbing Wearable Glove System
+# Project Name: tRocker - Smart Rock-Climbing Glove
 
-[![Overleaf Paper](https://img.shields.io/badge/Research_Paper-Link-green)](https://drive.google.com/drive/folders/1l-PDidxaaZN4nYoOUncHmqJZ8NY1nHeO?usp=sharing)
+[![Link to LaTeX report](https://img.shields.io/badge/Research_Paper-Link-green)](https://drive.google.com/drive/folders/1l-PDidxaaZN4nYoOUncHmqJZ8NY1nHeO?usp=sharing)
 
 ## Overview
 This project involves the design and development of a wearable glove system specifically tailored for optimizing rock climbing training. The glove integrates multiple sensors to capture data on grip force, finger flexion, hand motion, muscle activity, and altitude changes. The system is built on BLE-enabled FireBeetle 328P boards using a central-peripheral communication model to facilitate real-time data processing and transmission. Data is pre-processed on-board to ensure accuracy before being sent to a custom user interface for visualization.
