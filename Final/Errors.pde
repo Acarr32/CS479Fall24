@@ -47,6 +47,17 @@ String throwError(Exception e, int id){
         printLine();
       }
       return "ERROR 004: FAILED TO WRITE TO OUTPUT LOG FILE";
+    case 5:
+      System.out.println("ERROR OO5: SERIAL OUTPUT FAILURE");
+      System.out.println("See the repository README for more information");
+      System.out.println("https://github.com/Acarr32/CS479Fall24/tree/main/Final");
+      if(e != null){
+        printLine();
+        System.out.println("STACK TRACE (FOR DEBUGGING)");
+        e.printStackTrace();
+        printLine();
+      }
+      return "ERROR OO5: SERIAL OUTPUT FAILURE";
     default:
       return null;
   }

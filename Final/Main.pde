@@ -89,7 +89,7 @@ void serialEvent(Serial myPort){
         prevMid = mid;
      }
      catch(Exception e){
-       System.out.println("Error occurred: "+e);
+       throwError(e, 5);
      }
    }
 }
