@@ -4,6 +4,7 @@ void initializeGraphs(){
     heightPlot = new GPlot(this);
 }
 void drawGraphs(){
+    
     drawGraphGPlot(fsrData, fsrPlot, width * .025 , height * .025 , width / 3, height / 3, "FSR PLOT" , "Time", "Force Reading");
     drawGraphGPlot(addShell(flexData), flexPlot, (width * .05) + width / 3, height * .025, width / 3, height /3 , "FLEX PLOT" , "Time", "Flex Sensor Read");
     drawGraphGPlot(addShell(heightData), heightPlot, width * .025 , height - height/3 - height *.025 , width * .7, height / 3, "Altitude Plot", "Time", "Altitude Reading");
@@ -68,9 +69,15 @@ void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
 
  //<>//
 void drawBubbles(){
-  drawBubble(thumbX, thumbY, currValues.GetThm());
-  drawBubble(pointerX, pointerY, currValues.GetPtr());
-  drawBubble(middleX, middleY, currValues.GetMid());
+  float tempThumb, tempPtr, tempMid;
+  
+  tempThumb = currValues != null ? currValues.GetThm() : 0;
+  tempPtr = currValues != null ? currValues.GetPtr() : 0;
+  tempMid = currValues != null ? currValues.GetMid() : 0;
+  
+  drawBubble(thumbX, thumbY, tempThumb);
+  drawBubble(pointerX, pointerY, tempPtr);
+  drawBubble(middleX, middleY, tempMid);
 }
 
 void drawBubble(float x, float y, float reading){
