@@ -68,7 +68,7 @@ String throwError(Exception e, int id){
           e.printStackTrace();
           printLine();
         }
-        break;
+        return "ERROR OO6: FILE DIRECTORY ERROR";
     default:
       return null;
   }
