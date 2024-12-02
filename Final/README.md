@@ -13,6 +13,7 @@ This project involves the design and development of a wearable glove system spec
 ## Authors
 This project is developed by a student team from the University of Illinois at Chicago, and submitted as a final project for CS/BME 479 Wearable and Nearable Technologies:
 <div align="center">
+  
    **Shehrirar Burney**  
    Department of Computer Science  
    Chicago, Illinois, USA  
