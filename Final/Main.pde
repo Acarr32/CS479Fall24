@@ -68,10 +68,11 @@ void serialEvent(Serial myPort){
         float ptr = float(values[1]);
         float mid = float(values[2]);
         float flx = float(values[3]);
-        float vtg = float(values[4]);
+        //float vtg = float(values[4]);
         Accelerometer acc = new Accelerometer(float(values[5]), float(values[6]), float(values[7]));
         Gyroscope gyr = new Gyroscope(float(values[8]), float(values[9]), float(values[10]));
-        currValues = new Values(thm, ptr, mid, flx, vtg, acc, gyr);
+        float alt = float(values[13]);
+        currValues = new Values(thm, ptr, mid, flx, alt, acc, gyr);
         if(Started){
           if(prevThm == 0 && prevPtr == 0 && prevMid == 0){
             if(thm > 1 || ptr > 1 || mid > 1){
@@ -81,7 +82,7 @@ void serialEvent(Serial myPort){
             }
           }
            addData(currValues.GetThm(), currValues.GetPtr(), currValues.GetMid(),
-           currValues.GetFlex(), currValues.GetVtg());
+           currValues.GetFlex(), currValues.GetAlt());
         }
         prevThm = thm;
         prevPtr = ptr;
