@@ -11,7 +11,7 @@ class Replay{
   void drawReplay(){
     background(255);
     try{
-      image(loadImage("./data/replayBackground.jpg"),0, 0, width, height);
+      image(loadImage("./data/rockbackground.png"),0, 0, width, height);
     }
     catch(NullPointerException p) {
       printLine();
@@ -24,8 +24,8 @@ class Replay{
       text("Error 001: Please consult terminal for more information", height/8, width/2);
       return;
     }
-    fill(225, 203, 190);
-    rect(width / 2 - REPLAY_WIDTH/2, height/2 - REPLAY_HEIGHT/2, REPLAY_WIDTH, REPLAY_HEIGHT);
+    //fill(225, 203, 190);
+    //rect(width / 2 - REPLAY_WIDTH/2, height/2 - REPLAY_HEIGHT/2, REPLAY_WIDTH, REPLAY_HEIGHT);
     drawRocks();
     drawClimber();
   }
@@ -37,7 +37,7 @@ class Replay{
     float spacing = (REPLAY_HEIGHT - 20) / (float)numRocks; // 20 for padding
     float rectCenterX = width / 2;
     for (int i = 0; i < numRocks; i++) {
-      fill(getRockColor(i));
+      
       
       // Calculate Y position from bottom to top
       float y = height / 2 + REPLAY_HEIGHT / 2 - 10 - i * spacing;
@@ -47,15 +47,16 @@ class Replay{
       float x = (i % 2 == 0) 
                 ? rectCenterX - xOffset 
                 : rectCenterX + xOffset;
-
+      PImage rockImage = getRockColor(i);
       // Store rock position
       ArrayList<Integer> temp = new ArrayList<Integer>();
       temp.add(int(x));
       temp.add(int(y));
+      
       rockPositions.add(temp);
 
       // Draw the rock
-      rect(x, y, 10, 10);
+      image(rockImage, x, y, 50, 50);
     }
     
   }
@@ -92,21 +93,21 @@ class Replay{
     }
   }
   
-  private color getRockColor(int i){
+  private PImage getRockColor(int i){
     int j = i % 5;
     switch(j){
       case 0:
-        return(mossGreen);
+        return loadImage("./data/orangerock.png");
       case 1:
-        return(rustyRed);
+        return loadImage("./data/purplerock.png");
       case 2:
-        return(coralOrange);
+        return loadImage("./data/bluerock.png");
       case 3:
-        return(charcoalGray);
+        return loadImage("./data/yellowrock.png");
       case 4:
-        return(seafoamGreen);
+        return loadImage("./data/greenrock.png");
       default:
-        return(coralOrange);
+        return loadImage("./data/orangerock.png");
     }
   }
 }

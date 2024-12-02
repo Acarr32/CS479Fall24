@@ -35,7 +35,7 @@ void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
 
         for (int j = 0; j < data.size(); j++) {
             points.add(data.get(j).getTime(), data.get(j).getReading());
-        }
+             
 
         if (i == 0) {
             // Set the main points for the plot
@@ -46,8 +46,8 @@ void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
             // Add additional datasets as layers
             String layerName = "Layer " + i;
             plot.addLayer(layerName, points);
-            plot.getLayer(layerName).setLineColor(lineColors[i]);
-            plot.getLayer(layerName).setPointColor(pointColors[i]);
+            //plot.getLayer(layerName).setLineColor(lineColors[i]);
+            //plot.getLayer(layerName).setPointColor(pointColors[i]);
         }
     }
 
@@ -64,7 +64,8 @@ void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
     plot.drawPoints();
     plot.drawLines();
     plot.endDraw();
-} //<>//
+  } //<>//
+}
 
 
  //<>//

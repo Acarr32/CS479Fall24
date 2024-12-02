@@ -1,12 +1,12 @@
-         #include <Wire.h>
+#include <Wire.h>
 
 // Analog 0: EMG
-const int THM_PIN = 1;    // Analog 1: thumb FSR - THM
-const int IND_PIN = 2;    // Analog 2: index FSR - IND
-const int MID_PIN = 3;    // Analog 3: middle FSR - MID
-const int FLX_PIN = 4;    // Analog 4: flex sensor - FXS
+const int THM_PIN = 1;  // Analog 1: thumb FSR - THM
+const int IND_PIN = 2;  // Analog 2: index FSR - IND
+const int MID_PIN = 3;  // Analog 3: middle FSR - MID
+const int FLX_PIN = 4;  // Analog 4: flex sensor - FXS
 
-const int MPU = 0x68; // MPU6050 I2C address
+const int MPU = 0x68;  // MPU6050 I2C address
 
 float thm, ind, mid;
 float flx, vtg;
@@ -19,11 +19,11 @@ float AccErrorX, AccErrorY, GyroErrorX, GyroErrorY, GyroErrorZ;
 float elapsedTime, currentTime, previousTime;
 int c = 0;
 
-void setup(){
+void setup() {
   Serial.begin(115200);
 
-  // MPU6050 transmission 
-  Wire.begin();                     
+  // MPU6050 transmission
+  Wire.begin();
   Wire.beginTransmission(MPU);
   Wire.write(0x6B);
   Wire.write(0x00);
@@ -32,7 +32,7 @@ void setup(){
   calculate_IMU_error();
 }
 
-void loop(){
+void loop() {
   readInput();
   printInput();
   delay(200);
@@ -54,14 +54,14 @@ void readInput() {
   Wire.write(0x3B);
   Wire.endTransmission(false);
   Wire.requestFrom(MPU, 6, true);
-  AccX = (Wire.read() << 8 | Wire.read()) / 16384.0 ;
-  AccY = (Wire.read() << 8 | Wire.read()) / 16384.0 ;
-  AccZ = (Wire.read() << 8 | Wire.read()) / 16384.0 ;
+  AccX = (Wire.read() << 8 | Wire.read()) / 16384.0;
+  AccY = (Wire.read() << 8 | Wire.read()) / 16384.0;
+  AccZ = (Wire.read() << 8 | Wire.read()) / 16384.0;
 
   //Reading Gyro Sensor
   Wire.beginTransmission(MPU);
   Wire.write(0x43);
-  Wire.endTransmission(false);
+  Wire.endTransmission(false); 
   Wire.requestFrom(MPU, 6, true);
   GyroX = Wire.read() << 8 | Wire.read();
   GyroY = Wire.read() << 8 | Wire.read();
@@ -97,7 +97,7 @@ void printInput() {
   Serial.println(GyroZ);
 }
 
-float readAccX(){
+float readAccX() {
   return 0.0;
 }
 
@@ -112,9 +112,9 @@ void calculate_IMU_error() {
     Wire.endTransmission(false);
     Wire.requestFrom(MPU, 6, true);
 
-    AccX = (Wire.read() << 8 | Wire.read()) / 16384.0 ;
-    AccY = (Wire.read() << 8 | Wire.read()) / 16384.0 ;
-    AccZ = (Wire.read() << 8 | Wire.read()) / 16384.0 ;
+    AccX = (Wire.read() << 8 | Wire.read()) / 16384.0;
+    AccY = (Wire.read() << 8 | Wire.read()) / 16384.0;
+    AccZ = (Wire.read() << 8 | Wire.read()) / 16384.0;
 
     // Sum all readings
     AccErrorX = AccErrorX + ((atan((AccY) / sqrt(pow((AccX), 2) + pow((AccZ), 2))) * 180 / PI));
