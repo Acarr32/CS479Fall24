@@ -36,8 +36,6 @@ float minFlexReading, maxFlexReading;
 
 float MAX_FORCE_READING = 1000;
 
-float currentFlex;
-
 float relaxedHandFlexReading, clenchedHandFlexReading;
 
 PImage handImg;
@@ -49,7 +47,7 @@ ArrayList<ReplayValues> replayValuesList = new ArrayList<ReplayValues>();
 float replayClock = 0;
 Replay replay;
 float prevThm;
-float prevInd;
+float prevPtr;
 float prevMid;
 
 Button startButton, stopButton, holdButton, statusButton, replayButton;
@@ -70,15 +68,14 @@ float handHeight;
 // Scaled coordinate ratios and adjusted positions
 float middleX;
 float middleY;
-float currMiddleForce;
 
 float pointerX;
 float pointerY;
-float currPointerForce;
 
 float thumbX;
 float thumbY;
-float currThumbForce;
+
+//currValues = new Values(thm, ind, mid, flx, vtg, acc, gyr);
 
 
 ClimbingStatus currentStatus;

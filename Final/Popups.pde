@@ -74,10 +74,10 @@ void holdPopup(){
 
 void performHandReadings() {
   JOptionPane.showMessageDialog(null, "Clench your hand and press spacebar to continue.");
-  clenchedHandFlexReading = currentFlex;
+  clenchedHandFlexReading = currValues.GetFlex();
   
   JOptionPane.showMessageDialog(null, "Relax your hand and press spacebar to continue.");
-  relaxedHandFlexReading = currentFlex;
+  relaxedHandFlexReading = currValues.GetFlex();
   
   currentState = State.Graph;
 }

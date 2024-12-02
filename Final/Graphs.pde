@@ -68,13 +68,9 @@ void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
 
  //<>//
 void drawBubbles(){
-  currThumbForce = 0;
-  currPointerForce = 0;
-  currMiddleForce = 0;
-  
-  drawBubble(thumbX, thumbY, currThumbForce);
-  drawBubble(pointerX, pointerY, currPointerForce);
-  drawBubble(middleX, middleY, currMiddleForce);
+  drawBubble(thumbX, thumbY, currValues.GetThm());
+  drawBubble(pointerX, pointerY, currValues.GetPtr());
+  drawBubble(middleX, middleY, currValues.GetMid());
 }
 
 void drawBubble(float x, float y, float reading){

@@ -1,15 +1,15 @@
 class Values{
   float thm;
-  float ind;
+  float ptr;
   float mid;
   float flx;
   float vtg;
   Accelerometer acc;
   Gyroscope gyr;
   
-  Values(float thm, float ind, float mid, float flx, float vtg, Accelerometer acc, Gyroscope gyr){
+  Values(float thm, float ptr, float mid, float flx, float vtg, Accelerometer acc, Gyroscope gyr){
     this.thm = thm;
-    this.ind = ind;
+    this.ptr = ptr;
     this.mid = mid;
     this.flx = flx;
     this.vtg = vtg;
@@ -18,9 +18,37 @@ class Values{
   }
   void printValues(){
     System.out.println(this.thm);
-    System.out.println(this.ind);
+    System.out.println(this.ptr);
     System.out.println(this.mid);
     System.out.println(this.flx);
+  }
+  
+  public float GetThm(){
+    return this.thm;
+  }
+  
+  public float GetPtr(){
+    return this.ptr;
+  }
+  
+  public float GetMid(){
+    return this.mid;
+  }
+  
+  public float GetFlex(){
+    return this.flx;
+  }
+  
+  public float GetVtg(){
+    return this.vtg;
+  }
+  
+  public Accelerometer GetAccel(){
+    return this.acc;
+  }
+  
+  public Gyroscope GetGyro(){
+    return this.gyr;
   }
 }
 

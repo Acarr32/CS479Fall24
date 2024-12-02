@@ -6,11 +6,7 @@ void initializeVariables(){
   coralOrange = color(218, 125, 88);
   charcoalGray = color(29, 32, 29);
   seafoamGreen = color(131, 188, 169);
-  currPointerForce = 0;
-  currThumbForce = 0;
-  currMiddleForce = 0;
   Started = false;
-  currentFlex = 0;
 }
 
 void initializeSerialPort(int port, boolean debug){
@@ -144,10 +140,6 @@ void Stop(){
 }
 
 void addData(float thumbReading, float pointerReading, float middleReading, float flexReading, float heightReading){
-  currThumbForce = thumbReading;
-  currPointerForce = pointerReading;
-  currMiddleForce = middleReading;
-  
   if(!Started){
     return;
   }

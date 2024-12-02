@@ -101,15 +101,15 @@ class Replay{
 class ReplayValues{
   float clock;
   float thm;
-  float ind;
+  float ptr;
   float mid;
-  ReplayValues(float clock, float thm, float ind, float mid){
+  ReplayValues(float clock, float thm, float ptr, float mid){
     this.clock = clock;
     this.thm = thm;
-    this.ind = ind;
+    this.ptr = ptr;
     this.mid = mid;
   }
   void print(){
-    System.out.print(this.clock / 1000 + "s "+ this.thm + " " + this.ind + " " + this.mid + "\n");
+    System.out.print(this.clock / 1000 + "s "+ this.thm + " " + this.ptr + " " + this.mid + "\n");
   }
 }

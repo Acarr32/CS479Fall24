@@ -65,24 +65,26 @@ void serialEvent(Serial myPort){
         value = trim(value);
         String[] values = split(value, ", ");
         float thm = float(values[0]);
-        float ind = float(values[1]);
+        float ptr = float(values[1]);
         float mid = float(values[2]);
         float flx = float(values[3]);
         float vtg = float(values[4]);
         Accelerometer acc = new Accelerometer(float(values[5]), float(values[6]), float(values[7]));
         Gyroscope gyr = new Gyroscope(float(values[8]), float(values[9]), float(values[10]));
-        currValues = new Values(thm, ind, mid, flx, vtg, acc, gyr);
+        currValues = new Values(thm, ptr, mid, flx, vtg, acc, gyr);
         if(Started){
-          if(prevThm == 0 && prevInd == 0 && prevMid == 0){
-            if(thm > 1 || ind > 1 || mid > 1){
-              ReplayValues temp = new ReplayValues(millis() - clock, thm, ind, mid);
+          if(prevThm == 0 && prevPtr == 0 && prevMid == 0){
+            if(thm > 1 || ptr > 1 || mid > 1){
+              ReplayValues temp = new ReplayValues(millis() - clock, thm, ptr, mid);
               temp.print();
               replayValuesList.add(temp);
             }
           }
+           addData(currValues.GetThm(), currValues.GetPtr(), currValues.GetMid(),
+           currValues.GetFlex(), currValues.GetVtg());
         }
         prevThm = thm;
-        prevInd = ind;
+        prevPtr = ptr;
         prevMid = mid;
      }
      catch(Exception e){
