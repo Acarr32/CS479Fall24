@@ -29,7 +29,7 @@ This project is developed by a student team from the University of Illinois at C
    Chicago, Illinois, USA  
    [acarr32@uic.edu](mailto:acarr32@uic.edu)
 
-   **AJ Williams**  
+   **Alexander Williams, Jr.**  
    Department of Computer Science  
    Chicago, Illinois, USA  
    [awill276@uic.edu](mailto:awill276@uic.edu)
