@@ -1,0 +1,3111 @@
+Data from Accelerometer (Altitude):
+Reading: 4.17, Time Elapsed: 36
+Reading: 4.17, Time Elapsed: 247
+Reading: 4.17, Time Elapsed: 457
+Reading: 4.17, Time Elapsed: 669
+Reading: 4.17, Time Elapsed: 878
+Reading: 4.17, Time Elapsed: 1089
+Reading: 4.13, Time Elapsed: 1299
+Reading: 4.07, Time Elapsed: 1510
+Reading: 4.17, Time Elapsed: 1722
+Reading: 4.07, Time Elapsed: 1934
+Reading: 4.07, Time Elapsed: 2143
+Reading: 4.17, Time Elapsed: 2355
+Reading: 4.09, Time Elapsed: 2565
+Reading: 4.06, Time Elapsed: 2767
+Reading: 4.17, Time Elapsed: 2978
+Reading: 4.17, Time Elapsed: 3198
+Reading: 4.07, Time Elapsed: 3408
+Reading: 4.07, Time Elapsed: 3620
+Reading: 4.1, Time Elapsed: 3830
+Reading: 4.17, Time Elapsed: 4041
+Reading: 4.07, Time Elapsed: 4253
+Reading: 4.07, Time Elapsed: 4464
+Reading: 4.1, Time Elapsed: 4666
+Reading: 4.17, Time Elapsed: 4885
+Reading: 4.06, Time Elapsed: 5096
+Reading: 4.07, Time Elapsed: 5307
+Reading: 4.17, Time Elapsed: 5518
+Reading: 4.06, Time Elapsed: 5721
+Reading: 4.07, Time Elapsed: 5939
+Reading: 4.17, Time Elapsed: 6151
+Reading: 4.17, Time Elapsed: 6361
+Reading: 4.17, Time Elapsed: 6573
+Reading: 4.17, Time Elapsed: 6784
+Reading: 4.17, Time Elapsed: 6994
+Reading: 4.17, Time Elapsed: 7205
+Reading: 4.17, Time Elapsed: 7416
+Reading: 4.17, Time Elapsed: 7627
+Reading: 4.17, Time Elapsed: 7838
+Reading: 4.17, Time Elapsed: 8048
+Reading: 4.17, Time Elapsed: 8258
+Reading: 4.08, Time Elapsed: 8470
+Reading: 4.17, Time Elapsed: 8682
+Reading: 4.17, Time Elapsed: 8893
+Reading: 4.06, Time Elapsed: 9103
+Reading: 4.17, Time Elapsed: 9305
+Reading: 4.17, Time Elapsed: 9525
+Reading: 4.06, Time Elapsed: 9735
+Reading: 4.17, Time Elapsed: 9947
+Reading: 4.12, Time Elapsed: 10158
+Reading: 4.08, Time Elapsed: 10369
+Reading: 4.17, Time Elapsed: 10579
+Reading: 4.17, Time Elapsed: 10791
+Reading: 4.14, Time Elapsed: 11002
+Reading: 4.07, Time Elapsed: 11213
+Reading: 4.06, Time Elapsed: 11424
+Reading: 4.06, Time Elapsed: 11634
+Reading: 4.17, Time Elapsed: 11846
+Reading: 4.17, Time Elapsed: 12056
+Reading: 4.11, Time Elapsed: 12267
+Reading: 4.08, Time Elapsed: 12478
+Reading: 4.17, Time Elapsed: 12689
+Reading: 4.17, Time Elapsed: 12900
+Reading: 4.17, Time Elapsed: 13109
+Reading: 4.17, Time Elapsed: 13321
+Reading: 4.17, Time Elapsed: 13530
+Reading: 4.17, Time Elapsed: 13742
+Reading: 4.17, Time Elapsed: 13953
+Reading: 4.17, Time Elapsed: 14163
+Reading: 4.17, Time Elapsed: 14374
+Reading: 4.17, Time Elapsed: 14586
+Reading: 4.17, Time Elapsed: 14796
+Reading: 4.17, Time Elapsed: 15005
+Reading: 4.17, Time Elapsed: 15216
+Reading: 4.17, Time Elapsed: 15427
+Reading: 4.17, Time Elapsed: 15638
+Reading: 4.17, Time Elapsed: 15849
+Reading: 4.17, Time Elapsed: 16059
+Reading: 4.17, Time Elapsed: 16271
+Reading: 4.17, Time Elapsed: 16482
+Reading: 4.17, Time Elapsed: 16692
+Reading: 4.17, Time Elapsed: 16904
+Reading: 4.17, Time Elapsed: 17112
+Reading: 4.17, Time Elapsed: 17324
+Reading: 4.17, Time Elapsed: 17534
+Reading: 4.17, Time Elapsed: 17745
+Reading: 4.17, Time Elapsed: 17956
+Reading: 4.17, Time Elapsed: 18167
+Reading: 4.17, Time Elapsed: 18378
+Reading: 4.17, Time Elapsed: 18589
+Reading: 4.17, Time Elapsed: 18799
+Reading: 4.17, Time Elapsed: 19009
+Reading: 4.17, Time Elapsed: 19220
+Reading: 4.17, Time Elapsed: 19430
+Reading: 4.17, Time Elapsed: 19642
+Reading: 4.17, Time Elapsed: 19852
+Reading: 4.17, Time Elapsed: 20063
+Reading: 4.17, Time Elapsed: 20274
+Reading: 4.17, Time Elapsed: 20485
+Reading: 4.17, Time Elapsed: 20696
+Reading: 4.17, Time Elapsed: 20907
+Reading: 4.17, Time Elapsed: 21116
+Reading: 4.17, Time Elapsed: 21328
+Reading: 4.17, Time Elapsed: 21538
+Reading: 4.17, Time Elapsed: 21749
+Reading: 4.17, Time Elapsed: 21960
+Reading: 4.17, Time Elapsed: 22171
+Reading: 4.17, Time Elapsed: 22382
+Reading: 4.17, Time Elapsed: 22592
+Reading: 4.17, Time Elapsed: 22802
+Reading: 4.17, Time Elapsed: 23012
+Reading: 4.17, Time Elapsed: 23224
+Reading: 4.17, Time Elapsed: 23434
+Reading: 4.17, Time Elapsed: 23645
+Reading: 4.17, Time Elapsed: 23856
+Reading: 4.17, Time Elapsed: 24067
+Reading: 4.17, Time Elapsed: 24278
+Reading: 4.17, Time Elapsed: 24489
+Reading: 4.17, Time Elapsed: 24700
+Reading: 4.17, Time Elapsed: 24909
+Reading: 4.17, Time Elapsed: 25120
+Reading: 4.17, Time Elapsed: 25330
+Reading: 4.17, Time Elapsed: 25541
+Reading: 4.17, Time Elapsed: 25753
+Reading: 4.17, Time Elapsed: 25964
+Reading: 4.17, Time Elapsed: 26174
+Reading: 4.17, Time Elapsed: 26386
+Reading: 4.17, Time Elapsed: 26596
+Reading: 4.17, Time Elapsed: 26805
+Reading: 4.17, Time Elapsed: 27016
+Reading: 4.17, Time Elapsed: 27227
+Reading: 4.17, Time Elapsed: 27438
+Reading: 4.17, Time Elapsed: 27648
+Reading: 4.17, Time Elapsed: 27860
+Reading: 4.17, Time Elapsed: 28070
+Reading: 4.17, Time Elapsed: 28282
+Reading: 4.17, Time Elapsed: 28492
+Reading: 4.17, Time Elapsed: 28701
+Reading: 4.17, Time Elapsed: 28912
+Reading: 4.17, Time Elapsed: 29124
+Reading: 4.17, Time Elapsed: 29335
+Reading: 4.17, Time Elapsed: 29545
+Reading: 4.17, Time Elapsed: 29756
+Reading: 4.17, Time Elapsed: 29967
+Reading: 4.17, Time Elapsed: 30178
+Reading: 4.17, Time Elapsed: 30389
+Reading: 4.17, Time Elapsed: 30600
+Reading: 4.17, Time Elapsed: 30809
+Reading: 4.17, Time Elapsed: 31019
+Reading: 4.17, Time Elapsed: 31231
+Reading: 4.17, Time Elapsed: 31441
+Reading: 4.17, Time Elapsed: 31653
+Reading: 4.17, Time Elapsed: 31864
+Reading: 4.17, Time Elapsed: 32074
+Reading: 4.17, Time Elapsed: 32285
+Reading: 4.17, Time Elapsed: 32496
+Reading: 4.17, Time Elapsed: 32705
+Reading: 4.17, Time Elapsed: 32916
+Reading: 4.17, Time Elapsed: 33127
+Reading: 4.17, Time Elapsed: 33338
+Reading: 4.17, Time Elapsed: 33548
+Reading: 4.17, Time Elapsed: 33759
+Reading: 4.17, Time Elapsed: 33970
+Reading: 4.17, Time Elapsed: 34181
+Reading: 4.17, Time Elapsed: 34393
+Reading: 4.17, Time Elapsed: 34603
+Reading: 4.17, Time Elapsed: 34812
+Reading: 4.17, Time Elapsed: 35023
+Reading: 4.17, Time Elapsed: 35234
+Reading: 4.17, Time Elapsed: 35445
+Reading: 4.17, Time Elapsed: 35655
+Reading: 4.17, Time Elapsed: 35867
+Reading: 4.17, Time Elapsed: 36077
+Reading: 4.17, Time Elapsed: 36288
+Reading: 4.17, Time Elapsed: 36500
+Reading: 4.17, Time Elapsed: 36709
+Reading: 4.17, Time Elapsed: 36919
+Reading: 4.17, Time Elapsed: 37130
+Reading: 4.17, Time Elapsed: 37341
+Reading: 4.17, Time Elapsed: 37553
+Reading: 4.17, Time Elapsed: 37763
+Reading: 4.17, Time Elapsed: 37974
+Reading: 4.17, Time Elapsed: 38184
+Reading: 4.17, Time Elapsed: 38396
+Reading: 4.17, Time Elapsed: 38607
+Reading: 4.17, Time Elapsed: 38816
+Reading: 4.17, Time Elapsed: 39027
+Reading: 4.17, Time Elapsed: 39237
+Reading: 4.17, Time Elapsed: 39449
+Reading: 4.17, Time Elapsed: 39659
+Reading: 4.17, Time Elapsed: 39871
+Reading: 4.17, Time Elapsed: 40081
+Reading: 4.17, Time Elapsed: 40292
+Reading: 4.17, Time Elapsed: 40503
+Reading: 4.17, Time Elapsed: 40714
+Reading: 4.17, Time Elapsed: 40923
+Reading: 4.17, Time Elapsed: 41133
+Reading: 4.17, Time Elapsed: 41345
+Reading: 4.17, Time Elapsed: 41556
+Reading: 4.17, Time Elapsed: 41766
+Reading: 4.17, Time Elapsed: 41978
+Reading: 4.17, Time Elapsed: 42188
+Reading: 4.17, Time Elapsed: 42400
+Reading: 4.17, Time Elapsed: 42610
+Reading: 4.17, Time Elapsed: 42821
+Reading: 4.17, Time Elapsed: 43030
+Reading: 4.17, Time Elapsed: 43241
+Reading: 4.17, Time Elapsed: 43452
+Reading: 4.17, Time Elapsed: 43663
+Reading: 4.17, Time Elapsed: 43875
+Reading: 4.17, Time Elapsed: 44084
+Reading: 4.17, Time Elapsed: 44296
+Reading: 4.17, Time Elapsed: 44506
+Reading: 4.17, Time Elapsed: 44718
+Reading: 4.17, Time Elapsed: 44926
+Reading: 4.17, Time Elapsed: 45137
+Reading: 4.17, Time Elapsed: 45348
+Reading: 4.17, Time Elapsed: 45560
+Reading: 4.17, Time Elapsed: 45770
+Reading: 4.17, Time Elapsed: 45981
+Reading: 4.17, Time Elapsed: 46192
+Reading: 4.17, Time Elapsed: 46403
+Reading: 4.17, Time Elapsed: 46614
+Reading: 4.17, Time Elapsed: 46823
+Reading: 4.17, Time Elapsed: 47034
+Reading: 4.17, Time Elapsed: 47245
+Reading: 4.17, Time Elapsed: 47456
+Reading: 4.17, Time Elapsed: 47666
+Reading: 4.17, Time Elapsed: 47878
+Reading: 4.17, Time Elapsed: 48088
+Reading: 4.17, Time Elapsed: 48299
+Reading: 4.17, Time Elapsed: 48510
+Reading: 4.17, Time Elapsed: 48721
+Reading: 4.17, Time Elapsed: 48930
+Reading: 4.17, Time Elapsed: 49141
+Reading: 4.17, Time Elapsed: 49352
+Reading: 4.17, Time Elapsed: 49563
+Reading: 4.17, Time Elapsed: 49774
+Reading: 4.17, Time Elapsed: 49985
+Reading: 4.17, Time Elapsed: 50196
+Reading: 4.17, Time Elapsed: 50407
+Reading: 4.17, Time Elapsed: 50617
+Reading: 4.17, Time Elapsed: 50827
+Reading: 4.17, Time Elapsed: 51039
+Reading: 4.17, Time Elapsed: 51249
+Reading: 4.17, Time Elapsed: 51459
+Reading: 4.17, Time Elapsed: 51671
+Reading: 4.17, Time Elapsed: 51881
+Reading: 4.17, Time Elapsed: 52092
+Reading: 4.17, Time Elapsed: 52303
+Reading: 4.17, Time Elapsed: 52514
+Reading: 4.17, Time Elapsed: 52725
+Reading: 4.17, Time Elapsed: 52934
+Reading: 4.17, Time Elapsed: 53144
+Reading: 4.17, Time Elapsed: 53356
+Reading: 4.17, Time Elapsed: 53566
+Reading: 4.17, Time Elapsed: 53777
+Reading: 4.17, Time Elapsed: 53988
+Reading: 4.17, Time Elapsed: 54199
+Reading: 4.17, Time Elapsed: 54411
+Reading: 4.17, Time Elapsed: 54621
+Reading: 4.17, Time Elapsed: 54832
+Reading: 4.17, Time Elapsed: 55041
+Reading: 4.17, Time Elapsed: 55252
+Reading: 4.17, Time Elapsed: 55462
+Reading: 4.17, Time Elapsed: 55674
+Reading: 4.17, Time Elapsed: 55885
+Reading: 4.17, Time Elapsed: 56096
+Reading: 4.17, Time Elapsed: 56306
+Reading: 4.17, Time Elapsed: 56518
+Reading: 4.17, Time Elapsed: 56728
+Reading: 4.17, Time Elapsed: 56937
+Reading: 4.17, Time Elapsed: 57148
+Reading: 4.17, Time Elapsed: 57360
+Reading: 4.17, Time Elapsed: 57570
+Reading: 4.17, Time Elapsed: 57781
+Reading: 4.17, Time Elapsed: 57992
+Reading: 4.17, Time Elapsed: 58202
+Reading: 4.17, Time Elapsed: 58414
+Reading: 4.17, Time Elapsed: 58625
+Reading: 4.17, Time Elapsed: 58836
+Reading: 4.17, Time Elapsed: 59047
+Reading: 4.17, Time Elapsed: 59255
+Reading: 4.17, Time Elapsed: 59467
+Reading: 4.17, Time Elapsed: 59677
+Reading: 4.17, Time Elapsed: 59888
+Reading: 4.17, Time Elapsed: 60099
+Reading: 4.17, Time Elapsed: 60310
+Reading: 4.17, Time Elapsed: 60521
+Reading: 4.17, Time Elapsed: 60732
+Reading: 4.17, Time Elapsed: 60940
+Reading: 4.17, Time Elapsed: 61152
+Reading: 4.17, Time Elapsed: 61363
+Reading: 4.17, Time Elapsed: 61573
+Reading: 4.17, Time Elapsed: 61785
+Reading: 4.17, Time Elapsed: 61995
+Reading: 4.17, Time Elapsed: 62207
+Reading: 4.17, Time Elapsed: 62418
+Reading: 4.17, Time Elapsed: 62628
+Reading: 4.17, Time Elapsed: 62840
+Reading: 4.17, Time Elapsed: 63050
+Reading: 4.17, Time Elapsed: 63261
+Reading: 4.17, Time Elapsed: 63470
+Reading: 4.17, Time Elapsed: 63681
+Reading: 4.17, Time Elapsed: 63892
+Reading: 4.17, Time Elapsed: 64102
+Reading: 4.17, Time Elapsed: 64314
+Reading: 4.17, Time Elapsed: 64524
+Reading: 4.17, Time Elapsed: 64735
+Reading: 4.17, Time Elapsed: 64947
+Reading: 4.17, Time Elapsed: 65157
+Reading: 4.17, Time Elapsed: 65368
+Reading: 4.17, Time Elapsed: 65577
+Reading: 4.17, Time Elapsed: 65780
+Reading: 4.17, Time Elapsed: 65999
+Reading: 4.17, Time Elapsed: 66210
+Reading: 4.17, Time Elapsed: 66421
+Reading: 4.17, Time Elapsed: 66632
+Reading: 4.17, Time Elapsed: 66843
+Reading: 4.17, Time Elapsed: 67054
+Reading: 4.17, Time Elapsed: 67265
+Reading: 4.17, Time Elapsed: 67475
+Reading: 4.17, Time Elapsed: 67685
+Reading: 4.17, Time Elapsed: 67896
+Reading: 4.17, Time Elapsed: 68106
+Reading: 4.17, Time Elapsed: 68317
+Reading: 4.17, Time Elapsed: 68528
+Reading: 4.17, Time Elapsed: 68739
+Reading: 4.17, Time Elapsed: 68951
+Reading: 4.17, Time Elapsed: 69161
+Reading: 4.17, Time Elapsed: 69371
+Reading: 4.17, Time Elapsed: 69583
+Reading: 4.17, Time Elapsed: 69792
+Reading: 4.17, Time Elapsed: 70002
+Reading: 4.17, Time Elapsed: 70214
+Reading: 4.17, Time Elapsed: 70424
+Reading: 4.17, Time Elapsed: 70635
+Reading: 4.17, Time Elapsed: 70846
+Reading: 4.17, Time Elapsed: 71057
+Reading: 4.17, Time Elapsed: 71268
+Reading: 4.17, Time Elapsed: 71479
+Reading: 4.17, Time Elapsed: 71690
+Reading: 4.17, Time Elapsed: 71899
+Reading: 4.17, Time Elapsed: 72110
+Reading: 4.17, Time Elapsed: 72321
+Reading: 4.17, Time Elapsed: 72531
+Reading: 4.17, Time Elapsed: 72743
+Reading: 4.17, Time Elapsed: 72953
+Reading: 4.17, Time Elapsed: 73165
+Reading: 4.17, Time Elapsed: 73376
+Reading: 4.17, Time Elapsed: 73586
+Reading: 4.17, Time Elapsed: 73795
+Reading: 4.17, Time Elapsed: 74006
+Reading: 4.17, Time Elapsed: 74217
+Reading: 4.17, Time Elapsed: 74429
+Reading: 4.17, Time Elapsed: 74639
+Reading: 4.17, Time Elapsed: 74850
+Reading: 4.17, Time Elapsed: 75061
+Reading: 4.17, Time Elapsed: 75272
+Reading: 4.17, Time Elapsed: 75483
+Reading: 4.17, Time Elapsed: 75693
+Reading: 4.17, Time Elapsed: 75903
+Reading: 4.17, Time Elapsed: 76113
+Reading: 4.17, Time Elapsed: 76325
+Reading: 4.17, Time Elapsed: 76535
+Reading: 4.17, Time Elapsed: 76747
+Reading: 4.17, Time Elapsed: 76957
+Reading: 4.17, Time Elapsed: 77168
+Reading: 4.17, Time Elapsed: 77378
+Reading: 4.17, Time Elapsed: 77589
+Reading: 4.17, Time Elapsed: 77801
+Reading: 4.17, Time Elapsed: 78012
+Reading: 4.17, Time Elapsed: 78220
+Reading: 4.17, Time Elapsed: 78432
+Reading: 4.17, Time Elapsed: 78643
+Reading: 4.17, Time Elapsed: 78853
+Reading: 4.17, Time Elapsed: 79064
+Reading: 4.17, Time Elapsed: 79275
+Reading: 4.17, Time Elapsed: 79486
+Reading: 4.17, Time Elapsed: 79698
+Reading: 4.17, Time Elapsed: 79908
+Reading: 4.17, Time Elapsed: 80116
+Reading: 4.17, Time Elapsed: 80328
+Reading: 4.17, Time Elapsed: 80539
+Reading: 4.17, Time Elapsed: 80750
+Reading: 4.17, Time Elapsed: 80961
+Reading: 4.17, Time Elapsed: 81171
+Reading: 4.17, Time Elapsed: 81383
+Reading: 4.17, Time Elapsed: 81593
+Reading: 4.17, Time Elapsed: 81805
+Reading: 4.17, Time Elapsed: 82016
+Reading: 4.17, Time Elapsed: 82224
+Reading: 4.17, Time Elapsed: 82435
+Reading: 4.17, Time Elapsed: 82646
+Reading: 4.17, Time Elapsed: 82857
+Reading: 4.17, Time Elapsed: 83068
+Reading: 4.17, Time Elapsed: 83278
+Reading: 4.17, Time Elapsed: 83490
+Reading: 4.17, Time Elapsed: 83700
+Reading: 4.17, Time Elapsed: 83912
+Reading: 4.17, Time Elapsed: 84122
+Reading: 4.17, Time Elapsed: 84324
+Reading: 4.17, Time Elapsed: 84542
+Reading: 4.17, Time Elapsed: 84753
+Reading: 4.17, Time Elapsed: 84964
+Reading: 4.17, Time Elapsed: 85175
+Reading: 4.17, Time Elapsed: 85386
+Reading: 4.17, Time Elapsed: 85597
+Reading: 4.17, Time Elapsed: 85808
+Reading: 4.17, Time Elapsed: 86019
+Reading: 4.17, Time Elapsed: 86230
+Reading: 4.17, Time Elapsed: 86438
+Reading: 4.17, Time Elapsed: 86650
+Reading: 4.17, Time Elapsed: 86860
+Reading: 4.17, Time Elapsed: 87072
+Reading: 4.17, Time Elapsed: 87282
+Reading: 4.17, Time Elapsed: 87493
+Reading: 4.17, Time Elapsed: 87704
+Reading: 4.17, Time Elapsed: 87915
+Reading: 4.17, Time Elapsed: 88126
+Reading: 4.17, Time Elapsed: 88337
+Reading: 4.17, Time Elapsed: 88546
+Reading: 4.17, Time Elapsed: 88756
+Reading: 4.17, Time Elapsed: 88968
+Reading: 4.17, Time Elapsed: 89179
+Reading: 4.17, Time Elapsed: 89390
+Reading: 4.17, Time Elapsed: 89601
+Reading: 4.17, Time Elapsed: 89812
+Reading: 4.17, Time Elapsed: 90022
+Reading: 4.17, Time Elapsed: 90233
+Reading: 4.17, Time Elapsed: 90444
+Reading: 4.17, Time Elapsed: 90655
+Reading: 4.17, Time Elapsed: 90864
+Reading: 4.17, Time Elapsed: 91075
+Reading: 4.17, Time Elapsed: 91286
+Reading: 4.17, Time Elapsed: 91497
+Reading: 4.17, Time Elapsed: 91708
+Reading: 4.17, Time Elapsed: 91918
+Reading: 4.17, Time Elapsed: 92130
+Reading: 4.17, Time Elapsed: 92340
+Reading: 4.17, Time Elapsed: 92552
+Reading: 4.17, Time Elapsed: 92761
+Reading: 4.17, Time Elapsed: 92963
+Reading: 4.17, Time Elapsed: 93183
+Reading: 4.17, Time Elapsed: 93393
+
+Data from Flex Sensors:
+Reading: 854.0, Time Elapsed: 36
+Reading: 853.0, Time Elapsed: 247
+Reading: 853.0, Time Elapsed: 457
+Reading: 854.0, Time Elapsed: 669
+Reading: 853.0, Time Elapsed: 878
+Reading: 853.0, Time Elapsed: 1089
+Reading: 846.0, Time Elapsed: 1299
+Reading: 833.0, Time Elapsed: 1510
+Reading: 854.0, Time Elapsed: 1722
+Reading: 832.0, Time Elapsed: 1934
+Reading: 832.0, Time Elapsed: 2143
+Reading: 854.0, Time Elapsed: 2355
+Reading: 836.0, Time Elapsed: 2565
+Reading: 831.0, Time Elapsed: 2767
+Reading: 854.0, Time Elapsed: 2978
+Reading: 853.0, Time Elapsed: 3198
+Reading: 833.0, Time Elapsed: 3408
+Reading: 832.0, Time Elapsed: 3620
+Reading: 839.0, Time Elapsed: 3830
+Reading: 853.0, Time Elapsed: 4041
+Reading: 832.0, Time Elapsed: 4253
+Reading: 833.0, Time Elapsed: 4464
+Reading: 839.0, Time Elapsed: 4666
+Reading: 854.0, Time Elapsed: 4885
+Reading: 831.0, Time Elapsed: 5096
+Reading: 832.0, Time Elapsed: 5307
+Reading: 854.0, Time Elapsed: 5518
+Reading: 831.0, Time Elapsed: 5721
+Reading: 832.0, Time Elapsed: 5939
+Reading: 854.0, Time Elapsed: 6151
+Reading: 853.0, Time Elapsed: 6361
+Reading: 854.0, Time Elapsed: 6573
+Reading: 854.0, Time Elapsed: 6784
+Reading: 853.0, Time Elapsed: 6994
+Reading: 853.0, Time Elapsed: 7205
+Reading: 853.0, Time Elapsed: 7416
+Reading: 853.0, Time Elapsed: 7627
+Reading: 854.0, Time Elapsed: 7838
+Reading: 853.0, Time Elapsed: 8048
+Reading: 853.0, Time Elapsed: 8258
+Reading: 834.0, Time Elapsed: 8470
+Reading: 853.0, Time Elapsed: 8682
+Reading: 854.0, Time Elapsed: 8893
+Reading: 831.0, Time Elapsed: 9103
+Reading: 853.0, Time Elapsed: 9305
+Reading: 854.0, Time Elapsed: 9525
+Reading: 831.0, Time Elapsed: 9735
+Reading: 853.0, Time Elapsed: 9947
+Reading: 843.0, Time Elapsed: 10158
+Reading: 835.0, Time Elapsed: 10369
+Reading: 854.0, Time Elapsed: 10579
+Reading: 854.0, Time Elapsed: 10791
+Reading: 848.0, Time Elapsed: 11002
+Reading: 832.0, Time Elapsed: 11213
+Reading: 831.0, Time Elapsed: 11424
+Reading: 831.0, Time Elapsed: 11634
+Reading: 853.0, Time Elapsed: 11846
+Reading: 853.0, Time Elapsed: 12056
+Reading: 841.0, Time Elapsed: 12267
+Reading: 835.0, Time Elapsed: 12478
+Reading: 854.0, Time Elapsed: 12689
+Reading: 854.0, Time Elapsed: 12900
+Reading: 853.0, Time Elapsed: 13109
+Reading: 853.0, Time Elapsed: 13321
+Reading: 854.0, Time Elapsed: 13530
+Reading: 853.0, Time Elapsed: 13742
+Reading: 854.0, Time Elapsed: 13953
+Reading: 853.0, Time Elapsed: 14163
+Reading: 853.0, Time Elapsed: 14374
+Reading: 853.0, Time Elapsed: 14586
+Reading: 853.0, Time Elapsed: 14796
+Reading: 853.0, Time Elapsed: 15005
+Reading: 853.0, Time Elapsed: 15216
+Reading: 854.0, Time Elapsed: 15427
+Reading: 853.0, Time Elapsed: 15638
+Reading: 854.0, Time Elapsed: 15849
+Reading: 853.0, Time Elapsed: 16059
+Reading: 854.0, Time Elapsed: 16271
+Reading: 853.0, Time Elapsed: 16482
+Reading: 853.0, Time Elapsed: 16692
+Reading: 854.0, Time Elapsed: 16904
+Reading: 853.0, Time Elapsed: 17112
+Reading: 854.0, Time Elapsed: 17324
+Reading: 854.0, Time Elapsed: 17534
+Reading: 853.0, Time Elapsed: 17745
+Reading: 853.0, Time Elapsed: 17956
+Reading: 853.0, Time Elapsed: 18167
+Reading: 853.0, Time Elapsed: 18378
+Reading: 854.0, Time Elapsed: 18589
+Reading: 853.0, Time Elapsed: 18799
+Reading: 853.0, Time Elapsed: 19009
+Reading: 854.0, Time Elapsed: 19220
+Reading: 853.0, Time Elapsed: 19430
+Reading: 853.0, Time Elapsed: 19642
+Reading: 854.0, Time Elapsed: 19852
+Reading: 854.0, Time Elapsed: 20063
+Reading: 854.0, Time Elapsed: 20274
+Reading: 853.0, Time Elapsed: 20485
+Reading: 853.0, Time Elapsed: 20696
+Reading: 853.0, Time Elapsed: 20907
+Reading: 853.0, Time Elapsed: 21116
+Reading: 854.0, Time Elapsed: 21328
+Reading: 854.0, Time Elapsed: 21538
+Reading: 853.0, Time Elapsed: 21749
+Reading: 853.0, Time Elapsed: 21960
+Reading: 853.0, Time Elapsed: 22171
+Reading: 853.0, Time Elapsed: 22382
+Reading: 853.0, Time Elapsed: 22592
+Reading: 854.0, Time Elapsed: 22802
+Reading: 853.0, Time Elapsed: 23012
+Reading: 854.0, Time Elapsed: 23224
+Reading: 853.0, Time Elapsed: 23434
+Reading: 853.0, Time Elapsed: 23645
+Reading: 853.0, Time Elapsed: 23856
+Reading: 853.0, Time Elapsed: 24067
+Reading: 853.0, Time Elapsed: 24278
+Reading: 853.0, Time Elapsed: 24489
+Reading: 854.0, Time Elapsed: 24700
+Reading: 853.0, Time Elapsed: 24909
+Reading: 853.0, Time Elapsed: 25120
+Reading: 853.0, Time Elapsed: 25330
+Reading: 854.0, Time Elapsed: 25541
+Reading: 853.0, Time Elapsed: 25753
+Reading: 854.0, Time Elapsed: 25964
+Reading: 853.0, Time Elapsed: 26174
+Reading: 853.0, Time Elapsed: 26386
+Reading: 853.0, Time Elapsed: 26596
+Reading: 854.0, Time Elapsed: 26805
+Reading: 853.0, Time Elapsed: 27016
+Reading: 853.0, Time Elapsed: 27227
+Reading: 854.0, Time Elapsed: 27438
+Reading: 853.0, Time Elapsed: 27648
+Reading: 853.0, Time Elapsed: 27860
+Reading: 853.0, Time Elapsed: 28070
+Reading: 853.0, Time Elapsed: 28282
+Reading: 853.0, Time Elapsed: 28492
+Reading: 854.0, Time Elapsed: 28701
+Reading: 854.0, Time Elapsed: 28912
+Reading: 854.0, Time Elapsed: 29124
+Reading: 854.0, Time Elapsed: 29335
+Reading: 853.0, Time Elapsed: 29545
+Reading: 853.0, Time Elapsed: 29756
+Reading: 853.0, Time Elapsed: 29967
+Reading: 854.0, Time Elapsed: 30178
+Reading: 854.0, Time Elapsed: 30389
+Reading: 854.0, Time Elapsed: 30600
+Reading: 854.0, Time Elapsed: 30809
+Reading: 854.0, Time Elapsed: 31019
+Reading: 853.0, Time Elapsed: 31231
+Reading: 854.0, Time Elapsed: 31441
+Reading: 854.0, Time Elapsed: 31653
+Reading: 854.0, Time Elapsed: 31864
+Reading: 853.0, Time Elapsed: 32074
+Reading: 853.0, Time Elapsed: 32285
+Reading: 853.0, Time Elapsed: 32496
+Reading: 853.0, Time Elapsed: 32705
+Reading: 853.0, Time Elapsed: 32916
+Reading: 854.0, Time Elapsed: 33127
+Reading: 854.0, Time Elapsed: 33338
+Reading: 854.0, Time Elapsed: 33548
+Reading: 853.0, Time Elapsed: 33759
+Reading: 853.0, Time Elapsed: 33970
+Reading: 854.0, Time Elapsed: 34181
+Reading: 853.0, Time Elapsed: 34393
+Reading: 853.0, Time Elapsed: 34603
+Reading: 853.0, Time Elapsed: 34812
+Reading: 853.0, Time Elapsed: 35023
+Reading: 853.0, Time Elapsed: 35234
+Reading: 853.0, Time Elapsed: 35445
+Reading: 853.0, Time Elapsed: 35655
+Reading: 853.0, Time Elapsed: 35867
+Reading: 853.0, Time Elapsed: 36077
+Reading: 854.0, Time Elapsed: 36288
+Reading: 854.0, Time Elapsed: 36500
+Reading: 853.0, Time Elapsed: 36709
+Reading: 853.0, Time Elapsed: 36919
+Reading: 853.0, Time Elapsed: 37130
+Reading: 853.0, Time Elapsed: 37341
+Reading: 854.0, Time Elapsed: 37553
+Reading: 854.0, Time Elapsed: 37763
+Reading: 854.0, Time Elapsed: 37974
+Reading: 853.0, Time Elapsed: 38184
+Reading: 853.0, Time Elapsed: 38396
+Reading: 853.0, Time Elapsed: 38607
+Reading: 853.0, Time Elapsed: 38816
+Reading: 853.0, Time Elapsed: 39027
+Reading: 853.0, Time Elapsed: 39237
+Reading: 853.0, Time Elapsed: 39449
+Reading: 854.0, Time Elapsed: 39659
+Reading: 854.0, Time Elapsed: 39871
+Reading: 853.0, Time Elapsed: 40081
+Reading: 853.0, Time Elapsed: 40292
+Reading: 853.0, Time Elapsed: 40503
+Reading: 854.0, Time Elapsed: 40714
+Reading: 853.0, Time Elapsed: 40923
+Reading: 853.0, Time Elapsed: 41133
+Reading: 853.0, Time Elapsed: 41345
+Reading: 853.0, Time Elapsed: 41556
+Reading: 853.0, Time Elapsed: 41766
+Reading: 853.0, Time Elapsed: 41978
+Reading: 853.0, Time Elapsed: 42188
+Reading: 854.0, Time Elapsed: 42400
+Reading: 853.0, Time Elapsed: 42610
+Reading: 853.0, Time Elapsed: 42821
+Reading: 854.0, Time Elapsed: 43030
+Reading: 853.0, Time Elapsed: 43241
+Reading: 853.0, Time Elapsed: 43452
+Reading: 853.0, Time Elapsed: 43663
+Reading: 853.0, Time Elapsed: 43875
+Reading: 854.0, Time Elapsed: 44084
+Reading: 854.0, Time Elapsed: 44296
+Reading: 853.0, Time Elapsed: 44506
+Reading: 853.0, Time Elapsed: 44718
+Reading: 853.0, Time Elapsed: 44926
+Reading: 854.0, Time Elapsed: 45137
+Reading: 854.0, Time Elapsed: 45348
+Reading: 854.0, Time Elapsed: 45560
+Reading: 853.0, Time Elapsed: 45770
+Reading: 854.0, Time Elapsed: 45981
+Reading: 854.0, Time Elapsed: 46192
+Reading: 853.0, Time Elapsed: 46403
+Reading: 854.0, Time Elapsed: 46614
+Reading: 853.0, Time Elapsed: 46823
+Reading: 854.0, Time Elapsed: 47034
+Reading: 853.0, Time Elapsed: 47245
+Reading: 853.0, Time Elapsed: 47456
+Reading: 853.0, Time Elapsed: 47666
+Reading: 853.0, Time Elapsed: 47878
+Reading: 853.0, Time Elapsed: 48088
+Reading: 854.0, Time Elapsed: 48299
+Reading: 853.0, Time Elapsed: 48510
+Reading: 853.0, Time Elapsed: 48721
+Reading: 853.0, Time Elapsed: 48930
+Reading: 853.0, Time Elapsed: 49141
+Reading: 853.0, Time Elapsed: 49352
+Reading: 853.0, Time Elapsed: 49563
+Reading: 853.0, Time Elapsed: 49774
+Reading: 854.0, Time Elapsed: 49985
+Reading: 853.0, Time Elapsed: 50196
+Reading: 853.0, Time Elapsed: 50407
+Reading: 853.0, Time Elapsed: 50617
+Reading: 854.0, Time Elapsed: 50827
+Reading: 853.0, Time Elapsed: 51039
+Reading: 853.0, Time Elapsed: 51249
+Reading: 853.0, Time Elapsed: 51459
+Reading: 854.0, Time Elapsed: 51671
+Reading: 853.0, Time Elapsed: 51881
+Reading: 853.0, Time Elapsed: 52092
+Reading: 853.0, Time Elapsed: 52303
+Reading: 853.0, Time Elapsed: 52514
+Reading: 854.0, Time Elapsed: 52725
+Reading: 854.0, Time Elapsed: 52934
+Reading: 854.0, Time Elapsed: 53144
+Reading: 853.0, Time Elapsed: 53356
+Reading: 853.0, Time Elapsed: 53566
+Reading: 853.0, Time Elapsed: 53777
+Reading: 853.0, Time Elapsed: 53988
+Reading: 854.0, Time Elapsed: 54199
+Reading: 853.0, Time Elapsed: 54411
+Reading: 854.0, Time Elapsed: 54621
+Reading: 853.0, Time Elapsed: 54832
+Reading: 853.0, Time Elapsed: 55041
+Reading: 853.0, Time Elapsed: 55252
+Reading: 853.0, Time Elapsed: 55462
+Reading: 853.0, Time Elapsed: 55674
+Reading: 854.0, Time Elapsed: 55885
+Reading: 854.0, Time Elapsed: 56096
+Reading: 853.0, Time Elapsed: 56306
+Reading: 853.0, Time Elapsed: 56518
+Reading: 853.0, Time Elapsed: 56728
+Reading: 853.0, Time Elapsed: 56937
+Reading: 853.0, Time Elapsed: 57148
+Reading: 853.0, Time Elapsed: 57360
+Reading: 854.0, Time Elapsed: 57570
+Reading: 854.0, Time Elapsed: 57781
+Reading: 853.0, Time Elapsed: 57992
+Reading: 853.0, Time Elapsed: 58202
+Reading: 853.0, Time Elapsed: 58414
+Reading: 854.0, Time Elapsed: 58625
+Reading: 854.0, Time Elapsed: 58836
+Reading: 854.0, Time Elapsed: 59047
+Reading: 853.0, Time Elapsed: 59255
+Reading: 853.0, Time Elapsed: 59467
+Reading: 853.0, Time Elapsed: 59677
+Reading: 853.0, Time Elapsed: 59888
+Reading: 853.0, Time Elapsed: 60099
+Reading: 853.0, Time Elapsed: 60310
+Reading: 854.0, Time Elapsed: 60521
+Reading: 854.0, Time Elapsed: 60732
+Reading: 853.0, Time Elapsed: 60940
+Reading: 853.0, Time Elapsed: 61152
+Reading: 853.0, Time Elapsed: 61363
+Reading: 853.0, Time Elapsed: 61573
+Reading: 854.0, Time Elapsed: 61785
+Reading: 853.0, Time Elapsed: 61995
+Reading: 853.0, Time Elapsed: 62207
+Reading: 853.0, Time Elapsed: 62418
+Reading: 853.0, Time Elapsed: 62628
+Reading: 853.0, Time Elapsed: 62840
+Reading: 854.0, Time Elapsed: 63050
+Reading: 854.0, Time Elapsed: 63261
+Reading: 853.0, Time Elapsed: 63470
+Reading: 853.0, Time Elapsed: 63681
+Reading: 853.0, Time Elapsed: 63892
+Reading: 854.0, Time Elapsed: 64102
+Reading: 853.0, Time Elapsed: 64314
+Reading: 854.0, Time Elapsed: 64524
+Reading: 854.0, Time Elapsed: 64735
+Reading: 854.0, Time Elapsed: 64947
+Reading: 853.0, Time Elapsed: 65157
+Reading: 854.0, Time Elapsed: 65368
+Reading: 853.0, Time Elapsed: 65577
+Reading: 853.0, Time Elapsed: 65780
+Reading: 854.0, Time Elapsed: 65999
+Reading: 853.0, Time Elapsed: 66210
+Reading: 853.0, Time Elapsed: 66421
+Reading: 853.0, Time Elapsed: 66632
+Reading: 854.0, Time Elapsed: 66843
+Reading: 853.0, Time Elapsed: 67054
+Reading: 853.0, Time Elapsed: 67265
+Reading: 853.0, Time Elapsed: 67475
+Reading: 853.0, Time Elapsed: 67685
+Reading: 853.0, Time Elapsed: 67896
+Reading: 853.0, Time Elapsed: 68106
+Reading: 853.0, Time Elapsed: 68317
+Reading: 853.0, Time Elapsed: 68528
+Reading: 853.0, Time Elapsed: 68739
+Reading: 853.0, Time Elapsed: 68951
+Reading: 854.0, Time Elapsed: 69161
+Reading: 853.0, Time Elapsed: 69371
+Reading: 853.0, Time Elapsed: 69583
+Reading: 854.0, Time Elapsed: 69792
+Reading: 853.0, Time Elapsed: 70002
+Reading: 853.0, Time Elapsed: 70214
+Reading: 854.0, Time Elapsed: 70424
+Reading: 854.0, Time Elapsed: 70635
+Reading: 854.0, Time Elapsed: 70846
+Reading: 854.0, Time Elapsed: 71057
+Reading: 853.0, Time Elapsed: 71268
+Reading: 853.0, Time Elapsed: 71479
+Reading: 853.0, Time Elapsed: 71690
+Reading: 853.0, Time Elapsed: 71899
+Reading: 854.0, Time Elapsed: 72110
+Reading: 854.0, Time Elapsed: 72321
+Reading: 854.0, Time Elapsed: 72531
+Reading: 853.0, Time Elapsed: 72743
+Reading: 853.0, Time Elapsed: 72953
+Reading: 853.0, Time Elapsed: 73165
+Reading: 853.0, Time Elapsed: 73376
+Reading: 854.0, Time Elapsed: 73586
+Reading: 854.0, Time Elapsed: 73795
+Reading: 853.0, Time Elapsed: 74006
+Reading: 854.0, Time Elapsed: 74217
+Reading: 853.0, Time Elapsed: 74429
+Reading: 853.0, Time Elapsed: 74639
+Reading: 853.0, Time Elapsed: 74850
+Reading: 853.0, Time Elapsed: 75061
+Reading: 853.0, Time Elapsed: 75272
+Reading: 853.0, Time Elapsed: 75483
+Reading: 853.0, Time Elapsed: 75693
+Reading: 854.0, Time Elapsed: 75903
+Reading: 853.0, Time Elapsed: 76113
+Reading: 854.0, Time Elapsed: 76325
+Reading: 853.0, Time Elapsed: 76535
+Reading: 853.0, Time Elapsed: 76747
+Reading: 854.0, Time Elapsed: 76957
+Reading: 853.0, Time Elapsed: 77168
+Reading: 853.0, Time Elapsed: 77378
+Reading: 853.0, Time Elapsed: 77589
+Reading: 853.0, Time Elapsed: 77801
+Reading: 853.0, Time Elapsed: 78012
+Reading: 854.0, Time Elapsed: 78220
+Reading: 853.0, Time Elapsed: 78432
+Reading: 853.0, Time Elapsed: 78643
+Reading: 853.0, Time Elapsed: 78853
+Reading: 853.0, Time Elapsed: 79064
+Reading: 853.0, Time Elapsed: 79275
+Reading: 853.0, Time Elapsed: 79486
+Reading: 854.0, Time Elapsed: 79698
+Reading: 853.0, Time Elapsed: 79908
+Reading: 854.0, Time Elapsed: 80116
+Reading: 854.0, Time Elapsed: 80328
+Reading: 853.0, Time Elapsed: 80539
+Reading: 853.0, Time Elapsed: 80750
+Reading: 853.0, Time Elapsed: 80961
+Reading: 853.0, Time Elapsed: 81171
+Reading: 853.0, Time Elapsed: 81383
+Reading: 854.0, Time Elapsed: 81593
+Reading: 853.0, Time Elapsed: 81805
+Reading: 853.0, Time Elapsed: 82016
+Reading: 854.0, Time Elapsed: 82224
+Reading: 853.0, Time Elapsed: 82435
+Reading: 854.0, Time Elapsed: 82646
+Reading: 853.0, Time Elapsed: 82857
+Reading: 854.0, Time Elapsed: 83068
+Reading: 853.0, Time Elapsed: 83278
+Reading: 853.0, Time Elapsed: 83490
+Reading: 853.0, Time Elapsed: 83700
+Reading: 853.0, Time Elapsed: 83912
+Reading: 853.0, Time Elapsed: 84122
+Reading: 854.0, Time Elapsed: 84324
+Reading: 853.0, Time Elapsed: 84542
+Reading: 854.0, Time Elapsed: 84753
+Reading: 853.0, Time Elapsed: 84964
+Reading: 853.0, Time Elapsed: 85175
+Reading: 853.0, Time Elapsed: 85386
+Reading: 853.0, Time Elapsed: 85597
+Reading: 853.0, Time Elapsed: 85808
+Reading: 853.0, Time Elapsed: 86019
+Reading: 854.0, Time Elapsed: 86230
+Reading: 853.0, Time Elapsed: 86438
+Reading: 853.0, Time Elapsed: 86650
+Reading: 853.0, Time Elapsed: 86860
+Reading: 853.0, Time Elapsed: 87072
+Reading: 854.0, Time Elapsed: 87282
+Reading: 853.0, Time Elapsed: 87493
+Reading: 854.0, Time Elapsed: 87704
+Reading: 853.0, Time Elapsed: 87915
+Reading: 853.0, Time Elapsed: 88126
+Reading: 853.0, Time Elapsed: 88337
+Reading: 853.0, Time Elapsed: 88546
+Reading: 854.0, Time Elapsed: 88756
+Reading: 854.0, Time Elapsed: 88968
+Reading: 854.0, Time Elapsed: 89179
+Reading: 854.0, Time Elapsed: 89390
+Reading: 853.0, Time Elapsed: 89601
+Reading: 853.0, Time Elapsed: 89812
+Reading: 853.0, Time Elapsed: 90022
+Reading: 853.0, Time Elapsed: 90233
+Reading: 854.0, Time Elapsed: 90444
+Reading: 854.0, Time Elapsed: 90655
+Reading: 853.0, Time Elapsed: 90864
+Reading: 854.0, Time Elapsed: 91075
+Reading: 853.0, Time Elapsed: 91286
+Reading: 853.0, Time Elapsed: 91497
+Reading: 854.0, Time Elapsed: 91708
+Reading: 854.0, Time Elapsed: 91918
+Reading: 854.0, Time Elapsed: 92130
+Reading: 853.0, Time Elapsed: 92340
+Reading: 854.0, Time Elapsed: 92552
+Reading: 853.0, Time Elapsed: 92761
+Reading: 853.0, Time Elapsed: 92963
+Reading: 854.0, Time Elapsed: 93183
+Reading: 854.0, Time Elapsed: 93393
+
+Data from Force Sensor 0:
+Reading: 0.0, Time Elapsed: 36
+Reading: 0.0, Time Elapsed: 36
+Reading: 0.0, Time Elapsed: 36
+
+Data from Force Sensor 1:
+Reading: 0.0, Time Elapsed: 247
+Reading: 0.0, Time Elapsed: 247
+Reading: 0.0, Time Elapsed: 247
+
+Data from Force Sensor 2:
+Reading: 0.0, Time Elapsed: 457
+Reading: 0.0, Time Elapsed: 457
+Reading: 0.0, Time Elapsed: 457
+
+Data from Force Sensor 3:
+Reading: 0.0, Time Elapsed: 669
+Reading: 0.0, Time Elapsed: 669
+Reading: 0.0, Time Elapsed: 669
+
+Data from Force Sensor 4:
+Reading: 0.0, Time Elapsed: 878
+Reading: 0.0, Time Elapsed: 878
+Reading: 0.0, Time Elapsed: 878
+
+Data from Force Sensor 5:
+Reading: 0.0, Time Elapsed: 1089
+Reading: 0.0, Time Elapsed: 1089
+Reading: 0.0, Time Elapsed: 1089
+
+Data from Force Sensor 6:
+Reading: 0.0, Time Elapsed: 1299
+Reading: 0.0, Time Elapsed: 1299
+Reading: 13.0, Time Elapsed: 1299
+
+Data from Force Sensor 7:
+Reading: 0.0, Time Elapsed: 1510
+Reading: 0.0, Time Elapsed: 1510
+Reading: 38.0, Time Elapsed: 1510
+
+Data from Force Sensor 8:
+Reading: 0.0, Time Elapsed: 1722
+Reading: 0.0, Time Elapsed: 1722
+Reading: 0.0, Time Elapsed: 1722
+
+Data from Force Sensor 9:
+Reading: 0.0, Time Elapsed: 1934
+Reading: 0.0, Time Elapsed: 1934
+Reading: 40.0, Time Elapsed: 1934
+
+Data from Force Sensor 10:
+Reading: 0.0, Time Elapsed: 2143
+Reading: 0.0, Time Elapsed: 2143
+Reading: 39.0, Time Elapsed: 2143
+
+Data from Force Sensor 11:
+Reading: 0.0, Time Elapsed: 2355
+Reading: 0.0, Time Elapsed: 2355
+Reading: 0.0, Time Elapsed: 2355
+
+Data from Force Sensor 12:
+Reading: 0.0, Time Elapsed: 2565
+Reading: 32.0, Time Elapsed: 2565
+Reading: 0.0, Time Elapsed: 2565
+
+Data from Force Sensor 13:
+Reading: 0.0, Time Elapsed: 2767
+Reading: 41.0, Time Elapsed: 2767
+Reading: 0.0, Time Elapsed: 2767
+
+Data from Force Sensor 14:
+Reading: 0.0, Time Elapsed: 2978
+Reading: 0.0, Time Elapsed: 2978
+Reading: 0.0, Time Elapsed: 2978
+
+Data from Force Sensor 15:
+Reading: 0.0, Time Elapsed: 3198
+Reading: 0.0, Time Elapsed: 3198
+Reading: 0.0, Time Elapsed: 3198
+
+Data from Force Sensor 16:
+Reading: 0.0, Time Elapsed: 3408
+Reading: 36.0, Time Elapsed: 3408
+Reading: 0.0, Time Elapsed: 3408
+
+Data from Force Sensor 17:
+Reading: 0.0, Time Elapsed: 3620
+Reading: 42.0, Time Elapsed: 3620
+Reading: 0.0, Time Elapsed: 3620
+
+Data from Force Sensor 18:
+Reading: 0.0, Time Elapsed: 3830
+Reading: 26.0, Time Elapsed: 3830
+Reading: 0.0, Time Elapsed: 3830
+
+Data from Force Sensor 19:
+Reading: 0.0, Time Elapsed: 4041
+Reading: 0.0, Time Elapsed: 4041
+Reading: 0.0, Time Elapsed: 4041
+
+Data from Force Sensor 20:
+Reading: 0.0, Time Elapsed: 4253
+Reading: 38.0, Time Elapsed: 4253
+Reading: 0.0, Time Elapsed: 4253
+
+Data from Force Sensor 21:
+Reading: 0.0, Time Elapsed: 4464
+Reading: 38.0, Time Elapsed: 4464
+Reading: 0.0, Time Elapsed: 4464
+
+Data from Force Sensor 22:
+Reading: 0.0, Time Elapsed: 4666
+Reading: 26.0, Time Elapsed: 4666
+Reading: 0.0, Time Elapsed: 4666
+
+Data from Force Sensor 23:
+Reading: 0.0, Time Elapsed: 4885
+Reading: 0.0, Time Elapsed: 4885
+Reading: 0.0, Time Elapsed: 4885
+
+Data from Force Sensor 24:
+Reading: 0.0, Time Elapsed: 5096
+Reading: 0.0, Time Elapsed: 5096
+Reading: 42.0, Time Elapsed: 5096
+
+Data from Force Sensor 25:
+Reading: 0.0, Time Elapsed: 5307
+Reading: 0.0, Time Elapsed: 5307
+Reading: 40.0, Time Elapsed: 5307
+
+Data from Force Sensor 26:
+Reading: 0.0, Time Elapsed: 5518
+Reading: 0.0, Time Elapsed: 5518
+Reading: 0.0, Time Elapsed: 5518
+
+Data from Force Sensor 27:
+Reading: 0.0, Time Elapsed: 5721
+Reading: 0.0, Time Elapsed: 5721
+Reading: 42.0, Time Elapsed: 5721
+
+Data from Force Sensor 28:
+Reading: 0.0, Time Elapsed: 5939
+Reading: 0.0, Time Elapsed: 5939
+Reading: 41.0, Time Elapsed: 5939
+
+Data from Force Sensor 29:
+Reading: 0.0, Time Elapsed: 6151
+Reading: 0.0, Time Elapsed: 6151
+Reading: 0.0, Time Elapsed: 6151
+
+Data from Force Sensor 30:
+Reading: 0.0, Time Elapsed: 6361
+Reading: 0.0, Time Elapsed: 6361
+Reading: 0.0, Time Elapsed: 6361
+
+Data from Force Sensor 31:
+Reading: 0.0, Time Elapsed: 6573
+Reading: 0.0, Time Elapsed: 6573
+Reading: 0.0, Time Elapsed: 6573
+
+Data from Force Sensor 32:
+Reading: 0.0, Time Elapsed: 6784
+Reading: 0.0, Time Elapsed: 6784
+Reading: 0.0, Time Elapsed: 6784
+
+Data from Force Sensor 33:
+Reading: 0.0, Time Elapsed: 6994
+Reading: 0.0, Time Elapsed: 6994
+Reading: 0.0, Time Elapsed: 6994
+
+Data from Force Sensor 34:
+Reading: 0.0, Time Elapsed: 7205
+Reading: 0.0, Time Elapsed: 7205
+Reading: 0.0, Time Elapsed: 7205
+
+Data from Force Sensor 35:
+Reading: 0.0, Time Elapsed: 7416
+Reading: 0.0, Time Elapsed: 7416
+Reading: 0.0, Time Elapsed: 7416
+
+Data from Force Sensor 36:
+Reading: 0.0, Time Elapsed: 7627
+Reading: 0.0, Time Elapsed: 7627
+Reading: 0.0, Time Elapsed: 7627
+
+Data from Force Sensor 37:
+Reading: 0.0, Time Elapsed: 7838
+Reading: 0.0, Time Elapsed: 7838
+Reading: 0.0, Time Elapsed: 7838
+
+Data from Force Sensor 38:
+Reading: 0.0, Time Elapsed: 8048
+Reading: 0.0, Time Elapsed: 8048
+Reading: 0.0, Time Elapsed: 8048
+
+Data from Force Sensor 39:
+Reading: 0.0, Time Elapsed: 8258
+Reading: 0.0, Time Elapsed: 8258
+Reading: 0.0, Time Elapsed: 8258
+
+Data from Force Sensor 40:
+Reading: 0.0, Time Elapsed: 8470
+Reading: 0.0, Time Elapsed: 8470
+Reading: 36.0, Time Elapsed: 8470
+
+Data from Force Sensor 41:
+Reading: 0.0, Time Elapsed: 8682
+Reading: 0.0, Time Elapsed: 8682
+Reading: 0.0, Time Elapsed: 8682
+
+Data from Force Sensor 42:
+Reading: 0.0, Time Elapsed: 8893
+Reading: 0.0, Time Elapsed: 8893
+Reading: 0.0, Time Elapsed: 8893
+
+Data from Force Sensor 43:
+Reading: 0.0, Time Elapsed: 9103
+Reading: 0.0, Time Elapsed: 9103
+Reading: 42.0, Time Elapsed: 9103
+
+Data from Force Sensor 44:
+Reading: 0.0, Time Elapsed: 9305
+Reading: 0.0, Time Elapsed: 9305
+Reading: 0.0, Time Elapsed: 9305
+
+Data from Force Sensor 45:
+Reading: 0.0, Time Elapsed: 9525
+Reading: 0.0, Time Elapsed: 9525
+Reading: 0.0, Time Elapsed: 9525
+
+Data from Force Sensor 46:
+Reading: 0.0, Time Elapsed: 9735
+Reading: 0.0, Time Elapsed: 9735
+Reading: 42.0, Time Elapsed: 9735
+
+Data from Force Sensor 47:
+Reading: 0.0, Time Elapsed: 9947
+Reading: 0.0, Time Elapsed: 9947
+Reading: 0.0, Time Elapsed: 9947
+
+Data from Force Sensor 48:
+Reading: 0.0, Time Elapsed: 10158
+Reading: 18.0, Time Elapsed: 10158
+Reading: 0.0, Time Elapsed: 10158
+
+Data from Force Sensor 49:
+Reading: 0.0, Time Elapsed: 10369
+Reading: 34.0, Time Elapsed: 10369
+Reading: 0.0, Time Elapsed: 10369
+
+Data from Force Sensor 50:
+Reading: 0.0, Time Elapsed: 10579
+Reading: 0.0, Time Elapsed: 10579
+Reading: 0.0, Time Elapsed: 10579
+
+Data from Force Sensor 51:
+Reading: 0.0, Time Elapsed: 10791
+Reading: 0.0, Time Elapsed: 10791
+Reading: 0.0, Time Elapsed: 10791
+
+Data from Force Sensor 52:
+Reading: 0.0, Time Elapsed: 11002
+Reading: 10.0, Time Elapsed: 11002
+Reading: 0.0, Time Elapsed: 11002
+
+Data from Force Sensor 53:
+Reading: 0.0, Time Elapsed: 11213
+Reading: 41.0, Time Elapsed: 11213
+Reading: 0.0, Time Elapsed: 11213
+
+Data from Force Sensor 54:
+Reading: 0.0, Time Elapsed: 11424
+Reading: 41.0, Time Elapsed: 11424
+Reading: 0.0, Time Elapsed: 11424
+
+Data from Force Sensor 55:
+Reading: 0.0, Time Elapsed: 11634
+Reading: 41.0, Time Elapsed: 11634
+Reading: 0.0, Time Elapsed: 11634
+
+Data from Force Sensor 56:
+Reading: 0.0, Time Elapsed: 11846
+Reading: 0.0, Time Elapsed: 11846
+Reading: 0.0, Time Elapsed: 11846
+
+Data from Force Sensor 57:
+Reading: 0.0, Time Elapsed: 12056
+Reading: 0.0, Time Elapsed: 12056
+Reading: 0.0, Time Elapsed: 12056
+
+Data from Force Sensor 58:
+Reading: 0.0, Time Elapsed: 12267
+Reading: 22.0, Time Elapsed: 12267
+Reading: 0.0, Time Elapsed: 12267
+
+Data from Force Sensor 59:
+Reading: 0.0, Time Elapsed: 12478
+Reading: 34.0, Time Elapsed: 12478
+Reading: 0.0, Time Elapsed: 12478
+
+Data from Force Sensor 60:
+Reading: 0.0, Time Elapsed: 12689
+Reading: 0.0, Time Elapsed: 12689
+Reading: 0.0, Time Elapsed: 12689
+
+Data from Force Sensor 61:
+Reading: 0.0, Time Elapsed: 12900
+Reading: 0.0, Time Elapsed: 12900
+Reading: 0.0, Time Elapsed: 12900
+
+Data from Force Sensor 62:
+Reading: 0.0, Time Elapsed: 13109
+Reading: 0.0, Time Elapsed: 13109
+Reading: 0.0, Time Elapsed: 13109
+
+Data from Force Sensor 63:
+Reading: 0.0, Time Elapsed: 13321
+Reading: 0.0, Time Elapsed: 13321
+Reading: 0.0, Time Elapsed: 13321
+
+Data from Force Sensor 64:
+Reading: 0.0, Time Elapsed: 13530
+Reading: 0.0, Time Elapsed: 13530
+Reading: 0.0, Time Elapsed: 13530
+
+Data from Force Sensor 65:
+Reading: 0.0, Time Elapsed: 13742
+Reading: 0.0, Time Elapsed: 13742
+Reading: 0.0, Time Elapsed: 13742
+
+Data from Force Sensor 66:
+Reading: 0.0, Time Elapsed: 13953
+Reading: 0.0, Time Elapsed: 13953
+Reading: 0.0, Time Elapsed: 13953
+
+Data from Force Sensor 67:
+Reading: 0.0, Time Elapsed: 14163
+Reading: 0.0, Time Elapsed: 14163
+Reading: 0.0, Time Elapsed: 14163
+
+Data from Force Sensor 68:
+Reading: 0.0, Time Elapsed: 14374
+Reading: 0.0, Time Elapsed: 14374
+Reading: 0.0, Time Elapsed: 14374
+
+Data from Force Sensor 69:
+Reading: 0.0, Time Elapsed: 14586
+Reading: 0.0, Time Elapsed: 14586
+Reading: 0.0, Time Elapsed: 14586
+
+Data from Force Sensor 70:
+Reading: 0.0, Time Elapsed: 14796
+Reading: 0.0, Time Elapsed: 14796
+Reading: 0.0, Time Elapsed: 14796
+
+Data from Force Sensor 71:
+Reading: 0.0, Time Elapsed: 15005
+Reading: 0.0, Time Elapsed: 15005
+Reading: 0.0, Time Elapsed: 15005
+
+Data from Force Sensor 72:
+Reading: 0.0, Time Elapsed: 15216
+Reading: 0.0, Time Elapsed: 15216
+Reading: 0.0, Time Elapsed: 15216
+
+Data from Force Sensor 73:
+Reading: 0.0, Time Elapsed: 15427
+Reading: 0.0, Time Elapsed: 15427
+Reading: 0.0, Time Elapsed: 15427
+
+Data from Force Sensor 74:
+Reading: 0.0, Time Elapsed: 15638
+Reading: 0.0, Time Elapsed: 15638
+Reading: 0.0, Time Elapsed: 15638
+
+Data from Force Sensor 75:
+Reading: 0.0, Time Elapsed: 15849
+Reading: 0.0, Time Elapsed: 15849
+Reading: 0.0, Time Elapsed: 15849
+
+Data from Force Sensor 76:
+Reading: 0.0, Time Elapsed: 16059
+Reading: 0.0, Time Elapsed: 16059
+Reading: 0.0, Time Elapsed: 16059
+
+Data from Force Sensor 77:
+Reading: 0.0, Time Elapsed: 16271
+Reading: 0.0, Time Elapsed: 16271
+Reading: 0.0, Time Elapsed: 16271
+
+Data from Force Sensor 78:
+Reading: 0.0, Time Elapsed: 16482
+Reading: 0.0, Time Elapsed: 16482
+Reading: 0.0, Time Elapsed: 16482
+
+Data from Force Sensor 79:
+Reading: 0.0, Time Elapsed: 16692
+Reading: 0.0, Time Elapsed: 16692
+Reading: 0.0, Time Elapsed: 16692
+
+Data from Force Sensor 80:
+Reading: 0.0, Time Elapsed: 16904
+Reading: 0.0, Time Elapsed: 16904
+Reading: 0.0, Time Elapsed: 16904
+
+Data from Force Sensor 81:
+Reading: 0.0, Time Elapsed: 17112
+Reading: 0.0, Time Elapsed: 17112
+Reading: 0.0, Time Elapsed: 17112
+
+Data from Force Sensor 82:
+Reading: 0.0, Time Elapsed: 17324
+Reading: 0.0, Time Elapsed: 17324
+Reading: 0.0, Time Elapsed: 17324
+
+Data from Force Sensor 83:
+Reading: 0.0, Time Elapsed: 17534
+Reading: 0.0, Time Elapsed: 17534
+Reading: 0.0, Time Elapsed: 17534
+
+Data from Force Sensor 84:
+Reading: 0.0, Time Elapsed: 17745
+Reading: 0.0, Time Elapsed: 17745
+Reading: 0.0, Time Elapsed: 17745
+
+Data from Force Sensor 85:
+Reading: 0.0, Time Elapsed: 17956
+Reading: 0.0, Time Elapsed: 17956
+Reading: 0.0, Time Elapsed: 17956
+
+Data from Force Sensor 86:
+Reading: 0.0, Time Elapsed: 18167
+Reading: 0.0, Time Elapsed: 18167
+Reading: 0.0, Time Elapsed: 18167
+
+Data from Force Sensor 87:
+Reading: 0.0, Time Elapsed: 18378
+Reading: 0.0, Time Elapsed: 18378
+Reading: 0.0, Time Elapsed: 18378
+
+Data from Force Sensor 88:
+Reading: 0.0, Time Elapsed: 18589
+Reading: 0.0, Time Elapsed: 18589
+Reading: 0.0, Time Elapsed: 18589
+
+Data from Force Sensor 89:
+Reading: 0.0, Time Elapsed: 18799
+Reading: 0.0, Time Elapsed: 18799
+Reading: 0.0, Time Elapsed: 18799
+
+Data from Force Sensor 90:
+Reading: 0.0, Time Elapsed: 19009
+Reading: 0.0, Time Elapsed: 19009
+Reading: 0.0, Time Elapsed: 19009
+
+Data from Force Sensor 91:
+Reading: 0.0, Time Elapsed: 19220
+Reading: 0.0, Time Elapsed: 19220
+Reading: 0.0, Time Elapsed: 19220
+
+Data from Force Sensor 92:
+Reading: 0.0, Time Elapsed: 19430
+Reading: 0.0, Time Elapsed: 19430
+Reading: 0.0, Time Elapsed: 19430
+
+Data from Force Sensor 93:
+Reading: 0.0, Time Elapsed: 19642
+Reading: 0.0, Time Elapsed: 19642
+Reading: 0.0, Time Elapsed: 19642
+
+Data from Force Sensor 94:
+Reading: 0.0, Time Elapsed: 19852
+Reading: 0.0, Time Elapsed: 19852
+Reading: 0.0, Time Elapsed: 19852
+
+Data from Force Sensor 95:
+Reading: 0.0, Time Elapsed: 20063
+Reading: 0.0, Time Elapsed: 20063
+Reading: 0.0, Time Elapsed: 20063
+
+Data from Force Sensor 96:
+Reading: 0.0, Time Elapsed: 20274
+Reading: 0.0, Time Elapsed: 20274
+Reading: 0.0, Time Elapsed: 20274
+
+Data from Force Sensor 97:
+Reading: 0.0, Time Elapsed: 20485
+Reading: 0.0, Time Elapsed: 20485
+Reading: 0.0, Time Elapsed: 20485
+
+Data from Force Sensor 98:
+Reading: 0.0, Time Elapsed: 20696
+Reading: 0.0, Time Elapsed: 20696
+Reading: 0.0, Time Elapsed: 20696
+
+Data from Force Sensor 99:
+Reading: 0.0, Time Elapsed: 20907
+Reading: 0.0, Time Elapsed: 20907
+Reading: 0.0, Time Elapsed: 20907
+
+Data from Force Sensor 100:
+Reading: 0.0, Time Elapsed: 21116
+Reading: 0.0, Time Elapsed: 21116
+Reading: 0.0, Time Elapsed: 21116
+
+Data from Force Sensor 101:
+Reading: 0.0, Time Elapsed: 21328
+Reading: 0.0, Time Elapsed: 21328
+Reading: 0.0, Time Elapsed: 21328
+
+Data from Force Sensor 102:
+Reading: 0.0, Time Elapsed: 21538
+Reading: 0.0, Time Elapsed: 21538
+Reading: 0.0, Time Elapsed: 21538
+
+Data from Force Sensor 103:
+Reading: 0.0, Time Elapsed: 21749
+Reading: 0.0, Time Elapsed: 21749
+Reading: 0.0, Time Elapsed: 21749
+
+Data from Force Sensor 104:
+Reading: 0.0, Time Elapsed: 21960
+Reading: 0.0, Time Elapsed: 21960
+Reading: 0.0, Time Elapsed: 21960
+
+Data from Force Sensor 105:
+Reading: 0.0, Time Elapsed: 22171
+Reading: 0.0, Time Elapsed: 22171
+Reading: 0.0, Time Elapsed: 22171
+
+Data from Force Sensor 106:
+Reading: 0.0, Time Elapsed: 22382
+Reading: 0.0, Time Elapsed: 22382
+Reading: 0.0, Time Elapsed: 22382
+
+Data from Force Sensor 107:
+Reading: 0.0, Time Elapsed: 22592
+Reading: 0.0, Time Elapsed: 22592
+Reading: 0.0, Time Elapsed: 22592
+
+Data from Force Sensor 108:
+Reading: 0.0, Time Elapsed: 22802
+Reading: 0.0, Time Elapsed: 22802
+Reading: 0.0, Time Elapsed: 22802
+
+Data from Force Sensor 109:
+Reading: 0.0, Time Elapsed: 23012
+Reading: 0.0, Time Elapsed: 23012
+Reading: 0.0, Time Elapsed: 23012
+
+Data from Force Sensor 110:
+Reading: 0.0, Time Elapsed: 23224
+Reading: 0.0, Time Elapsed: 23224
+Reading: 0.0, Time Elapsed: 23224
+
+Data from Force Sensor 111:
+Reading: 0.0, Time Elapsed: 23434
+Reading: 0.0, Time Elapsed: 23434
+Reading: 0.0, Time Elapsed: 23434
+
+Data from Force Sensor 112:
+Reading: 0.0, Time Elapsed: 23645
+Reading: 0.0, Time Elapsed: 23645
+Reading: 0.0, Time Elapsed: 23645
+
+Data from Force Sensor 113:
+Reading: 0.0, Time Elapsed: 23856
+Reading: 0.0, Time Elapsed: 23856
+Reading: 0.0, Time Elapsed: 23856
+
+Data from Force Sensor 114:
+Reading: 0.0, Time Elapsed: 24067
+Reading: 0.0, Time Elapsed: 24067
+Reading: 0.0, Time Elapsed: 24067
+
+Data from Force Sensor 115:
+Reading: 0.0, Time Elapsed: 24278
+Reading: 0.0, Time Elapsed: 24278
+Reading: 0.0, Time Elapsed: 24278
+
+Data from Force Sensor 116:
+Reading: 0.0, Time Elapsed: 24489
+Reading: 0.0, Time Elapsed: 24489
+Reading: 0.0, Time Elapsed: 24489
+
+Data from Force Sensor 117:
+Reading: 0.0, Time Elapsed: 24700
+Reading: 0.0, Time Elapsed: 24700
+Reading: 0.0, Time Elapsed: 24700
+
+Data from Force Sensor 118:
+Reading: 0.0, Time Elapsed: 24909
+Reading: 0.0, Time Elapsed: 24909
+Reading: 0.0, Time Elapsed: 24909
+
+Data from Force Sensor 119:
+Reading: 0.0, Time Elapsed: 25120
+Reading: 0.0, Time Elapsed: 25120
+Reading: 0.0, Time Elapsed: 25120
+
+Data from Force Sensor 120:
+Reading: 0.0, Time Elapsed: 25330
+Reading: 0.0, Time Elapsed: 25330
+Reading: 0.0, Time Elapsed: 25330
+
+Data from Force Sensor 121:
+Reading: 0.0, Time Elapsed: 25541
+Reading: 0.0, Time Elapsed: 25541
+Reading: 0.0, Time Elapsed: 25541
+
+Data from Force Sensor 122:
+Reading: 0.0, Time Elapsed: 25753
+Reading: 0.0, Time Elapsed: 25753
+Reading: 0.0, Time Elapsed: 25753
+
+Data from Force Sensor 123:
+Reading: 0.0, Time Elapsed: 25964
+Reading: 0.0, Time Elapsed: 25964
+Reading: 0.0, Time Elapsed: 25964
+
+Data from Force Sensor 124:
+Reading: 0.0, Time Elapsed: 26174
+Reading: 0.0, Time Elapsed: 26174
+Reading: 0.0, Time Elapsed: 26174
+
+Data from Force Sensor 125:
+Reading: 0.0, Time Elapsed: 26386
+Reading: 0.0, Time Elapsed: 26386
+Reading: 0.0, Time Elapsed: 26386
+
+Data from Force Sensor 126:
+Reading: 0.0, Time Elapsed: 26596
+Reading: 0.0, Time Elapsed: 26596
+Reading: 0.0, Time Elapsed: 26596
+
+Data from Force Sensor 127:
+Reading: 0.0, Time Elapsed: 26805
+Reading: 0.0, Time Elapsed: 26805
+Reading: 0.0, Time Elapsed: 26805
+
+Data from Force Sensor 128:
+Reading: 0.0, Time Elapsed: 27016
+Reading: 0.0, Time Elapsed: 27016
+Reading: 0.0, Time Elapsed: 27016
+
+Data from Force Sensor 129:
+Reading: 0.0, Time Elapsed: 27227
+Reading: 0.0, Time Elapsed: 27227
+Reading: 0.0, Time Elapsed: 27227
+
+Data from Force Sensor 130:
+Reading: 0.0, Time Elapsed: 27438
+Reading: 0.0, Time Elapsed: 27438
+Reading: 0.0, Time Elapsed: 27438
+
+Data from Force Sensor 131:
+Reading: 0.0, Time Elapsed: 27648
+Reading: 0.0, Time Elapsed: 27648
+Reading: 0.0, Time Elapsed: 27648
+
+Data from Force Sensor 132:
+Reading: 0.0, Time Elapsed: 27860
+Reading: 0.0, Time Elapsed: 27860
+Reading: 0.0, Time Elapsed: 27860
+
+Data from Force Sensor 133:
+Reading: 0.0, Time Elapsed: 28070
+Reading: 0.0, Time Elapsed: 28070
+Reading: 0.0, Time Elapsed: 28070
+
+Data from Force Sensor 134:
+Reading: 0.0, Time Elapsed: 28282
+Reading: 0.0, Time Elapsed: 28282
+Reading: 0.0, Time Elapsed: 28282
+
+Data from Force Sensor 135:
+Reading: 0.0, Time Elapsed: 28492
+Reading: 0.0, Time Elapsed: 28492
+Reading: 0.0, Time Elapsed: 28492
+
+Data from Force Sensor 136:
+Reading: 0.0, Time Elapsed: 28701
+Reading: 0.0, Time Elapsed: 28701
+Reading: 0.0, Time Elapsed: 28701
+
+Data from Force Sensor 137:
+Reading: 0.0, Time Elapsed: 28912
+Reading: 0.0, Time Elapsed: 28912
+Reading: 0.0, Time Elapsed: 28912
+
+Data from Force Sensor 138:
+Reading: 0.0, Time Elapsed: 29124
+Reading: 0.0, Time Elapsed: 29124
+Reading: 0.0, Time Elapsed: 29124
+
+Data from Force Sensor 139:
+Reading: 0.0, Time Elapsed: 29335
+Reading: 0.0, Time Elapsed: 29335
+Reading: 0.0, Time Elapsed: 29335
+
+Data from Force Sensor 140:
+Reading: 0.0, Time Elapsed: 29545
+Reading: 0.0, Time Elapsed: 29545
+Reading: 0.0, Time Elapsed: 29545
+
+Data from Force Sensor 141:
+Reading: 0.0, Time Elapsed: 29756
+Reading: 0.0, Time Elapsed: 29756
+Reading: 0.0, Time Elapsed: 29756
+
+Data from Force Sensor 142:
+Reading: 0.0, Time Elapsed: 29967
+Reading: 0.0, Time Elapsed: 29967
+Reading: 0.0, Time Elapsed: 29967
+
+Data from Force Sensor 143:
+Reading: 0.0, Time Elapsed: 30178
+Reading: 0.0, Time Elapsed: 30178
+Reading: 0.0, Time Elapsed: 30178
+
+Data from Force Sensor 144:
+Reading: 0.0, Time Elapsed: 30389
+Reading: 0.0, Time Elapsed: 30389
+Reading: 0.0, Time Elapsed: 30389
+
+Data from Force Sensor 145:
+Reading: 0.0, Time Elapsed: 30600
+Reading: 0.0, Time Elapsed: 30600
+Reading: 0.0, Time Elapsed: 30600
+
+Data from Force Sensor 146:
+Reading: 0.0, Time Elapsed: 30809
+Reading: 0.0, Time Elapsed: 30809
+Reading: 0.0, Time Elapsed: 30809
+
+Data from Force Sensor 147:
+Reading: 0.0, Time Elapsed: 31019
+Reading: 0.0, Time Elapsed: 31019
+Reading: 0.0, Time Elapsed: 31019
+
+Data from Force Sensor 148:
+Reading: 0.0, Time Elapsed: 31231
+Reading: 0.0, Time Elapsed: 31231
+Reading: 0.0, Time Elapsed: 31231
+
+Data from Force Sensor 149:
+Reading: 0.0, Time Elapsed: 31441
+Reading: 0.0, Time Elapsed: 31441
+Reading: 0.0, Time Elapsed: 31441
+
+Data from Force Sensor 150:
+Reading: 0.0, Time Elapsed: 31653
+Reading: 0.0, Time Elapsed: 31653
+Reading: 0.0, Time Elapsed: 31653
+
+Data from Force Sensor 151:
+Reading: 0.0, Time Elapsed: 31864
+Reading: 0.0, Time Elapsed: 31864
+Reading: 0.0, Time Elapsed: 31864
+
+Data from Force Sensor 152:
+Reading: 0.0, Time Elapsed: 32074
+Reading: 0.0, Time Elapsed: 32074
+Reading: 0.0, Time Elapsed: 32074
+
+Data from Force Sensor 153:
+Reading: 0.0, Time Elapsed: 32285
+Reading: 0.0, Time Elapsed: 32285
+Reading: 0.0, Time Elapsed: 32285
+
+Data from Force Sensor 154:
+Reading: 0.0, Time Elapsed: 32496
+Reading: 0.0, Time Elapsed: 32496
+Reading: 0.0, Time Elapsed: 32496
+
+Data from Force Sensor 155:
+Reading: 0.0, Time Elapsed: 32705
+Reading: 0.0, Time Elapsed: 32705
+Reading: 0.0, Time Elapsed: 32705
+
+Data from Force Sensor 156:
+Reading: 0.0, Time Elapsed: 32916
+Reading: 0.0, Time Elapsed: 32916
+Reading: 0.0, Time Elapsed: 32916
+
+Data from Force Sensor 157:
+Reading: 0.0, Time Elapsed: 33127
+Reading: 0.0, Time Elapsed: 33127
+Reading: 0.0, Time Elapsed: 33127
+
+Data from Force Sensor 158:
+Reading: 0.0, Time Elapsed: 33338
+Reading: 0.0, Time Elapsed: 33338
+Reading: 0.0, Time Elapsed: 33338
+
+Data from Force Sensor 159:
+Reading: 0.0, Time Elapsed: 33548
+Reading: 0.0, Time Elapsed: 33548
+Reading: 0.0, Time Elapsed: 33548
+
+Data from Force Sensor 160:
+Reading: 0.0, Time Elapsed: 33759
+Reading: 0.0, Time Elapsed: 33759
+Reading: 0.0, Time Elapsed: 33759
+
+Data from Force Sensor 161:
+Reading: 0.0, Time Elapsed: 33970
+Reading: 0.0, Time Elapsed: 33970
+Reading: 0.0, Time Elapsed: 33970
+
+Data from Force Sensor 162:
+Reading: 0.0, Time Elapsed: 34181
+Reading: 0.0, Time Elapsed: 34181
+Reading: 0.0, Time Elapsed: 34181
+
+Data from Force Sensor 163:
+Reading: 0.0, Time Elapsed: 34393
+Reading: 0.0, Time Elapsed: 34393
+Reading: 0.0, Time Elapsed: 34393
+
+Data from Force Sensor 164:
+Reading: 0.0, Time Elapsed: 34603
+Reading: 0.0, Time Elapsed: 34603
+Reading: 0.0, Time Elapsed: 34603
+
+Data from Force Sensor 165:
+Reading: 0.0, Time Elapsed: 34812
+Reading: 0.0, Time Elapsed: 34812
+Reading: 0.0, Time Elapsed: 34812
+
+Data from Force Sensor 166:
+Reading: 0.0, Time Elapsed: 35023
+Reading: 0.0, Time Elapsed: 35023
+Reading: 0.0, Time Elapsed: 35023
+
+Data from Force Sensor 167:
+Reading: 0.0, Time Elapsed: 35234
+Reading: 0.0, Time Elapsed: 35234
+Reading: 0.0, Time Elapsed: 35234
+
+Data from Force Sensor 168:
+Reading: 0.0, Time Elapsed: 35445
+Reading: 0.0, Time Elapsed: 35445
+Reading: 0.0, Time Elapsed: 35445
+
+Data from Force Sensor 169:
+Reading: 0.0, Time Elapsed: 35655
+Reading: 0.0, Time Elapsed: 35655
+Reading: 0.0, Time Elapsed: 35655
+
+Data from Force Sensor 170:
+Reading: 0.0, Time Elapsed: 35867
+Reading: 0.0, Time Elapsed: 35867
+Reading: 0.0, Time Elapsed: 35867
+
+Data from Force Sensor 171:
+Reading: 0.0, Time Elapsed: 36077
+Reading: 0.0, Time Elapsed: 36077
+Reading: 0.0, Time Elapsed: 36077
+
+Data from Force Sensor 172:
+Reading: 0.0, Time Elapsed: 36288
+Reading: 0.0, Time Elapsed: 36288
+Reading: 0.0, Time Elapsed: 36288
+
+Data from Force Sensor 173:
+Reading: 0.0, Time Elapsed: 36500
+Reading: 0.0, Time Elapsed: 36500
+Reading: 0.0, Time Elapsed: 36500
+
+Data from Force Sensor 174:
+Reading: 0.0, Time Elapsed: 36709
+Reading: 0.0, Time Elapsed: 36709
+Reading: 0.0, Time Elapsed: 36709
+
+Data from Force Sensor 175:
+Reading: 0.0, Time Elapsed: 36919
+Reading: 0.0, Time Elapsed: 36919
+Reading: 0.0, Time Elapsed: 36919
+
+Data from Force Sensor 176:
+Reading: 0.0, Time Elapsed: 37130
+Reading: 0.0, Time Elapsed: 37130
+Reading: 0.0, Time Elapsed: 37130
+
+Data from Force Sensor 177:
+Reading: 0.0, Time Elapsed: 37341
+Reading: 0.0, Time Elapsed: 37341
+Reading: 0.0, Time Elapsed: 37341
+
+Data from Force Sensor 178:
+Reading: 0.0, Time Elapsed: 37553
+Reading: 0.0, Time Elapsed: 37553
+Reading: 0.0, Time Elapsed: 37553
+
+Data from Force Sensor 179:
+Reading: 0.0, Time Elapsed: 37763
+Reading: 0.0, Time Elapsed: 37763
+Reading: 0.0, Time Elapsed: 37763
+
+Data from Force Sensor 180:
+Reading: 0.0, Time Elapsed: 37974
+Reading: 0.0, Time Elapsed: 37974
+Reading: 0.0, Time Elapsed: 37974
+
+Data from Force Sensor 181:
+Reading: 0.0, Time Elapsed: 38184
+Reading: 0.0, Time Elapsed: 38184
+Reading: 0.0, Time Elapsed: 38184
+
+Data from Force Sensor 182:
+Reading: 0.0, Time Elapsed: 38396
+Reading: 0.0, Time Elapsed: 38396
+Reading: 0.0, Time Elapsed: 38396
+
+Data from Force Sensor 183:
+Reading: 0.0, Time Elapsed: 38607
+Reading: 0.0, Time Elapsed: 38607
+Reading: 0.0, Time Elapsed: 38607
+
+Data from Force Sensor 184:
+Reading: 0.0, Time Elapsed: 38816
+Reading: 0.0, Time Elapsed: 38816
+Reading: 0.0, Time Elapsed: 38816
+
+Data from Force Sensor 185:
+Reading: 0.0, Time Elapsed: 39027
+Reading: 0.0, Time Elapsed: 39027
+Reading: 0.0, Time Elapsed: 39027
+
+Data from Force Sensor 186:
+Reading: 0.0, Time Elapsed: 39237
+Reading: 0.0, Time Elapsed: 39237
+Reading: 0.0, Time Elapsed: 39237
+
+Data from Force Sensor 187:
+Reading: 0.0, Time Elapsed: 39449
+Reading: 0.0, Time Elapsed: 39449
+Reading: 0.0, Time Elapsed: 39449
+
+Data from Force Sensor 188:
+Reading: 0.0, Time Elapsed: 39659
+Reading: 0.0, Time Elapsed: 39659
+Reading: 0.0, Time Elapsed: 39659
+
+Data from Force Sensor 189:
+Reading: 0.0, Time Elapsed: 39871
+Reading: 0.0, Time Elapsed: 39871
+Reading: 0.0, Time Elapsed: 39871
+
+Data from Force Sensor 190:
+Reading: 0.0, Time Elapsed: 40081
+Reading: 0.0, Time Elapsed: 40081
+Reading: 0.0, Time Elapsed: 40081
+
+Data from Force Sensor 191:
+Reading: 0.0, Time Elapsed: 40292
+Reading: 0.0, Time Elapsed: 40292
+Reading: 0.0, Time Elapsed: 40292
+
+Data from Force Sensor 192:
+Reading: 0.0, Time Elapsed: 40503
+Reading: 0.0, Time Elapsed: 40503
+Reading: 0.0, Time Elapsed: 40503
+
+Data from Force Sensor 193:
+Reading: 0.0, Time Elapsed: 40714
+Reading: 0.0, Time Elapsed: 40714
+Reading: 0.0, Time Elapsed: 40714
+
+Data from Force Sensor 194:
+Reading: 0.0, Time Elapsed: 40923
+Reading: 0.0, Time Elapsed: 40923
+Reading: 0.0, Time Elapsed: 40923
+
+Data from Force Sensor 195:
+Reading: 0.0, Time Elapsed: 41133
+Reading: 0.0, Time Elapsed: 41133
+Reading: 0.0, Time Elapsed: 41133
+
+Data from Force Sensor 196:
+Reading: 0.0, Time Elapsed: 41345
+Reading: 0.0, Time Elapsed: 41345
+Reading: 0.0, Time Elapsed: 41345
+
+Data from Force Sensor 197:
+Reading: 0.0, Time Elapsed: 41556
+Reading: 0.0, Time Elapsed: 41556
+Reading: 0.0, Time Elapsed: 41556
+
+Data from Force Sensor 198:
+Reading: 0.0, Time Elapsed: 41766
+Reading: 0.0, Time Elapsed: 41766
+Reading: 0.0, Time Elapsed: 41766
+
+Data from Force Sensor 199:
+Reading: 0.0, Time Elapsed: 41978
+Reading: 0.0, Time Elapsed: 41978
+Reading: 0.0, Time Elapsed: 41978
+
+Data from Force Sensor 200:
+Reading: 0.0, Time Elapsed: 42188
+Reading: 0.0, Time Elapsed: 42188
+Reading: 0.0, Time Elapsed: 42188
+
+Data from Force Sensor 201:
+Reading: 0.0, Time Elapsed: 42400
+Reading: 0.0, Time Elapsed: 42400
+Reading: 0.0, Time Elapsed: 42400
+
+Data from Force Sensor 202:
+Reading: 0.0, Time Elapsed: 42610
+Reading: 0.0, Time Elapsed: 42610
+Reading: 0.0, Time Elapsed: 42610
+
+Data from Force Sensor 203:
+Reading: 0.0, Time Elapsed: 42821
+Reading: 0.0, Time Elapsed: 42821
+Reading: 0.0, Time Elapsed: 42821
+
+Data from Force Sensor 204:
+Reading: 0.0, Time Elapsed: 43030
+Reading: 0.0, Time Elapsed: 43030
+Reading: 0.0, Time Elapsed: 43030
+
+Data from Force Sensor 205:
+Reading: 0.0, Time Elapsed: 43241
+Reading: 0.0, Time Elapsed: 43241
+Reading: 0.0, Time Elapsed: 43241
+
+Data from Force Sensor 206:
+Reading: 0.0, Time Elapsed: 43452
+Reading: 0.0, Time Elapsed: 43452
+Reading: 0.0, Time Elapsed: 43452
+
+Data from Force Sensor 207:
+Reading: 0.0, Time Elapsed: 43663
+Reading: 0.0, Time Elapsed: 43663
+Reading: 0.0, Time Elapsed: 43663
+
+Data from Force Sensor 208:
+Reading: 0.0, Time Elapsed: 43875
+Reading: 0.0, Time Elapsed: 43875
+Reading: 0.0, Time Elapsed: 43875
+
+Data from Force Sensor 209:
+Reading: 0.0, Time Elapsed: 44084
+Reading: 0.0, Time Elapsed: 44084
+Reading: 0.0, Time Elapsed: 44084
+
+Data from Force Sensor 210:
+Reading: 0.0, Time Elapsed: 44296
+Reading: 0.0, Time Elapsed: 44296
+Reading: 0.0, Time Elapsed: 44296
+
+Data from Force Sensor 211:
+Reading: 0.0, Time Elapsed: 44506
+Reading: 0.0, Time Elapsed: 44506
+Reading: 0.0, Time Elapsed: 44506
+
+Data from Force Sensor 212:
+Reading: 0.0, Time Elapsed: 44718
+Reading: 0.0, Time Elapsed: 44718
+Reading: 0.0, Time Elapsed: 44718
+
+Data from Force Sensor 213:
+Reading: 0.0, Time Elapsed: 44926
+Reading: 0.0, Time Elapsed: 44926
+Reading: 0.0, Time Elapsed: 44926
+
+Data from Force Sensor 214:
+Reading: 0.0, Time Elapsed: 45137
+Reading: 0.0, Time Elapsed: 45137
+Reading: 0.0, Time Elapsed: 45137
+
+Data from Force Sensor 215:
+Reading: 0.0, Time Elapsed: 45348
+Reading: 0.0, Time Elapsed: 45348
+Reading: 0.0, Time Elapsed: 45348
+
+Data from Force Sensor 216:
+Reading: 0.0, Time Elapsed: 45560
+Reading: 0.0, Time Elapsed: 45560
+Reading: 0.0, Time Elapsed: 45560
+
+Data from Force Sensor 217:
+Reading: 0.0, Time Elapsed: 45770
+Reading: 0.0, Time Elapsed: 45770
+Reading: 0.0, Time Elapsed: 45770
+
+Data from Force Sensor 218:
+Reading: 0.0, Time Elapsed: 45981
+Reading: 0.0, Time Elapsed: 45981
+Reading: 0.0, Time Elapsed: 45981
+
+Data from Force Sensor 219:
+Reading: 0.0, Time Elapsed: 46192
+Reading: 0.0, Time Elapsed: 46192
+Reading: 0.0, Time Elapsed: 46192
+
+Data from Force Sensor 220:
+Reading: 0.0, Time Elapsed: 46403
+Reading: 0.0, Time Elapsed: 46403
+Reading: 0.0, Time Elapsed: 46403
+
+Data from Force Sensor 221:
+Reading: 0.0, Time Elapsed: 46614
+Reading: 0.0, Time Elapsed: 46614
+Reading: 0.0, Time Elapsed: 46614
+
+Data from Force Sensor 222:
+Reading: 0.0, Time Elapsed: 46823
+Reading: 0.0, Time Elapsed: 46823
+Reading: 0.0, Time Elapsed: 46823
+
+Data from Force Sensor 223:
+Reading: 0.0, Time Elapsed: 47034
+Reading: 0.0, Time Elapsed: 47034
+Reading: 0.0, Time Elapsed: 47034
+
+Data from Force Sensor 224:
+Reading: 0.0, Time Elapsed: 47245
+Reading: 0.0, Time Elapsed: 47245
+Reading: 0.0, Time Elapsed: 47245
+
+Data from Force Sensor 225:
+Reading: 0.0, Time Elapsed: 47456
+Reading: 0.0, Time Elapsed: 47456
+Reading: 0.0, Time Elapsed: 47456
+
+Data from Force Sensor 226:
+Reading: 0.0, Time Elapsed: 47666
+Reading: 0.0, Time Elapsed: 47666
+Reading: 0.0, Time Elapsed: 47666
+
+Data from Force Sensor 227:
+Reading: 0.0, Time Elapsed: 47878
+Reading: 0.0, Time Elapsed: 47878
+Reading: 0.0, Time Elapsed: 47878
+
+Data from Force Sensor 228:
+Reading: 0.0, Time Elapsed: 48088
+Reading: 0.0, Time Elapsed: 48088
+Reading: 0.0, Time Elapsed: 48088
+
+Data from Force Sensor 229:
+Reading: 0.0, Time Elapsed: 48299
+Reading: 0.0, Time Elapsed: 48299
+Reading: 0.0, Time Elapsed: 48299
+
+Data from Force Sensor 230:
+Reading: 0.0, Time Elapsed: 48510
+Reading: 0.0, Time Elapsed: 48510
+Reading: 0.0, Time Elapsed: 48510
+
+Data from Force Sensor 231:
+Reading: 0.0, Time Elapsed: 48721
+Reading: 0.0, Time Elapsed: 48721
+Reading: 0.0, Time Elapsed: 48721
+
+Data from Force Sensor 232:
+Reading: 0.0, Time Elapsed: 48930
+Reading: 0.0, Time Elapsed: 48930
+Reading: 0.0, Time Elapsed: 48930
+
+Data from Force Sensor 233:
+Reading: 0.0, Time Elapsed: 49141
+Reading: 0.0, Time Elapsed: 49141
+Reading: 0.0, Time Elapsed: 49141
+
+Data from Force Sensor 234:
+Reading: 0.0, Time Elapsed: 49352
+Reading: 0.0, Time Elapsed: 49352
+Reading: 0.0, Time Elapsed: 49352
+
+Data from Force Sensor 235:
+Reading: 0.0, Time Elapsed: 49563
+Reading: 0.0, Time Elapsed: 49563
+Reading: 0.0, Time Elapsed: 49563
+
+Data from Force Sensor 236:
+Reading: 0.0, Time Elapsed: 49774
+Reading: 0.0, Time Elapsed: 49774
+Reading: 0.0, Time Elapsed: 49774
+
+Data from Force Sensor 237:
+Reading: 0.0, Time Elapsed: 49985
+Reading: 0.0, Time Elapsed: 49985
+Reading: 0.0, Time Elapsed: 49985
+
+Data from Force Sensor 238:
+Reading: 0.0, Time Elapsed: 50196
+Reading: 0.0, Time Elapsed: 50196
+Reading: 0.0, Time Elapsed: 50196
+
+Data from Force Sensor 239:
+Reading: 0.0, Time Elapsed: 50407
+Reading: 0.0, Time Elapsed: 50407
+Reading: 0.0, Time Elapsed: 50407
+
+Data from Force Sensor 240:
+Reading: 0.0, Time Elapsed: 50617
+Reading: 0.0, Time Elapsed: 50617
+Reading: 0.0, Time Elapsed: 50617
+
+Data from Force Sensor 241:
+Reading: 0.0, Time Elapsed: 50827
+Reading: 0.0, Time Elapsed: 50827
+Reading: 0.0, Time Elapsed: 50827
+
+Data from Force Sensor 242:
+Reading: 0.0, Time Elapsed: 51039
+Reading: 0.0, Time Elapsed: 51039
+Reading: 0.0, Time Elapsed: 51039
+
+Data from Force Sensor 243:
+Reading: 0.0, Time Elapsed: 51249
+Reading: 0.0, Time Elapsed: 51249
+Reading: 0.0, Time Elapsed: 51249
+
+Data from Force Sensor 244:
+Reading: 0.0, Time Elapsed: 51459
+Reading: 0.0, Time Elapsed: 51459
+Reading: 0.0, Time Elapsed: 51459
+
+Data from Force Sensor 245:
+Reading: 0.0, Time Elapsed: 51671
+Reading: 0.0, Time Elapsed: 51671
+Reading: 0.0, Time Elapsed: 51671
+
+Data from Force Sensor 246:
+Reading: 0.0, Time Elapsed: 51881
+Reading: 0.0, Time Elapsed: 51881
+Reading: 0.0, Time Elapsed: 51881
+
+Data from Force Sensor 247:
+Reading: 0.0, Time Elapsed: 52092
+Reading: 0.0, Time Elapsed: 52092
+Reading: 0.0, Time Elapsed: 52092
+
+Data from Force Sensor 248:
+Reading: 0.0, Time Elapsed: 52303
+Reading: 0.0, Time Elapsed: 52303
+Reading: 0.0, Time Elapsed: 52303
+
+Data from Force Sensor 249:
+Reading: 0.0, Time Elapsed: 52514
+Reading: 0.0, Time Elapsed: 52514
+Reading: 0.0, Time Elapsed: 52514
+
+Data from Force Sensor 250:
+Reading: 0.0, Time Elapsed: 52725
+Reading: 0.0, Time Elapsed: 52725
+Reading: 0.0, Time Elapsed: 52725
+
+Data from Force Sensor 251:
+Reading: 0.0, Time Elapsed: 52934
+Reading: 0.0, Time Elapsed: 52934
+Reading: 0.0, Time Elapsed: 52934
+
+Data from Force Sensor 252:
+Reading: 0.0, Time Elapsed: 53144
+Reading: 0.0, Time Elapsed: 53144
+Reading: 0.0, Time Elapsed: 53144
+
+Data from Force Sensor 253:
+Reading: 0.0, Time Elapsed: 53356
+Reading: 0.0, Time Elapsed: 53356
+Reading: 0.0, Time Elapsed: 53356
+
+Data from Force Sensor 254:
+Reading: 0.0, Time Elapsed: 53566
+Reading: 0.0, Time Elapsed: 53566
+Reading: 0.0, Time Elapsed: 53566
+
+Data from Force Sensor 255:
+Reading: 0.0, Time Elapsed: 53777
+Reading: 0.0, Time Elapsed: 53777
+Reading: 0.0, Time Elapsed: 53777
+
+Data from Force Sensor 256:
+Reading: 0.0, Time Elapsed: 53988
+Reading: 0.0, Time Elapsed: 53988
+Reading: 0.0, Time Elapsed: 53988
+
+Data from Force Sensor 257:
+Reading: 0.0, Time Elapsed: 54199
+Reading: 0.0, Time Elapsed: 54199
+Reading: 0.0, Time Elapsed: 54199
+
+Data from Force Sensor 258:
+Reading: 0.0, Time Elapsed: 54411
+Reading: 0.0, Time Elapsed: 54411
+Reading: 0.0, Time Elapsed: 54411
+
+Data from Force Sensor 259:
+Reading: 0.0, Time Elapsed: 54621
+Reading: 0.0, Time Elapsed: 54621
+Reading: 0.0, Time Elapsed: 54621
+
+Data from Force Sensor 260:
+Reading: 0.0, Time Elapsed: 54832
+Reading: 0.0, Time Elapsed: 54832
+Reading: 0.0, Time Elapsed: 54832
+
+Data from Force Sensor 261:
+Reading: 0.0, Time Elapsed: 55041
+Reading: 0.0, Time Elapsed: 55041
+Reading: 0.0, Time Elapsed: 55041
+
+Data from Force Sensor 262:
+Reading: 0.0, Time Elapsed: 55252
+Reading: 0.0, Time Elapsed: 55252
+Reading: 0.0, Time Elapsed: 55252
+
+Data from Force Sensor 263:
+Reading: 0.0, Time Elapsed: 55462
+Reading: 0.0, Time Elapsed: 55462
+Reading: 0.0, Time Elapsed: 55462
+
+Data from Force Sensor 264:
+Reading: 0.0, Time Elapsed: 55674
+Reading: 0.0, Time Elapsed: 55674
+Reading: 0.0, Time Elapsed: 55674
+
+Data from Force Sensor 265:
+Reading: 0.0, Time Elapsed: 55885
+Reading: 0.0, Time Elapsed: 55885
+Reading: 0.0, Time Elapsed: 55885
+
+Data from Force Sensor 266:
+Reading: 0.0, Time Elapsed: 56096
+Reading: 0.0, Time Elapsed: 56096
+Reading: 0.0, Time Elapsed: 56096
+
+Data from Force Sensor 267:
+Reading: 0.0, Time Elapsed: 56306
+Reading: 0.0, Time Elapsed: 56306
+Reading: 0.0, Time Elapsed: 56306
+
+Data from Force Sensor 268:
+Reading: 0.0, Time Elapsed: 56518
+Reading: 0.0, Time Elapsed: 56518
+Reading: 0.0, Time Elapsed: 56518
+
+Data from Force Sensor 269:
+Reading: 0.0, Time Elapsed: 56728
+Reading: 0.0, Time Elapsed: 56728
+Reading: 0.0, Time Elapsed: 56728
+
+Data from Force Sensor 270:
+Reading: 0.0, Time Elapsed: 56937
+Reading: 0.0, Time Elapsed: 56937
+Reading: 0.0, Time Elapsed: 56937
+
+Data from Force Sensor 271:
+Reading: 0.0, Time Elapsed: 57148
+Reading: 0.0, Time Elapsed: 57148
+Reading: 0.0, Time Elapsed: 57148
+
+Data from Force Sensor 272:
+Reading: 0.0, Time Elapsed: 57360
+Reading: 0.0, Time Elapsed: 57360
+Reading: 0.0, Time Elapsed: 57360
+
+Data from Force Sensor 273:
+Reading: 0.0, Time Elapsed: 57570
+Reading: 0.0, Time Elapsed: 57570
+Reading: 0.0, Time Elapsed: 57570
+
+Data from Force Sensor 274:
+Reading: 0.0, Time Elapsed: 57781
+Reading: 0.0, Time Elapsed: 57781
+Reading: 0.0, Time Elapsed: 57781
+
+Data from Force Sensor 275:
+Reading: 0.0, Time Elapsed: 57992
+Reading: 0.0, Time Elapsed: 57992
+Reading: 0.0, Time Elapsed: 57992
+
+Data from Force Sensor 276:
+Reading: 0.0, Time Elapsed: 58202
+Reading: 0.0, Time Elapsed: 58202
+Reading: 0.0, Time Elapsed: 58202
+
+Data from Force Sensor 277:
+Reading: 0.0, Time Elapsed: 58414
+Reading: 0.0, Time Elapsed: 58414
+Reading: 0.0, Time Elapsed: 58414
+
+Data from Force Sensor 278:
+Reading: 0.0, Time Elapsed: 58625
+Reading: 0.0, Time Elapsed: 58625
+Reading: 0.0, Time Elapsed: 58625
+
+Data from Force Sensor 279:
+Reading: 0.0, Time Elapsed: 58836
+Reading: 0.0, Time Elapsed: 58836
+Reading: 0.0, Time Elapsed: 58836
+
+Data from Force Sensor 280:
+Reading: 0.0, Time Elapsed: 59047
+Reading: 0.0, Time Elapsed: 59047
+Reading: 0.0, Time Elapsed: 59047
+
+Data from Force Sensor 281:
+Reading: 0.0, Time Elapsed: 59255
+Reading: 0.0, Time Elapsed: 59255
+Reading: 0.0, Time Elapsed: 59255
+
+Data from Force Sensor 282:
+Reading: 0.0, Time Elapsed: 59467
+Reading: 0.0, Time Elapsed: 59467
+Reading: 0.0, Time Elapsed: 59467
+
+Data from Force Sensor 283:
+Reading: 0.0, Time Elapsed: 59677
+Reading: 0.0, Time Elapsed: 59677
+Reading: 0.0, Time Elapsed: 59677
+
+Data from Force Sensor 284:
+Reading: 0.0, Time Elapsed: 59888
+Reading: 0.0, Time Elapsed: 59888
+Reading: 0.0, Time Elapsed: 59888
+
+Data from Force Sensor 285:
+Reading: 0.0, Time Elapsed: 60099
+Reading: 0.0, Time Elapsed: 60099
+Reading: 0.0, Time Elapsed: 60099
+
+Data from Force Sensor 286:
+Reading: 0.0, Time Elapsed: 60310
+Reading: 0.0, Time Elapsed: 60310
+Reading: 0.0, Time Elapsed: 60310
+
+Data from Force Sensor 287:
+Reading: 0.0, Time Elapsed: 60521
+Reading: 0.0, Time Elapsed: 60521
+Reading: 0.0, Time Elapsed: 60521
+
+Data from Force Sensor 288:
+Reading: 0.0, Time Elapsed: 60732
+Reading: 0.0, Time Elapsed: 60732
+Reading: 0.0, Time Elapsed: 60732
+
+Data from Force Sensor 289:
+Reading: 0.0, Time Elapsed: 60940
+Reading: 0.0, Time Elapsed: 60940
+Reading: 0.0, Time Elapsed: 60940
+
+Data from Force Sensor 290:
+Reading: 0.0, Time Elapsed: 61152
+Reading: 0.0, Time Elapsed: 61152
+Reading: 0.0, Time Elapsed: 61152
+
+Data from Force Sensor 291:
+Reading: 0.0, Time Elapsed: 61363
+Reading: 0.0, Time Elapsed: 61363
+Reading: 0.0, Time Elapsed: 61363
+
+Data from Force Sensor 292:
+Reading: 0.0, Time Elapsed: 61573
+Reading: 0.0, Time Elapsed: 61573
+Reading: 0.0, Time Elapsed: 61573
+
+Data from Force Sensor 293:
+Reading: 0.0, Time Elapsed: 61785
+Reading: 0.0, Time Elapsed: 61785
+Reading: 0.0, Time Elapsed: 61785
+
+Data from Force Sensor 294:
+Reading: 0.0, Time Elapsed: 61995
+Reading: 0.0, Time Elapsed: 61995
+Reading: 0.0, Time Elapsed: 61995
+
+Data from Force Sensor 295:
+Reading: 0.0, Time Elapsed: 62207
+Reading: 0.0, Time Elapsed: 62207
+Reading: 0.0, Time Elapsed: 62207
+
+Data from Force Sensor 296:
+Reading: 0.0, Time Elapsed: 62418
+Reading: 0.0, Time Elapsed: 62418
+Reading: 0.0, Time Elapsed: 62418
+
+Data from Force Sensor 297:
+Reading: 0.0, Time Elapsed: 62628
+Reading: 0.0, Time Elapsed: 62628
+Reading: 0.0, Time Elapsed: 62628
+
+Data from Force Sensor 298:
+Reading: 0.0, Time Elapsed: 62840
+Reading: 0.0, Time Elapsed: 62840
+Reading: 0.0, Time Elapsed: 62840
+
+Data from Force Sensor 299:
+Reading: 0.0, Time Elapsed: 63050
+Reading: 0.0, Time Elapsed: 63050
+Reading: 0.0, Time Elapsed: 63050
+
+Data from Force Sensor 300:
+Reading: 0.0, Time Elapsed: 63261
+Reading: 0.0, Time Elapsed: 63261
+Reading: 0.0, Time Elapsed: 63261
+
+Data from Force Sensor 301:
+Reading: 0.0, Time Elapsed: 63470
+Reading: 0.0, Time Elapsed: 63470
+Reading: 0.0, Time Elapsed: 63470
+
+Data from Force Sensor 302:
+Reading: 0.0, Time Elapsed: 63681
+Reading: 0.0, Time Elapsed: 63681
+Reading: 0.0, Time Elapsed: 63681
+
+Data from Force Sensor 303:
+Reading: 0.0, Time Elapsed: 63892
+Reading: 0.0, Time Elapsed: 63892
+Reading: 0.0, Time Elapsed: 63892
+
+Data from Force Sensor 304:
+Reading: 0.0, Time Elapsed: 64102
+Reading: 0.0, Time Elapsed: 64102
+Reading: 0.0, Time Elapsed: 64102
+
+Data from Force Sensor 305:
+Reading: 0.0, Time Elapsed: 64314
+Reading: 0.0, Time Elapsed: 64314
+Reading: 0.0, Time Elapsed: 64314
+
+Data from Force Sensor 306:
+Reading: 0.0, Time Elapsed: 64524
+Reading: 0.0, Time Elapsed: 64524
+Reading: 0.0, Time Elapsed: 64524
+
+Data from Force Sensor 307:
+Reading: 0.0, Time Elapsed: 64735
+Reading: 0.0, Time Elapsed: 64735
+Reading: 0.0, Time Elapsed: 64735
+
+Data from Force Sensor 308:
+Reading: 0.0, Time Elapsed: 64947
+Reading: 0.0, Time Elapsed: 64947
+Reading: 0.0, Time Elapsed: 64947
+
+Data from Force Sensor 309:
+Reading: 0.0, Time Elapsed: 65157
+Reading: 0.0, Time Elapsed: 65157
+Reading: 0.0, Time Elapsed: 65157
+
+Data from Force Sensor 310:
+Reading: 0.0, Time Elapsed: 65368
+Reading: 0.0, Time Elapsed: 65368
+Reading: 0.0, Time Elapsed: 65368
+
+Data from Force Sensor 311:
+Reading: 0.0, Time Elapsed: 65577
+Reading: 0.0, Time Elapsed: 65577
+Reading: 0.0, Time Elapsed: 65577
+
+Data from Force Sensor 312:
+Reading: 0.0, Time Elapsed: 65780
+Reading: 0.0, Time Elapsed: 65780
+Reading: 0.0, Time Elapsed: 65780
+
+Data from Force Sensor 313:
+Reading: 0.0, Time Elapsed: 65999
+Reading: 0.0, Time Elapsed: 65999
+Reading: 0.0, Time Elapsed: 65999
+
+Data from Force Sensor 314:
+Reading: 0.0, Time Elapsed: 66210
+Reading: 0.0, Time Elapsed: 66210
+Reading: 0.0, Time Elapsed: 66210
+
+Data from Force Sensor 315:
+Reading: 0.0, Time Elapsed: 66421
+Reading: 0.0, Time Elapsed: 66421
+Reading: 0.0, Time Elapsed: 66421
+
+Data from Force Sensor 316:
+Reading: 0.0, Time Elapsed: 66632
+Reading: 0.0, Time Elapsed: 66632
+Reading: 0.0, Time Elapsed: 66632
+
+Data from Force Sensor 317:
+Reading: 0.0, Time Elapsed: 66843
+Reading: 0.0, Time Elapsed: 66843
+Reading: 0.0, Time Elapsed: 66843
+
+Data from Force Sensor 318:
+Reading: 0.0, Time Elapsed: 67054
+Reading: 0.0, Time Elapsed: 67054
+Reading: 0.0, Time Elapsed: 67054
+
+Data from Force Sensor 319:
+Reading: 0.0, Time Elapsed: 67265
+Reading: 0.0, Time Elapsed: 67265
+Reading: 0.0, Time Elapsed: 67265
+
+Data from Force Sensor 320:
+Reading: 0.0, Time Elapsed: 67475
+Reading: 0.0, Time Elapsed: 67475
+Reading: 0.0, Time Elapsed: 67475
+
+Data from Force Sensor 321:
+Reading: 0.0, Time Elapsed: 67685
+Reading: 0.0, Time Elapsed: 67685
+Reading: 0.0, Time Elapsed: 67685
+
+Data from Force Sensor 322:
+Reading: 0.0, Time Elapsed: 67896
+Reading: 0.0, Time Elapsed: 67896
+Reading: 0.0, Time Elapsed: 67896
+
+Data from Force Sensor 323:
+Reading: 0.0, Time Elapsed: 68106
+Reading: 0.0, Time Elapsed: 68106
+Reading: 0.0, Time Elapsed: 68106
+
+Data from Force Sensor 324:
+Reading: 0.0, Time Elapsed: 68317
+Reading: 0.0, Time Elapsed: 68317
+Reading: 0.0, Time Elapsed: 68317
+
+Data from Force Sensor 325:
+Reading: 0.0, Time Elapsed: 68528
+Reading: 0.0, Time Elapsed: 68528
+Reading: 0.0, Time Elapsed: 68528
+
+Data from Force Sensor 326:
+Reading: 0.0, Time Elapsed: 68739
+Reading: 0.0, Time Elapsed: 68739
+Reading: 0.0, Time Elapsed: 68739
+
+Data from Force Sensor 327:
+Reading: 0.0, Time Elapsed: 68951
+Reading: 0.0, Time Elapsed: 68951
+Reading: 0.0, Time Elapsed: 68951
+
+Data from Force Sensor 328:
+Reading: 0.0, Time Elapsed: 69161
+Reading: 0.0, Time Elapsed: 69161
+Reading: 0.0, Time Elapsed: 69161
+
+Data from Force Sensor 329:
+Reading: 0.0, Time Elapsed: 69371
+Reading: 0.0, Time Elapsed: 69371
+Reading: 0.0, Time Elapsed: 69371
+
+Data from Force Sensor 330:
+Reading: 0.0, Time Elapsed: 69583
+Reading: 0.0, Time Elapsed: 69583
+Reading: 0.0, Time Elapsed: 69583
+
+Data from Force Sensor 331:
+Reading: 0.0, Time Elapsed: 69792
+Reading: 0.0, Time Elapsed: 69792
+Reading: 0.0, Time Elapsed: 69792
+
+Data from Force Sensor 332:
+Reading: 0.0, Time Elapsed: 70002
+Reading: 0.0, Time Elapsed: 70002
+Reading: 0.0, Time Elapsed: 70002
+
+Data from Force Sensor 333:
+Reading: 0.0, Time Elapsed: 70214
+Reading: 0.0, Time Elapsed: 70214
+Reading: 0.0, Time Elapsed: 70214
+
+Data from Force Sensor 334:
+Reading: 0.0, Time Elapsed: 70424
+Reading: 0.0, Time Elapsed: 70424
+Reading: 0.0, Time Elapsed: 70424
+
+Data from Force Sensor 335:
+Reading: 0.0, Time Elapsed: 70635
+Reading: 0.0, Time Elapsed: 70635
+Reading: 0.0, Time Elapsed: 70635
+
+Data from Force Sensor 336:
+Reading: 0.0, Time Elapsed: 70846
+Reading: 0.0, Time Elapsed: 70846
+Reading: 0.0, Time Elapsed: 70846
+
+Data from Force Sensor 337:
+Reading: 0.0, Time Elapsed: 71057
+Reading: 0.0, Time Elapsed: 71057
+Reading: 0.0, Time Elapsed: 71057
+
+Data from Force Sensor 338:
+Reading: 0.0, Time Elapsed: 71268
+Reading: 0.0, Time Elapsed: 71268
+Reading: 0.0, Time Elapsed: 71268
+
+Data from Force Sensor 339:
+Reading: 0.0, Time Elapsed: 71479
+Reading: 0.0, Time Elapsed: 71479
+Reading: 0.0, Time Elapsed: 71479
+
+Data from Force Sensor 340:
+Reading: 0.0, Time Elapsed: 71690
+Reading: 0.0, Time Elapsed: 71690
+Reading: 0.0, Time Elapsed: 71690
+
+Data from Force Sensor 341:
+Reading: 0.0, Time Elapsed: 71899
+Reading: 0.0, Time Elapsed: 71899
+Reading: 0.0, Time Elapsed: 71899
+
+Data from Force Sensor 342:
+Reading: 0.0, Time Elapsed: 72110
+Reading: 0.0, Time Elapsed: 72110
+Reading: 0.0, Time Elapsed: 72110
+
+Data from Force Sensor 343:
+Reading: 0.0, Time Elapsed: 72321
+Reading: 0.0, Time Elapsed: 72321
+Reading: 0.0, Time Elapsed: 72321
+
+Data from Force Sensor 344:
+Reading: 0.0, Time Elapsed: 72531
+Reading: 0.0, Time Elapsed: 72531
+Reading: 0.0, Time Elapsed: 72531
+
+Data from Force Sensor 345:
+Reading: 0.0, Time Elapsed: 72743
+Reading: 0.0, Time Elapsed: 72743
+Reading: 0.0, Time Elapsed: 72743
+
+Data from Force Sensor 346:
+Reading: 0.0, Time Elapsed: 72953
+Reading: 0.0, Time Elapsed: 72953
+Reading: 0.0, Time Elapsed: 72953
+
+Data from Force Sensor 347:
+Reading: 0.0, Time Elapsed: 73165
+Reading: 0.0, Time Elapsed: 73165
+Reading: 0.0, Time Elapsed: 73165
+
+Data from Force Sensor 348:
+Reading: 0.0, Time Elapsed: 73376
+Reading: 0.0, Time Elapsed: 73376
+Reading: 0.0, Time Elapsed: 73376
+
+Data from Force Sensor 349:
+Reading: 0.0, Time Elapsed: 73586
+Reading: 0.0, Time Elapsed: 73586
+Reading: 0.0, Time Elapsed: 73586
+
+Data from Force Sensor 350:
+Reading: 0.0, Time Elapsed: 73795
+Reading: 0.0, Time Elapsed: 73795
+Reading: 0.0, Time Elapsed: 73795
+
+Data from Force Sensor 351:
+Reading: 0.0, Time Elapsed: 74006
+Reading: 0.0, Time Elapsed: 74006
+Reading: 0.0, Time Elapsed: 74006
+
+Data from Force Sensor 352:
+Reading: 0.0, Time Elapsed: 74217
+Reading: 0.0, Time Elapsed: 74217
+Reading: 0.0, Time Elapsed: 74217
+
+Data from Force Sensor 353:
+Reading: 0.0, Time Elapsed: 74429
+Reading: 0.0, Time Elapsed: 74429
+Reading: 0.0, Time Elapsed: 74429
+
+Data from Force Sensor 354:
+Reading: 0.0, Time Elapsed: 74639
+Reading: 0.0, Time Elapsed: 74639
+Reading: 0.0, Time Elapsed: 74639
+
+Data from Force Sensor 355:
+Reading: 0.0, Time Elapsed: 74850
+Reading: 0.0, Time Elapsed: 74850
+Reading: 0.0, Time Elapsed: 74850
+
+Data from Force Sensor 356:
+Reading: 0.0, Time Elapsed: 75061
+Reading: 0.0, Time Elapsed: 75061
+Reading: 0.0, Time Elapsed: 75061
+
+Data from Force Sensor 357:
+Reading: 0.0, Time Elapsed: 75272
+Reading: 0.0, Time Elapsed: 75272
+Reading: 0.0, Time Elapsed: 75272
+
+Data from Force Sensor 358:
+Reading: 0.0, Time Elapsed: 75483
+Reading: 0.0, Time Elapsed: 75483
+Reading: 0.0, Time Elapsed: 75483
+
+Data from Force Sensor 359:
+Reading: 0.0, Time Elapsed: 75693
+Reading: 0.0, Time Elapsed: 75693
+Reading: 0.0, Time Elapsed: 75693
+
+Data from Force Sensor 360:
+Reading: 0.0, Time Elapsed: 75903
+Reading: 0.0, Time Elapsed: 75903
+Reading: 0.0, Time Elapsed: 75903
+
+Data from Force Sensor 361:
+Reading: 0.0, Time Elapsed: 76113
+Reading: 0.0, Time Elapsed: 76113
+Reading: 0.0, Time Elapsed: 76113
+
+Data from Force Sensor 362:
+Reading: 0.0, Time Elapsed: 76325
+Reading: 0.0, Time Elapsed: 76325
+Reading: 0.0, Time Elapsed: 76325
+
+Data from Force Sensor 363:
+Reading: 0.0, Time Elapsed: 76535
+Reading: 0.0, Time Elapsed: 76535
+Reading: 0.0, Time Elapsed: 76535
+
+Data from Force Sensor 364:
+Reading: 0.0, Time Elapsed: 76747
+Reading: 0.0, Time Elapsed: 76747
+Reading: 0.0, Time Elapsed: 76747
+
+Data from Force Sensor 365:
+Reading: 0.0, Time Elapsed: 76957
+Reading: 0.0, Time Elapsed: 76957
+Reading: 0.0, Time Elapsed: 76957
+
+Data from Force Sensor 366:
+Reading: 0.0, Time Elapsed: 77168
+Reading: 0.0, Time Elapsed: 77168
+Reading: 0.0, Time Elapsed: 77168
+
+Data from Force Sensor 367:
+Reading: 0.0, Time Elapsed: 77378
+Reading: 0.0, Time Elapsed: 77378
+Reading: 0.0, Time Elapsed: 77378
+
+Data from Force Sensor 368:
+Reading: 0.0, Time Elapsed: 77589
+Reading: 0.0, Time Elapsed: 77589
+Reading: 0.0, Time Elapsed: 77589
+
+Data from Force Sensor 369:
+Reading: 0.0, Time Elapsed: 77801
+Reading: 0.0, Time Elapsed: 77801
+Reading: 0.0, Time Elapsed: 77801
+
+Data from Force Sensor 370:
+Reading: 0.0, Time Elapsed: 78012
+Reading: 0.0, Time Elapsed: 78012
+Reading: 0.0, Time Elapsed: 78012
+
+Data from Force Sensor 371:
+Reading: 0.0, Time Elapsed: 78220
+Reading: 0.0, Time Elapsed: 78220
+Reading: 0.0, Time Elapsed: 78220
+
+Data from Force Sensor 372:
+Reading: 0.0, Time Elapsed: 78432
+Reading: 0.0, Time Elapsed: 78432
+Reading: 0.0, Time Elapsed: 78432
+
+Data from Force Sensor 373:
+Reading: 0.0, Time Elapsed: 78643
+Reading: 0.0, Time Elapsed: 78643
+Reading: 0.0, Time Elapsed: 78643
+
+Data from Force Sensor 374:
+Reading: 0.0, Time Elapsed: 78853
+Reading: 0.0, Time Elapsed: 78853
+Reading: 0.0, Time Elapsed: 78853
+
+Data from Force Sensor 375:
+Reading: 0.0, Time Elapsed: 79064
+Reading: 0.0, Time Elapsed: 79064
+Reading: 0.0, Time Elapsed: 79064
+
+Data from Force Sensor 376:
+Reading: 0.0, Time Elapsed: 79275
+Reading: 0.0, Time Elapsed: 79275
+Reading: 0.0, Time Elapsed: 79275
+
+Data from Force Sensor 377:
+Reading: 0.0, Time Elapsed: 79486
+Reading: 0.0, Time Elapsed: 79486
+Reading: 0.0, Time Elapsed: 79486
+
+Data from Force Sensor 378:
+Reading: 0.0, Time Elapsed: 79698
+Reading: 0.0, Time Elapsed: 79698
+Reading: 0.0, Time Elapsed: 79698
+
+Data from Force Sensor 379:
+Reading: 0.0, Time Elapsed: 79908
+Reading: 0.0, Time Elapsed: 79908
+Reading: 0.0, Time Elapsed: 79908
+
+Data from Force Sensor 380:
+Reading: 0.0, Time Elapsed: 80116
+Reading: 0.0, Time Elapsed: 80116
+Reading: 0.0, Time Elapsed: 80116
+
+Data from Force Sensor 381:
+Reading: 0.0, Time Elapsed: 80328
+Reading: 0.0, Time Elapsed: 80328
+Reading: 0.0, Time Elapsed: 80328
+
+Data from Force Sensor 382:
+Reading: 0.0, Time Elapsed: 80539
+Reading: 0.0, Time Elapsed: 80539
+Reading: 0.0, Time Elapsed: 80539
+
+Data from Force Sensor 383:
+Reading: 0.0, Time Elapsed: 80750
+Reading: 0.0, Time Elapsed: 80750
+Reading: 0.0, Time Elapsed: 80750
+
+Data from Force Sensor 384:
+Reading: 0.0, Time Elapsed: 80961
+Reading: 0.0, Time Elapsed: 80961
+Reading: 0.0, Time Elapsed: 80961
+
+Data from Force Sensor 385:
+Reading: 0.0, Time Elapsed: 81171
+Reading: 0.0, Time Elapsed: 81171
+Reading: 0.0, Time Elapsed: 81171
+
+Data from Force Sensor 386:
+Reading: 0.0, Time Elapsed: 81383
+Reading: 0.0, Time Elapsed: 81383
+Reading: 0.0, Time Elapsed: 81383
+
+Data from Force Sensor 387:
+Reading: 0.0, Time Elapsed: 81593
+Reading: 0.0, Time Elapsed: 81593
+Reading: 0.0, Time Elapsed: 81593
+
+Data from Force Sensor 388:
+Reading: 0.0, Time Elapsed: 81805
+Reading: 0.0, Time Elapsed: 81805
+Reading: 0.0, Time Elapsed: 81805
+
+Data from Force Sensor 389:
+Reading: 0.0, Time Elapsed: 82016
+Reading: 0.0, Time Elapsed: 82016
+Reading: 0.0, Time Elapsed: 82016
+
+Data from Force Sensor 390:
+Reading: 0.0, Time Elapsed: 82224
+Reading: 0.0, Time Elapsed: 82224
+Reading: 0.0, Time Elapsed: 82224
+
+Data from Force Sensor 391:
+Reading: 0.0, Time Elapsed: 82435
+Reading: 0.0, Time Elapsed: 82435
+Reading: 0.0, Time Elapsed: 82435
+
+Data from Force Sensor 392:
+Reading: 0.0, Time Elapsed: 82646
+Reading: 0.0, Time Elapsed: 82646
+Reading: 0.0, Time Elapsed: 82646
+
+Data from Force Sensor 393:
+Reading: 0.0, Time Elapsed: 82857
+Reading: 0.0, Time Elapsed: 82857
+Reading: 0.0, Time Elapsed: 82857
+
+Data from Force Sensor 394:
+Reading: 0.0, Time Elapsed: 83068
+Reading: 0.0, Time Elapsed: 83068
+Reading: 0.0, Time Elapsed: 83068
+
+Data from Force Sensor 395:
+Reading: 0.0, Time Elapsed: 83278
+Reading: 0.0, Time Elapsed: 83278
+Reading: 0.0, Time Elapsed: 83278
+
+Data from Force Sensor 396:
+Reading: 0.0, Time Elapsed: 83490
+Reading: 0.0, Time Elapsed: 83490
+Reading: 0.0, Time Elapsed: 83490
+
+Data from Force Sensor 397:
+Reading: 0.0, Time Elapsed: 83700
+Reading: 0.0, Time Elapsed: 83700
+Reading: 0.0, Time Elapsed: 83700
+
+Data from Force Sensor 398:
+Reading: 0.0, Time Elapsed: 83912
+Reading: 0.0, Time Elapsed: 83912
+Reading: 0.0, Time Elapsed: 83912
+
+Data from Force Sensor 399:
+Reading: 0.0, Time Elapsed: 84122
+Reading: 0.0, Time Elapsed: 84122
+Reading: 0.0, Time Elapsed: 84122
+
+Data from Force Sensor 400:
+Reading: 0.0, Time Elapsed: 84324
+Reading: 0.0, Time Elapsed: 84324
+Reading: 0.0, Time Elapsed: 84324
+
+Data from Force Sensor 401:
+Reading: 0.0, Time Elapsed: 84542
+Reading: 0.0, Time Elapsed: 84542
+Reading: 0.0, Time Elapsed: 84542
+
+Data from Force Sensor 402:
+Reading: 0.0, Time Elapsed: 84753
+Reading: 0.0, Time Elapsed: 84753
+Reading: 0.0, Time Elapsed: 84753
+
+Data from Force Sensor 403:
+Reading: 0.0, Time Elapsed: 84964
+Reading: 0.0, Time Elapsed: 84964
+Reading: 0.0, Time Elapsed: 84964
+
+Data from Force Sensor 404:
+Reading: 0.0, Time Elapsed: 85175
+Reading: 0.0, Time Elapsed: 85175
+Reading: 0.0, Time Elapsed: 85175
+
+Data from Force Sensor 405:
+Reading: 0.0, Time Elapsed: 85386
+Reading: 0.0, Time Elapsed: 85386
+Reading: 0.0, Time Elapsed: 85386
+
+Data from Force Sensor 406:
+Reading: 0.0, Time Elapsed: 85597
+Reading: 0.0, Time Elapsed: 85597
+Reading: 0.0, Time Elapsed: 85597
+
+Data from Force Sensor 407:
+Reading: 0.0, Time Elapsed: 85808
+Reading: 0.0, Time Elapsed: 85808
+Reading: 0.0, Time Elapsed: 85808
+
+Data from Force Sensor 408:
+Reading: 0.0, Time Elapsed: 86019
+Reading: 0.0, Time Elapsed: 86019
+Reading: 0.0, Time Elapsed: 86019
+
+Data from Force Sensor 409:
+Reading: 0.0, Time Elapsed: 86230
+Reading: 0.0, Time Elapsed: 86230
+Reading: 0.0, Time Elapsed: 86230
+
+Data from Force Sensor 410:
+Reading: 0.0, Time Elapsed: 86438
+Reading: 0.0, Time Elapsed: 86438
+Reading: 0.0, Time Elapsed: 86438
+
+Data from Force Sensor 411:
+Reading: 0.0, Time Elapsed: 86650
+Reading: 0.0, Time Elapsed: 86650
+Reading: 0.0, Time Elapsed: 86650
+
+Data from Force Sensor 412:
+Reading: 0.0, Time Elapsed: 86860
+Reading: 0.0, Time Elapsed: 86860
+Reading: 0.0, Time Elapsed: 86860
+
+Data from Force Sensor 413:
+Reading: 0.0, Time Elapsed: 87072
+Reading: 0.0, Time Elapsed: 87072
+Reading: 0.0, Time Elapsed: 87072
+
+Data from Force Sensor 414:
+Reading: 0.0, Time Elapsed: 87282
+Reading: 0.0, Time Elapsed: 87282
+Reading: 0.0, Time Elapsed: 87282
+
+Data from Force Sensor 415:
+Reading: 0.0, Time Elapsed: 87493
+Reading: 0.0, Time Elapsed: 87493
+Reading: 0.0, Time Elapsed: 87493
+
+Data from Force Sensor 416:
+Reading: 0.0, Time Elapsed: 87704
+Reading: 0.0, Time Elapsed: 87704
+Reading: 0.0, Time Elapsed: 87704
+
+Data from Force Sensor 417:
+Reading: 0.0, Time Elapsed: 87915
+Reading: 0.0, Time Elapsed: 87915
+Reading: 0.0, Time Elapsed: 87915
+
+Data from Force Sensor 418:
+Reading: 0.0, Time Elapsed: 88126
+Reading: 0.0, Time Elapsed: 88126
+Reading: 0.0, Time Elapsed: 88126
+
+Data from Force Sensor 419:
+Reading: 0.0, Time Elapsed: 88337
+Reading: 0.0, Time Elapsed: 88337
+Reading: 0.0, Time Elapsed: 88337
+
+Data from Force Sensor 420:
+Reading: 0.0, Time Elapsed: 88546
+Reading: 0.0, Time Elapsed: 88546
+Reading: 0.0, Time Elapsed: 88546
+
+Data from Force Sensor 421:
+Reading: 0.0, Time Elapsed: 88756
+Reading: 0.0, Time Elapsed: 88756
+Reading: 0.0, Time Elapsed: 88756
+
+Data from Force Sensor 422:
+Reading: 0.0, Time Elapsed: 88968
+Reading: 0.0, Time Elapsed: 88968
+Reading: 0.0, Time Elapsed: 88968
+
+Data from Force Sensor 423:
+Reading: 0.0, Time Elapsed: 89179
+Reading: 0.0, Time Elapsed: 89179
+Reading: 0.0, Time Elapsed: 89179
+
+Data from Force Sensor 424:
+Reading: 0.0, Time Elapsed: 89390
+Reading: 0.0, Time Elapsed: 89390
+Reading: 0.0, Time Elapsed: 89390
+
+Data from Force Sensor 425:
+Reading: 0.0, Time Elapsed: 89601
+Reading: 0.0, Time Elapsed: 89601
+Reading: 0.0, Time Elapsed: 89601
+
+Data from Force Sensor 426:
+Reading: 0.0, Time Elapsed: 89812
+Reading: 0.0, Time Elapsed: 89812
+Reading: 0.0, Time Elapsed: 89812
+
+Data from Force Sensor 427:
+Reading: 0.0, Time Elapsed: 90022
+Reading: 0.0, Time Elapsed: 90022
+Reading: 0.0, Time Elapsed: 90022
+
+Data from Force Sensor 428:
+Reading: 0.0, Time Elapsed: 90233
+Reading: 0.0, Time Elapsed: 90233
+Reading: 0.0, Time Elapsed: 90233
+
+Data from Force Sensor 429:
+Reading: 0.0, Time Elapsed: 90444
+Reading: 0.0, Time Elapsed: 90444
+Reading: 0.0, Time Elapsed: 90444
+
+Data from Force Sensor 430:
+Reading: 0.0, Time Elapsed: 90655
+Reading: 0.0, Time Elapsed: 90655
+Reading: 0.0, Time Elapsed: 90655
+
+Data from Force Sensor 431:
+Reading: 0.0, Time Elapsed: 90864
+Reading: 0.0, Time Elapsed: 90864
+Reading: 0.0, Time Elapsed: 90864
+
+Data from Force Sensor 432:
+Reading: 0.0, Time Elapsed: 91075
+Reading: 0.0, Time Elapsed: 91075
+Reading: 0.0, Time Elapsed: 91075
+
+Data from Force Sensor 433:
+Reading: 0.0, Time Elapsed: 91286
+Reading: 0.0, Time Elapsed: 91286
+Reading: 0.0, Time Elapsed: 91286
+
+Data from Force Sensor 434:
+Reading: 0.0, Time Elapsed: 91497
+Reading: 0.0, Time Elapsed: 91497
+Reading: 0.0, Time Elapsed: 91497
+
+Data from Force Sensor 435:
+Reading: 0.0, Time Elapsed: 91708
+Reading: 0.0, Time Elapsed: 91708
+Reading: 0.0, Time Elapsed: 91708
+
+Data from Force Sensor 436:
+Reading: 0.0, Time Elapsed: 91918
+Reading: 0.0, Time Elapsed: 91918
+Reading: 0.0, Time Elapsed: 91918
+
+Data from Force Sensor 437:
+Reading: 0.0, Time Elapsed: 92130
+Reading: 0.0, Time Elapsed: 92130
+Reading: 0.0, Time Elapsed: 92130
+
+Data from Force Sensor 438:
+Reading: 0.0, Time Elapsed: 92340
+Reading: 0.0, Time Elapsed: 92340
+Reading: 0.0, Time Elapsed: 92340
+
+Data from Force Sensor 439:
+Reading: 0.0, Time Elapsed: 92552
+Reading: 0.0, Time Elapsed: 92552
+Reading: 0.0, Time Elapsed: 92552
+
+Data from Force Sensor 440:
+Reading: 0.0, Time Elapsed: 92761
+Reading: 0.0, Time Elapsed: 92761
+Reading: 0.0, Time Elapsed: 92761
+
+Data from Force Sensor 441:
+Reading: 0.0, Time Elapsed: 92963
+Reading: 0.0, Time Elapsed: 92963
+Reading: 0.0, Time Elapsed: 92963
+
+Data from Force Sensor 442:
+Reading: 0.0, Time Elapsed: 93183
+Reading: 0.0, Time Elapsed: 93183
+Reading: 0.0, Time Elapsed: 93183
+
+Data from Force Sensor 443:
+Reading: 0.0, Time Elapsed: 93393
+Reading: 0.0, Time Elapsed: 93393
+Reading: 0.0, Time Elapsed: 93393

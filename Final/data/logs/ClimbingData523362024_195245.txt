@@ -1,0 +1,38 @@
+Data from Accelerometer (Altitude):
+Reading: 4.17, Time Elapsed: 63
+Reading: 4.17, Time Elapsed: 274
+Reading: 4.17, Time Elapsed: 485
+Reading: 4.17, Time Elapsed: 696
+Reading: 4.17, Time Elapsed: 907
+
+Data from Flex Sensors:
+Reading: 854.0, Time Elapsed: 63
+Reading: 853.0, Time Elapsed: 274
+Reading: 853.0, Time Elapsed: 485
+Reading: 853.0, Time Elapsed: 696
+Reading: 854.0, Time Elapsed: 907
+
+Data from Force Sensor 0:
+Reading: 0.0, Time Elapsed: 63
+Reading: 0.0, Time Elapsed: 63
+Reading: 0.0, Time Elapsed: 63
+
+Data from Force Sensor 1:
+Reading: 0.0, Time Elapsed: 274
+Reading: 0.0, Time Elapsed: 274
+Reading: 0.0, Time Elapsed: 274
+
+Data from Force Sensor 2:
+Reading: 0.0, Time Elapsed: 485
+Reading: 0.0, Time Elapsed: 485
+Reading: 0.0, Time Elapsed: 485
+
+Data from Force Sensor 3:
+Reading: 0.0, Time Elapsed: 696
+Reading: 0.0, Time Elapsed: 696
+Reading: 0.0, Time Elapsed: 696
+
+Data from Force Sensor 4:
+Reading: 0.0, Time Elapsed: 907
+Reading: 0.0, Time Elapsed: 907
+Reading: 0.0, Time Elapsed: 907

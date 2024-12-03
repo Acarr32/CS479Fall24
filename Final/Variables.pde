@@ -46,7 +46,7 @@ PImage climbing2;
 Values currValues;
 ArrayList<ReplayValues> replayValuesList = new ArrayList<ReplayValues>();
 float replayClock = 0;
-Replay replay;
+Replay replay = new Replay();
 float prevThm;
 float prevPtr;
 float prevMid;

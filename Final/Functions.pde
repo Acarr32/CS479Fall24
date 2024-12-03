@@ -103,8 +103,8 @@ void drawGraphing(){
   
   
   //Draw Buttons
-  startButton.display();
-  stopButton.display();
+  if(!Started){ startButton.display(); }
+  else{ stopButton.display(); }
   statusButton.display();
   holdButton.display();
   if(!Started && hasStartedBefore){
@@ -158,14 +158,17 @@ void LoadGraphing(){
   GraphingLoaded = true;
 }
 
-
-void Start(){
-  Started = true;
-  clock = millis();
+void clearData(){
   fsrData.clear();
   flexData.clear();
   heightData.clear();
   emgData.clear();
+}
+
+void Start(){
+  Started = true;
+  clock = millis();
+  clearData();
 
   seed = (int)(Math.random() * 4);
   

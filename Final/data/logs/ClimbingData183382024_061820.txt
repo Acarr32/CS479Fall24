@@ -1,0 +1,5 @@
+Data from Accelerometer (Altitude):
+
+Data from Flex Sensors:
+
+Data from Emg Sensors:

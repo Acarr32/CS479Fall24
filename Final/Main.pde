@@ -41,6 +41,7 @@ void mouseClicked(){
       replay = new Replay(replayValuesList);
     }
     else if(!Started && startButton.isMouseOver()){
+      replay.clearData();
       Start();
       hasStartedBefore = true;
     }
@@ -78,7 +79,7 @@ void serialEvent(Serial myPort){
         if(Started){
           if(prevThm == 0 && prevPtr == 0 && prevMid == 0){
             if(thm > 1 || ptr > 1 || mid > 1){
-              ReplayValues temp = new ReplayValues(millis() - clock, thm, ptr, mid);
+              ReplayValues temp = new ReplayValues(millis() - clock, thm, ptr, mid, alt);
               temp.print();
               replayValuesList.add(temp);
             }
