@@ -86,10 +86,3 @@ boolean Started;
 boolean hasStartedBefore = false;
 
 float clock;
-
-ArrayList<Float> oldAltVals = new ArrayList<Float>();  // Holds the last 10 altitude values
-float oldAltAvg = 0.0f;  // Average of the last 10 altitude values
-float deltaAlt = 0.0f;  // Difference between current altitude and the average of the last 10
-float smoothDeltaAlt = 0.0f;
-float smoothingFactor = 0.1f;
-float smoothFlex = 0.0f;
