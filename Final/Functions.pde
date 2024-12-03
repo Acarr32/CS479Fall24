@@ -1,11 +1,11 @@
 void initializeVariables(){
   currentState = State.Init;
   boldFont = createFont("SansSerif-Bold", 24);
-  mossGreen = color(62, 86, 65);
-  rustyRed = color(162, 73, 54);
-  coralOrange = color(218, 125, 88);
-  charcoalGray = color(29, 32, 29);
-  seafoamGreen = color(131, 188, 169);
+  mossGreen = color(62, 86, 65); // #3E5641
+  rustyRed = color(162, 73, 54); // #A24936
+  coralOrange = color(218, 125, 88); // #DA7D58
+  charcoalGray = color(29, 32, 29); // #1D201D
+  seafoamGreen = color(131, 188, 169); // #83BCA9
   Started = false;
 }
 
@@ -46,9 +46,40 @@ void printLine(){
   System.out.println("=====================");
 }
 
-void determineHold(){
-  currentHold = Hold.Jug;
+void determineHold() {
+    if (currValues == null) {
+        System.out.println("Error: currValues is null");
+        currentHold = Hold.None; // Set a default state if necessary
+        return; // Exit the function early
+    }
+    else{
+      System.out.println("currVals good");
+
+    }
+
+    // Debugging statements for validation
+    System.out.println("Thumb Value: " + currValues.GetThm());
+    System.out.println("Flex Value: " + currValues.GetFlex());
+
+    // Evaluate flex thresholds for climbing holds
+    float flex = currValues.GetFlex(); // Store the flex value to avoid repeated calls
+
+    if (flex > 0 && flex < 4) {
+        currentHold = Hold.Sloper;
+        System.out.println("Sloper");
+    } else if (flex >= 4 && flex < 12) { // Updated to avoid overlap with the previous range
+        currentHold = Hold.Crimp;
+        System.out.println("Crimp");
+    } else if (flex >= 12 && flex < 40) { // Avoid overlapping ranges
+        currentHold = Hold.Jug;
+        System.out.println("Jug");
+    } else {
+        currentHold = Hold.None;
+        System.out.println("None");
+    }
 }
+
+
 
 void determineClimbingStatus(){
   currentStatus = ClimbingStatus.Climbing;

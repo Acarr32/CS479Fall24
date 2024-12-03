@@ -181,7 +181,8 @@ String AboutStatus(ClimbingStatus status){
 enum Hold{
   Sloper,
   Jug,
-  Crimp
+  Crimp,
+  None
 }
 
 String HoldString(Hold hold){
@@ -192,6 +193,8 @@ String HoldString(Hold hold){
       return "Jug";
     case Crimp:
       return "Crimp";
+    case None:
+      return "None";
     default:
       return throwError(null, 3);
   }
@@ -205,6 +208,8 @@ String AboutHold(Hold hold){
       return "A small edge on a rock or plastic that's only big enough to fit the pads of your fingers.";
     case Jug:
       return "A large, ergonomic shape that you can grip with your whole hand.";
+    case None:
+      return "No hold is currently detected.";
     default:
       return throwError(null, 3);
   }
