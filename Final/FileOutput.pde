@@ -18,25 +18,69 @@ public void writeClimbingData(ArrayList<ArrayList<Data>> forceData, ArrayList<Da
       throwError(e, 6);
       return;
     }
-
+    
+    
     try (FileWriter writer = new FileWriter(file)) {
-        writer.write("Data from Accelerometer (Altitude):\n");
+        writer.write("Data Summary\n\n");
+        writer.write("++++++++++++++++++++++++++++++++++++++++++++++++++");
+        float totalHR = 0;
+        float totalHT = 0;
+        
+        for (Data item : heightData) {
+            totalHR += item.getReading();
+            totalHT += item.getTime();
+        }
+        writer.write("\n Average Value from Barometer (Altitude) : " + str(totalHR/totalHT) + "\n");
+        
+        
+        float totalER = 0;
+        float totalET = 0;
+        
+        for (Data item : emgData) {
+            totalER += item.getReading();
+            totalET += item.getTime();
+        }
+        writer.write("\n Average Value from EMG : " + str(totalER/totalET) + "\n");
+        
+        float totalFR = 0;
+        float totalFT = 0;
+        for (Data item : flexData) {
+            totalFR += item.getReading();
+            totalFT += item.getTime();
+        }
+        writer.write("\n Average Value from Flex Sensor: " + str(totalFR/totalFT) + "\n");
+        
+        for (int i = 0; i < forceData.size(); i++) {
+            float totalR = 0.0;
+            float totalTime = 0.0;
+            writer.write("\n Average Value from Force Sensor " + i + ": ");
+            for (Data item : forceData.get(i)) {
+                totalR += item.getReading();
+                totalTime += item.getTime();
+            }
+            writer.write(str(totalR/totalTime) + "\n");
+        } 
+        
+        
+        writer.write("Data Dumps For Further Analysis\n\n");
+        writer.write("++++++++++++++++++++++++++++++++++++++++++++++++++");
+        writer.write("Data Dump from Barometer (Altitude):\n");
         for (Data item : heightData) {
             writer.write("Reading: " + item.reading + ", Time Elapsed: " + item.timeElapsed + "\n");
         }
 
-        writer.write("\nData from Flex Sensors:\n");
+        writer.write("\nData Dump from Flex Sensors:\n");
         for (Data item : flexData) {
             writer.write("Reading: " + item.reading + ", Time Elapsed: " + item.timeElapsed + "\n");
         }
         
-        writer.write("\nData from Emg Sensors:\n");
+        writer.write("\nData Dump from Emg Sensors:\n");
         for (Data item : emgData) {
             writer.write("Reading: " + item.reading + ", Time Elapsed: " + item.timeElapsed + "\n");
         }
 
         for (int i = 0; i < forceData.size(); i++) {
-            writer.write("\nData from Force Sensor " + i + ":\n");
+            writer.write("\nData Dump from Force Sensor " + i + ":\n");
             for (Data item : forceData.get(i)) {
                 writer.write("Reading: " + item.reading + ", Time Elapsed: " + item.timeElapsed + "\n");
             }
