@@ -68,10 +68,10 @@ void determineHold() {
     if (flex > 0 && flex < 4) {
         currentHold = Hold.Sloper;
         System.out.println("Sloper");
-    } else if (flex >= 4 && flex < 12) { // Updated to avoid overlap with the previous range
+    } else if (flex >= 4 && flex < 6) { // Updated to avoid overlap with the previous range
         currentHold = Hold.Crimp;
         System.out.println("Crimp");
-    } else if (flex >= 12 && flex < 40) { // Avoid overlapping ranges
+    } else if (flex >= 6 && flex < 40) { // Avoid overlapping ranges
         currentHold = Hold.Jug;
         System.out.println("Jug");
     } else {
@@ -99,10 +99,10 @@ void determineClimbingStatus(){
     calcDeltaAlt();
     System.out.println(deltaAlt);
 
-    if (smoothDeltaAlt > .7) { //if deltaAlt > 1
+    if (smoothDeltaAlt > .03) { //if deltaAlt > 1
       currentStatus = ClimbingStatus.Climbing;
         System.out.println("Climbing");
-    } else if (smoothDeltaAlt < -0.1) { //if deltaAlt <1
+    } else if (smoothDeltaAlt < -0.03) { //if deltaAlt <1
         currentStatus = ClimbingStatus.Falling;
         System.out.println("Falling");
     } else {

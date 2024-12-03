@@ -46,7 +46,7 @@ void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
       plot.setYLim(0, 5); // set y limits
     }
     else if (plot == emgPlot){
-      plot.setYLim(0, 500); // set y limits
+      plot.setYLim(0, 150); // set y limits
     }
     // Define a list of colors for different layers (adjust as needed)
     color[] colors = {mossGreen, rustyRed, coralOrange, charcoalGray, seafoamGreen};
