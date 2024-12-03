@@ -11,7 +11,7 @@ void initializeVariables(){
 
 void initializeSerialPort(int port, boolean debug){
   if (Serial.list().length > 0) {
- 
+     myPort = new Serial(this, Serial.list()[port], 115200);
   }
   else{
     if(debug){
@@ -99,7 +99,7 @@ void determineClimbingStatus(){
     calcDeltaAlt();
     System.out.println(deltaAlt);
 
-    if (smoothDeltaAlt > .1) { //if deltaAlt > 1
+    if (smoothDeltaAlt > .7) { //if deltaAlt > 1
       currentStatus = ClimbingStatus.Climbing;
         System.out.println("Climbing");
     } else if (smoothDeltaAlt < -0.1) { //if deltaAlt <1
@@ -109,7 +109,7 @@ void determineClimbingStatus(){
         currentStatus = ClimbingStatus.Stationary;
         System.out.println("Stationary");
     }
-    //statusButton.changeLabel(ClimbingString(currentStatus));
+    statusButton.changeLabel(ClimbingString(currentStatus));
     ////currentStatus = ClimbingStatus.Climbing;
 }
 
