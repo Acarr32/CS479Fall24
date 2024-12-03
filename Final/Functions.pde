@@ -11,7 +11,7 @@ void initializeVariables(){
 
 void initializeSerialPort(int port, boolean debug){
   if (Serial.list().length > 0) {
-    myPort = new Serial(this, Serial.list()[port], 115200);
+     myPort = new Serial(this, Serial.list()[port], 115200);
   }
   else{
     if(debug){
@@ -49,7 +49,7 @@ void printLine(){
 void determineHold() {
     if (currValues == null) {
         System.out.println("Error: currValues is null");
-        currentHold = Hold.None; // Set a default state if necessary
+        currentHold = Hold.None0; // Set a default state if necessary
         return; // Exit the function early
     }
     else{
@@ -63,6 +63,7 @@ void determineHold() {
 
     // Evaluate flex thresholds for climbing holds
     float flex = currValues.GetFlex(); // Store the flex value to avoid repeated calls
+    smoothFlex = (smoothingFactor * flex) + ((1 - smoothingFactor) * smoothFlex);
 
     if (flex > 0 && flex < 4) {
         currentHold = Hold.Sloper;
@@ -82,10 +83,60 @@ void determineHold() {
 }
 
 
-
 void determineClimbingStatus(){
-  currentStatus = ClimbingStatus.Climbing;
+  if (currValues == null) {
+        System.out.println("Error: currValues is null");
+        currentStatus = ClimbingStatus.Stationary0; // Set a default state if necessary
+        return; // Exit the function early
+    }
+    else{
+      System.out.println("currVals good");
+    }
+      
+    // Debugging statements for validation
+    //System.out.println("Thumb Value: " + currValues.GetThm());
+    //System.out.println("Flex Value: " + currValues.GetFlex());
+    calcDeltaAlt();
+    System.out.println(deltaAlt);
+
+    if (smoothDeltaAlt > .7) { //if deltaAlt > 1
+      currentStatus = ClimbingStatus.Climbing;
+        System.out.println("Climbing");
+    } else if (smoothDeltaAlt < -0.1) { //if deltaAlt <1
+        currentStatus = ClimbingStatus.Falling;
+        System.out.println("Falling");
+    } else {
+        currentStatus = ClimbingStatus.Stationary;
+        System.out.println("Stationary");
+    }
+    statusButton.changeLabel(ClimbingString(currentStatus));
+    ////currentStatus = ClimbingStatus.Climbing;
 }
+
+void calcDeltaAlt() {
+  float alt = currValues.GetAlt();
+  // Add the new altitude value to the ArrayList
+  oldAltVals.add(alt);
+  
+  // Ensure the list contains no more than 10 values
+  if (oldAltVals.size() > 10) {
+      oldAltVals.remove(0);
+  }
+
+  // Calculate the average of the last 10 altitude values
+  oldAltAvg = 0.0f;
+  for (float value : oldAltVals) {
+      oldAltAvg += value;
+  }
+  oldAltAvg /= oldAltVals.size();
+
+  // Calculate the deltaAlt
+  deltaAlt = alt - oldAltAvg;
+  smoothDeltaAlt = (smoothingFactor * deltaAlt) + ((1 - smoothingFactor) * smoothDeltaAlt);
+
+}
+
+
 
 void drawGraphing(){
   if(Started){

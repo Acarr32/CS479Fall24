@@ -43,7 +43,7 @@ void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
       plot.setYLim(-5, 30); // set y limits
     }
     else if (plot == heightPlot){
-      plot.setYLim(0, 10); // set y limits
+      plot.setYLim(0, 5); // set y limits
     }
     else if (plot == emgPlot){
       plot.setYLim(0, 500); // set y limits
@@ -83,10 +83,10 @@ void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
 }
 
 
-void drawBubbles(){ //<>// //<>// //<>//
+void drawBubbles(){ //<>// //<>// //<>// //<>//
   float tempThumb, tempPtr, tempMid;
   
-  tempThumb = currValues != null ? currValues.GetThm() : 0; //<>// //<>// //<>// //<>//
+  tempThumb = currValues != null ? currValues.GetThm() : 0; //<>// //<>// //<>// //<>// //<>//
   tempPtr = currValues != null ? currValues.GetPtr() : 0;
   tempMid = currValues != null ? currValues.GetMid() : 0;
   

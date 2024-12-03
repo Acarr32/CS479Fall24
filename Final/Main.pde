@@ -50,7 +50,7 @@ void mouseClicked(){
       currentState = State.Replay;
    }
   
-  if(holdButton.isMouseOver()){
+  if(statusButton.isMouseOver()){
     holdPopup();
   }
   if(statusButton.isMouseOver()){
