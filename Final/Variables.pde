@@ -26,11 +26,12 @@ color coralOrange;
 color charcoalGray;
 color seafoamGreen;
 
-GPlot fsrPlot, flexPlot, heightPlot;
+GPlot fsrPlot, flexPlot, heightPlot, emgPlot;
 
 ArrayList<ArrayList<Data>> fsrData = new ArrayList<ArrayList<Data>>();
 ArrayList<Data> flexData = new ArrayList<Data>();
 ArrayList<Data> heightData = new ArrayList<Data>();
+ArrayList<Data> emgData = new ArrayList<Data>();
 
 float minFlexReading, maxFlexReading;
 

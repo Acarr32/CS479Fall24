@@ -132,20 +132,22 @@ void Start(){
   fsrData.clear();
   flexData.clear();
   heightData.clear();
+  emgData.clear();
+
   seed = (int)(Math.random() * 4);
   
 }
 void Stop(){
   Started = false;
-  writeClimbingData(fsrData, flexData, heightData);
+  writeClimbingData(fsrData, flexData, heightData, emgData);
 }
 
-void addData(float thumbReading, float pointerReading, float middleReading, float flexReading, float heightReading){
+void addData(float thumbReading, float pointerReading, float middleReading, float flexReading, float heightReading, float emgReading){
   if(!Started){
     return;
   }
   
-  Data thumbData, pointerData, middleData, flexD, heightD;
+  Data thumbData, pointerData, middleData, flexD, heightD, emgD;
   
   int currTime = (int)(millis() - clock);
   
@@ -154,6 +156,8 @@ void addData(float thumbReading, float pointerReading, float middleReading, floa
   middleData = new Data(middleReading, currTime);
   flexD = new Data(flexReading, currTime);
   heightD = new Data(heightReading, currTime);
+  emgD = new Data(emgReading, currTime);
+
   
   ArrayList<Data> tempForceData = new ArrayList<Data>();
   tempForceData.add(thumbData);
@@ -163,6 +167,8 @@ void addData(float thumbReading, float pointerReading, float middleReading, floa
   fsrData.add(tempForceData);
   flexData.add(flexD);
   heightData.add(heightD);
+  emgData.add(emgD);
+
 }
 
 ArrayList<ArrayList<Data>> addShell(ArrayList<Data> data){

@@ -72,9 +72,9 @@ void serialEvent(Serial myPort){
         Accelerometer acc = new Accelerometer(float(values[5]), float(values[6]), float(values[7]));
         Gyroscope gyr = new Gyroscope(float(values[8]), float(values[9]), float(values[10]));
         float alt = float(values[13]);
-        System.out.println(alt);
+        float emg = float(values[11]);
 
-        currValues = new Values(thm, ptr, mid, flx, alt, acc, gyr);
+        currValues = new Values(thm, ptr, mid, flx, alt, acc, gyr, emg);
         if(Started){
           if(prevThm == 0 && prevPtr == 0 && prevMid == 0){
             if(thm > 1 || ptr > 1 || mid > 1){
@@ -84,7 +84,7 @@ void serialEvent(Serial myPort){
             }
           }
            addData(currValues.GetThm(), currValues.GetPtr(), currValues.GetMid(),
-           currValues.GetFlex(), currValues.GetAlt());
+           currValues.GetFlex(), currValues.GetAlt(), currValues.GetEmg());
         }
         prevThm = thm;
         prevPtr = ptr;
