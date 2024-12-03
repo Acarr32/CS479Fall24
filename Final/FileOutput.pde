@@ -1,4 +1,4 @@
-public void writeClimbingData(ArrayList<ArrayList<Data>> forceData, ArrayList<Data> flexData, ArrayList<Data> heightData) {
+public void writeClimbingData(ArrayList<ArrayList<Data>> forceData, ArrayList<Data> flexData, ArrayList<Data> emgData ArrayList<Data> heightData) {
     String currentDateTime = new SimpleDateFormat("mmDDyyyy_HHmmss").format(new Date());
     String directoryPath = "logs"; // No leading slash for relative paths
     String fileName = "ClimbingData" + currentDateTime + ".txt";
@@ -27,6 +27,11 @@ public void writeClimbingData(ArrayList<ArrayList<Data>> forceData, ArrayList<Da
 
         writer.write("\nData from Flex Sensors:\n");
         for (Data item : flexData) {
+            writer.write("Reading: " + item.reading + ", Time Elapsed: " + item.timeElapsed + "\n");
+        }
+        
+        writer.write("\nData from Emg Sensors:\n");
+        for (Data item : emgData) {
             writer.write("Reading: " + item.reading + ", Time Elapsed: " + item.timeElapsed + "\n");
         }
 

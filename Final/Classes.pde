@@ -4,6 +4,7 @@ class Values{
   float mid;
   float flx;
   float alt;
+  float emg;
   Accelerometer acc;
   Gyroscope gyr;
   
@@ -13,6 +14,7 @@ class Values{
     this.mid = mid;
     this.flx = flx;
     this.alt = alt;
+    this.emg = emg
     this.acc = acc;
     this.gyr = gyr;
   }
@@ -22,6 +24,7 @@ class Values{
     System.out.println(this.mid);
     System.out.println(this.flx);
     System.out.println(this.alt);
+    System.out.println(this.emg);
     //System.out.println(this.acc);
     //System.out.println(this.gyr);
   }
@@ -42,6 +45,9 @@ class Values{
     return this.flx;
   }
   
+  public float GetEmg(){
+    return this.emg;
+  }
   public float GetAlt(){
     return this.alt;
   }
