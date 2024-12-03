@@ -30,7 +30,7 @@ public void writeClimbingData(ArrayList<ArrayList<Data>> forceData, ArrayList<Da
             totalHR += item.getReading();
             totalHT += item.getTime();
         }
-        writer.write("\n Average Value from Barometer (Altitude) : " + str(totalHR/totalHT) + "\n");
+        writer.write("\n Average Value from Barometer (Altitude) : " + str((totalHR * 1000) /totalHT) + "\n");
         
         
         float totalER = 0;
@@ -40,7 +40,7 @@ public void writeClimbingData(ArrayList<ArrayList<Data>> forceData, ArrayList<Da
             totalER += item.getReading();
             totalET += item.getTime();
         }
-        writer.write("\n Average Value from EMG : " + str(totalER/totalET) + "\n");
+        writer.write("\n Average Value from EMG : " + str((totalER * 1000) /totalET) + "\n");
         
         float totalFR = 0;
         float totalFT = 0;
@@ -48,12 +48,22 @@ public void writeClimbingData(ArrayList<ArrayList<Data>> forceData, ArrayList<Da
             totalFR += item.getReading();
             totalFT += item.getTime();
         }
-        writer.write("\n Average Value from Flex Sensor: " + str(totalFR/totalFT) + "\n");
+        writer.write("\n Average Value from Flex Sensor: " + str((totalFR * 1000)/totalFT) + "\n");
         
         for (int i = 0; i < forceData.size(); i++) {
             float totalR = 0.0;
             float totalTime = 0.0;
-            writer.write("\n Average Value from Force Sensor " + i + ": ");
+            switch(i % 3){
+                case 0:
+                  writer.write("\n(Thumb)");
+                case 1:
+                  writer.write("\n(Pointer)");
+                case 2:
+                  writer.write("\n(Middle)");
+                default:
+                  break;
+              }
+            writer.write(" Average Value from Force Sensor " + i + ": ");
             for (Data item : forceData.get(i)) {
                 totalR += item.getReading();
                 totalTime += item.getTime();
@@ -82,7 +92,17 @@ public void writeClimbingData(ArrayList<ArrayList<Data>> forceData, ArrayList<Da
         for (int i = 0; i < forceData.size(); i++) {
             writer.write("\nData Dump from Force Sensor " + i + ":\n");
             for (Data item : forceData.get(i)) {
-                writer.write("Reading: " + item.reading + ", Time Elapsed: " + item.timeElapsed + "\n");
+              switch(i % 3){
+                case 0:
+                  writer.write("Thumb");
+                case 1:
+                  writer.write("Pointer");
+                case 2:
+                  writer.write("Middle");
+                default:
+                  break;
+              }
+                writer.write(" Reading: " + item.reading + ", Time Elapsed: " + item.timeElapsed + "\n");
             }
         }
 
