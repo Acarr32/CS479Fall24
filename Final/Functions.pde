@@ -210,6 +210,9 @@ void LoadGraphing(){
 }
 
 void clearData(){
+  for(ArrayList<Data> lst : fsrData){
+    lst.clear();
+  }
   fsrData.clear();
   flexData.clear();
   heightData.clear();
