@@ -83,10 +83,10 @@ void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
 }
 
 
- //<>//
+ //<>// //<>// //<>// //<>// //<>//
 void drawBubbles(){
   float tempThumb, tempPtr, tempMid;
-   //<>//
+   //<>// //<>// //<>// //<>// //<>//
   tempThumb = currValues != null ? currValues.GetThm() : 0;
   tempPtr = currValues != null ? currValues.GetPtr() : 0;
   tempMid = currValues != null ? currValues.GetMid() : 0;

@@ -41,36 +41,34 @@ public void writeClimbingData(ArrayList<ArrayList<Data>> forceData, ArrayList<Da
             totalET += item.getTime();
         }
         writer.write("\n Average Value from EMG : " + str((totalER * 1000) /totalET) + "\n");
-        
+        writer.write("+++++++++++++++++++");
         float totalFR = 0;
         float totalFT = 0;
         for (Data item : flexData) {
             totalFR += item.getReading();
             totalFT += item.getTime();
         }
-        writer.write("\n Average Value from Flex Sensor: " + str((totalFR * 1000)/totalFT) + "\n");
         
+        if(((totalFR * 1000)/totalFT) != 0.0){
+            writer.write("\n Average Value from Flex Sensor: " + str((totalFR * 1000)/totalFT) + "\n");
+        }
+        writer.write("+++++++++++++++++++");
+  
+        float totalThm = 0.0;
+        float totalPtr = 0.0;
+        float totalMid = 0.0;
+        float totalTime = 0.0;
         for (int i = 0; i < forceData.size(); i++) {
-            float totalR = 0.0;
-            float totalTime = 0.0;
-            switch(i % 3){
-                case 0:
-                  writer.write("\n(Thumb)");
-                case 1:
-                  writer.write("\n(Pointer)");
-                case 2:
-                  writer.write("\n(Middle)");
-                default:
-                  break;
-              }
-            writer.write(" Average Value from Force Sensor " + i + ": ");
-            for (Data item : forceData.get(i)) {
-                totalR += item.getReading();
-                totalTime += item.getTime();
-            }
-            writer.write(str(totalR/totalTime) + "\n");
+            totalThm += forceData.get(i).get(0).getReading();
+            totalPtr += forceData.get(i).get(1).getReading();
+            totalMid += forceData.get(i).get(2).getReading();
+            totalTime += forceData.get(i).get(0).getTime();
         } 
         
+        writer.write("\n Average Value from Thumb Finger Force Sensor: " + str((totalThm * 1000)/ totalTime) + "\n");
+        writer.write("\n Average Value from Pointer Finger Force Sensor: " + str((totalPtr * 1000)/ totalTime) + "\n");
+        writer.write("\n Average Value from Middle Finger Force Sensor: " + str((totalMid * 1000)/ totalTime) + "\n");
+        writer.write("+++++++++++++++++++");
         
         writer.write("Data Dumps For Further Analysis\n\n");
         writer.write("++++++++++++++++++++++++++++++++++++++++++++++++++");
@@ -78,32 +76,30 @@ public void writeClimbingData(ArrayList<ArrayList<Data>> forceData, ArrayList<Da
         for (Data item : heightData) {
             writer.write("Reading: " + item.reading + ", Time Elapsed: " + item.timeElapsed + "\n");
         }
-
+        
+        writer.write("+++++++++++++++++++");
         writer.write("\nData Dump from Flex Sensors:\n");
         for (Data item : flexData) {
             writer.write("Reading: " + item.reading + ", Time Elapsed: " + item.timeElapsed + "\n");
         }
-        
+        writer.write("+++++++++++++++++++");
         writer.write("\nData Dump from Emg Sensors:\n");
         for (Data item : emgData) {
             writer.write("Reading: " + item.reading + ", Time Elapsed: " + item.timeElapsed + "\n");
         }
-
+        writer.write("+++++++++++++++++++");
+        writer.write("\nData Dump from Force Sensors: \n");
         for (int i = 0; i < forceData.size(); i++) {
-            writer.write("\nData Dump from Force Sensor " + i + ":\n");
-            for (Data item : forceData.get(i)) {
-              switch(i % 3){
-                case 0:
-                  writer.write("Thumb");
-                case 1:
-                  writer.write("Pointer");
-                case 2:
-                  writer.write("Middle");
-                default:
-                  break;
-              }
-                writer.write(" Reading: " + item.reading + ", Time Elapsed: " + item.timeElapsed + "\n");
-            }
+            float thm = forceData.get(i).get(0).getReading();
+            float ptr = forceData.get(i).get(1).getReading();
+            float mid = forceData.get(i).get(2).getReading();
+            int tme = forceData.get(i).get(0).getTime();
+            
+            writer.write("At Time :" + str(tme) + " \n");
+            writer.write("Thumb Value: " + str(thm) + "\n");
+            writer.write("Pointer Value: " + str(ptr) + "\n");
+            writer.write("Mid Value: " + str(mid) + "\n");
+            writer.write("+++++++++++++++++++");
         }
 
         System.out.println("Log file created at: " + file.getAbsolutePath());
