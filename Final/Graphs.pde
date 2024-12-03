@@ -5,6 +5,7 @@ void initializeGraphs(){
 }
 
 void drawGraphs(){
+  initializeGraphs();
     drawGraphGPlot(fsrData, fsrPlot, width * .025 , height * .025 , width / 3, height / 3, "FSR PLOT" , "Time", "Force Reading");
     drawGraphGPlot(addShell(flexData), flexPlot, (width * .05) + width / 3, height * .025, width / 3, height /3 , "FLEX PLOT" , "Time", "Flex Sensor Read");
     drawGraphGPlot(addShell(heightData), heightPlot, width * .025 , height - height/3 - height *.025 , width * .7, height / 3, "Altitude Plot", "Time", "Altitude Reading");
@@ -34,6 +35,7 @@ void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
 
     // Add datasets as layers
     for (int i = 0; i < datasets.size(); i++) {
+      System.out.println("HIT: " + i);
         GPointsArray tempPoints = arrayToPoints(datasets.get(i));
         String layerName = "Layer " + i;
         color layerColor = colors[i % colors.length];

@@ -3,7 +3,7 @@ void setup(){
   
   //Environment & Feature Initializations
   initializeVariables();
-  initializeSerialPort(0`, true); //port#, debug
+  initializeSerialPort(0, false); //port#, debug
   initializeGraphs();
   //Print 
   background(255);
@@ -72,8 +72,6 @@ void serialEvent(Serial myPort){
         Accelerometer acc = new Accelerometer(float(values[5]), float(values[6]), float(values[7]));
         Gyroscope gyr = new Gyroscope(float(values[8]), float(values[9]), float(values[10]));
         float alt = float(values[13]);
-        System.out.println(alt);
-
         currValues = new Values(thm, ptr, mid, flx, alt, acc, gyr);
         if(Started){
           if(prevThm == 0 && prevPtr == 0 && prevMid == 0){
