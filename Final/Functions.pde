@@ -77,6 +77,8 @@ void determineHold() {
         currentHold = Hold.None;
         System.out.println("None");
     }
+    
+    holdButton.changeLabel(HoldString(currentHold));
 }
 
 
