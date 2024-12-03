@@ -149,17 +149,20 @@ enum State{
 enum ClimbingStatus {
   Climbing,
   Stationary,
+  Stationary0,
   Falling
 }
 
 String ClimbingString(ClimbingStatus status){
    switch (status){
      case Climbing:
-       return "Climbing";
+       return "Climber Status: Climbing";
      case Stationary:
+       return "Climber Status: Stationary";
+     case Stationary0:
        return "Stationary";
      case Falling:
-       return "Falling";
+       return "Climber Status: Falling";
      default:
        return throwError(null, 2);
    }
@@ -182,18 +185,21 @@ enum Hold{
   Sloper,
   Jug,
   Crimp,
-  None
+  None,
+  None0
 }
 
 String HoldString(Hold hold){
   switch(hold){
     case Sloper:
-      return "Sloper";
+      return "Current Hold: Sloper";
     case Jug:
-      return "Jug";
+      return "Current Hold: Jug";
     case Crimp:
-      return "Crimp";
+      return "Current Hold: Crimp";
     case None:
+      return "Current Hold: None";
+    case None0:
       return "None";
     default:
       return throwError(null, 3);

@@ -8,10 +8,10 @@ void initializeGraphs(){
 void drawGraphs(){
   initializeGraphs();
   
-    drawGraphGPlot(fsrData, fsrPlot, width * .025 , height * .025 , width / 3, height / 3, "FSR PLOT" , "Time", "Force Reading");
-    drawGraphGPlot(addShell(flexData), flexPlot, (width * .05) + width / 3, height * .025, width / 3, height /3 , "FLEX PLOT" , "Time", "Flex Sensor Read");
+    //drawGraphGPlot(fsrData, fsrPlot, width * .025 , height * .025 , width / 3, height / 3, "FSR PLOT" , "Time", "Force Reading");
+    //drawGraphGPlot(addShell(flexData), flexPlot, (width * .05) + width / 3, height * .025, width / 3, height /3 , "FLEX PLOT" , "Time", "Flex Sensor Read");
     drawGraphGPlot(addShell(heightData), heightPlot, width * .025 , height - height/3 - height *.025 , width / 3, height / 3, "Altitude Plot", "Time", "Altitude Reading");
-    drawGraphGPlot(addShell(emgData), emgPlot, (width * .05) + width / 3 , height - height/3 - height *.025 , width / 3, height / 3, "EMG Plot", "Time", "EMG Reading");
+    //drawGraphGPlot(addShell(emgData), emgPlot, (width * .05) + width / 3 , height - height/3 - height *.025 , width / 3, height / 3, "EMG Plot", "Time", "EMG Reading");
 
 }
 
