@@ -40,10 +40,10 @@ void drawGraphGPlot(ArrayList<ArrayList<Data>> datasets, GPlot plot,
       plot.setYLim(0, 1023); // set y limits
     }
     else if (plot == flexPlot){
-      plot.setYLim(-5, 30); // set y limits
+      plot.setYLim(-5, 15); // set y limits
     }
     else if (plot == heightPlot){
-      plot.setYLim(0, 5); // set y limits
+      plot.setYLim(0, 2); // set y limits
     }
     else if (plot == emgPlot){
       plot.setYLim(0, 150); // set y limits

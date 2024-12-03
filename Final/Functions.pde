@@ -99,10 +99,10 @@ void determineClimbingStatus(){
     calcDeltaAlt();
     System.out.println(deltaAlt);
 
-    if (smoothDeltaAlt > .03) { //if deltaAlt > 1
+    if (smoothDeltaAlt > .04) { //if deltaAlt > 1
       currentStatus = ClimbingStatus.Climbing;
         System.out.println("Climbing");
-    } else if (smoothDeltaAlt < -0.03) { //if deltaAlt <1
+    } else if (smoothDeltaAlt < -0.04) { //if deltaAlt <1
         currentStatus = ClimbingStatus.Falling;
         System.out.println("Falling");
     } else {
